@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magic Carnival — hết giờ và fallback theme – Royal Kingdom GDD Wiki</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/img/brand.png">
+
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><img src="../assets/img/brand.png" alt=""> <span>Royal Kingdom GDD Wiki</span></a>
+  <div class="search"><input id="q" type="search" placeholder="Tìm tính năng, class, config… (/)" autocomplete="off"><div id="results" class="results" hidden></div></div>
+  <nav class="toplinks"><a href="../index.html">Trang chủ</a><a href="../categories/event.html">Sự kiện</a><a href="../analysis/index.html">Phân tích</a><a href="../appendix/events-overview.html">Phụ lục</a></nav>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="side-title">Danh mục</div>
+  <details><summary>🎯 Lõi gameplay <span class="n">17</span></summary><ul><li><a href="../features/LevelSets.html">Bộ level &amp; tải level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MatchMechanics.html">Luật match-3<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelFlow.html">Luồng level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemainingMoves.html">Lượt dư cuối level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Lives.html">Mạng (Lives)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelGoals.html">Mục tiêu level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSkins.html">Skin level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelTutorials.html">Tutorial trong level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SpecialItems.html">Vật phẩm đặc biệt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_1.html" title="Vật cản 1 (L1–500)">Vật cản 1 (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AttackLevels.html" title="Level tấn công (đánh thành)">Level tấn công (lv5)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Boosters.html" title="Booster">Booster (lv6)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Difficulty.html" title="Độ khó (Hard, Super Hard)">Độ khó (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicPot.html" title="Magic Pot (bình thuốc)">Magic Pot (lv32)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperElectroBall.html" title="Super Electro Ball">Super Electro Ball (lv101/301)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_2.html" title="Vật cản 2 (L500–1500)">Vật cản 2 (lv451)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_3.html" title="Vật cản 3 (L1500+)">Vật cản 3 (lv1501)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>💰 Kinh tế &amp; Shop <span class="n">11</span></summary><ul><li><a href="../features/Inventory.html">Coin &amp; kho đồ (Inventory)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PlayOn.html">Hết lượt - Play On<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Ads.html">Quảng cáo (Ads)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Shop.html">Shop &amp; IAP<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomePack.html" title="Welcome Pack">Welcome Pack (lv13)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PrelevelMultiplier.html" title="Nhân thưởng event theo level">Nhân thưởng event theo level (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LadderOffer.html" title="Ladder Offer">Ladder Offer (lv35)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Offers.html" title="Khung offer (Offers)">Khung offer (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MythicDeal.html" title="Mythic Deal">Mythic Deal (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CoinCraze.html" title="Coin Craze (progress offer)">Coin Craze (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperBoostOffer.html" title="Super Boost Offer">Super Boost Offer (lv111/311)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🏰 Tiến trình <span class="n">8</span></summary><ul><li><a href="../features/WorldMap.html">Bản đồ thế giới<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Cutscenes.html">Cutscene, thư viện và vignette<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TrophyRoom.html">Phòng cúp (đã gỡ)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyGift.html">Quà hằng ngày (Daily Refill)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Kingdom.html">Xây vương quốc (Kingdom)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyLogin.html">Điểm danh hằng ngày<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomeBack.html" title="Welcome Back (quà quay lại)">Welcome Back (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelMilestones.html" title="Mốc nghìn level và hết level">Mốc nghìn level và hết level (lv1000)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🎪 Sự kiện <span class="n">24</span></summary><ul><li><a href="../features/RichardsJourney.html" title="Richard&#x27;s Journey">Richard&#x27;s Journey (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamAdventure.html" title="Team Adventure">Team Adventure (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamClash.html" title="Team Clash">Team Clash (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomPass.html" title="Kingdom Pass">Kingdom Pass (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Blitz.html" title="Electro Blitz - Diamond Mine">Electro Blitz - Diamond Mine (lv36)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CardCollection.html" title="Bộ sưu tập thẻ">Bộ sưu tập thẻ (lv41)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CubeBlast.html" title="Cube Blast (mini-game)">Cube Blast (lv41/51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FlyingContest.html" title="Flying Contest">Flying Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GrandTournament.html" title="Grand Tournament">Grand Tournament (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyContest.html" title="Weekly Contest">Weekly Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicCarnival.html" title="Magic Carnival (mini-game)">Magic Carnival (lv51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DungeonEscape.html" title="Dungeon Escape">Dungeon Escape (lv56)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomDuels.html" title="Kingdom Duels">Kingdom Duels (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PowerRush.html" title="Power Rush">Power Rush (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HiddenPath.html" title="Hidden Path">Hidden Path (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PearlsOfAtlantis.html" title="Pearls of Atlantis">Pearls of Atlantis (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GemHunt.html" title="Gem Hunt">Gem Hunt (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/IslandRace.html" title="Island Race">Island Race (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CanvasQuest.html" title="Canvas Quest">Canvas Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HillQuest.html" title="Hill Quest">Hill Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MissionEvents.html" title="Khung event nhiệm vụ">Khung event nhiệm vụ (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyMission.html" title="Weekly Goals (Weekly Mission)">Weekly Goals (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MedalMissions.html" title="Medal Missions">Medal Missions (lv151)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ChampionsArena.html" title="Đấu trường (Champions Arena)">Đấu trường (lv5600)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>👥 Xã hội <span class="n">6</span></summary><ul><li><a href="../features/Leaderboard.html">Bảng xếp hạng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Emotes.html">Emote<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Profile.html">Hồ sơ &amp; trang trí<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Team.html" title="Đội (Team)">Đội (lv21)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EmoteAlbum.html" title="Emote Album">Emote Album (lv22)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Friends.html" title="Bạn bè (Friends)">Bạn bè (lv44)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📡 Live-ops &amp; hạ tầng <span class="n">8</span></summary><ul><li><a href="../features/Analytics.html">Analytics<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AssetBundles.html">Bundle &amp; tải tài nguyên<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemoteConfig.html">Cấu hình từ xa &amp; AB test<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ServerCommunication.html">Giao tiếp server<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EventsFramework.html">Khung sự kiện<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SaveSync.html">Lưu &amp; đồng bộ dữ liệu<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Notifications.html">Thông báo<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FeatureDependency.html">Ưu tiên &amp; mở tính năng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>⚙️ Meta &amp; UI <span class="n">9</span></summary><ul><li><a href="../features/Settings.html">Cài đặt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Support.html">Hỗ trợ (Helpshift)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Loading.html">Loading &amp; splash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HomeUI.html">Màn hình Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Onboarding.html">Onboarding &amp; tutorial Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AppUpdate.html">Phiên bản &amp; cập nhật<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Privacy.html">Quyền riêng tư &amp; phụ huynh<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Account.html">Tài khoản &amp; đăng nhập<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RateUs.html" title="Đánh giá app">Đánh giá app (lv15)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📊 Phân tích & đánh giá <span class="n">6</span></summary><ul><li><a href="../analysis/index.html">Tất cả phân tích</a></li><li><a href="../analysis/01-sale-event-flows.html">Luồng Sale &amp; Event của Royal Kingdom — từ server tới phần thưởng</a></li><li><a href="../analysis/02-deep-dive.html">Phân tích chuyên sâu — Độ khó, bộ level, hệ số nhân, AB test và kinh tế của thất bại</a></li><li><a href="../analysis/03-iap-packages.html">Phân tích từng gói IAP — Royal Kingdom</a></li><li><a href="../analysis/04-user-segmentation.html">Phân tệp người chơi — payer, segment và AB trong Royal Kingdom</a></li><li><a href="../analysis/05-economy.html">Kinh tế Royal Kingdom — nguồn, nơi tiêu và ngân sách mỗi 1.000 level</a></li><li><a href="../analysis/06-rk-vs-royal-match.html">Royal Kingdom so với Royal Match — cùng khung, khác lõi</a></li></ul></details><details open><summary>📎 Phụ lục <span class="n">47</span></summary><ul><li><a href="../appendix/events-overview.html">Tổng quan sự kiện</a></li><li><a href="../appendix/unlock-levels.html">Level mở khoá</a></li><li><a href="../appendix/reward-codes.html">Mã phần thưởng</a></li><li><a href="../appendix/iap-products.html">Sản phẩm IAP</a></li><li><a href="../appendix/levels-summary.html">Level &amp; thống kê</a></li><li><a href="../appendix/default-configs.html">Config mặc định trong APK</a></li><li><a href="../appendix/backend-protocol.html">Giao thức backend</a></li><li><a href="../appendix/enums.html">Enum</a></li><li><a href="../appendix/static-arrays.html">Mảng tĩnh (metadata)</a></li><li><a href="../appendix/localization.html">Text UI (EN)</a></li><li><a href="../appendix/save-state.html">Trạng thái lưu (save)</a></li><li><a href="../appendix/config-default-vs-live.html">Config mặc định vs live</a></li><li><a href="../appendix/asset-configs.html">Asset/config local — phạm vi và bằng chứng</a></li><li><a href="../appendix/blitz-collect-calls.html">Blitz — các nơi gọi thu tia sét</a></li><li><a href="../appendix/bundle-config-catalog.html">Config giải từ asset bundle</a></li><li><a href="../appendix/bundle-localization.html">Localization từ bundle CDN Royal Kingdom</a></li><li><a href="../appendix/capture-plan.html">Ảnh cần chụp — kế hoạch đang thực hiện</a></li><li><a href="../appendix/card-collection-extended-native.html">Card Collection — điều kiện wildcard, hoàn tất và giao dịch</a></li><li><a href="../appendix/card-collection-extended-playtest.html">Card Collection — wildcard, hoàn tất bộ, Diamond và Ultimate</a></li><li><a href="../appendix/card-collection-playtest.html">Card Collection — kiểm thử rương và thẻ trùng 12/11/2026</a></li><li><a href="../appendix/card-collection-season10.html">Card Collection — toàn bộ season10 từ config client</a></li><li><a href="../appendix/cdn-quality-coverage.html">Độ phủ bundle: CDN, APK và config runtime</a></li><li><a href="../appendix/client-config-samples-after_ab56_57.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-after_dependency_mc.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-forced151.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/config-leaf-diff.html">So sánh từng trường config — kết quả tái sinh</a></li><li><a href="../appendix/config-playtest-diff.html">Config trước/sau playtest và override</a></li><li><a href="../appendix/cube-blast-outcomes.html">Cube Blast — kết quả kiểm chứng cập nhật</a></li><li><a href="../appendix/design-uncertainty-scan.html">Rà soát thiếu design và cấu hình server</a></li><li><a href="../appendix/difficulty-vignette-assets.html">Loading vignette — giá trị asset đã giải</a></li><li><a href="../appendix/event-outcome-playtest.html">Event outcomes — 12/11/2026</a></li><li><a href="../appendix/followup-outcomes.html">Follow-up Dungeon, trao đổi thẻ và chuyển mùa — 12/11/2026</a></li><li><a href="../appendix/gaps.html">Khoảng trống và giới hạn bằng chứng — 12/11/2026</a></li><li><a href="../appendix/kingdom-tasks.html">Kingdom — asset, task và localization</a></li><li><a href="../appendix/magic-carnival-config-selection.html">Magic Carnival — lựa chọn primary/secondary</a></li><li class=cur><a href="../appendix/magic-carnival-expiry-theme-native.html">Magic Carnival — hết giờ và fallback theme</a></li><li><a href="../appendix/magic-carnival-initial-orbs.html">MagicCarnival —2orbkhởiđầu</a></li><li><a href="../appendix/magic-carnival-manipulation.html">Magic Carnival — thuật toán thay nội dung orb</a></li><li><a href="../appendix/magic-carnival-mission-findings.html">Magic Carnival: tiến độ Mission khi ghép đúng</a></li><li><a href="../appendix/magic-carnival-runtime-cases.html">Magic Carnival — playtest theo trạng thái,12/11/2026</a></li><li><a href="../appendix/playtest-20261112.html">Quan sát playtest 12/11/2026</a></li><li><a href="../appendix/playtest-case-matrix.html">Ma trận use case cần kiểm chứng</a></li><li><a href="../appendix/richards-journey-outcomes.html">Richard’s Journey — gameplay và thưởng</a></li><li><a href="../appendix/save-state-inventory.html">Kiểm kê SQLite tái sinh — snapshot 11/11/2026</a></li><li><a href="../appendix/verified-findings.html">Kết quả kiểm chứng local — 12/11/2026</a></li><li><a href="../appendix/about.html">Về tài liệu này</a></li></ul></details>
+</aside>
+<main class="content"><div class="inner">
+<div class="crumbs"><a href="../index.html">Trang chủ</a> › Magic Carnival — hết giờ và fallback theme</div><h1 class="title">Magic Carnival — hết giờ và fallback theme</h1><p class="tagline"> <span class="muted">· nguồn <code>appendix/magic-carnival-expiry-theme-native.md</code></span></p><div class="md"><p>Phần mã dưới đây dùng để đối chiếu với thử nghiệm offline. Helper fallback được gọi trực tiếp trên ManualUpdate; chưa giả lập toàn bộ UpdateInfo hay chứng minh server gửi theme=0.</p>
+<h2 id="tryrevertthemetodefault">TryRevertThemeToDefault</h2>
+<p>Nguồn: <code>Royal/Player/Context/Units/MagicCarnival/MagicCarnivalManager.c:3540</code>; RVA <code>0x249F4B0</code>; SHA256 <code>c1d904476d938ae164dcd6b9636a2d2a388027bffaaed3cdea37545f385e4b1e</code>.</p>
+<pre><code>// ===== MagicCarnivalManager :: private void TryRevertThemeToDefault()   [RVA 0x249F4B0, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+void Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__TryRevertThemeToDefault
+               (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager_o *__this,
+               MethodInfo *method)
+
+{
+  int32_t iVar1;
+  Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *pRVar2;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager_o *__this_00;
+  Il2CppObject *arg0;
+  Il2CppObject *arg1;
+  MethodInfo *method_00;
+  long lVar3;
+  MethodInfo *extraout_x1;
+  MethodInfo *method_01;
+  long lVar4;
+  undefined4 local_28;
+  int32_t local_24;
+  
+  if ((DAT_0519f0b9 &amp; 1) == 0) {
+    FUN_021edf74(&amp;Method_System_Array_Empty&lt;object&gt;__);
+    FUN_021edf74(&amp;int_TypeInfo);
+    FUN_021edf74(&amp;Royal_Player_Context_Units_MagicCarnival_MagicCarnivalContext_TypeInfo);
+    FUN_021edf74(&amp;
+                 Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_ThemeScripts_MagicCarnivalThemeHelper_TypeInfo
+                );
+    FUN_021edf74(&amp;StringLiteral_4995 /* &quot;Config theme is default. Revert event theme {0}. UserEventId: {1}&quot; */);
+    DAT_0519f0b9 = 1;
+    method = extraout_x1;
+  }
+  pRVar2 = (__this-&gt;fields)._Progress_k__BackingField;
+  if (pRVar2 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+    iVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__get_ThemeId
+                      (pRVar2,method);
+    if (iVar1 == 0) {
+      return;
+    }
+    __this_00 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager__get_Current
+                          ((MethodInfo *)0x0);
+    if (__this_00 !=
+        (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager_o *)0x0) {
+      iVar1 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager__get_ConfigThemeId
+                        (__this_00,(MethodInfo *)0x0);
+      if (iVar1 != 0) {
+        return;
+      }
+      pRVar2 = (__this-&gt;fields)._Progress_k__BackingField;
+      if (pRVar2 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+        local_24 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__get_ThemeId
+                             (pRVar2,method_01);
+        arg0 = (Il2CppObject *)thunk_FUN_02248c24(int_TypeInfo,&amp;local_24);
+        local_28 = (*(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered.methodPtr)
+                             (__this,(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered.
+                                     method);
+        arg1 = (Il2CppObject *)thunk_FUN_02248c24(int_TypeInfo,&amp;local_28);
+        method_00 = (MethodInfo *)
+                    System_String__Format(StringLiteral_4995 /* &quot;Config theme is default. Revert event theme {0}. UserEventId: {1}&quot; */,arg0,arg1,(MethodInfo *)0x0);
+        lVar3 = Method_System_Array_Empty&lt;object&gt;__;
+        lVar4 = *(long *)(Method_System_Array_Empty&lt;object&gt;__ + 0x38);
+        if (lVar4 == 0) {
+          FUN_0223d474(Method_System_Array_Empty&lt;object&gt;__);
+          lVar4 = *(long *)(lVar3 + 0x38);
+        }
+        lVar4 = *(long *)(lVar4 + 0x10);
+        if ((*(byte *)(lVar4 + 0x135) &amp; 1) == 0) {
+          lVar4 = FUN_0223d418();
+        }
+        if (*(int *)(lVar4 + 0xe0) == 0) {
+          thunk_FUN_021c3bd4();
+        }
+        lVar3 = *(long *)(*(long *)(lVar3 + 0x38) + 0x10);
+        if ((*(byte *)(lVar3 + 0x135) &amp; 1) == 0) {
+          lVar3 = FUN_0223d418();
+        }
+        Royal_Infrastructure_Services_Logs_Log__Debug
+                  ((Il2CppObject *)__this,0x4a,(System_String_o *)method_00,
+                   (System_Object_array *)**(undefined8 **)(lVar3 + 0xb8),(MethodInfo *)0x0);
+        pRVar2 = (__this-&gt;fields)._Progress_k__BackingField;
+        if (pRVar2 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+          Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__set_ThemeId
+                    (pRVar2,0,method_00);
+          if ((Royal_Player_Context_Units_MagicCarnival_MagicCarnivalContext_TypeInfo-&gt;_2).
+              cctor_finished == 0) {
+            thunk_FUN_021c3bd4();
+          }
+          if (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalContext_TypeInfo-&gt;static_fields
+              -&gt;isScreenActive != false) {
+            return;
+          }
+          if ((
+              Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_ThemeScripts_MagicCarnivalThemeHelper_TypeInfo
+              -&gt;_2).cctor_finished == 0) {
+            thunk_FUN_021c3bd4();
+          }
+          Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_ThemeScripts_MagicCarnivalThemeHelper__ClearCache
+                    ((MethodInfo *)0x0);
+          return;
+        }
+      }
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<h2 id="eventtimefinished">EventTimeFinished</h2>
+<p>Nguồn: <code>Royal/Player/Context/Units/MagicCarnival/MagicCarnivalManager.c:4477</code>; RVA <code>0x249FE98</code>; SHA256 <code>d405c355937ae52cc5733ab7ef34fbe5879baede927fce470be4107efe391de6</code>.</p>
+<pre><code>// ===== MagicCarnivalManager :: public void EventTimeFinished()   [RVA 0x249FE98, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+void Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__EventTimeFinished
+               (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager_o *__this,
+               MethodInfo *method)
+
+{
+  MethodInfo *arg0;
+  bool bVar1;
+  System_String_o *pSVar2;
+  Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *pRVar3;
+  Il2CppObject *pIVar4;
+  MethodInfo *pMVar5;
+  long lVar6;
+  MethodInfo *extraout_x1;
+  MethodInfo *method_00;
+  MethodInfo *method_01;
+  MethodInfo *method_02;
+  MethodInfo *extraout_x1_00;
+  MethodInfo *extraout_x1_01;
+  MethodInfo *extraout_x1_02;
+  MethodInfo *extraout_x1_03;
+  MethodInfo *method_03;
+  MethodInfo *in_x3;
+  long lVar7;
+  System_String_o *str1;
+  Il2CppMethodPointer local_60;
+  Il2CppMethodPointer pIStack_58;
+  InvokerMethod local_50;
+  char *pcStack_48;
+  Il2CppClass *pIStack_40;
+  Il2CppType *pIStack_38;
+  Royal_Player_Context_Data_InventoryPackage_o *local_30;
+  undefined4 uStack_24;
+  
+  pMVar5 = (MethodInfo *)&amp;local_60;
+  if ((DAT_0519f0be &amp; 1) == 0) {
+    FUN_021edf74(&amp;Royal_Player_Context_Units_MagicCarnival_MagicCarnivalContext_TypeInfo);
+    FUN_021edf74(&amp;StringLiteral_6466 /* &quot;EventTimeFinished&quot; */);
+    DAT_0519f0be = 1;
+  }
+  local_30 = (Royal_Player_Context_Data_InventoryPackage_o *)0x0;
+  pcStack_48 = (char *)0x0;
+  local_50 = (InvokerMethod)0x0;
+  pIStack_38 = (Il2CppType *)0x0;
+  pIStack_40 = (Il2CppClass *)0x0;
+  pIStack_58 = (Il2CppMethodPointer)0x0;
+  local_60 = (Il2CppMethodPointer)0x0;
+  Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__SendFinishAnalyticsEvent
+            (__this,false,
+             (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalAnalyticsData_o *)&amp;local_60,
+             in_x3);
+  bVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__InvalidateEventIfUserNotCollectedAnyCollectable
+                    (__this,method_01);
+  if (!bVar1) {
+    bVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__get_CanClaimEvent
+                      (__this,method_02);
+    arg0 = StringLiteral_6466 /* &quot;EventTimeFinished&quot; */;
+    if (!bVar1) {
+      method_00 = StringLiteral_6466 /* &quot;EventTimeFinished&quot; */;
+      if ((DAT_0519f0c1 &amp; 1) == 0) {
+        FUN_021edf74(&amp;Method_System_Array_Empty&lt;object&gt;__);
+        FUN_021edf74(&amp;int_TypeInfo);
+        FUN_021edf74(&amp;string_TypeInfo);
+        FUN_021edf74(&amp;StringLiteral_11176 /* &quot;Origin: {0} UserEventId: {1}.&quot; */);
+        FUN_021edf74(&amp;StringLiteral_6437 /* &quot;Event was in LastChanceToProgress. &quot; */);
+        FUN_021edf74(&amp;StringLiteral_9901 /* &quot;MagicCarnival entered LastSession and event invalidated. &quot; */);
+        DAT_0519f0c1 = 1;
+        method_00 = extraout_x1;
+      }
+      if ((__this-&gt;fields)._IsLastSessionOfEvent_k__BackingField != false) {
+        return;
+      }
+      pRVar3 = (__this-&gt;fields)._Progress_k__BackingField;
+      if (pRVar3 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+        str1 = string_TypeInfo-&gt;static_fields-&gt;Empty;
+        bVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__get_LastChanceToProgress
+                          (pRVar3,method_00);
+        pSVar2 = StringLiteral_6437 /* &quot;Event was in LastChanceToProgress. &quot; */;
+        if (bVar1) {
+          pRVar3 = (__this-&gt;fields)._Progress_k__BackingField;
+          if (pRVar3 == (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0)
+          goto LAB_0259fe94;
+          Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__set_LastChanceToProgress
+                    (pRVar3,false,pMVar5);
+          str1 = pSVar2;
+        }
+        uStack_24 = (*(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered.methodPtr)
+                              (__this,(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered.
+                                      method);
+        pIVar4 = (Il2CppObject *)thunk_FUN_02248c24(int_TypeInfo,&amp;uStack_24);
+        pSVar2 = System_String__Format
+                           (StringLiteral_11176 /* &quot;Origin: {0} UserEventId: {1}.&quot; */,(Il2CppObject *)arg0,pIVar4,(MethodInfo *)0x0);
+        pMVar5 = (MethodInfo *)
+                 System_String__Concat(StringLiteral_9901 /* &quot;MagicCarnival entered LastSession and event invalidated. &quot; */,str1,pSVar2,(MethodInfo *)0x0);
+        lVar6 = Method_System_Array_Empty&lt;object&gt;__;
+        lVar7 = *(long *)(Method_System_Array_Empty&lt;object&gt;__ + 0x38);
+        if (lVar7 == 0) {
+          FUN_0223d474(Method_System_Array_Empty&lt;object&gt;__);
+          lVar7 = *(long *)(lVar6 + 0x38);
+        }
+        lVar7 = *(long *)(lVar7 + 0x10);
+        if ((*(byte *)(lVar7 + 0x135) &amp; 1) == 0) {
+          lVar7 = FUN_0223d418();
+        }
+        if (*(int *)(lVar7 + 0xe0) == 0) {
+          thunk_FUN_021c3bd4();
+        }
+        lVar6 = *(long *)(*(long *)(lVar6 + 0x38) + 0x10);
+        if ((*(byte *)(lVar6 + 0x135) &amp; 1) == 0) {
+          lVar6 = FUN_0223d418();
+        }
+        Royal_Infrastructure_Services_Logs_Log__Debug
+                  ((Il2CppObject *)__this,0x4a,(System_String_o *)pMVar5,
+                   (System_Object_array *)**(undefined8 **)(lVar6 + 0xb8),(MethodInfo *)0x0);
+        pRVar3 = (__this-&gt;fields)._Progress_k__BackingField;
+        if (pRVar3 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+          Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__set_IsEventValid
+                    (pRVar3,false,pMVar5);
+          (__this-&gt;fields)._IsLastSessionOfEvent_k__BackingField = true;
+          return;
+        }
+      }
+LAB_0259fe94:
+                    /* WARNING: Subroutine does not return */
+      FUN_021ee1d0();
+    }
+    pMVar5 = extraout_x1_00;
+    if ((Royal_Player_Context_Units_MagicCarnival_MagicCarnivalContext_TypeInfo-&gt;_2).cctor_finished
+        == 0) {
+      thunk_FUN_021c3bd4();
+      pMVar5 = extraout_x1_01;
+    }
+    if ((Royal_Player_Context_Units_MagicCarnival_MagicCarnivalContext_TypeInfo-&gt;static_fields-&gt;
+         isScreenActive != false) ||
+       (bVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__HasEnoughCollectableToFinishLevel
+                          (__this,pMVar5), pMVar5 = extraout_x1_02, !bVar1)) {
+      if ((DAT_0519f0c0 &amp; 1) == 0) {
+        FUN_021edf74(&amp;Method_System_Array_Empty&lt;object&gt;__);
+        FUN_021edf74(&amp;int_TypeInfo);
+        FUN_021edf74(&amp;StringLiteral_9900 /* &quot;MagicCarnival entered LastChanceToProgress. UserEventId: {0}.&quot; */);
+        DAT_0519f0c0 = 1;
+        pMVar5 = extraout_x1_03;
+      }
+      bVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__get_CanClaimEvent
+                        (__this,pMVar5);
+      if (bVar1) {
+        pRVar3 = (__this-&gt;fields)._Progress_k__BackingField;
+        if (pRVar3 == (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+LAB_025a0370:
+                    /* WARNING: Subroutine does not return */
+          FUN_021ee1d0();
+        }
+        bVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__get_LastChanceToProgress
+                          (pRVar3,method_03);
+        if (!bVar1) {
+          uStack_24 = (*(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered.methodPtr)
+                                (__this,(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered
+                                        .method);
+          pIVar4 = (Il2CppObject *)thunk_FUN_02248c24(int_TypeInfo,&amp;uStack_24);
+          pMVar5 = (MethodInfo *)System_String__Format(StringLiteral_9900 /* &quot;MagicCarnival entered LastChanceToProgress. UserEventId: {0}.&quot; */,pIVar4,(MethodInfo *)0x0);
+          lVar6 = Method_System_Array_Empty&lt;object&gt;__;
+          lVar7 = *(long *)(Method_System_Array_Empty&lt;object&gt;__ + 0x38);
+          if (lVar7 == 0) {
+            FUN_0223d474(Method_System_Array_Empty&lt;object&gt;__);
+            lVar7 = *(long *)(lVar6 + 0x38);
+          }
+          lVar7 = *(long *)(lVar7 + 0x10);
+          if ((*(byte *)(lVar7 + 0x135) &amp; 1) == 0) {
+            lVar7 = FUN_0223d418();
+          }
+          if (*(int *)(lVar7 + 0xe0) == 0) {
+            thunk_FUN_021c3bd4();
+          }
+          lVar6 = *(long *)(*(long *)(lVar6 + 0x38) + 0x10);
+          if ((*(byte *)(lVar6 + 0x135) &amp; 1) == 0) {
+            lVar6 = FUN_0223d418();
+          }
+          Royal_Infrastructure_Services_Logs_Log__Debug
+                    ((Il2CppObject *)__this,0x4a,(System_String_o *)pMVar5,
+                     (System_Object_array *)**(undefined8 **)(lVar6 + 0xb8),(MethodInfo *)0x0);
+          pRVar3 = (__this-&gt;fields)._Progress_k__BackingField;
+          if (pRVar3 == (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0)
+          goto LAB_025a0370;
+          Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__set_LastChanceToProgress
+                    (pRVar3,true,pMVar5);
+        }
+      }
+      return;
+    }
+  }
+  return;
+}
+
+
+</code></pre>
+<h2 id="hasenoughcollectabletofinishlevel">HasEnoughCollectableToFinishLevel</h2>
+<p>Nguồn: <code>Royal/Player/Context/Units/MagicCarnival/MagicCarnivalManager.c:4674</code>; RVA <code>0x249FAFC</code>; SHA256 <code>52d0dc2e1572145d6edd70caa4a965dada1384b80fa2b11aabd58b70a40d9dfc</code>.</p>
+<pre><code>// ===== MagicCarnivalManager :: private bool HasEnoughCollectableToFinishLevel()   [RVA 0x249FAFC, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+bool Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__HasEnoughCollectableToFinishLevel
+               (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager_o *__this,
+               MethodInfo *method)
+
+{
+  int32_t iVar1;
+  int32_t iVar2;
+  int iVar3;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalMoveManager_o *__this_00;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager_o *__this_01;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelConfig_o *pRVar4;
+  MethodInfo *method_00;
+  MethodInfo *method_01;
+  Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *pRVar5;
+  
+  __this_00 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalMoveManager__get_Current
+                        ((MethodInfo *)0x0);
+  if (__this_00 !=
+      (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalMoveManager_o *)0x0) {
+    iVar1 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalMoveManager__get_CollectableCount
+                      (__this_00,(MethodInfo *)0x0);
+    pRVar5 = (__this-&gt;fields)._Progress_k__BackingField;
+    if (pRVar5 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+      iVar2 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__get_Width
+                        (pRVar5,method_00);
+      if (iVar2 &lt; 1) {
+        __this_01 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager__get_Current
+                              ((MethodInfo *)0x0);
+        if ((__this_01 ==
+             (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager_o *)0x0) ||
+           (pRVar4 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelManager__GetLevelConfig
+                               (__this_01,(MethodInfo *)0x0),
+           pRVar4 == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalLevelConfig_o *)
+                     0x0)) goto LAB_0259fbb8;
+        iVar3 = (pRVar4-&gt;fields).h * (pRVar4-&gt;fields).w;
+      }
+      else {
+        pRVar5 = (__this-&gt;fields)._Progress_k__BackingField;
+        if (pRVar5 == (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0)
+        goto LAB_0259fbb8;
+        iVar3 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__get_RemainingOrbCountInLevel
+                          (pRVar5,method_01);
+        if (iVar3 == 2) {
+          return 1 &lt; iVar1;
+        }
+        if (iVar3 &lt; 4) {
+          return false;
+        }
+      }
+      return (float)iVar3 * 1.5 &lt;= (float)iVar1;
+    }
+  }
+LAB_0259fbb8:
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<h2 id="invalidateeventifusernotcollectedanycollectable">InvalidateEventIfUserNotCollectedAnyCollectable</h2>
+<p>Nguồn: <code>Royal/Player/Context/Units/MagicCarnival/MagicCarnivalManager.c:4736</code>; RVA <code>0x24A00B8</code>; SHA256 <code>91b75b93f788aba30865380c39988e33c41269b75a902aa2a69ee8cf7b2d8c8d</code>.</p>
+<pre><code>// ===== MagicCarnivalManager :: private bool InvalidateEventIfUserNotCollectedAnyCollectable()   [RVA 0x24A00B8, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+bool Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager__InvalidateEventIfUserNotCollectedAnyCollectable
+               (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalManager_o *__this,
+               MethodInfo *method)
+
+{
+  bool bVar1;
+  int32_t eventType;
+  Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *pRVar2;
+  Il2CppObject *arg0;
+  MethodInfo *method_00;
+  long lVar3;
+  Royal_Player_Context_Units_FeatureDependency_FeatureDependencyManager_o *__this_00;
+  MethodInfo *extraout_x1;
+  long lVar4;
+  undefined4 local_24;
+  
+  if ((DAT_0519f0bf &amp; 1) == 0) {
+    FUN_021edf74(&amp;Method_System_Array_Empty&lt;object&gt;__);
+    FUN_021edf74(&amp;int_TypeInfo);
+    FUN_021edf74(&amp;StringLiteral_6467 /* &quot;EventTimeFinished, User didn&#x27;t collect any collectable. UserEventId: {0}&quot; */);
+    DAT_0519f0bf = 1;
+    method = extraout_x1;
+  }
+  pRVar2 = (__this-&gt;fields)._Progress_k__BackingField;
+  if (pRVar2 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+    bVar1 = Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__get_HasCollectedAnyCollectable
+                      (pRVar2,method);
+    if (bVar1) {
+LAB_025a0214:
+      return (bool)(~bVar1 &amp; 1);
+    }
+    local_24 = (*(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered.methodPtr)
+                         (__this,(__this-&gt;klass-&gt;vtable)._20_PrioritizeInPrelevelIfNotEntered.method
+                         );
+    arg0 = (Il2CppObject *)thunk_FUN_02248c24(int_TypeInfo,&amp;local_24);
+    method_00 = (MethodInfo *)System_String__Format(StringLiteral_6467 /* &quot;EventTimeFinished, User didn&#x27;t collect any collectable. UserEventId: {0}&quot; */,arg0,(MethodInfo *)0x0);
+    lVar3 = Method_System_Array_Empty&lt;object&gt;__;
+    lVar4 = *(long *)(Method_System_Array_Empty&lt;object&gt;__ + 0x38);
+    if (lVar4 == 0) {
+      FUN_0223d474(Method_System_Array_Empty&lt;object&gt;__);
+      lVar4 = *(long *)(lVar3 + 0x38);
+    }
+    lVar4 = *(long *)(lVar4 + 0x10);
+    if ((*(byte *)(lVar4 + 0x135) &amp; 1) == 0) {
+      lVar4 = FUN_0223d418();
+    }
+    if (*(int *)(lVar4 + 0xe0) == 0) {
+      thunk_FUN_021c3bd4();
+    }
+    lVar3 = *(long *)(*(long *)(lVar3 + 0x38) + 0x10);
+    if ((*(byte *)(lVar3 + 0x135) &amp; 1) == 0) {
+      lVar3 = FUN_0223d418();
+    }
+    Royal_Infrastructure_Services_Logs_Log__Debug
+              ((Il2CppObject *)__this,0x4a,(System_String_o *)method_00,
+               (System_Object_array *)**(undefined8 **)(lVar3 + 0xb8),(MethodInfo *)0x0);
+    pRVar2 = (__this-&gt;fields)._Progress_k__BackingField;
+    if (pRVar2 != (Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress_o *)0x0) {
+      Royal_Player_Context_Units_MagicCarnival_MagicCarnivalProgress__set_IsEventValid
+                (pRVar2,false,method_00);
+      __this_00 = Royal_Player_Context_Units_FeatureDependency_FeatureDependencyManager__get_Current
+                            ((MethodInfo *)0x0);
+      eventType = (*(__this-&gt;klass-&gt;vtable)._18_get_EventType.methodPtr)
+                            (__this,(__this-&gt;klass-&gt;vtable)._18_get_EventType.method);
+      if (__this_00 !=
+          (Royal_Player_Context_Units_FeatureDependency_FeatureDependencyManager_o *)0x0) {
+        Royal_Player_Context_Units_FeatureDependency_FeatureDependencyManager__CheckFeaturesOnEventComplete
+                  (__this_00,eventType,(MethodInfo *)0x0);
+        goto LAB_025a0214;
+      }
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre></div>
+<footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
+</div></main>
+</div>
+<script>window.SITE_ROOT="../";</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

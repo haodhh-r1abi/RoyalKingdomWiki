@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blitz — các nơi gọi thu tia sét – Royal Kingdom GDD Wiki</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/img/brand.png">
+
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><img src="../assets/img/brand.png" alt=""> <span>Royal Kingdom GDD Wiki</span></a>
+  <div class="search"><input id="q" type="search" placeholder="Tìm tính năng, class, config… (/)" autocomplete="off"><div id="results" class="results" hidden></div></div>
+  <nav class="toplinks"><a href="../index.html">Trang chủ</a><a href="../categories/event.html">Sự kiện</a><a href="../analysis/index.html">Phân tích</a><a href="../appendix/events-overview.html">Phụ lục</a></nav>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="side-title">Danh mục</div>
+  <details><summary>🎯 Lõi gameplay <span class="n">17</span></summary><ul><li><a href="../features/LevelSets.html">Bộ level &amp; tải level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MatchMechanics.html">Luật match-3<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelFlow.html">Luồng level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemainingMoves.html">Lượt dư cuối level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Lives.html">Mạng (Lives)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelGoals.html">Mục tiêu level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSkins.html">Skin level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelTutorials.html">Tutorial trong level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SpecialItems.html">Vật phẩm đặc biệt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_1.html" title="Vật cản 1 (L1–500)">Vật cản 1 (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AttackLevels.html" title="Level tấn công (đánh thành)">Level tấn công (lv5)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Boosters.html" title="Booster">Booster (lv6)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Difficulty.html" title="Độ khó (Hard, Super Hard)">Độ khó (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicPot.html" title="Magic Pot (bình thuốc)">Magic Pot (lv32)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperElectroBall.html" title="Super Electro Ball">Super Electro Ball (lv101/301)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_2.html" title="Vật cản 2 (L500–1500)">Vật cản 2 (lv451)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_3.html" title="Vật cản 3 (L1500+)">Vật cản 3 (lv1501)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>💰 Kinh tế &amp; Shop <span class="n">11</span></summary><ul><li><a href="../features/Inventory.html">Coin &amp; kho đồ (Inventory)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PlayOn.html">Hết lượt - Play On<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Ads.html">Quảng cáo (Ads)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Shop.html">Shop &amp; IAP<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomePack.html" title="Welcome Pack">Welcome Pack (lv13)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PrelevelMultiplier.html" title="Nhân thưởng event theo level">Nhân thưởng event theo level (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LadderOffer.html" title="Ladder Offer">Ladder Offer (lv35)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Offers.html" title="Khung offer (Offers)">Khung offer (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MythicDeal.html" title="Mythic Deal">Mythic Deal (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CoinCraze.html" title="Coin Craze (progress offer)">Coin Craze (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperBoostOffer.html" title="Super Boost Offer">Super Boost Offer (lv111/311)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🏰 Tiến trình <span class="n">8</span></summary><ul><li><a href="../features/WorldMap.html">Bản đồ thế giới<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Cutscenes.html">Cutscene, thư viện và vignette<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TrophyRoom.html">Phòng cúp (đã gỡ)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyGift.html">Quà hằng ngày (Daily Refill)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Kingdom.html">Xây vương quốc (Kingdom)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyLogin.html">Điểm danh hằng ngày<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomeBack.html" title="Welcome Back (quà quay lại)">Welcome Back (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelMilestones.html" title="Mốc nghìn level và hết level">Mốc nghìn level và hết level (lv1000)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🎪 Sự kiện <span class="n">24</span></summary><ul><li><a href="../features/RichardsJourney.html" title="Richard&#x27;s Journey">Richard&#x27;s Journey (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamAdventure.html" title="Team Adventure">Team Adventure (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamClash.html" title="Team Clash">Team Clash (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomPass.html" title="Kingdom Pass">Kingdom Pass (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Blitz.html" title="Electro Blitz - Diamond Mine">Electro Blitz - Diamond Mine (lv36)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CardCollection.html" title="Bộ sưu tập thẻ">Bộ sưu tập thẻ (lv41)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CubeBlast.html" title="Cube Blast (mini-game)">Cube Blast (lv41/51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FlyingContest.html" title="Flying Contest">Flying Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GrandTournament.html" title="Grand Tournament">Grand Tournament (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyContest.html" title="Weekly Contest">Weekly Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicCarnival.html" title="Magic Carnival (mini-game)">Magic Carnival (lv51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DungeonEscape.html" title="Dungeon Escape">Dungeon Escape (lv56)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomDuels.html" title="Kingdom Duels">Kingdom Duels (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PowerRush.html" title="Power Rush">Power Rush (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HiddenPath.html" title="Hidden Path">Hidden Path (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PearlsOfAtlantis.html" title="Pearls of Atlantis">Pearls of Atlantis (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GemHunt.html" title="Gem Hunt">Gem Hunt (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/IslandRace.html" title="Island Race">Island Race (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CanvasQuest.html" title="Canvas Quest">Canvas Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HillQuest.html" title="Hill Quest">Hill Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MissionEvents.html" title="Khung event nhiệm vụ">Khung event nhiệm vụ (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyMission.html" title="Weekly Goals (Weekly Mission)">Weekly Goals (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MedalMissions.html" title="Medal Missions">Medal Missions (lv151)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ChampionsArena.html" title="Đấu trường (Champions Arena)">Đấu trường (lv5600)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>👥 Xã hội <span class="n">6</span></summary><ul><li><a href="../features/Leaderboard.html">Bảng xếp hạng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Emotes.html">Emote<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Profile.html">Hồ sơ &amp; trang trí<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Team.html" title="Đội (Team)">Đội (lv21)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EmoteAlbum.html" title="Emote Album">Emote Album (lv22)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Friends.html" title="Bạn bè (Friends)">Bạn bè (lv44)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📡 Live-ops &amp; hạ tầng <span class="n">8</span></summary><ul><li><a href="../features/Analytics.html">Analytics<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AssetBundles.html">Bundle &amp; tải tài nguyên<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemoteConfig.html">Cấu hình từ xa &amp; AB test<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ServerCommunication.html">Giao tiếp server<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EventsFramework.html">Khung sự kiện<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SaveSync.html">Lưu &amp; đồng bộ dữ liệu<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Notifications.html">Thông báo<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FeatureDependency.html">Ưu tiên &amp; mở tính năng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>⚙️ Meta &amp; UI <span class="n">9</span></summary><ul><li><a href="../features/Settings.html">Cài đặt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Support.html">Hỗ trợ (Helpshift)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Loading.html">Loading &amp; splash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HomeUI.html">Màn hình Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Onboarding.html">Onboarding &amp; tutorial Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AppUpdate.html">Phiên bản &amp; cập nhật<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Privacy.html">Quyền riêng tư &amp; phụ huynh<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Account.html">Tài khoản &amp; đăng nhập<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RateUs.html" title="Đánh giá app">Đánh giá app (lv15)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📊 Phân tích & đánh giá <span class="n">6</span></summary><ul><li><a href="../analysis/index.html">Tất cả phân tích</a></li><li><a href="../analysis/01-sale-event-flows.html">Luồng Sale &amp; Event của Royal Kingdom — từ server tới phần thưởng</a></li><li><a href="../analysis/02-deep-dive.html">Phân tích chuyên sâu — Độ khó, bộ level, hệ số nhân, AB test và kinh tế của thất bại</a></li><li><a href="../analysis/03-iap-packages.html">Phân tích từng gói IAP — Royal Kingdom</a></li><li><a href="../analysis/04-user-segmentation.html">Phân tệp người chơi — payer, segment và AB trong Royal Kingdom</a></li><li><a href="../analysis/05-economy.html">Kinh tế Royal Kingdom — nguồn, nơi tiêu và ngân sách mỗi 1.000 level</a></li><li><a href="../analysis/06-rk-vs-royal-match.html">Royal Kingdom so với Royal Match — cùng khung, khác lõi</a></li></ul></details><details open><summary>📎 Phụ lục <span class="n">47</span></summary><ul><li><a href="../appendix/events-overview.html">Tổng quan sự kiện</a></li><li><a href="../appendix/unlock-levels.html">Level mở khoá</a></li><li><a href="../appendix/reward-codes.html">Mã phần thưởng</a></li><li><a href="../appendix/iap-products.html">Sản phẩm IAP</a></li><li><a href="../appendix/levels-summary.html">Level &amp; thống kê</a></li><li><a href="../appendix/default-configs.html">Config mặc định trong APK</a></li><li><a href="../appendix/backend-protocol.html">Giao thức backend</a></li><li><a href="../appendix/enums.html">Enum</a></li><li><a href="../appendix/static-arrays.html">Mảng tĩnh (metadata)</a></li><li><a href="../appendix/localization.html">Text UI (EN)</a></li><li><a href="../appendix/save-state.html">Trạng thái lưu (save)</a></li><li><a href="../appendix/config-default-vs-live.html">Config mặc định vs live</a></li><li><a href="../appendix/asset-configs.html">Asset/config local — phạm vi và bằng chứng</a></li><li class=cur><a href="../appendix/blitz-collect-calls.html">Blitz — các nơi gọi thu tia sét</a></li><li><a href="../appendix/bundle-config-catalog.html">Config giải từ asset bundle</a></li><li><a href="../appendix/bundle-localization.html">Localization từ bundle CDN Royal Kingdom</a></li><li><a href="../appendix/capture-plan.html">Ảnh cần chụp — kế hoạch đang thực hiện</a></li><li><a href="../appendix/card-collection-extended-native.html">Card Collection — điều kiện wildcard, hoàn tất và giao dịch</a></li><li><a href="../appendix/card-collection-extended-playtest.html">Card Collection — wildcard, hoàn tất bộ, Diamond và Ultimate</a></li><li><a href="../appendix/card-collection-playtest.html">Card Collection — kiểm thử rương và thẻ trùng 12/11/2026</a></li><li><a href="../appendix/card-collection-season10.html">Card Collection — toàn bộ season10 từ config client</a></li><li><a href="../appendix/cdn-quality-coverage.html">Độ phủ bundle: CDN, APK và config runtime</a></li><li><a href="../appendix/client-config-samples-after_ab56_57.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-after_dependency_mc.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-forced151.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/config-leaf-diff.html">So sánh từng trường config — kết quả tái sinh</a></li><li><a href="../appendix/config-playtest-diff.html">Config trước/sau playtest và override</a></li><li><a href="../appendix/cube-blast-outcomes.html">Cube Blast — kết quả kiểm chứng cập nhật</a></li><li><a href="../appendix/design-uncertainty-scan.html">Rà soát thiếu design và cấu hình server</a></li><li><a href="../appendix/difficulty-vignette-assets.html">Loading vignette — giá trị asset đã giải</a></li><li><a href="../appendix/event-outcome-playtest.html">Event outcomes — 12/11/2026</a></li><li><a href="../appendix/followup-outcomes.html">Follow-up Dungeon, trao đổi thẻ và chuyển mùa — 12/11/2026</a></li><li><a href="../appendix/gaps.html">Khoảng trống và giới hạn bằng chứng — 12/11/2026</a></li><li><a href="../appendix/kingdom-tasks.html">Kingdom — asset, task và localization</a></li><li><a href="../appendix/magic-carnival-config-selection.html">Magic Carnival — lựa chọn primary/secondary</a></li><li><a href="../appendix/magic-carnival-expiry-theme-native.html">Magic Carnival — hết giờ và fallback theme</a></li><li><a href="../appendix/magic-carnival-initial-orbs.html">MagicCarnival —2orbkhởiđầu</a></li><li><a href="../appendix/magic-carnival-manipulation.html">Magic Carnival — thuật toán thay nội dung orb</a></li><li><a href="../appendix/magic-carnival-mission-findings.html">Magic Carnival: tiến độ Mission khi ghép đúng</a></li><li><a href="../appendix/magic-carnival-runtime-cases.html">Magic Carnival — playtest theo trạng thái,12/11/2026</a></li><li><a href="../appendix/playtest-20261112.html">Quan sát playtest 12/11/2026</a></li><li><a href="../appendix/playtest-case-matrix.html">Ma trận use case cần kiểm chứng</a></li><li><a href="../appendix/richards-journey-outcomes.html">Richard’s Journey — gameplay và thưởng</a></li><li><a href="../appendix/save-state-inventory.html">Kiểm kê SQLite tái sinh — snapshot 11/11/2026</a></li><li><a href="../appendix/verified-findings.html">Kết quả kiểm chứng local — 12/11/2026</a></li><li><a href="../appendix/about.html">Về tài liệu này</a></li></ul></details>
+</aside>
+<main class="content"><div class="inner">
+<div class="crumbs"><a href="../index.html">Trang chủ</a> › Blitz — các nơi gọi thu tia sét</div><h1 class="title">Blitz — các nơi gọi thu tia sét</h1><p class="tagline"> <span class="muted">· nguồn <code>appendix/blitz-collect-calls.md</code></span></p><div class="md"><p>Đã tìm thấy 7 callsite trong 6 lớp. Default.StartElectroBallCollectForEvents, Default.SingleRayReached, Dynamite/Rocket/Spinner.SingleRayReached và Special.Start truyền amount=1; coroutine ElectroElectroComboView truyền chênh lệch bộ đếm. Không suy ra tổng mỗi combo chỉ từ một callsite: còn điều kiện, vòng lặp và hệ số. Wrapper kiểm tra event hợp lệ; Add dùng amount × Multiplier.</p>
+<p>// ===== DefaultElectroBallStrategy :: private void StartElectroBallCollectForEvents()   [RVA 0x2E16818, ok]</p>
+<p>Nguồn: <code>Royal/Scenes/Game/Mechanics/Items/SpecialItems/ElectroBallItem/Strategy/DefaultElectroBallStrategy.c</code>; SHA256 <code>b9ad421605d60d9c0151fc246cb8d9134d9ba90cff1d2c1f0d2d999a9028f675</code>.</p>
+<pre><code>// ===== DefaultElectroBallStrategy :: private void StartElectroBallCollectForEvents()   [RVA 0x2E16818, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+void Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_DefaultElectroBallStrategy__StartElectroBallCollectForEvents
+               (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_DefaultElectroBallStrategy_o
+                *__this,MethodInfo *method)
+
+{
+  int iVar1;
+  int32_t delta;
+  uint uVar2;
+  bool bVar3;
+  System_String_o *pSVar4;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o *pRVar5;
+  Royal_Player_Context_Data_Session_LastPlayedLevelData_o *pRVar6;
+  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *pRVar7;
+  Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *pRVar8;
+  Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *pRVar9;
+  MethodInfo *extraout_x1;
+  MethodInfo *method_00;
+  MethodInfo *method_01;
+  MethodInfo *method_02;
+  MethodInfo *method_03;
+  TMPro_TextMeshPro_array *pTVar10;
+  TMPro_TextMeshPro_o *pTVar11;
+  Royal_Scenes_Home_Ui_Dialogs_KingdomDuels_KingdomDuelsGameplayCollectView_o *pRVar12;
+  long lVar13;
+  undefined8 in_d1;
+  undefined8 in_d2;
+  UnityEngine_Vector3_o initialPosition;
+  UnityEngine_Vector3_o initialPosition_00;
+  UnityEngine_Vector3_o initialPosition_01;
+  Royal_Scenes_Game_Mechanics_Sortings_SortingData_o RVar14;
+  
+  if ((DAT_051a5233 &amp; 1) == 0) {
+    FUN_021edf74(&amp;Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo);
+    DAT_051a5233 = 1;
+  }
+  pRVar5 = (__this-&gt;fields).super.electroBallModel;
+  if (pRVar5 != (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o
+                 *)0x0) {
+    initialPosition.fields.x =
+         (*(pRVar5-&gt;klass-&gt;vtable)._39_GetViewPosition.methodPtr)
+                   (pRVar5,(pRVar5-&gt;klass-&gt;vtable)._39_GetViewPosition.method);
+    RVar14 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__GetElectroBallSorting
+                       ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+                         *)__this,method_01);
+    if ((Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo-&gt;_2).cctor_finished == 0) {
+      thunk_FUN_021c3bd4();
+    }
+    RVar14 = Royal_Scenes_Game_Mechanics_Sortings_Sorting__GetSortingWithOffset
+                       (RVar14,-1,(MethodInfo *)0x0);
+    pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current((MethodInfo *)0x0);
+    if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+       (pRVar7 = (pRVar6-&gt;fields).blitzLevelDataWrapper,
+       pRVar7 != (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+      initialPosition.fields.y = (undefined4)in_d1;
+      initialPosition.fields.z = (float)in_d2;
+      Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__StartElectroBlitzIcon
+                (pRVar7,initialPosition,RVar14,(MethodInfo *)0x0);
+      pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current((MethodInfo *)0x0)
+      ;
+      if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+         (pRVar7 = (pRVar6-&gt;fields).blitzLevelDataWrapper,
+         pRVar7 != (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+        Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__TryCollectLightningBolts
+                  (pRVar7,1,(MethodInfo *)0x0);
+        pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                           ((MethodInfo *)0x0);
+        if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+           (pRVar8 = (pRVar6-&gt;fields).powerRushLevelData,
+           pRVar8 != (Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *)0x0)) {
+          initialPosition_00.fields.y = (float)initialPosition.fields.y;
+          initialPosition_00.fields.x = (float)initialPosition.fields.x;
+          initialPosition_00.fields.z = initialPosition.fields.z;
+          Royal_Player_Context_Units_PowerRush_PowerRushLevelData__StartIncrementPowerRushElectroBallIcon
+                    (pRVar8,initialPosition_00,0,(MethodInfo *)0x0);
+          pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                             ((MethodInfo *)0x0);
+          if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+             (pRVar8 = (pRVar6-&gt;fields).powerRushLevelData,
+             pRVar8 != (Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *)0x0)) {
+            Royal_Player_Context_Units_PowerRush_PowerRushLevelData__TryIncrementPowerRushElectroBall
+                      (pRVar8,1,(MethodInfo *)0x0);
+            pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                               ((MethodInfo *)0x0);
+            if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+               (pRVar9 = (pRVar6-&gt;fields).kingdomDuelsData,
+               pRVar9 != (Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *)0x0)) {
+              initialPosition_01.fields.y = (float)initialPosition.fields.y;
+              initialPosition_01.fields.x = (float)initialPosition.fields.x;
+              initialPosition_01.fields.z = initialPosition.fields.z;
+              Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__StartIncrementKingdomDuelsElectroBallIcon
+                        (pRVar9,initialPosition_01,0,(MethodInfo *)0x0);
+              pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                 ((MethodInfo *)0x0);
+              if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                 (pRVar9 = (pRVar6-&gt;fields).kingdomDuelsData,
+                 pRVar9 != (Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *)0x0))
+              {
+                method_02 = (MethodInfo *)0x1;
+                method_03 = (MethodInfo *)0x0;
+                if ((DAT_0519f224 &amp; 1) == 0) {
+                  FUN_021edf74(&amp;UnityEngine_Object_TypeInfo);
+                  DAT_0519f224 = 1;
+                  method_02 = extraout_x1;
+                }
+                bVar3 = Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__HasValidEventId
+                                  (pRVar9,method_02);
+                if (((!bVar3) ||
+                    (bVar3 = Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__get_CanIncreaseScore
+                                       (pRVar9,method_00), !bVar3)) ||
+                   ((pRVar9-&gt;fields).electroBallIncrementIconCount &lt; 1)) {
+                  return;
+                }
+                pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                   ((MethodInfo *)0x0);
+                if (pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) {
+                  delta = (pRVar6-&gt;fields).enteredLevelMultiplier;
+                  Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__AddScore
+                            (pRVar9,delta,method_03);
+                  pRVar12 = (pRVar9-&gt;fields).electroBallCollectView;
+                  if ((UnityEngine_Object_TypeInfo-&gt;_2).cctor_finished == 0) {
+                    thunk_FUN_021c3bd4();
+                  }
+                  bVar3 = UnityEngine_Object__op_Inequality
+                                    ((UnityEngine_Object_o *)pRVar12,(UnityEngine_Object_o *)0x0,
+                                     (MethodInfo *)0x0);
+                  if (!bVar3) {
+                    return;
+                  }
+                  pRVar12 = (pRVar9-&gt;fields).electroBallCollectView;
+                  if (pRVar12 !=
+                      (Royal_Scenes_Home_Ui_Dialogs_KingdomDuels_KingdomDuelsGameplayCollectView_o *
+                      )0x0) {
+                    iVar1 = (pRVar12-&gt;fields).targetCount + delta;
+                    (pRVar12-&gt;fields).targetCount = iVar1;
+                    (pRVar12-&gt;fields).currentScore = (pRVar12-&gt;fields).currentScore + delta;
+                    if ((DAT_051a2eb8 &amp; 1) == 0) {
+                      FUN_021edf74(&amp;StringLiteral_1562 /* &quot;&lt;b&gt;+&lt;/b&gt;&quot; */,iVar1,0);
+                      DAT_051a2eb8 = 1;
+                    }
+                    pTVar10 = (pRVar12-&gt;fields).countTexts;
+                    if (pTVar10 != (TMPro_TextMeshPro_array *)0x0) {
+                      lVar13 = 0;
+                      do {
+                        uVar2 = (uint)pTVar10-&gt;max_length;
+                        if ((int)uVar2 &lt;= (int)(uint)lVar13) {
+                          return;
+                        }
+                        if (uVar2 &lt;= (uint)lVar13) {
+                    /* WARNING: Subroutine does not return */
+                          FUN_021ee1d8();
+                        }
+                        pTVar11 = pTVar10-&gt;m_Items[lVar13];
+                        pSVar4 = System_Int32__ToString
+                                           ((int32_t)&amp;stack0xffffffffffffffdc,(MethodInfo *)0x0);
+                        pSVar4 = System_String__Concat(StringLiteral_1562 /* &quot;&lt;b&gt;+&lt;/b&gt;&quot; */,pSVar4,(MethodInfo *)0x0);
+                        if (pTVar11 == (TMPro_TextMeshPro_o *)0x0) break;
+                        (*(pTVar11-&gt;klass-&gt;vtable)._66_set_text.methodPtr)
+                                  (pTVar11,pSVar4,(pTVar11-&gt;klass-&gt;vtable)._66_set_text.method);
+                        pTVar10 = (pRVar12-&gt;fields).countTexts;
+                        lVar13 = lVar13 + 1;
+                      } while (pTVar10 != (TMPro_TextMeshPro_array *)0x0);
+                    }
+                    /* WARNING: Subroutine does not return */
+                    FUN_021ee1d0();
+                  }
+                }
+                    /* WARNING: Subroutine does not return */
+                FUN_021ee1d0();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<p>// ===== DefaultElectroBallStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E16F38, ok]</p>
+<p>Nguồn: <code>Royal/Scenes/Game/Mechanics/Items/SpecialItems/ElectroBallItem/Strategy/DefaultElectroBallStrategy.c</code>; SHA256 <code>89a8c423920ced5ca4e9a640281fa92d78a7f5eac351178f226a7a5658bc00d5</code>.</p>
+<pre><code>// ===== DefaultElectroBallStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E16F38, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *
+Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_DefaultElectroBallStrategy__SingleRayReached
+          (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_DefaultElectroBallStrategy_o
+           *__this,Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+                   *electroBallRay,Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *itemModel,
+          MethodInfo *method)
+
+{
+  byte bVar1;
+  int32_t itemType;
+  Royal_Scenes_Game_Mechanics_Items_Config_ItemView_o *__this_00;
+  UnityEngine_Transform_o *__this_01;
+  Royal_Player_Context_Data_Session_LastPlayedLevelData_o *pRVar2;
+  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *__this_02;
+  Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *__this_03;
+  Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *__this_04;
+  Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *pRVar3;
+  Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *__this_05;
+  Royal_Scenes_Game_Mechanics_Items_StaticItems_StaticItemModel_o *pRVar4;
+  long *plVar5;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *extraout_x1;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *electroBallRay_00;
+  Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_c *pRVar6;
+  UnityEngine_Vector3_o position;
+  Royal_Scenes_Game_Mechanics_Sortings_SortingData_o RVar7;
+  
+  electroBallRay_00 = electroBallRay;
+  if ((DAT_051a5236 &amp; 1) == 0) {
+    FUN_021edf74(&amp;Royal_Scenes_Game_Mechanics_Items_MatchItem_MatchItemModel_TypeInfo);
+    FUN_021edf74(&amp;Royal_Scenes_Game_Mechanics_Items_MatchItem_View_MatchItemView_TypeInfo);
+    FUN_021edf74(&amp;Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo);
+    DAT_051a5236 = 1;
+    electroBallRay_00 = extraout_x1;
+  }
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__SingleRayReached
+            ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+              *)__this,electroBallRay_00,itemModel,method);
+  if (itemModel != (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0) {
+    pRVar6 = itemModel-&gt;klass;
+    bVar1 = (Royal_Scenes_Game_Mechanics_Items_MatchItem_MatchItemModel_TypeInfo-&gt;_2).
+            naturalAligment;
+    if ((bVar1 &lt;= (pRVar6-&gt;_2).naturalAligment) &amp;&amp;
+       ((pRVar6-&gt;_2).typeHierarchy[(ulong)bVar1 - 1] ==
+        (Il2CppClass *)Royal_Scenes_Game_Mechanics_Items_MatchItem_MatchItemModel_TypeInfo)) {
+      __this_00 = (Royal_Scenes_Game_Mechanics_Items_Config_ItemView_o *)
+                  (*(pRVar6-&gt;vtable)._35_unknown.methodPtr)
+                            (itemModel,(pRVar6-&gt;vtable)._35_unknown.method);
+      if (__this_00 != (Royal_Scenes_Game_Mechanics_Items_Config_ItemView_o *)0x0) {
+        bVar1 = (Royal_Scenes_Game_Mechanics_Items_MatchItem_View_MatchItemView_TypeInfo-&gt;_2).
+                naturalAligment;
+        if (((__this_00-&gt;klass-&gt;_2).naturalAligment &lt; bVar1) ||
+           ((__this_00-&gt;klass-&gt;_2).typeHierarchy[(ulong)bVar1 - 1] !=
+            (Il2CppClass *)Royal_Scenes_Game_Mechanics_Items_MatchItem_View_MatchItemView_TypeInfo))
+        {
+                    /* WARNING: Subroutine does not return */
+          FUN_021ee570(__this_00);
+        }
+      }
+      if ((Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo-&gt;_2).cctor_finished == 0) {
+        thunk_FUN_021c3bd4();
+      }
+      RVar7 = Royal_Scenes_Game_Mechanics_Sortings_Sorting__GetElectroBallRayItemSorting
+                        ((MethodInfo *)0x0);
+      if (__this_00 != (Royal_Scenes_Game_Mechanics_Items_Config_ItemView_o *)0x0) {
+        Royal_Scenes_Game_Mechanics_Items_Config_ItemView__UpdateSortingForAnimation
+                  (__this_00,RVar7,false,(MethodInfo *)0x0);
+        itemType = (*(itemModel-&gt;klass-&gt;vtable)._30_get_ItemType.methodPtr)
+                             (itemModel,(itemModel-&gt;klass-&gt;vtable)._30_get_ItemType.method);
+        if (((__this_00[1].klass != (Royal_Scenes_Game_Mechanics_Items_Config_ItemView_c *)0x0) &amp;&amp;
+            (__this_01 = UnityEngine_Component__get_transform
+                                   ((UnityEngine_Component_o *)__this_00[1].klass,(MethodInfo *)0x0)
+            , __this_01 != (UnityEngine_Transform_o *)0x0)) &amp;&amp;
+           (position = UnityEngine_Transform__get_position(__this_01,(MethodInfo *)0x0),
+           electroBallRay !=
+           (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+            *)0x0)) {
+          Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__CreateItemBg
+                    (electroBallRay,itemType,position,(__this_00-&gt;fields).rootTransform,
+                     (MethodInfo *)0x0);
+          Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__ShakeItem
+                    (electroBallRay,(__this_00-&gt;fields).rootTransform,true,false,(MethodInfo *)0x0);
+          pRVar2 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                             ((MethodInfo *)0x0);
+          if ((pRVar2 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+             (__this_02 = (pRVar2-&gt;fields).blitzLevelDataWrapper,
+             __this_02 != (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0
+             )) {
+            Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__TryCollectLightningBolts
+                      (__this_02,1,(MethodInfo *)0x0);
+            pRVar2 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                               ((MethodInfo *)0x0);
+            if ((pRVar2 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+               (__this_03 = (pRVar2-&gt;fields).powerRushLevelData,
+               __this_03 != (Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *)0x0)) {
+              Royal_Player_Context_Units_PowerRush_PowerRushLevelData__TryIncrementPowerRushElectroBall
+                        (__this_03,1,(MethodInfo *)0x0);
+              pRVar2 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                 ((MethodInfo *)0x0);
+              if ((pRVar2 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                 (__this_04 = (pRVar2-&gt;fields).kingdomDuelsData,
+                 __this_04 != (Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *)0x0
+                 )) {
+                Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__TryIncrementKingdomDuelsElectroBall
+                          (__this_04,1,(MethodInfo *)0x0);
+                pRVar3 = Royal_Scenes_Game_Mechanics_Items_Config_ItemModel__get_CurrentCell
+                                   (itemModel,(MethodInfo *)0x0);
+                if (pRVar3 == (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) {
+                  return itemModel;
+                }
+                __this_05 = (pRVar3-&gt;fields)._StaticMediator_k__BackingField;
+                if (__this_05 ==
+                    (Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *)0x0) {
+                  return itemModel;
+                }
+                pRVar4 = Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator__GetStaticItem
+                                   (__this_05,5,(MethodInfo *)0x0);
+                if (pRVar4 == (Royal_Scenes_Game_Mechanics_Items_StaticItems_StaticItemModel_o *)0x0
+                   ) {
+                  return itemModel;
+                }
+                plVar5 = (long *)(*(pRVar4-&gt;klass-&gt;vtable)._28_unknown.methodPtr)
+                                           (pRVar4,(pRVar4-&gt;klass-&gt;vtable)._28_unknown.method);
+                if ((Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo-&gt;_2).cctor_finished == 0)
+                {
+                  thunk_FUN_021c3bd4(Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo);
+                }
+                RVar7 = Royal_Scenes_Game_Mechanics_Sortings_Sorting__GetElectroBallRayItemSorting
+                                  ((MethodInfo *)0x0);
+                RVar7 = Royal_Scenes_Game_Mechanics_Sortings_Sorting__GetSortingWithOffset
+                                  (RVar7,100,(MethodInfo *)0x0);
+                if (plVar5 != (long *)0x0) {
+                  (**(code **)(*plVar5 + 0x1f8))
+                            (plVar5,RVar7.fields._0_8_,RVar7.fields._8_4_,
+                             *(undefined8 *)(*plVar5 + 0x200));
+                  return itemModel;
+                }
+              }
+            }
+          }
+        }
+      }
+                    /* WARNING: Subroutine does not return */
+      FUN_021ee1d0();
+    }
+  }
+  return itemModel;
+}
+
+
+</code></pre>
+<p>// ===== ElectroBallDynamiteStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E188D8, ok]</p>
+<p>Nguồn: <code>Royal/Scenes/Game/Mechanics/Items/SpecialItems/ElectroBallItem/Strategy/ElectroBallDynamiteStrategy.c</code>; SHA256 <code>0c91e34ddf8c094cc8b2287ee14c9991cce76d22c05893f9e463879d0b07517d</code>.</p>
+<pre><code>// ===== ElectroBallDynamiteStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E188D8, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *
+Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallDynamiteStrategy__SingleRayReached
+          (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallDynamiteStrategy_o
+           *__this,Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+                   *electroBallRay,Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *itemModel,
+          MethodInfo *method)
+
+{
+  byte bVar1;
+  long lVar2;
+  bool bVar3;
+  int32_t itemType;
+  Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *pRVar4;
+  Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *__this_00;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *createdItem;
+  System_Action_o *onExplode;
+  undefined8 uVar5;
+  UnityEngine_Transform_o *__this_02;
+  Royal_Player_Context_Data_Session_LastPlayedLevelData_o *pRVar6;
+  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *__this_03;
+  Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *__this_04;
+  Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *__this_05;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *extraout_x1;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *electroBallRay_00;
+  Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *method_00;
+  MethodInfo *in_x4;
+  UnityEngine_Component_o *__this_06;
+  long lVar7;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator_o *__this_07;
+  long *plVar8;
+  float fVar9;
+  UnityEngine_Vector3_o UVar10;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_150;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_110;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_d0;
+  undefined4 uStack_91;
+  undefined8 local_80;
+  undefined4 uStack_71;
+  long local_68;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+  *__this_01;
+  
+  lVar2 = tpidr_el0;
+  local_68 = *(long *)(lVar2 + 0x28);
+  electroBallRay_00 = electroBallRay;
+  if ((DAT_051a5241 &amp; 1) == 0) {
+    FUN_021edf74(&amp;System_Action_TypeInfo);
+    FUN_021edf74(&amp;
+                 Royal_Scenes_Game_Mechanics_Items_SpecialItems_DynamiteItem_DynamiteItemModel_TypeInfo
+                );
+    FUN_021edf74(&amp;
+                 Method_Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallDynamiteStrategy_OnElectroCreationAnimationComplete__
+                );
+    FUN_021edf74(&amp;
+                 Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallDynamiteStrategy_TypeInfo
+                );
+    FUN_021edf74(&amp;
+                 Method_Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_EndRayRecycleSelf__
+                );
+    DAT_051a5241 = 1;
+    electroBallRay_00 = extraout_x1;
+  }
+  method_00 = itemModel;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__SingleRayReached
+            ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+              *)__this,electroBallRay_00,itemModel,method);
+  if (itemModel != (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0) {
+    pRVar4 = Royal_Scenes_Game_Mechanics_Items_Config_ItemModel__get_CurrentCell
+                       (itemModel,(MethodInfo *)0x0);
+    __this_01 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                 *)0x0;
+    if (pRVar4 != (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) {
+      pRVar4 = Royal_Scenes_Game_Mechanics_Items_Config_ItemModel__get_CurrentCell
+                         (itemModel,(MethodInfo *)0x0);
+      if ((pRVar4 == (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) ||
+         (__this_00 = (pRVar4-&gt;fields)._StaticMediator_k__BackingField,
+         __this_00 == (Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *)0x0))
+      goto LAB_02f18c80;
+      method_00 = (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0;
+      bVar3 = Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator__HasStaticItem
+                        (__this_00,5,(MethodInfo *)0x0);
+      __this_01 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                   *)(ulong)bVar3;
+      if (bVar3) {
+        Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__ExplodeChainAndResetItem
+                  ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                    *)__this,itemModel,(MethodInfo *)method_00);
+        createdItem = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)itemModel
+        ;
+        goto LAB_02f18c48;
+      }
+    }
+    pRVar4 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__RemoveAnItemFromCell
+                       (__this_01,itemModel,(MethodInfo *)method_00);
+    Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator__GetSettingsForTileId
+              ((Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_o *)&amp;local_110,0x28,
+               (System_Nullable_int__o)0x0,(MethodInfo *)0x0);
+    local_d0.saveData.fields.value = local_110.saveData.fields.value;
+    local_d0.staticItemType = local_110.staticItemType;
+    local_d0.overlayItemType = local_110.overlayItemType;
+    local_d0.tiledId = local_110.tiledId;
+    local_d0.itemType = local_110.itemType;
+    local_d0.goalType = local_110.goalType;
+    local_d0.saveData.fields.hasValue = local_110.saveData.fields.hasValue;
+    local_d0.saveData.fields._1_3_ = local_110.saveData.fields._1_3_;
+    local_d0.layerCount = local_110.layerCount;
+    local_d0.matchType = local_110.matchType;
+    local_80 = local_110._37_8_;
+    uStack_71 = local_110._52_4_;
+    __this_07 = (__this-&gt;fields).super.super.itemModelCreator;
+    local_d0._48_8_ = local_110._37_8_;
+    uStack_91 = local_110._52_4_;
+    if ((pRVar4 != (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) &amp;&amp;
+       (UVar10 = Royal_Scenes_Game_Mechanics_Board_Cell_CellModel__get_LocalPosition
+                           (pRVar4,(MethodInfo *)0x0),
+       __this_07 != (Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator_o *)0x0)) {
+      local_150.isCreatedByElectroBall = true;
+      local_150.staticItemType = local_110.staticItemType;
+      local_150.overlayItemType = local_110.overlayItemType;
+      local_150.tiledId = local_110.tiledId;
+      local_150.itemType = local_110.itemType;
+      local_150.goalType = local_110.goalType;
+      local_150.saveData.fields.hasValue = local_110.saveData.fields.hasValue;
+      local_150.saveData.fields._1_3_ = local_110.saveData.fields._1_3_;
+      local_150.layerCount = local_110.layerCount;
+      local_150.matchType = local_110.matchType;
+      local_150.saveData.fields.value = local_110.saveData.fields.value;
+      local_150._37_8_ = local_d0._48_8_;
+      local_150._52_4_ = uStack_91;
+      createdItem = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)
+                    Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator__CreateItemWithSettings
+                              (__this_07,
+                               (Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_o *)
+                               &amp;local_150,UVar10,true,(MethodInfo *)0x0);
+      if (createdItem != (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)0x0) {
+        bVar1 = (
+                Royal_Scenes_Game_Mechanics_Items_SpecialItems_DynamiteItem_DynamiteItemModel_TypeInfo
+                -&gt;_2).naturalAligment;
+        if (((createdItem-&gt;klass-&gt;_2).naturalAligment &lt; bVar1) ||
+           ((createdItem-&gt;klass-&gt;_2).typeHierarchy[(ulong)bVar1 - 1] !=
+            (Il2CppClass *)
+            Royal_Scenes_Game_Mechanics_Items_SpecialItems_DynamiteItem_DynamiteItemModel_TypeInfo))
+        {
+                    /* WARNING: Subroutine does not return */
+          FUN_021ee570(createdItem);
+        }
+        (createdItem-&gt;fields)._ReplacedMatchType_k__BackingField =
+             (itemModel-&gt;fields)._MatchType_k__BackingField;
+        onExplode = (System_Action_o *)thunk_FUN_02248ff4(System_Action_TypeInfo);
+        System_Action___ctor();
+        Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__PutItemToCell
+                  ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                    *)__this,createdItem,pRVar4,onExplode,in_x4);
+        (__this-&gt;fields).activeComboCreationAnimations =
+             (__this-&gt;fields).activeComboCreationAnimations + 1;
+        plVar8 = *(long **)&amp;createdItem[1].fields.super._GoalType_k__BackingField;
+        if ((
+            Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallDynamiteStrategy_TypeInfo
+            -&gt;_2).cctor_finished == 0) {
+          thunk_FUN_021c3bd4();
+        }
+        fVar9 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallDynamiteStrategy_TypeInfo
+                -&gt;static_fields-&gt;frame;
+        uVar5 = thunk_FUN_02248ff4(System_Action_TypeInfo);
+        System_Action___ctor();
+        if (plVar8 != (long *)0x0) {
+          (**(code **)(*plVar8 + 0x3d8))(fVar9 / 73.0,plVar8,uVar5,*(undefined8 *)(*plVar8 + 0x3e0))
+          ;
+          itemType = (*(createdItem-&gt;klass-&gt;vtable)._30_get_ItemType.methodPtr)
+                               (createdItem,(createdItem-&gt;klass-&gt;vtable)._30_get_ItemType.method);
+          __this_06 = *(UnityEngine_Component_o **)
+                       &amp;createdItem[1].fields.super._GoalType_k__BackingField;
+          if ((__this_06 != (UnityEngine_Component_o *)0x0) &amp;&amp;
+             (__this_02 = UnityEngine_Component__get_transform(__this_06,(MethodInfo *)0x0),
+             __this_02 != (UnityEngine_Transform_o *)0x0)) {
+            UVar10 = UnityEngine_Transform__get_position(__this_02,(MethodInfo *)0x0);
+            lVar7 = *(long *)&amp;createdItem[1].fields.super._GoalType_k__BackingField;
+            if ((lVar7 != 0) &amp;&amp;
+               (electroBallRay !=
+                (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+                 *)0x0)) {
+              Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__CreateItemBg
+                        (electroBallRay,itemType,UVar10,
+                         *(Royal_Scenes_Game_Mechanics_Items_Config_RootTransform_o **)
+                          (lVar7 + 0x48),(MethodInfo *)0x0);
+              lVar7 = *(long *)&amp;createdItem[1].fields.super._GoalType_k__BackingField;
+              if (lVar7 != 0) {
+                Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__ShakeItem
+                          (electroBallRay,
+                           *(Royal_Scenes_Game_Mechanics_Items_Config_RootTransform_o **)
+                            (lVar7 + 0x48),true,true,(MethodInfo *)0x0);
+                pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                   ((MethodInfo *)0x0);
+                if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                   (__this_03 = (pRVar6-&gt;fields).blitzLevelDataWrapper,
+                   __this_03 !=
+                   (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+                  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__TryCollectLightningBolts
+                            (__this_03,1,(MethodInfo *)0x0);
+                  pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                     ((MethodInfo *)0x0);
+                  if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                     (__this_04 = (pRVar6-&gt;fields).powerRushLevelData,
+                     __this_04 != (Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *)0x0))
+                  {
+                    Royal_Player_Context_Units_PowerRush_PowerRushLevelData__TryIncrementPowerRushElectroBall
+                              (__this_04,10,(MethodInfo *)0x0);
+                    pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                       ((MethodInfo *)0x0);
+                    if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0)
+                       &amp;&amp; (__this_05 = (pRVar6-&gt;fields).kingdomDuelsData,
+                          __this_05 !=
+                          (Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *)0x0)) {
+                      Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__TryIncrementKingdomDuelsElectroBall
+                                (__this_05,10,(MethodInfo *)0x0);
+LAB_02f18c48:
+                      if (*(long *)(lVar2 + 0x28) == local_68) {
+                        return (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)createdItem;
+                      }
+                    /* WARNING: Subroutine does not return */
+                      __stack_chk_fail();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+LAB_02f18c80:
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<p>// ===== ElectroBallRocketStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E19FE4, ok]</p>
+<p>Nguồn: <code>Royal/Scenes/Game/Mechanics/Items/SpecialItems/ElectroBallItem/Strategy/ElectroBallRocketStrategy.c</code>; SHA256 <code>55245a261fea7d56bf2c6130dfb3ab6d90c0f7036619fed2ec6092e9fd6e7f32</code>.</p>
+<pre><code>// ===== ElectroBallRocketStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E19FE4, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *
+Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy__SingleRayReached
+          (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy_o
+           *__this,Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+                   *electroBallRay,Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *itemModel,
+          MethodInfo *method)
+
+{
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy_StaticFields
+  *pRVar1;
+  int iVar2;
+  byte bVar3;
+  long lVar4;
+  bool bVar5;
+  int32_t iVar6;
+  Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *pRVar7;
+  Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *__this_00;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *createdItem;
+  System_Action_o *onExplode;
+  UnityEngine_Transform_o *__this_02;
+  Royal_Player_Context_Data_Session_LastPlayedLevelData_o *pRVar8;
+  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *__this_03;
+  Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *__this_04;
+  Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *__this_05;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *extraout_x1;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *electroBallRay_00;
+  Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *method_00;
+  MethodInfo *in_x4;
+  Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator_o *pRVar9;
+  float fVar10;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator_o *__this_06;
+  UnityEngine_Vector3_o UVar11;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_140;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_100;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_c0;
+  undefined4 uStack_81;
+  undefined8 local_70;
+  undefined4 uStack_61;
+  long local_58;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+  *__this_01;
+  
+  lVar4 = tpidr_el0;
+  local_58 = *(long *)(lVar4 + 0x28);
+  electroBallRay_00 = electroBallRay;
+  if ((DAT_051a5249 &amp; 1) == 0) {
+    FUN_021edf74(&amp;System_Action_TypeInfo);
+    FUN_021edf74(&amp;
+                 Method_Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_EndRayRecycleSelf__
+                );
+    FUN_021edf74(&amp;
+                 Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy_TypeInfo
+                );
+    FUN_021edf74(&amp;Royal_Scenes_Game_Mechanics_Items_SpecialItems_RocketItem_RocketItemModel_TypeInfo
+                );
+    DAT_051a5249 = 1;
+    electroBallRay_00 = extraout_x1;
+  }
+  method_00 = itemModel;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__SingleRayReached
+            ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+              *)__this,electroBallRay_00,itemModel,method);
+  if (itemModel != (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0) {
+    pRVar7 = Royal_Scenes_Game_Mechanics_Items_Config_ItemModel__get_CurrentCell
+                       (itemModel,(MethodInfo *)0x0);
+    __this_01 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                 *)0x0;
+    if (pRVar7 != (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) {
+      pRVar7 = Royal_Scenes_Game_Mechanics_Items_Config_ItemModel__get_CurrentCell
+                         (itemModel,(MethodInfo *)0x0);
+      if ((pRVar7 == (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) ||
+         (__this_00 = (pRVar7-&gt;fields)._StaticMediator_k__BackingField,
+         __this_00 == (Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *)0x0))
+      goto LAB_02f1a36c;
+      method_00 = (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0;
+      bVar5 = Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator__HasStaticItem
+                        (__this_00,5,(MethodInfo *)0x0);
+      __this_01 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                   *)(ulong)bVar5;
+      if (bVar5) {
+        Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__ExplodeChainAndResetItem
+                  ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                    *)__this,itemModel,(MethodInfo *)method_00);
+        createdItem = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)itemModel
+        ;
+        goto LAB_02f1a33c;
+      }
+    }
+    pRVar7 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__RemoveAnItemFromCell
+                       (__this_01,itemModel,(MethodInfo *)method_00);
+    iVar6 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy__GetCurrentTiledId
+                      (__this,(itemModel-&gt;fields)._Id_k__BackingField,(MethodInfo *)method_00);
+    Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator__GetSettingsForTileId
+              ((Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_o *)&amp;local_100,iVar6,
+               (System_Nullable_int__o)0x0,(MethodInfo *)0x0);
+    local_c0.saveData.fields.value = local_100.saveData.fields.value;
+    local_c0.staticItemType = local_100.staticItemType;
+    local_c0.overlayItemType = local_100.overlayItemType;
+    local_c0.tiledId = local_100.tiledId;
+    local_c0.itemType = local_100.itemType;
+    local_c0.goalType = local_100.goalType;
+    local_c0.saveData.fields.hasValue = local_100.saveData.fields.hasValue;
+    local_c0.saveData.fields._1_3_ = local_100.saveData.fields._1_3_;
+    local_c0.layerCount = local_100.layerCount;
+    local_c0.matchType = local_100.matchType;
+    local_70 = local_100._37_8_;
+    uStack_61 = local_100._52_4_;
+    __this_06 = (__this-&gt;fields).super.super.itemModelCreator;
+    local_c0._48_8_ = local_100._37_8_;
+    uStack_81 = local_100._52_4_;
+    if ((pRVar7 != (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) &amp;&amp;
+       (UVar11 = Royal_Scenes_Game_Mechanics_Board_Cell_CellModel__get_LocalPosition
+                           (pRVar7,(MethodInfo *)0x0),
+       __this_06 != (Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator_o *)0x0)) {
+      local_140.isCreatedByElectroBall = true;
+      local_140.staticItemType = local_100.staticItemType;
+      local_140.overlayItemType = local_100.overlayItemType;
+      local_140.tiledId = local_100.tiledId;
+      local_140.itemType = local_100.itemType;
+      local_140.goalType = local_100.goalType;
+      local_140.saveData.fields.hasValue = local_100.saveData.fields.hasValue;
+      local_140.saveData.fields._1_3_ = local_100.saveData.fields._1_3_;
+      local_140.layerCount = local_100.layerCount;
+      local_140.matchType = local_100.matchType;
+      local_140.saveData.fields.value = local_100.saveData.fields.value;
+      local_140._37_8_ = local_c0._48_8_;
+      local_140._52_4_ = uStack_81;
+      createdItem = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)
+                    Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator__CreateItemWithSettings
+                              (__this_06,
+                               (Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_o *)
+                               &amp;local_140,UVar11,true,(MethodInfo *)0x0);
+      if (createdItem != (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)0x0) {
+        bVar3 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_RocketItem_RocketItemModel_TypeInfo
+                -&gt;_2).naturalAligment;
+        if (((createdItem-&gt;klass-&gt;_2).naturalAligment &lt; bVar3) ||
+           ((createdItem-&gt;klass-&gt;_2).typeHierarchy[(ulong)bVar3 - 1] !=
+            (Il2CppClass *)
+            Royal_Scenes_Game_Mechanics_Items_SpecialItems_RocketItem_RocketItemModel_TypeInfo)) {
+                    /* WARNING: Subroutine does not return */
+          FUN_021ee570(createdItem);
+        }
+        (createdItem-&gt;fields)._ReplacedMatchType_k__BackingField =
+             (itemModel-&gt;fields)._MatchType_k__BackingField;
+        onExplode = (System_Action_o *)thunk_FUN_02248ff4(System_Action_TypeInfo);
+        System_Action___ctor();
+        Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__PutItemToCell
+                  ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                    *)__this,createdItem,pRVar7,onExplode,in_x4);
+        iVar2 = *(int *)&amp;createdItem[1].fields.super._OverlayItemMediator_k__BackingField;
+        if ((
+            Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy_TypeInfo
+            -&gt;_2).cctor_finished == 0) {
+          thunk_FUN_021c3bd4();
+        }
+        pRVar9 = createdItem[1].fields.super.itemMediator;
+        if (pRVar9 != (Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator_o *)0x0) {
+          fVar10 = 70.0;
+          if (*(int *)&amp;createdItem[1].fields.super._OverlayItemMediator_k__BackingField != 0) {
+            fVar10 = 60.0;
+          }
+          pRVar1 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy_TypeInfo
+                   -&gt;static_fields;
+          if (iVar2 != 0) {
+            pRVar1 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy_StaticFields
+                      *)&amp;Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallRocketStrategy_TypeInfo
+                         -&gt;static_fields-&gt;frameVertical;
+          }
+          (*(code *)pRVar9-&gt;klass[2]._2.cctor_thread)
+                    (pRVar1-&gt;frameHorizontal / fVar10,pRVar9,0,
+                     pRVar9-&gt;klass[2]._2.genericContainerHandle);
+          iVar6 = (*(createdItem-&gt;klass-&gt;vtable)._30_get_ItemType.methodPtr)
+                            (createdItem,(createdItem-&gt;klass-&gt;vtable)._30_get_ItemType.method);
+          pRVar9 = createdItem[1].fields.super.itemMediator;
+          if ((pRVar9 != (Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator_o *)0x0) &amp;&amp;
+             (__this_02 = UnityEngine_Component__get_transform
+                                    ((UnityEngine_Component_o *)pRVar9,(MethodInfo *)0x0),
+             __this_02 != (UnityEngine_Transform_o *)0x0)) {
+            UVar11 = UnityEngine_Transform__get_position(__this_02,(MethodInfo *)0x0);
+            pRVar9 = createdItem[1].fields.super.itemMediator;
+            if ((pRVar9 != (Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator_o *)0x0) &amp;&amp;
+               (electroBallRay !=
+                (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+                 *)0x0)) {
+              Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__CreateItemBg
+                        (electroBallRay,iVar6,UVar11,
+                         (Royal_Scenes_Game_Mechanics_Items_Config_RootTransform_o *)
+                         pRVar9[1].fields._TargetMediator_k__BackingField,(MethodInfo *)0x0);
+              pRVar9 = createdItem[1].fields.super.itemMediator;
+              if (pRVar9 != (Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator_o *)0x0) {
+                Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__ShakeItem
+                          (electroBallRay,
+                           (Royal_Scenes_Game_Mechanics_Items_Config_RootTransform_o *)
+                           pRVar9[1].fields._TargetMediator_k__BackingField,true,true,
+                           (MethodInfo *)0x0);
+                pRVar8 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                   ((MethodInfo *)0x0);
+                if ((pRVar8 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                   (__this_03 = (pRVar8-&gt;fields).blitzLevelDataWrapper,
+                   __this_03 !=
+                   (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+                  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__TryCollectLightningBolts
+                            (__this_03,1,(MethodInfo *)0x0);
+                  pRVar8 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                     ((MethodInfo *)0x0);
+                  if ((pRVar8 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                     (__this_04 = (pRVar8-&gt;fields).powerRushLevelData,
+                     __this_04 != (Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *)0x0))
+                  {
+                    Royal_Player_Context_Units_PowerRush_PowerRushLevelData__TryIncrementPowerRushElectroBall
+                              (__this_04,5,(MethodInfo *)0x0);
+                    pRVar8 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                       ((MethodInfo *)0x0);
+                    if ((pRVar8 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0)
+                       &amp;&amp; (__this_05 = (pRVar8-&gt;fields).kingdomDuelsData,
+                          __this_05 !=
+                          (Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *)0x0)) {
+                      Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__TryIncrementKingdomDuelsElectroBall
+                                (__this_05,5,(MethodInfo *)0x0);
+LAB_02f1a33c:
+                      if (*(long *)(lVar4 + 0x28) == local_58) {
+                        return (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)createdItem;
+                      }
+                    /* WARNING: Subroutine does not return */
+                      __stack_chk_fail();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+LAB_02f1a36c:
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<p>// ===== ElectroBallSpecialStrategy :: public override void Start(ElectroBallItemModel electroBallItem, ItemModel otherItem, ExplodeData data)   [RVA 0x2E184B8, ok]</p>
+<p>Nguồn: <code>Royal/Scenes/Game/Mechanics/Items/SpecialItems/ElectroBallItem/Strategy/ElectroBallSpecialStrategy.c</code>; SHA256 <code>880ce4723d413d7a1a369cb2de0cd42ac589fa27c8bd383bbd78245bac6353cc</code>.</p>
+<pre><code>// ===== ElectroBallSpecialStrategy :: public override void Start(ElectroBallItemModel electroBallItem, ItemModel otherItem, ExplodeData data)   [RVA 0x2E184B8, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+void Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__Start
+               (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                *__this,Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o
+                        *electroBallItem,
+               Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *otherItem,
+               Royal_Scenes_Game_Mechanics_Explode_ExplodeData_o *data,MethodInfo *method)
+
+{
+  ulong *puVar1;
+  char cVar2;
+  bool bVar3;
+  long lVar4;
+  uint uVar5;
+  int32_t iVar6;
+  Royal_Infrastructure_Utils_Coroutines_CoroutinePlayer_o *pRVar7;
+  Royal_Infrastructure_Utils_Coroutines_CoroutinePlayer_o **ppRVar8;
+  System_Collections_Generic_List_RoyalCoroutine__o *__this_00;
+  UnityEngine_Coroutine_o *pUVar9;
+  System_Collections_IEnumerator_o *pSVar10;
+  Royal_Infrastructure_Utils_Coroutines_RoyalCoroutine_o *__this_01;
+  System_Collections_Generic_List_T__o *__this_02;
+  Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator_o *__this_03;
+  Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *__this_04;
+  Royal_Scenes_Game_Context_Units_GameTouchListener_o *__this_05;
+  Royal_Scenes_Game_Context_Units_LevelRandomManager_o *__this_06;
+  Royal_Player_Context_Data_Session_LastPlayedLevelData_o *pRVar11;
+  MethodInfo *extraout_x1;
+  MethodInfo *extraout_x1_00;
+  MethodInfo *pMVar12;
+  MethodInfo *method_00;
+  MethodInfo *method_01;
+  MethodInfo *method_02;
+  Royal_Infrastructure_Utils_Coroutines_RoyalCoroutine_array *pRVar13;
+  System_Collections_Generic_List_SpecialItemModel__o *pSVar14;
+  System_Collections_Generic_List_MatchItemModel__o *pSVar15;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o *pRVar16;
+  UnityEngine_Coroutine_o **ppUVar17;
+  Royal_Infrastructure_Utils_Coroutines_RoyalCoroutine_o **ppRVar18;
+  UnityEngine_MonoBehaviour_o *__this_07;
+  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *pRVar19;
+  Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *__this_08;
+  Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *__this_09;
+  MethodInfo *method_03;
+  ulong in_d1;
+  ulong in_d2;
+  UnityEngine_Vector3_o initialPosition;
+  UnityEngine_Vector3_o initialPosition_00;
+  UnityEngine_Vector3_o initialPosition_01;
+  Royal_Scenes_Game_Mechanics_Sortings_SortingData_o RVar20;
+  
+  if ((DAT_051a524e &amp; 1) == 0) {
+    FUN_021edf74(&amp;
+                 Method_Royal_Scenes_Game_Context_Units_LevelRandomManager_ShuffleList&lt;MatchItemModel&gt;__
+                );
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MatchItemModel&gt;_Clear__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;SpecialItemModel&gt;_Clear__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MatchType&gt;_Insert__);
+    FUN_021edf74(&amp;Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo);
+    DAT_051a524e = 1;
+  }
+  pSVar14 = (__this-&gt;fields).replacedItems;
+  if (pSVar14 != (System_Collections_Generic_List_SpecialItemModel__o *)0x0) {
+    iVar6 = (pSVar14-&gt;fields)._size;
+    (pSVar14-&gt;fields)._size = 0;
+    (pSVar14-&gt;fields)._version = (pSVar14-&gt;fields)._version + 1;
+    if (0 &lt; iVar6) {
+      System_Array__Clear((System_Array_o *)(pSVar14-&gt;fields)._items,0,iVar6,(MethodInfo *)0x0);
+    }
+    pSVar15 = (__this-&gt;fields).nonConvertedMatchItems;
+    if (pSVar15 != (System_Collections_Generic_List_MatchItemModel__o *)0x0) {
+      uVar5 = (pSVar15-&gt;fields)._size;
+      pMVar12 = (MethodInfo *)(ulong)uVar5;
+      (pSVar15-&gt;fields)._size = 0;
+      (pSVar15-&gt;fields)._version = (pSVar15-&gt;fields)._version + 1;
+      if (0 &lt; (int)uVar5) {
+        System_Array__Clear((System_Array_o *)(pSVar15-&gt;fields)._items,0,uVar5,(MethodInfo *)0x0);
+      }
+      Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__Init
+                ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+                  *)__this,electroBallItem,pMVar12);
+      uVar5 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__FindMostCommonItem
+                        ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+                          *)__this,method_00);
+      method_03 = (MethodInfo *)(ulong)uVar5;
+      Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__FindItemsByType
+                ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+                  *)__this,uVar5,pMVar12);
+      __this_02 = (System_Collections_Generic_List_T__o *)(__this-&gt;fields).super.matchTypes;
+      if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {
+        System_Collections_Generic_List&lt;Int32Enum&gt;__Insert
+                  (__this_02,0,uVar5,Method_System_Collections_Generic_List&lt;MatchType&gt;_Insert__);
+        pRVar16 = (__this-&gt;fields).super.electroBallModel;
+        if (((pRVar16 !=
+              (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o
+               *)0x0) &amp;&amp;
+            (__this_03 = (pRVar16-&gt;fields).super.super.itemMediator,
+            __this_03 != (Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator_o *)0x0)) &amp;&amp;
+           (__this_04 = Royal_Scenes_Game_Mechanics_Items_Config_ItemMediator__get_CurrentCell
+                                  (__this_03,(MethodInfo *)0x0),
+           __this_04 != (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0)) {
+          Royal_Scenes_Game_Mechanics_Board_Cell_CellModel__FreezeFall(__this_04,(MethodInfo *)0x0);
+          __this_05 = (__this-&gt;fields).super.touchManager;
+          if (__this_05 != (Royal_Scenes_Game_Context_Units_GameTouchListener_o *)0x0) {
+            Royal_Scenes_Game_Context_Units_GameTouchListener__DisableTouch
+                      (__this_05,(MethodInfo *)0x0);
+            if (otherItem == (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0) {
+              iVar6 = 0;
+            }
+            else {
+              iVar6 = (*(otherItem-&gt;klass-&gt;vtable)._30_get_ItemType.methodPtr)
+                                (otherItem,(otherItem-&gt;klass-&gt;vtable)._30_get_ItemType.method);
+            }
+            Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__StartShakingElectroBall
+                      ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+                        *)__this,iVar6,method_03);
+            __this_06 = (__this-&gt;fields).super.randomManager;
+            if (__this_06 != (Royal_Scenes_Game_Context_Units_LevelRandomManager_o *)0x0) {
+              Royal_Scenes_Game_Context_Units_LevelRandomManager__ShuffleList&lt;object&gt;
+                        (__this_06,
+                         (System_Collections_Generic_List_T__o *)(__this-&gt;fields).super.items,
+                         Method_Royal_Scenes_Game_Context_Units_LevelRandomManager_ShuffleList&lt;MatchItemModel&gt;__
+                        );
+              pRVar11 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                  ((MethodInfo *)0x0);
+              if ((pRVar11 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                 (pRVar16 = (__this-&gt;fields).super.electroBallModel,
+                 pRVar16 !=
+                 (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o
+                  *)0x0)) {
+                pRVar19 = (pRVar11-&gt;fields).blitzLevelDataWrapper;
+                initialPosition.fields.x =
+                     (*(pRVar16-&gt;klass-&gt;vtable)._39_GetViewPosition.methodPtr)
+                               (pRVar16,(pRVar16-&gt;klass-&gt;vtable)._39_GetViewPosition.method);
+                RVar20 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__GetElectroBallSorting
+                                   ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+                                     *)__this,method_01);
+                if ((Royal_Scenes_Game_Mechanics_Sortings_Sorting_TypeInfo-&gt;_2).cctor_finished == 0)
+                {
+                  thunk_FUN_021c3bd4();
+                }
+                RVar20 = Royal_Scenes_Game_Mechanics_Sortings_Sorting__GetSortingWithOffset
+                                   (RVar20,-1,(MethodInfo *)0x0);
+                if (pRVar19 !=
+                    (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0) {
+                  initialPosition.fields.y = (undefined4)in_d1;
+                  initialPosition.fields.z = (float)in_d2;
+                  in_d2 = in_d2 &amp; 0xffffffff;
+                  in_d1 = in_d1 &amp; 0xffffffff;
+                  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__StartElectroBlitzIcon
+                            (pRVar19,initialPosition,RVar20,(MethodInfo *)0x0);
+                  pRVar11 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                      ((MethodInfo *)0x0);
+                  if ((pRVar11 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                     (pRVar19 = (pRVar11-&gt;fields).blitzLevelDataWrapper,
+                     pRVar19 !=
+                     (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+                    Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__TryCollectLightningBolts
+                              (pRVar19,1,(MethodInfo *)0x0);
+                    pRVar11 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                        ((MethodInfo *)0x0);
+                    if ((pRVar11 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0)
+                       &amp;&amp; (pRVar16 = (__this-&gt;fields).super.electroBallModel,
+                          pRVar16 !=
+                          (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o
+                           *)0x0)) {
+                      __this_08 = (pRVar11-&gt;fields).powerRushLevelData;
+                      initialPosition_00.fields.x =
+                           (*(pRVar16-&gt;klass-&gt;vtable)._39_GetViewPosition.methodPtr)
+                                     (pRVar16,(pRVar16-&gt;klass-&gt;vtable)._39_GetViewPosition.method);
+                      iVar6 = (*(__this-&gt;klass-&gt;vtable)._16_unknown.methodPtr)
+                                        (__this,(__this-&gt;klass-&gt;vtable)._16_unknown.method);
+                      if (__this_08 !=
+                          (Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *)0x0) {
+                        initialPosition_00.fields.y = (undefined4)in_d1;
+                        initialPosition_00.fields.z = (float)in_d2;
+                        in_d2 = in_d2 &amp; 0xffffffff;
+                        in_d1 = in_d1 &amp; 0xffffffff;
+                        Royal_Player_Context_Units_PowerRush_PowerRushLevelData__StartIncrementPowerRushElectroBallIcon
+                                  (__this_08,initialPosition_00,iVar6,(MethodInfo *)0x0);
+                        pRVar11 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                            ((MethodInfo *)0x0);
+                        if ((pRVar11 !=
+                             (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                           (pRVar16 = (__this-&gt;fields).super.electroBallModel,
+                           pRVar16 !=
+                           (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_ElectroBallItemModel_o
+                            *)0x0)) {
+                          __this_09 = (pRVar11-&gt;fields).kingdomDuelsData;
+                          initialPosition_01.fields.x =
+                               (*(pRVar16-&gt;klass-&gt;vtable)._39_GetViewPosition.methodPtr)
+                                         (pRVar16,(pRVar16-&gt;klass-&gt;vtable)._39_GetViewPosition.
+                                                  method);
+                          iVar6 = (*(__this-&gt;klass-&gt;vtable)._16_unknown.methodPtr)
+                                            (__this,(__this-&gt;klass-&gt;vtable)._16_unknown.method);
+                          if (__this_09 !=
+                              (Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *)0x0
+                             ) {
+                            initialPosition_01.fields.y = (undefined4)in_d1;
+                            initialPosition_01.fields.z = (float)in_d2;
+                            Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__StartIncrementKingdomDuelsElectroBallIcon
+                                      (__this_09,initialPosition_01,iVar6,(MethodInfo *)0x0);
+                            pSVar10 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__StartSendingRaysRoutine
+                                                ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+                                                  *)__this,method_02);
+                            __this_01 = Royal_Infrastructure_Utils_Coroutines_RoyalCoroutine__Create
+                                                  (pSVar10,(MethodInfo *)0x0);
+                            ppRVar18 = &amp;(__this-&gt;fields).super.raySenderRoutine;
+                            *ppRVar18 = __this_01;
+                            switchD_0461e7ac::default(ppRVar18,__this_01);
+                            if ((DAT_0519e215 &amp; 1) == 0) {
+                              FUN_021edf74(&amp;Royal_Scenes_Game_Context_GameContext_TypeInfo,0);
+                              DAT_0519e215 = 1;
+                            }
+                            pRVar7 = Royal_Scenes_Game_Context_GameContext_TypeInfo-&gt;static_fields-&gt;
+                                     CoroutinePlayer;
+                            if (pRVar7 == (Royal_Infrastructure_Utils_Coroutines_CoroutinePlayer_o *
+                                          )0x0) {
+                    /* WARNING: Subroutine does not return */
+                              FUN_021ee1d0();
+                            }
+                            if ((DAT_0519fc2c &amp; 1) == 0) {
+                              FUN_021edf74(&amp;
+                                           Method_System_Collections_Generic_List&lt;RoyalCoroutine&gt;_Add__
+                                           ,__this_01,0);
+                              DAT_0519fc2c = 1;
+                            }
+                            if (__this_01 !=
+                                (Royal_Infrastructure_Utils_Coroutines_RoyalCoroutine_o *)0x0) {
+                              ppRVar8 = &amp;(__this_01-&gt;fields).player;
+                              *ppRVar8 = pRVar7;
+                              switchD_0461e7ac::default(ppRVar8,pRVar7);
+                              lVar4 = Method_System_Collections_Generic_List&lt;RoyalCoroutine&gt;_Add__;
+                              __this_00 = (pRVar7-&gt;fields).routines;
+                              if (__this_00 !=
+                                  (System_Collections_Generic_List_RoyalCoroutine__o *)0x0) {
+                                pRVar13 = (__this_00-&gt;fields)._items;
+                                (__this_00-&gt;fields)._version = (__this_00-&gt;fields)._version + 1;
+                                if (pRVar13 !=
+                                    (Royal_Infrastructure_Utils_Coroutines_RoyalCoroutine_array *)
+                                    0x0) {
+                                  uVar5 = (__this_00-&gt;fields)._size;
+                                  if (uVar5 &lt; (uint)pRVar13-&gt;max_length) {
+                                    (__this_00-&gt;fields)._size = uVar5 + 1;
+                                    pRVar13-&gt;m_Items[(int)uVar5] = __this_01;
+                                    switchD_0461e7ac::default
+                                              (pRVar13-&gt;m_Items + (int)uVar5,__this_01);
+                                    pMVar12 = extraout_x1;
+                                  }
+                                  else {
+                                    System_Collections_Generic_List&lt;object&gt;__AddWithResize
+                                              ((System_Collections_Generic_List_object__o *)
+                                               __this_00,(Il2CppObject *)__this_01,
+                                               *(MethodInfo_409EAD0 **)
+                                                (*(long *)(*(long *)(lVar4 + 0x20) + 0xc0) + 0x70));
+                                    pMVar12 = extraout_x1_00;
+                                  }
+                                  __this_07 = (pRVar7-&gt;fields).mono;
+                                  pSVar10 = Royal_Infrastructure_Utils_Coroutines_RoyalCoroutine__Start
+                                                      (__this_01,pMVar12);
+                                  if (__this_07 != (UnityEngine_MonoBehaviour_o *)0x0) {
+                                    pUVar9 = UnityEngine_MonoBehaviour__StartCoroutine
+                                                       (__this_07,pSVar10,(MethodInfo *)0x0);
+                                    ppUVar17 = &amp;(__this_01-&gt;fields).coroutine;
+                                    *ppUVar17 = pUVar9;
+                                    if (DAT_053c7d98 != 0) {
+                                      puVar1 = &amp;DAT_051fbd70 + ((ulong)ppUVar17 &gt;&gt; 0x12 &amp; 0x7fff);
+                                      do {
+                                        cVar2 = &#x27;\x01&#x27;;
+                                        bVar3 = (bool)ExclusiveMonitorPass(puVar1,0x10);
+                                        if (bVar3) {
+                                          *puVar1 = *puVar1 | 1L &lt;&lt; ((ulong)ppUVar17 &gt;&gt; 0xc &amp; 0x3f);
+                                          cVar2 = ExclusiveMonitorsStatus();
+                                        }
+                                      } while (cVar2 != &#x27;\0&#x27;);
+                                    }
+                                    return;
+                                  }
+                                }
+                              }
+                            }
+                    /* WARNING: Subroutine does not return */
+                            FUN_021ee1d0();
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<p>// ===== ElectroBallSpinnerStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E1B2D0, ok]</p>
+<p>Nguồn: <code>Royal/Scenes/Game/Mechanics/Items/SpecialItems/ElectroBallItem/Strategy/ElectroBallSpinnerStrategy.c</code>; SHA256 <code>553c71f9fc9d4a801b06625157e7f7c4496509cc7ba03910451fac51a1503c21</code>.</p>
+<pre><code>// ===== ElectroBallSpinnerStrategy :: public override ItemModel SingleRayReached(ElectroBallItemRay electroBallRay, ItemModel itemModel)   [RVA 0x2E1B2D0, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *
+Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpinnerStrategy__SingleRayReached
+          (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpinnerStrategy_o
+           *__this,Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+                   *electroBallRay,Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *itemModel,
+          MethodInfo *method)
+
+{
+  byte bVar1;
+  long lVar2;
+  bool bVar3;
+  int32_t itemType;
+  Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *pRVar4;
+  Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *__this_00;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *createdItem;
+  System_Action_o *onExplode;
+  Royal_Scenes_Game_Context_Units_GoalManager_o *pRVar5;
+  UnityEngine_Transform_o *__this_02;
+  Royal_Player_Context_Data_Session_LastPlayedLevelData_o *pRVar6;
+  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *__this_03;
+  Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *__this_04;
+  Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *__this_05;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *extraout_x1;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+  *electroBallRay_00;
+  Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *method_00;
+  MethodInfo *in_x4;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator_o *__this_06;
+  UnityEngine_Vector3_o UVar7;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_140;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_100;
+  Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_Fields local_c0;
+  undefined4 uStack_81;
+  undefined8 local_70;
+  undefined4 uStack_61;
+  long local_58;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+  *__this_01;
+  
+  lVar2 = tpidr_el0;
+  local_58 = *(long *)(lVar2 + 0x28);
+  electroBallRay_00 = electroBallRay;
+  if ((DAT_051a525c &amp; 1) == 0) {
+    FUN_021edf74(&amp;System_Action_TypeInfo);
+    FUN_021edf74(&amp;
+                 Method_Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_EndRayRecycleSelf__
+                );
+    FUN_021edf74(&amp;
+                 Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpinnerItem_SpinnerItemModel_TypeInfo
+                );
+    DAT_051a525c = 1;
+    electroBallRay_00 = extraout_x1;
+  }
+  method_00 = itemModel;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy__SingleRayReached
+            ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallStrategy_o
+              *)__this,electroBallRay_00,itemModel,method);
+  if (itemModel != (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0) {
+    pRVar4 = Royal_Scenes_Game_Mechanics_Items_Config_ItemModel__get_CurrentCell
+                       (itemModel,(MethodInfo *)0x0);
+    __this_01 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                 *)0x0;
+    if (pRVar4 != (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) {
+                    /* try { // try from 02f1b35c to 0301b363 has its CatchHandler @ 02f1b3d0 */
+      pRVar4 = Royal_Scenes_Game_Mechanics_Items_Config_ItemModel__get_CurrentCell
+                         (itemModel,(MethodInfo *)0x0);
+                    /* try { // try from 02f1b36c to 0301b37b has its CatchHandler @ 02f1b3cc */
+      if ((pRVar4 == (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) ||
+         (__this_00 = (pRVar4-&gt;fields)._StaticMediator_k__BackingField,
+         __this_00 == (Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator_o *)0x0))
+      goto LAB_02f1b5f0;
+      method_00 = (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)0x0;
+      bVar3 = Royal_Scenes_Game_Mechanics_Board_Cell_Mediator_StaticItemMediator__HasStaticItem
+                        (__this_00,5,(MethodInfo *)0x0);
+      __this_01 = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                   *)(ulong)bVar3;
+      if (bVar3) {
+        Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__ExplodeChainAndResetItem
+                  ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                    *)__this,itemModel,(MethodInfo *)method_00);
+        createdItem = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)itemModel
+        ;
+                    /* try { // try from 02f1b38c to 0301b393 has its CatchHandler @ 02f1b3c8 */
+        goto LAB_02f1b5c0;
+      }
+    }
+                    /* try { // try from 02f1b394 to 0301b3bb has its CatchHandler @ 02f1b298 */
+    pRVar4 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__RemoveAnItemFromCell
+                       (__this_01,itemModel,(MethodInfo *)method_00);
+    Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator__GetSettingsForTileId
+              ((Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_o *)&amp;local_100,10,
+               (System_Nullable_int__o)0x0,(MethodInfo *)0x0);
+                    /* try { // try from 02f1b3bc to 0301b3bf has its CatchHandler @ 02f1b3c4 */
+                    /* try { // try from 02f1b3c0 to 0301b3e7 has its CatchHandler @ 02f1b298 */
+                    /* catch(type#1 @ 04baf5b8) { ... } // from try @ 02f1b3bc with catch @ 02f1b3c4
+                        */
+    local_c0.saveData.fields.value = local_100.saveData.fields.value;
+    local_c0.staticItemType = local_100.staticItemType;
+    local_c0.overlayItemType = local_100.overlayItemType;
+    local_c0.tiledId = local_100.tiledId;
+    local_c0.itemType = local_100.itemType;
+                    /* catch(type#1 @ 04baf5b8) { ... } // from try @ 02f1b38c with catch @ 02f1b3c8
+                        */
+    local_c0.goalType = local_100.goalType;
+    local_c0.saveData.fields.hasValue = local_100.saveData.fields.hasValue;
+    local_c0.saveData.fields._1_3_ = local_100.saveData.fields._1_3_;
+    local_c0.layerCount = local_100.layerCount;
+    local_c0.matchType = local_100.matchType;
+                    /* catch(type#1 @ 04baf5b8) { ... } // from try @ 02f1b36c with catch @ 02f1b3cc
+                        */
+    local_70 = local_100._37_8_;
+                    /* catch(type#1 @ 04baf5b8) { ... } // from try @ 02f1b35c with catch @ 02f1b3d0
+                        */
+    uStack_61 = local_100._52_4_;
+    __this_06 = (__this-&gt;fields).super.super.itemModelCreator;
+                    /* try { // try from 02f1b3e8 to 0301b3eb has its CatchHandler @ 02f1b40c */
+    local_c0._48_8_ = local_100._37_8_;
+                    /* try { // try from 02f1b3ec to 0301b413 has its CatchHandler @ 02f1b298 */
+    uStack_81 = local_100._52_4_;
+    if ((pRVar4 != (Royal_Scenes_Game_Mechanics_Board_Cell_CellModel_o *)0x0) &amp;&amp;
+       (UVar7 = Royal_Scenes_Game_Mechanics_Board_Cell_CellModel__get_LocalPosition
+                          (pRVar4,(MethodInfo *)0x0),
+       __this_06 != (Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator_o *)0x0)) {
+                    /* catch() { ... } // from try @ 02f1b3e8 with catch @ 02f1b40c */
+                    /* try { // try from 02f1b414 to 0301b41b has its CatchHandler @ 02f1b430 */
+                    /* try { // try from 02f1b41c to 0301b427 has its CatchHandler @ 02f1b298 */
+                    /* try { // try from 02f1b428 to 0301b42f has its CatchHandler @ 02f1b430 */
+      local_140.isCreatedByElectroBall = true;
+      local_140.staticItemType = local_100.staticItemType;
+      local_140.overlayItemType = local_100.overlayItemType;
+      local_140.tiledId = local_100.tiledId;
+      local_140.itemType = local_100.itemType;
+      local_140.goalType = local_100.goalType;
+      local_140.saveData.fields.hasValue = local_100.saveData.fields.hasValue;
+      local_140.saveData.fields._1_3_ = local_100.saveData.fields._1_3_;
+      local_140.layerCount = local_100.layerCount;
+      local_140.matchType = local_100.matchType;
+                    /* catch(type#2 @ 00000000) { ... } // from try @ 02f1b414 with catch @ 02f1b430
+                       catch(type#2 @ 00000000) { ... } // from try @ 02f1b428 with catch @ 02f1b430
+                        */
+      local_140.saveData.fields.value = local_100.saveData.fields.value;
+      local_140._37_8_ = local_c0._48_8_;
+      local_140._52_4_ = uStack_81;
+      createdItem = (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)
+                    Royal_Scenes_Game_Context_Units_ItemCreation_ItemModelCreator__CreateItemWithSettings
+                              (__this_06,
+                               (Royal_Scenes_Game_Context_Units_ItemCreation_ItemSettings_o *)
+                               &amp;local_140,UVar7,true,(MethodInfo *)0x0);
+      if (createdItem != (Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpecialItemModel_o *)0x0) {
+        bVar1 = (
+                Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpinnerItem_SpinnerItemModel_TypeInfo
+                -&gt;_2).naturalAligment;
+        if (((createdItem-&gt;klass-&gt;_2).naturalAligment &lt; bVar1) ||
+           ((createdItem-&gt;klass-&gt;_2).typeHierarchy[(ulong)bVar1 - 1] !=
+            (Il2CppClass *)
+            Royal_Scenes_Game_Mechanics_Items_SpecialItems_SpinnerItem_SpinnerItemModel_TypeInfo)) {
+                    /* WARNING: Subroutine does not return */
+          FUN_021ee570(createdItem);
+        }
+        (createdItem-&gt;fields)._ReplacedMatchType_k__BackingField =
+             (itemModel-&gt;fields)._MatchType_k__BackingField;
+        onExplode = (System_Action_o *)thunk_FUN_02248ff4(System_Action_TypeInfo);
+        System_Action___ctor();
+        Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy__PutItemToCell
+                  ((Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_Strategy_ElectroBallSpecialStrategy_o
+                    *)__this,createdItem,pRVar4,onExplode,in_x4);
+        pRVar5 = createdItem[1].fields.super.goalManager;
+        if (pRVar5 != (Royal_Scenes_Game_Context_Units_GoalManager_o *)0x0) {
+          (*pRVar5-&gt;klass[2]._1.typeMetadataHandle)(0,pRVar5,0,pRVar5-&gt;klass[2]._1.interopData);
+          itemType = (*(createdItem-&gt;klass-&gt;vtable)._30_get_ItemType.methodPtr)
+                               (createdItem,(createdItem-&gt;klass-&gt;vtable)._30_get_ItemType.method);
+          pRVar5 = createdItem[1].fields.super.goalManager;
+          if ((pRVar5 != (Royal_Scenes_Game_Context_Units_GoalManager_o *)0x0) &amp;&amp;
+             (__this_02 = UnityEngine_Component__get_transform
+                                    ((UnityEngine_Component_o *)pRVar5,(MethodInfo *)0x0),
+             __this_02 != (UnityEngine_Transform_o *)0x0)) {
+            UVar7 = UnityEngine_Transform__get_position(__this_02,(MethodInfo *)0x0);
+            pRVar5 = createdItem[1].fields.super.goalManager;
+            if ((pRVar5 != (Royal_Scenes_Game_Context_Units_GoalManager_o *)0x0) &amp;&amp;
+               (electroBallRay !=
+                (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay_o
+                 *)0x0)) {
+              Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__CreateItemBg
+                        (electroBallRay,itemType,UVar7,
+                         (Royal_Scenes_Game_Mechanics_Items_Config_RootTransform_o *)
+                         pRVar5[1].fields.goals,(MethodInfo *)0x0);
+              pRVar5 = createdItem[1].fields.super.goalManager;
+              if (pRVar5 != (Royal_Scenes_Game_Context_Units_GoalManager_o *)0x0) {
+                Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroBallItemRay__ShakeItem
+                          (electroBallRay,
+                           (Royal_Scenes_Game_Mechanics_Items_Config_RootTransform_o *)
+                           pRVar5[1].fields.goals,true,true,(MethodInfo *)0x0);
+                pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                   ((MethodInfo *)0x0);
+                if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                   (__this_03 = (pRVar6-&gt;fields).blitzLevelDataWrapper,
+                   __this_03 !=
+                   (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+                  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__TryCollectLightningBolts
+                            (__this_03,1,(MethodInfo *)0x0);
+                  pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                     ((MethodInfo *)0x0);
+                  if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+                     (__this_04 = (pRVar6-&gt;fields).powerRushLevelData,
+                     __this_04 != (Royal_Player_Context_Units_PowerRush_PowerRushLevelData_o *)0x0))
+                  {
+                    Royal_Player_Context_Units_PowerRush_PowerRushLevelData__TryIncrementPowerRushElectroBall
+                              (__this_04,5,(MethodInfo *)0x0);
+                    pRVar6 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current
+                                       ((MethodInfo *)0x0);
+                    if ((pRVar6 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0)
+                       &amp;&amp; (__this_05 = (pRVar6-&gt;fields).kingdomDuelsData,
+                          __this_05 !=
+                          (Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData_o *)0x0)) {
+                      Royal_Player_Context_Units_KingdomDuels_KingdomDuelsLevelData__TryIncrementKingdomDuelsElectroBall
+                                (__this_05,5,(MethodInfo *)0x0);
+LAB_02f1b5c0:
+                      if (*(long *)(lVar2 + 0x28) == local_58) {
+                    /* try { // try from 02f1b5d4 to 0301b67f has its CatchHandler @ 02f1b5d4
+                       catch() { ... } // from try @ 02f1b5d4 with catch @ 02f1b5d4
+                       catch() { ... } // from try @ 02f1b6ac with catch @ 02f1b5d4
+                       catch() { ... } // from try @ 02f1b6d4 with catch @ 02f1b5d4
+                       catch() { ... } // from try @ 02f1b6fc with catch @ 02f1b5d4
+                       catch() { ... } // from try @ 02f1b730 with catch @ 02f1b5d4 */
+                        return (Royal_Scenes_Game_Mechanics_Items_Config_ItemModel_o *)createdItem;
+                      }
+                    /* WARNING: Subroutine does not return */
+                      __stack_chk_fail();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+LAB_02f1b5f0:
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<p>// ===== ElectroElectroComboView.&lt;ElectroBlitzCounter&gt;d__25 :: private bool MoveNext()   [RVA 0x2E15F10, ok]</p>
+<p>Nguồn: <code>Royal/Scenes/Game/Mechanics/Items/SpecialItems/ElectroBallItem/View/ElectroElectroCombo/ElectroElectroComboView.c</code>; SHA256 <code>76690dd3dc3551e48e4d8cf114c5da4085d902efa2272879d049061602802483</code>.</p>
+<pre><code>// ===== ElectroElectroComboView.&lt;ElectroBlitzCounter&gt;d__25 :: private bool MoveNext()   [RVA 0x2E15F10, ok]
+
+/* WARNING: Removing unreachable block (ram,0x02f1609c) */
+/* WARNING: Type propagation algorithm not settling */
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+bool Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroElectroCombo_ElectroElectroComboView_&lt;ElectroBlitzCounter&gt;d__25__MoveNext
+               (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroElectroCombo_ElectroElectroComboView__ElectroBlitzCounter_d__25_o
+                *__this,MethodInfo *method)
+
+{
+  UnityEngine_WaitForSeconds_o *__this_00;
+  Il2CppObject **ppIVar1;
+  Royal_Infrastructure_Utils_Animation_ManualEasing_Easer_o *pRVar2;
+  Royal_Scenes_Game_Context_Units_GridManager_o *__this_01;
+  Royal_Scenes_Game_Context_Units_Boards_Board_o *pRVar3;
+  Royal_Player_Context_Data_Session_LastPlayedLevelData_o *pRVar4;
+  Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *pRVar5;
+  MethodInfo *extraout_x1;
+  Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroElectroCombo_ElectroElectroComboView_o
+  *__this_02;
+  float fVar6;
+  float fVar7;
+  float fVar8;
+  int iVar9;
+  
+  if ((DAT_051a5232 &amp; 1) == 0) {
+    FUN_021edf74(&amp;UnityEngine_WaitForSeconds_TypeInfo);
+    DAT_051a5232 = 1;
+    method = extraout_x1;
+  }
+  iVar9 = (__this-&gt;fields).__1__state;
+  if (iVar9 == 2) {
+    (__this-&gt;fields).__1__state = -1;
+  }
+  else {
+    if (iVar9 != 1) {
+      if (iVar9 != 0) {
+        return false;
+      }
+      (__this-&gt;fields).__1__state = -1;
+      (__this-&gt;fields)._delayDur_5__2 = 0.1;
+      __this_00 = (UnityEngine_WaitForSeconds_o *)
+                  thunk_FUN_02248ff4(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(__this_00,0.1,(MethodInfo *)0x0);
+      ppIVar1 = &amp;(__this-&gt;fields).__2__current;
+      *ppIVar1 = (Il2CppObject *)__this_00;
+      switchD_0461e7ac::default(ppIVar1,__this_00);
+      (__this-&gt;fields).__1__state = 1;
+      return true;
+    }
+    __this_02 = (__this-&gt;fields).__4__this;
+    (__this-&gt;fields).__1__state = -1;
+    if (__this_02 ==
+        (Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroElectroCombo_ElectroElectroComboView_o
+         *)0x0) goto LAB_02f16174;
+    fVar6 = Royal_Scenes_Game_Mechanics_Items_SpecialItems_ElectroBallItem_View_ElectroElectroCombo_ElectroElectroComboView__GetAnimationLength
+                      (__this_02,method);
+    (__this-&gt;fields)._duration_5__3 = (fVar6 + -0.1) - (__this-&gt;fields)._delayDur_5__2;
+    (__this-&gt;fields)._elapsed_5__4 = 0.0;
+    (__this-&gt;fields)._elapsedBolts_5__5 = 0;
+    pRVar2 = Royal_Infrastructure_Utils_Animation_ManualEasing__GetEase(1,(MethodInfo *)0x0);
+    (__this-&gt;fields)._easing_5__6 = pRVar2;
+    switchD_0461e7ac::default();
+    __this_01 = Royal_Scenes_Game_Context_Units_GridManager__get_Current((MethodInfo *)0x0);
+    if ((__this_01 == (Royal_Scenes_Game_Context_Units_GridManager_o *)0x0) ||
+       (pRVar3 = Royal_Scenes_Game_Context_Units_GridManager__get_CurrentBoard
+                           (__this_01,(MethodInfo *)0x0),
+       pRVar3 == (Royal_Scenes_Game_Context_Units_Boards_Board_o *)0x0)) goto LAB_02f16174;
+    iVar9 = 1;
+    if ((__this_02-&gt;fields).isSuper != false) {
+      iVar9 = 2;
+    }
+    (__this-&gt;fields)._targetCount_5__7 = iVar9 * (pRVar3-&gt;fields)._NormalCellCount_k__BackingField;
+  }
+  fVar6 = (__this-&gt;fields)._elapsed_5__4;
+  if (fVar6 &lt; (__this-&gt;fields)._duration_5__3) {
+    fVar7 = UnityEngine_Time__get_deltaTime((MethodInfo *)0x0);
+    pRVar2 = (__this-&gt;fields)._easing_5__6;
+    fVar6 = fVar6 + fVar7;
+    (__this-&gt;fields)._elapsed_5__4 = fVar6;
+    if (pRVar2 != (Royal_Infrastructure_Utils_Animation_ManualEasing_Easer_o *)0x0) {
+      fVar8 = (__this-&gt;fields)._duration_5__3;
+      iVar9 = (__this-&gt;fields)._targetCount_5__7;
+      fVar7 = fVar8;
+      if (fVar6 &lt;= fVar8) {
+        fVar7 = fVar6;
+      }
+      if (fVar6 &lt; 0.0) {
+        fVar7 = 0.0;
+      }
+      fVar6 = (float)(*(code *)(pRVar2-&gt;fields).super.super.invoke_impl)
+                               (fVar7 / fVar8,(pRVar2-&gt;fields).super.super.method_code,
+                                (pRVar2-&gt;fields).super.super.method);
+      if (fVar6 &lt; 0.0) {
+        fVar6 = 0.0;
+      }
+      if (DAT_0519d5fc == &#x27;\0&#x27;) {
+        FUN_021edf74(&amp;System_Math_TypeInfo);
+        DAT_0519d5fc = &#x27;\x01&#x27;;
+      }
+      fVar6 = fVar6 * (float)iVar9 + 0.0;
+      if ((System_Math_TypeInfo-&gt;_2).cctor_finished == 0) {
+        thunk_FUN_021c3bd4();
+      }
+      iVar9 = -0x80000000;
+      if ((float)(int)fVar6 != INFINITY) {
+        iVar9 = (int)fVar6;
+      }
+      pRVar4 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current((MethodInfo *)0x0)
+      ;
+      if ((pRVar4 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+         (pRVar5 = (pRVar4-&gt;fields).blitzLevelDataWrapper,
+         pRVar5 != (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+        Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__TryCollectLightningBolts
+                  (pRVar5,iVar9 - (__this-&gt;fields)._elapsedBolts_5__5,(MethodInfo *)0x0);
+        (__this-&gt;fields)._elapsedBolts_5__5 = iVar9;
+        ppIVar1 = &amp;(__this-&gt;fields).__2__current;
+        *ppIVar1 = (Il2CppObject *)0x0;
+        switchD_0461e7ac::default(ppIVar1,0);
+        (__this-&gt;fields).__1__state = 2;
+        return true;
+      }
+    }
+  }
+  else {
+    pRVar4 = Royal_Player_Context_Data_Session_LastPlayedLevelData__get_Current((MethodInfo *)0x0);
+    if ((pRVar4 != (Royal_Player_Context_Data_Session_LastPlayedLevelData_o *)0x0) &amp;&amp;
+       (pRVar5 = (pRVar4-&gt;fields).blitzLevelDataWrapper,
+       pRVar5 != (Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper_o *)0x0)) {
+      Royal_Player_Context_Units_EventItemCollect_BlitzLevelDataWrapper__CompleteElectroBlitzIcon
+                (pRVar5,(MethodInfo *)0x0);
+      return false;
+    }
+  }
+LAB_02f16174:
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre></div>
+<footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
+</div></main>
+</div>
+<script>window.SITE_ROOT="../";</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

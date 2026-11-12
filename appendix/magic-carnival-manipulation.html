@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magic Carnival — thuật toán thay nội dung orb – Royal Kingdom GDD Wiki</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/img/brand.png">
+
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><img src="../assets/img/brand.png" alt=""> <span>Royal Kingdom GDD Wiki</span></a>
+  <div class="search"><input id="q" type="search" placeholder="Tìm tính năng, class, config… (/)" autocomplete="off"><div id="results" class="results" hidden></div></div>
+  <nav class="toplinks"><a href="../index.html">Trang chủ</a><a href="../categories/event.html">Sự kiện</a><a href="../analysis/index.html">Phân tích</a><a href="../appendix/events-overview.html">Phụ lục</a></nav>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="side-title">Danh mục</div>
+  <details><summary>🎯 Lõi gameplay <span class="n">17</span></summary><ul><li><a href="../features/LevelSets.html">Bộ level &amp; tải level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MatchMechanics.html">Luật match-3<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelFlow.html">Luồng level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemainingMoves.html">Lượt dư cuối level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Lives.html">Mạng (Lives)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelGoals.html">Mục tiêu level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSkins.html">Skin level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelTutorials.html">Tutorial trong level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SpecialItems.html">Vật phẩm đặc biệt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_1.html" title="Vật cản 1 (L1–500)">Vật cản 1 (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AttackLevels.html" title="Level tấn công (đánh thành)">Level tấn công (lv5)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Boosters.html" title="Booster">Booster (lv6)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Difficulty.html" title="Độ khó (Hard, Super Hard)">Độ khó (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicPot.html" title="Magic Pot (bình thuốc)">Magic Pot (lv32)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperElectroBall.html" title="Super Electro Ball">Super Electro Ball (lv101/301)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_2.html" title="Vật cản 2 (L500–1500)">Vật cản 2 (lv451)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_3.html" title="Vật cản 3 (L1500+)">Vật cản 3 (lv1501)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>💰 Kinh tế &amp; Shop <span class="n">11</span></summary><ul><li><a href="../features/Inventory.html">Coin &amp; kho đồ (Inventory)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PlayOn.html">Hết lượt - Play On<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Ads.html">Quảng cáo (Ads)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Shop.html">Shop &amp; IAP<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomePack.html" title="Welcome Pack">Welcome Pack (lv13)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PrelevelMultiplier.html" title="Nhân thưởng event theo level">Nhân thưởng event theo level (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LadderOffer.html" title="Ladder Offer">Ladder Offer (lv35)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Offers.html" title="Khung offer (Offers)">Khung offer (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MythicDeal.html" title="Mythic Deal">Mythic Deal (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CoinCraze.html" title="Coin Craze (progress offer)">Coin Craze (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperBoostOffer.html" title="Super Boost Offer">Super Boost Offer (lv111/311)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🏰 Tiến trình <span class="n">8</span></summary><ul><li><a href="../features/WorldMap.html">Bản đồ thế giới<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Cutscenes.html">Cutscene, thư viện và vignette<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TrophyRoom.html">Phòng cúp (đã gỡ)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyGift.html">Quà hằng ngày (Daily Refill)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Kingdom.html">Xây vương quốc (Kingdom)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyLogin.html">Điểm danh hằng ngày<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomeBack.html" title="Welcome Back (quà quay lại)">Welcome Back (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelMilestones.html" title="Mốc nghìn level và hết level">Mốc nghìn level và hết level (lv1000)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🎪 Sự kiện <span class="n">24</span></summary><ul><li><a href="../features/RichardsJourney.html" title="Richard&#x27;s Journey">Richard&#x27;s Journey (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamAdventure.html" title="Team Adventure">Team Adventure (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamClash.html" title="Team Clash">Team Clash (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomPass.html" title="Kingdom Pass">Kingdom Pass (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Blitz.html" title="Electro Blitz - Diamond Mine">Electro Blitz - Diamond Mine (lv36)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CardCollection.html" title="Bộ sưu tập thẻ">Bộ sưu tập thẻ (lv41)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CubeBlast.html" title="Cube Blast (mini-game)">Cube Blast (lv41/51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FlyingContest.html" title="Flying Contest">Flying Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GrandTournament.html" title="Grand Tournament">Grand Tournament (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyContest.html" title="Weekly Contest">Weekly Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicCarnival.html" title="Magic Carnival (mini-game)">Magic Carnival (lv51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DungeonEscape.html" title="Dungeon Escape">Dungeon Escape (lv56)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomDuels.html" title="Kingdom Duels">Kingdom Duels (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PowerRush.html" title="Power Rush">Power Rush (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HiddenPath.html" title="Hidden Path">Hidden Path (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PearlsOfAtlantis.html" title="Pearls of Atlantis">Pearls of Atlantis (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GemHunt.html" title="Gem Hunt">Gem Hunt (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/IslandRace.html" title="Island Race">Island Race (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CanvasQuest.html" title="Canvas Quest">Canvas Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HillQuest.html" title="Hill Quest">Hill Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MissionEvents.html" title="Khung event nhiệm vụ">Khung event nhiệm vụ (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyMission.html" title="Weekly Goals (Weekly Mission)">Weekly Goals (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MedalMissions.html" title="Medal Missions">Medal Missions (lv151)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ChampionsArena.html" title="Đấu trường (Champions Arena)">Đấu trường (lv5600)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>👥 Xã hội <span class="n">6</span></summary><ul><li><a href="../features/Leaderboard.html">Bảng xếp hạng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Emotes.html">Emote<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Profile.html">Hồ sơ &amp; trang trí<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Team.html" title="Đội (Team)">Đội (lv21)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EmoteAlbum.html" title="Emote Album">Emote Album (lv22)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Friends.html" title="Bạn bè (Friends)">Bạn bè (lv44)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📡 Live-ops &amp; hạ tầng <span class="n">8</span></summary><ul><li><a href="../features/Analytics.html">Analytics<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AssetBundles.html">Bundle &amp; tải tài nguyên<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemoteConfig.html">Cấu hình từ xa &amp; AB test<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ServerCommunication.html">Giao tiếp server<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EventsFramework.html">Khung sự kiện<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SaveSync.html">Lưu &amp; đồng bộ dữ liệu<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Notifications.html">Thông báo<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FeatureDependency.html">Ưu tiên &amp; mở tính năng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>⚙️ Meta &amp; UI <span class="n">9</span></summary><ul><li><a href="../features/Settings.html">Cài đặt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Support.html">Hỗ trợ (Helpshift)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Loading.html">Loading &amp; splash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HomeUI.html">Màn hình Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Onboarding.html">Onboarding &amp; tutorial Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AppUpdate.html">Phiên bản &amp; cập nhật<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Privacy.html">Quyền riêng tư &amp; phụ huynh<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Account.html">Tài khoản &amp; đăng nhập<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RateUs.html" title="Đánh giá app">Đánh giá app (lv15)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📊 Phân tích & đánh giá <span class="n">6</span></summary><ul><li><a href="../analysis/index.html">Tất cả phân tích</a></li><li><a href="../analysis/01-sale-event-flows.html">Luồng Sale &amp; Event của Royal Kingdom — từ server tới phần thưởng</a></li><li><a href="../analysis/02-deep-dive.html">Phân tích chuyên sâu — Độ khó, bộ level, hệ số nhân, AB test và kinh tế của thất bại</a></li><li><a href="../analysis/03-iap-packages.html">Phân tích từng gói IAP — Royal Kingdom</a></li><li><a href="../analysis/04-user-segmentation.html">Phân tệp người chơi — payer, segment và AB trong Royal Kingdom</a></li><li><a href="../analysis/05-economy.html">Kinh tế Royal Kingdom — nguồn, nơi tiêu và ngân sách mỗi 1.000 level</a></li><li><a href="../analysis/06-rk-vs-royal-match.html">Royal Kingdom so với Royal Match — cùng khung, khác lõi</a></li></ul></details><details open><summary>📎 Phụ lục <span class="n">47</span></summary><ul><li><a href="../appendix/events-overview.html">Tổng quan sự kiện</a></li><li><a href="../appendix/unlock-levels.html">Level mở khoá</a></li><li><a href="../appendix/reward-codes.html">Mã phần thưởng</a></li><li><a href="../appendix/iap-products.html">Sản phẩm IAP</a></li><li><a href="../appendix/levels-summary.html">Level &amp; thống kê</a></li><li><a href="../appendix/default-configs.html">Config mặc định trong APK</a></li><li><a href="../appendix/backend-protocol.html">Giao thức backend</a></li><li><a href="../appendix/enums.html">Enum</a></li><li><a href="../appendix/static-arrays.html">Mảng tĩnh (metadata)</a></li><li><a href="../appendix/localization.html">Text UI (EN)</a></li><li><a href="../appendix/save-state.html">Trạng thái lưu (save)</a></li><li><a href="../appendix/config-default-vs-live.html">Config mặc định vs live</a></li><li><a href="../appendix/asset-configs.html">Asset/config local — phạm vi và bằng chứng</a></li><li><a href="../appendix/blitz-collect-calls.html">Blitz — các nơi gọi thu tia sét</a></li><li><a href="../appendix/bundle-config-catalog.html">Config giải từ asset bundle</a></li><li><a href="../appendix/bundle-localization.html">Localization từ bundle CDN Royal Kingdom</a></li><li><a href="../appendix/capture-plan.html">Ảnh cần chụp — kế hoạch đang thực hiện</a></li><li><a href="../appendix/card-collection-extended-native.html">Card Collection — điều kiện wildcard, hoàn tất và giao dịch</a></li><li><a href="../appendix/card-collection-extended-playtest.html">Card Collection — wildcard, hoàn tất bộ, Diamond và Ultimate</a></li><li><a href="../appendix/card-collection-playtest.html">Card Collection — kiểm thử rương và thẻ trùng 12/11/2026</a></li><li><a href="../appendix/card-collection-season10.html">Card Collection — toàn bộ season10 từ config client</a></li><li><a href="../appendix/cdn-quality-coverage.html">Độ phủ bundle: CDN, APK và config runtime</a></li><li><a href="../appendix/client-config-samples-after_ab56_57.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-after_dependency_mc.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-forced151.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/config-leaf-diff.html">So sánh từng trường config — kết quả tái sinh</a></li><li><a href="../appendix/config-playtest-diff.html">Config trước/sau playtest và override</a></li><li><a href="../appendix/cube-blast-outcomes.html">Cube Blast — kết quả kiểm chứng cập nhật</a></li><li><a href="../appendix/design-uncertainty-scan.html">Rà soát thiếu design và cấu hình server</a></li><li><a href="../appendix/difficulty-vignette-assets.html">Loading vignette — giá trị asset đã giải</a></li><li><a href="../appendix/event-outcome-playtest.html">Event outcomes — 12/11/2026</a></li><li><a href="../appendix/followup-outcomes.html">Follow-up Dungeon, trao đổi thẻ và chuyển mùa — 12/11/2026</a></li><li><a href="../appendix/gaps.html">Khoảng trống và giới hạn bằng chứng — 12/11/2026</a></li><li><a href="../appendix/kingdom-tasks.html">Kingdom — asset, task và localization</a></li><li><a href="../appendix/magic-carnival-config-selection.html">Magic Carnival — lựa chọn primary/secondary</a></li><li><a href="../appendix/magic-carnival-expiry-theme-native.html">Magic Carnival — hết giờ và fallback theme</a></li><li><a href="../appendix/magic-carnival-initial-orbs.html">MagicCarnival —2orbkhởiđầu</a></li><li class=cur><a href="../appendix/magic-carnival-manipulation.html">Magic Carnival — thuật toán thay nội dung orb</a></li><li><a href="../appendix/magic-carnival-mission-findings.html">Magic Carnival: tiến độ Mission khi ghép đúng</a></li><li><a href="../appendix/magic-carnival-runtime-cases.html">Magic Carnival — playtest theo trạng thái,12/11/2026</a></li><li><a href="../appendix/playtest-20261112.html">Quan sát playtest 12/11/2026</a></li><li><a href="../appendix/playtest-case-matrix.html">Ma trận use case cần kiểm chứng</a></li><li><a href="../appendix/richards-journey-outcomes.html">Richard’s Journey — gameplay và thưởng</a></li><li><a href="../appendix/save-state-inventory.html">Kiểm kê SQLite tái sinh — snapshot 11/11/2026</a></li><li><a href="../appendix/verified-findings.html">Kết quả kiểm chứng local — 12/11/2026</a></li><li><a href="../appendix/about.html">Về tài liệu này</a></li></ul></details>
+</aside>
+<main class="content"><div class="inner">
+<div class="crumbs"><a href="../index.html">Trang chủ</a> › Magic Carnival — thuật toán thay nội dung orb</div><h1 class="title">Magic Carnival — thuật toán thay nội dung orb</h1><p class="tagline"> <span class="muted">· nguồn <code>appendix/magic-carnival-manipulation.md</code></span></p><div class="md"><h2 id="kết-quả-đọc-code">Kết quả đọc code</h2>
+<p>Đã đọc4hàm: lấy orb chưa seen, trừ ô hiện chọn; lập ứng viên có type khớp lastThreeSeenCards, loại highlighted và không lặp type. Không có ứng viên thìfalse. DecideCardToReplace với3ứngviên: draw&lt;50→index2,50..89→index1,&gt;=90→index0;2ứngviên:draw&lt;80→index1,&gt;=80→index0;1→index0;khác→null. ReplaceTwoCards cập nhật GridData, Progress, nội dung orb và PairProvider. Không đồng nhất index ứngviên với mới/cũ nhất khi chưa chứng minh thứ tự history.</p>
+<h2 id="phạm-vi-còn-thiếu">Phạm vi còn thiếu</h2>
+<p>TryManipulateGrid có cảnh báo type propagation; cần kiểm chứng receiver và các nhánh gọi bằng ARM64/playtest. Bảng ngưỡng dưới đây là điều kiện code, không phải tần suất đo từ game. Chưa đóng toàn bộ MagicCarnival-G04.</p>
+<h2 id="magiccarnivalgrid--public-bool-trymanipulategridmagiccarnivalorbitem-currentcard---rva-0x2a172b8-ok">MagicCarnivalGrid :: public bool TryManipulateGrid(MagicCarnivalOrbItem currentCard)   [RVA 0x2A172B8, ok]</h2>
+<p>SHA256 <code>77bd4d0b1ee81eedf9701f692504bdc8a16025c565c5ceb0a00f079ddbd2e8c1</code></p>
+<pre><code>// ===== MagicCarnivalGrid :: public bool TryManipulateGrid(MagicCarnivalOrbItem currentCard)   [RVA 0x2A172B8, ok]
+
+/* WARNING: Removing unreachable block (ram,0x02b1761c) */
+/* WARNING: Type propagation algorithm not settling */
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+bool Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__TryManipulateGrid
+               (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid_o *__this,
+               Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o
+               *currentCard,MethodInfo *method)
+
+{
+  UnityEngine_Vector2Int_o gridPos;
+  int item;
+  int iVar1;
+  int32_t iVar2;
+  int iVar3;
+  long lVar4;
+  Il2CppObject *item_00;
+  bool bVar5;
+  uint uVar6;
+  int32_t iVar7;
+  System_Collections_Generic_List_MagicCarnivalOrbItem__o *__this_00;
+  System_Collections_Generic_List_MagicCarnivalOrbItem__o *cardsToReplace;
+  System_Collections_Generic_List_T__o *__this_01;
+  System_Collections_Generic_List_int__o *__this_02;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o *__this_03;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *pRVar8;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid_o *__this_04;
+  MethodInfo *method_00;
+  MethodInfo *method_01;
+  MethodInfo *in_x3;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_array *pRVar9;
+  System_Object_array *pSVar10;
+  System_Collections_Generic_List_Enumerator_T__o local_b8;
+  System_Collections_Generic_List_Enumerator_object__o local_a0;
+  System_Collections_Generic_List_Enumerator_T__o local_80;
+  
+  if ((DAT_051a2b4e &amp; 1) == 0) {
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List_Enumerator&lt;int&gt;_Dispose__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List_Enumerator&lt;MagicCarnivalOrbItem&gt;_Dispose__)
+    ;
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List_Enumerator&lt;MagicCarnivalOrbItem&gt;_MoveNext__
+                );
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List_Enumerator&lt;int&gt;_MoveNext__);
+    FUN_021edf74(&amp;
+                 Method_System_Collections_Generic_List_Enumerator&lt;MagicCarnivalOrbItem&gt;_get_Current__
+                );
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List_Enumerator&lt;int&gt;_get_Current__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_Add__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;_Add__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;_Contains__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_GetEnumerator__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;int&gt;_GetEnumerator__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;__ctor__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;__ctor__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_get_Count__);
+    FUN_021edf74(&amp;System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;_TypeInfo);
+    FUN_021edf74(&amp;System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_TypeInfo);
+    FUN_021edf74(&amp;UnityEngine_Object_TypeInfo);
+    DAT_051a2b4e = 1;
+  }
+  local_80.fields._list = (System_Collections_Generic_List_T__o *)0x0;
+  local_80.fields._index = 0;
+  local_80.fields._version = 0;
+  local_80.fields._current = (Il2CppObject *)0x0;
+  local_a0.fields._list = (System_Collections_Generic_List_T__o *)0x0;
+  local_a0.fields._index = 0;
+  local_a0.fields._version = 0;
+  local_a0.fields._current = (Il2CppObject *)0x0;
+  __this_00 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__GetNotSeenCardsInGrid
+                        (__this,currentCard,method);
+  if ((__this_00 == (System_Collections_Generic_List_MagicCarnivalOrbItem__o *)0x0) ||
+     ((__this_00-&gt;fields)._size == 0)) {
+    return false;
+  }
+  cardsToReplace =
+       (System_Collections_Generic_List_MagicCarnivalOrbItem__o *)
+       thunk_FUN_02248ff4(System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_TypeInfo);
+  System_Collections_Generic_List&lt;object&gt;___ctor
+            ((System_Collections_Generic_List_object__o *)cardsToReplace,
+             Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;__ctor__);
+  __this_01 = (System_Collections_Generic_List_T__o *)
+              thunk_FUN_02248ff4(System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;_TypeInfo);
+  System_Collections_Generic_List&lt;Int32Enum&gt;___ctor
+            (__this_01,Method_System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;__ctor__);
+  __this_02 = (__this-&gt;fields).lastThreeSeenCards;
+  if (__this_02 != (System_Collections_Generic_List_int__o *)0x0) {
+    System_Collections_Generic_List&lt;int&gt;__GetEnumerator
+              (&amp;local_b8,__this_02,Method_System_Collections_Generic_List&lt;int&gt;_GetEnumerator__);
+    local_80.fields._index = local_b8.fields._index;
+    local_80.fields._version = local_b8.fields._version;
+    local_80.fields._list = local_b8.fields._list;
+    local_80.fields._current = local_b8.fields._current;
+    while (bVar5 = System_Collections_Generic_List_Enumerator&lt;int&gt;__MoveNext
+                             (&amp;local_80,
+                              Method_System_Collections_Generic_List_Enumerator&lt;int&gt;_MoveNext__),
+          bVar5) {
+      iVar3 = (int)local_80.fields._current;
+      System_Collections_Generic_List&lt;object&gt;__GetEnumerator
+                (&amp;local_b8,(System_Collections_Generic_List_object__o *)__this_00,
+                 Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_GetEnumerator__);
+      iVar3 = iVar3 + -1;
+      local_a0.fields._index = local_b8.fields._index;
+      local_a0.fields._version = local_b8.fields._version;
+      local_a0.fields._list = local_b8.fields._list;
+      local_a0.fields._current = local_b8.fields._current;
+      do {
+        do {
+          bVar5 = System_Collections_Generic_List_Enumerator&lt;object&gt;__MoveNext
+                            (&amp;local_a0,
+                             Method_System_Collections_Generic_List_Enumerator&lt;MagicCarnivalOrbItem&gt;_MoveNext__
+                            );
+          item_00 = local_a0.fields._current;
+          if (!bVar5) goto LAB_02b17604;
+          if ((Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)
+              local_a0.fields._current ==
+              (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)0x0) {
+                    /* WARNING: Subroutine does not return */
+            FUN_021ee1d0();
+          }
+          if ((__this-&gt;fields).gridManager ==
+              (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o *)0x0) {
+                    /* WARNING: Subroutine does not return */
+            FUN_021ee1d0();
+          }
+          item = ((Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_Fields *)
+                 ((long)local_a0.fields._current + 0x10))-&gt;_Type_k__BackingField;
+          uVar6 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager__get_Width
+                            ((Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o
+                              *)(ulong)bVar5,method_00);
+          iVar7 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager__get_Width
+                            ((Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o
+                              *)(ulong)uVar6,method_01);
+          __this_03 = (__this-&gt;fields).gridManager;
+          if (__this_03 ==
+              (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o *)0x0) {
+                    /* WARNING: Subroutine does not return */
+            FUN_021ee1d0();
+          }
+          iVar1 = 0;
+          if (uVar6 != 0) {
+            iVar1 = iVar3 / (int)uVar6;
+          }
+          iVar2 = 0;
+          if (iVar7 != 0) {
+            iVar2 = iVar3 / iVar7;
+          }
+          gridPos.fields.m_Y = iVar2;
+          gridPos.fields.m_X = iVar3 - iVar1 * uVar6;
+          pRVar8 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager__GetOrbItem
+                             (__this_03,gridPos,method);
+          if (pRVar8 == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *
+                        )0x0) {
+                    /* WARNING: Subroutine does not return */
+            FUN_021ee1d0();
+          }
+        } while (((pRVar8-&gt;fields)._Type_k__BackingField != item) ||
+                (((Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_Fields *)
+                 ((long)item_00 + 0x10))-&gt;_IsHighlighted_k__BackingField != false));
+        if (__this_01 == (System_Collections_Generic_List_T__o *)0x0) {
+                    /* WARNING: Subroutine does not return */
+          FUN_021ee1d0();
+        }
+        method = Method_System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;_Contains__;
+        bVar5 = System_Collections_Generic_List&lt;Int32Enum&gt;__Contains
+                          (__this_01,item,
+                           (MethodInfo_4056728 *)
+                           Method_System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;_Contains__
+                          );
+        lVar4 = Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_Add__;
+      } while (bVar5);
+      if (cardsToReplace == (System_Collections_Generic_List_MagicCarnivalOrbItem__o *)0x0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_021ee1d0();
+      }
+      pRVar9 = (cardsToReplace-&gt;fields)._items;
+      (cardsToReplace-&gt;fields)._version = (cardsToReplace-&gt;fields)._version + 1;
+      if (pRVar9 == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_array *
+                    )0x0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_021ee1d0();
+      }
+      uVar6 = (cardsToReplace-&gt;fields)._size;
+      if (uVar6 &lt; (uint)pRVar9-&gt;max_length) {
+        (cardsToReplace-&gt;fields)._size = uVar6 + 1;
+        pRVar9-&gt;m_Items[(int)uVar6] =
+             (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)item_00;
+        switchD_0461e7ac::default(pRVar9-&gt;m_Items + (int)uVar6,item_00);
+      }
+      else {
+        method = *(MethodInfo **)(*(long *)(*(long *)(lVar4 + 0x20) + 0xc0) + 0x70);
+        System_Collections_Generic_List&lt;object&gt;__AddWithResize
+                  ((System_Collections_Generic_List_object__o *)cardsToReplace,item_00,
+                   (MethodInfo_409EAD0 *)method);
+      }
+      lVar4 = Method_System_Collections_Generic_List&lt;MagicCarnivalAssetType&gt;_Add__;
+      pSVar10 = (__this_01-&gt;fields)._items;
+      (__this_01-&gt;fields)._version = (__this_01-&gt;fields)._version + 1;
+      if (pSVar10 == (System_Object_array *)0x0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_021ee1d0();
+      }
+      uVar6 = (__this_01-&gt;fields)._size;
+      if (uVar6 &lt; (uint)pSVar10-&gt;max_length) {
+        (__this_01-&gt;fields)._size = uVar6 + 1;
+        *(int *)((long)pSVar10-&gt;m_Items + (long)(int)uVar6 * 4) = item;
+      }
+      else {
+        method = *(MethodInfo **)(*(long *)(*(long *)(lVar4 + 0x20) + 0xc0) + 0x70);
+        System_Collections_Generic_List&lt;Int32Enum&gt;__AddWithResize
+                  (__this_01,item,(MethodInfo_40563B0 *)method);
+      }
+LAB_02b17604:
+      System_Collections_Generic_List_Enumerator&lt;object&gt;__Dispose
+                (&amp;local_a0,
+                 Method_System_Collections_Generic_List_Enumerator&lt;MagicCarnivalOrbItem&gt;_Dispose__);
+    }
+    System_Collections_Generic_List_Enumerator&lt;int&gt;__Dispose
+              (&amp;local_80,Method_System_Collections_Generic_List_Enumerator&lt;int&gt;_Dispose__);
+    if (cardsToReplace != (System_Collections_Generic_List_MagicCarnivalOrbItem__o *)0x0) {
+      if ((cardsToReplace-&gt;fields)._size == 0) {
+        return false;
+      }
+      pRVar8 = Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__DecideCardToReplace
+                         (__this_04,cardsToReplace,method);
+      if ((UnityEngine_Object_TypeInfo-&gt;_2).cctor_finished == 0) {
+        thunk_FUN_021c3bd4(UnityEngine_Object_TypeInfo);
+      }
+      bVar5 = UnityEngine_Object__op_Equality
+                        ((UnityEngine_Object_o *)pRVar8,(UnityEngine_Object_o *)0x0,
+                         (MethodInfo *)0x0);
+      if (bVar5) {
+        return false;
+      }
+      Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__ReplaceTwoCards
+                (__this,currentCard,pRVar8,in_x3);
+      return true;
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<h2 id="magiccarnivalgrid--public-void-replacetwocardsmagiccarnivalorbitem-currentcard-magiccarnivalorbitem-newcard---rva-0x2a17b6c-ok">MagicCarnivalGrid :: public void ReplaceTwoCards(MagicCarnivalOrbItem currentCard, MagicCarnivalOrbItem newCard)   [RVA 0x2A17B6C, ok]</h2>
+<p>SHA256 <code>3964e90a8f0b7eb3c3b15e3f02da3f57e6569e1b4cdf6128d4d2a64db979295b</code></p>
+<pre><code>// ===== MagicCarnivalGrid :: public void ReplaceTwoCards(MagicCarnivalOrbItem currentCard, MagicCarnivalOrbItem newCard)   [RVA 0x2A17B6C, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+void Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__ReplaceTwoCards
+               (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid_o *__this,
+               Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o
+               *currentCard,
+               Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *newCard,
+               MethodInfo *method)
+
+{
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGridData_o *__this_00;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o *pRVar1;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalProvider_o *__this_01;
+  System_Object_array *args;
+  Il2CppObject *pIVar2;
+  long lVar3;
+  System_String_o *log;
+  undefined8 uVar4;
+  UnityEngine_Vector2Int_Fields UVar5;
+  MethodInfo *method_00;
+  UnityEngine_Vector2Int_Fields UVar6;
+  MethodInfo *in_x5;
+  long lVar7;
+  int32_t local_5c;
+  UnityEngine_Vector2Int_Fields local_58;
+  int32_t local_4c;
+  UnityEngine_Vector2Int_Fields local_48;
+  
+  if ((DAT_051a2b4f &amp; 1) == 0) {
+    FUN_021edf74(&amp;Method_System_Array_Empty&lt;object&gt;__);
+    FUN_021edf74(&amp;int_TypeInfo);
+    FUN_021edf74(&amp;object___TypeInfo);
+    FUN_021edf74(&amp;UnityEngine_Vector2Int_TypeInfo);
+    FUN_021edf74(&amp;StringLiteral_14812 /* &quot;Two orbs are replaced : GridPos - {0} | Type - {1}, GridPos - {2} | Type - {3}&quot; */);
+    DAT_051a2b4f = 1;
+  }
+  if (((currentCard !=
+        (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)0x0) &amp;&amp;
+      (newCard != (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)0x0))
+     &amp;&amp; (__this_00 = (__this-&gt;fields)._GridData_k__BackingField,
+        __this_00 !=
+        (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGridData_o *)0x0)) {
+    Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGridData__ReplaceTwoCardsInGridData
+              (__this_00,
+               (UnityEngine_Vector2Int_o)(currentCard-&gt;fields)._GridPos_k__BackingField.fields,
+               (UnityEngine_Vector2Int_o)(newCard-&gt;fields)._GridPos_k__BackingField.fields,method);
+    pRVar1 = (__this-&gt;fields).gridManager;
+    if (pRVar1 != (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o *)0x0
+       ) {
+      UVar6 = (currentCard-&gt;fields)._GridPos_k__BackingField.fields;
+      UVar5 = (newCard-&gt;fields)._GridPos_k__BackingField.fields;
+      method_00 = (MethodInfo *)((ulong)UVar5 &gt;&gt; 0x20);
+      Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager__ReplaceTwoCardsInProgress
+                (pRVar1,UVar5.m_X,UVar5.m_Y,UVar6.m_X,UVar6.m_Y,in_x5);
+      Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__UpdateOrbContents
+                (currentCard,newCard,method_00);
+      pRVar1 = (__this-&gt;fields).gridManager;
+      if ((pRVar1 != (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Units_MagicCarnivalGridManager_o *)
+                     0x0) &amp;&amp;
+         (__this_01 = (pRVar1-&gt;fields)._PairProvider_k__BackingField,
+         __this_01 !=
+         (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalProvider_o *)0x0)) {
+        Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalProvider__OnCardManipulation
+                  (__this_01,
+                   (UnityEngine_Vector2Int_o)(newCard-&gt;fields)._GridPos_k__BackingField.fields,
+                   (UnityEngine_Vector2Int_o)(currentCard-&gt;fields)._GridPos_k__BackingField.fields,
+                   (MethodInfo *)0x0);
+        args = (System_Object_array *)FUN_021ee01c(object___TypeInfo,4);
+        local_48 = (currentCard-&gt;fields)._GridPos_k__BackingField.fields;
+        pIVar2 = (Il2CppObject *)thunk_FUN_02248c24(UnityEngine_Vector2Int_TypeInfo,&amp;local_48);
+        if (args != (System_Object_array *)0x0) {
+          if ((pIVar2 != (Il2CppObject *)0x0) &amp;&amp;
+             (lVar3 = thunk_FUN_02248ef8(pIVar2,(((args-&gt;obj).klass)-&gt;_1).element_class), lVar3 == 0
+             )) {
+LAB_02b17e40:
+            uVar4 = thunk_FUN_021fe694();
+                    /* WARNING: Subroutine does not return */
+            FUN_021ee09c(uVar4,0);
+          }
+          if ((int)args-&gt;max_length != 0) {
+            args-&gt;m_Items[0] = pIVar2;
+            switchD_0461e7ac::default(args-&gt;m_Items,pIVar2);
+            local_4c = (currentCard-&gt;fields)._Type_k__BackingField;
+            pIVar2 = (Il2CppObject *)thunk_FUN_02248c24(int_TypeInfo,&amp;local_4c);
+            if ((pIVar2 != (Il2CppObject *)0x0) &amp;&amp;
+               (lVar3 = thunk_FUN_02248ef8(pIVar2,(((args-&gt;obj).klass)-&gt;_1).element_class),
+               lVar3 == 0)) goto LAB_02b17e40;
+            if (1 &lt; (uint)args-&gt;max_length) {
+              args-&gt;m_Items[1] = pIVar2;
+              switchD_0461e7ac::default(args-&gt;m_Items + 1,pIVar2);
+              local_58 = (newCard-&gt;fields)._GridPos_k__BackingField.fields;
+              pIVar2 = (Il2CppObject *)thunk_FUN_02248c24(UnityEngine_Vector2Int_TypeInfo,&amp;local_58)
+              ;
+              if ((pIVar2 != (Il2CppObject *)0x0) &amp;&amp;
+                 (lVar3 = thunk_FUN_02248ef8(pIVar2,(((args-&gt;obj).klass)-&gt;_1).element_class),
+                 lVar3 == 0)) goto LAB_02b17e40;
+              if (2 &lt; (uint)args-&gt;max_length) {
+                args-&gt;m_Items[2] = pIVar2;
+                switchD_0461e7ac::default(args-&gt;m_Items + 2,pIVar2);
+                local_5c = (newCard-&gt;fields)._Type_k__BackingField;
+                pIVar2 = (Il2CppObject *)thunk_FUN_02248c24(int_TypeInfo,&amp;local_5c);
+                if ((pIVar2 != (Il2CppObject *)0x0) &amp;&amp;
+                   (lVar3 = thunk_FUN_02248ef8(pIVar2,(((args-&gt;obj).klass)-&gt;_1).element_class),
+                   lVar3 == 0)) goto LAB_02b17e40;
+                if (3 &lt; (uint)args-&gt;max_length) {
+                  args-&gt;m_Items[3] = pIVar2;
+                  switchD_0461e7ac::default(args-&gt;m_Items + 3,pIVar2);
+                  log = System_String__Format(StringLiteral_14812 /* &quot;Two orbs are replaced : GridPos - {0} | Type - {1}, GridPos - {2} | Type - {3}&quot; */,args,(MethodInfo *)0x0);
+                  lVar3 = Method_System_Array_Empty&lt;object&gt;__;
+                  lVar7 = *(long *)(Method_System_Array_Empty&lt;object&gt;__ + 0x38);
+                  if (lVar7 == 0) {
+                    FUN_0223d474(Method_System_Array_Empty&lt;object&gt;__);
+                    lVar7 = *(long *)(lVar3 + 0x38);
+                  }
+                  lVar7 = *(long *)(lVar7 + 0x10);
+                  if ((*(byte *)(lVar7 + 0x135) &amp; 1) == 0) {
+                    lVar7 = FUN_0223d418();
+                  }
+                  if (*(int *)(lVar7 + 0xe0) == 0) {
+                    thunk_FUN_021c3bd4();
+                  }
+                  lVar3 = *(long *)(*(long *)(lVar3 + 0x38) + 0x10);
+                  if ((*(byte *)(lVar3 + 0x135) &amp; 1) == 0) {
+                    lVar3 = FUN_0223d418();
+                  }
+                  Royal_Infrastructure_Services_Logs_Log__Debug
+                            ((Il2CppObject *)__this,0x4a,log,
+                             (System_Object_array *)**(undefined8 **)(lVar3 + 0xb8),
+                             (MethodInfo *)0x0);
+                  return;
+                }
+              }
+            }
+          }
+                    /* WARNING: Subroutine does not return */
+          FUN_021ee1d8();
+        }
+      }
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre>
+<h2 id="magiccarnivalgrid--private-magiccarnivalorbitem-decidecardtoreplacelistmagiccarnivalorbitem-cardstoreplace---rva-0x2a23978-ok">MagicCarnivalGrid :: private MagicCarnivalOrbItem DecideCardToReplace(List&lt;MagicCarnivalOrbItem&gt; cardsToReplace)   [RVA 0x2A23978, ok]</h2>
+<p>SHA256 <code>c39b733d81929fcd16eca4f4226acfbca221d4188feba00f33d26ebf1e384430</code></p>
+<pre><code>// ===== MagicCarnivalGrid :: private MagicCarnivalOrbItem DecideCardToReplace(List&lt;MagicCarnivalOrbItem&gt; cardsToReplace)   [RVA 0x2A23978, ok]
+
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *
+Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__DecideCardToReplace
+          (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid_o *__this,
+          System_Collections_Generic_List_MagicCarnivalOrbItem__o *cardsToReplace,MethodInfo *method
+          )
+
+{
+  int iVar1;
+  int32_t iVar2;
+  Royal_Scenes_Start_Context_Units_RandomManager_o *__this_00;
+  uint uVar3;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_array *pRVar4;
+  
+  if ((DAT_051a2b50 &amp; 1) == 0) {
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_get_Count__);
+    __this = (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid_o *)
+             FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_get_Item__);
+    DAT_051a2b50 = 1;
+  }
+  if (cardsToReplace == (System_Collections_Generic_List_MagicCarnivalOrbItem__o *)0x0) {
+LAB_02b23a68:
+                    /* WARNING: Subroutine does not return */
+    FUN_021ee1d0(__this);
+  }
+  iVar1 = (cardsToReplace-&gt;fields)._size;
+  __this_00 = Royal_Scenes_Start_Context_Units_RandomManager__get_Current((MethodInfo *)0x0);
+  __this = (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid_o *)0x0;
+  if (__this_00 == (Royal_Scenes_Start_Context_Units_RandomManager_o *)0x0) goto LAB_02b23a68;
+  iVar2 = Royal_Scenes_Start_Context_Units_RandomManager__Next(__this_00,0,100,(MethodInfo *)0x0);
+  if (iVar1 == 3) {
+                    /* try { // try from 02b23a08 to 02c23a17 has its CatchHandler @ 02b23a78 */
+    if (iVar2 &lt; 0x32) {
+      uVar3 = 2;
+      goto LAB_02b23a5c;
+    }
+    if (iVar2 &lt; 0x5a) goto LAB_02b23a38;
+  }
+  else if (iVar1 == 2) {
+    if (iVar2 &lt; 0x50) {
+LAB_02b23a38:
+      uVar3 = 1;
+      goto LAB_02b23a5c;
+    }
+  }
+  else if (iVar1 != 1) {
+    return (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)0x0;
+  }
+                    /* try { // try from 02b23a18 to 02c23a93 has its CatchHandler @ 02b238fc */
+  uVar3 = 0;
+LAB_02b23a5c:
+  if ((uint)(cardsToReplace-&gt;fields)._size &lt;= uVar3) {
+    System_ThrowHelper__ThrowArgumentOutOfRange_IndexException((MethodInfo *)0x0);
+  }
+  pRVar4 = (cardsToReplace-&gt;fields)._items;
+  if (pRVar4 == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_array *)0x0
+     ) {
+                    /* WARNING: Subroutine does not return */
+    FUN_021ee1d0();
+  }
+  if ((uint)pRVar4-&gt;max_length &lt;= uVar3) {
+                    /* WARNING: Subroutine does not return */
+    FUN_021ee1d8();
+  }
+  return pRVar4-&gt;m_Items[(int)uVar3];
+}
+
+
+</code></pre>
+<h2 id="magiccarnivalgrid--private-listmagiccarnivalorbitem-getnotseencardsingridmagiccarnivalorbitem-selectedcard---rva-0x2a237dc-ok">MagicCarnivalGrid :: private List&lt;MagicCarnivalOrbItem&gt; GetNotSeenCardsInGrid(MagicCarnivalOrbItem selectedCard)   [RVA 0x2A237DC, ok]</h2>
+<p>SHA256 <code>52f9df7c841d646db28674b00e4b87a5bcef801b0b3fc7effdb231b266bf8224</code></p>
+<pre><code>// ===== MagicCarnivalGrid :: private List&lt;MagicCarnivalOrbItem&gt; GetNotSeenCardsInGrid(MagicCarnivalOrbItem selectedCard)   [RVA 0x2A237DC, ok]
+
+/* WARNING: Type propagation algorithm not settling */
+/* WARNING: Unknown calling convention -- yet parameter storage is locked */
+
+System_Collections_Generic_List_MagicCarnivalOrbItem__o *
+Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid__GetNotSeenCardsInGrid
+          (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGrid_o *__this,
+          Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *selectedCard,
+          MethodInfo *method)
+
+{
+  uint uVar1;
+  long lVar2;
+  System_Collections_Generic_List_MagicCarnivalOrbItem__o *__this_00;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *item;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGridData_o *pRVar3;
+  Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_array *pRVar4;
+  ulong uVar5;
+  ulong uVar6;
+  long lVar7;
+  
+  if ((DAT_051a2b51 &amp; 1) == 0) {
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_Add__);
+    FUN_021edf74(&amp;Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;__ctor__);
+    FUN_021edf74(&amp;System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_TypeInfo);
+    DAT_051a2b51 = 1;
+  }
+  __this_00 = (System_Collections_Generic_List_MagicCarnivalOrbItem__o *)
+              thunk_FUN_02248ff4(System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_TypeInfo);
+  System_Collections_Generic_List&lt;object&gt;___ctor
+            ((System_Collections_Generic_List_object__o *)__this_00,
+             Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;__ctor__);
+  pRVar3 = (__this-&gt;fields)._GridData_k__BackingField;
+  if (pRVar3 != (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGridData_o *)0x0) {
+    if (0 &lt; (pRVar3-&gt;fields).height) {
+      uVar6 = 0;
+      do {
+        lVar7 = 0;
+        while (lVar2 = Method_System_Collections_Generic_List&lt;MagicCarnivalOrbItem&gt;_Add__,
+              (int)(uint)lVar7 &lt; (pRVar3-&gt;fields).width) {
+          pRVar4 = (__this-&gt;fields)._Grid_k__BackingField;
+          if (pRVar4 == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_array
+                         *)0x0) goto LAB_02b23970;
+          if (((uint)pRVar4-&gt;bounds-&gt;length &lt;= (uint)lVar7) ||
+             (uVar5 = pRVar4-&gt;bounds[1].length, (uVar5 &amp; 0xffffffff) &lt;= uVar6)) {
+                    /* WARNING: Subroutine does not return */
+            FUN_021ee1d8();
+          }
+          item = pRVar4-&gt;m_Items[uVar6 + uVar5 * lVar7];
+          if (item == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)
+                      0x0) goto LAB_02b23970;
+          if ((item-&gt;fields)._IsSeen_k__BackingField == false) {
+            if (selectedCard ==
+                (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_o *)0x0)
+            goto LAB_02b23970;
+            if (((selectedCard-&gt;fields)._GridPos_k__BackingField.fields.m_X !=
+                 (item-&gt;fields)._GridPos_k__BackingField.fields.m_X) ||
+               ((selectedCard-&gt;fields)._GridPos_k__BackingField.fields.m_Y !=
+                (item-&gt;fields)._GridPos_k__BackingField.fields.m_Y)) {
+              if (__this_00 == (System_Collections_Generic_List_MagicCarnivalOrbItem__o *)0x0)
+              goto LAB_02b23970;
+              pRVar4 = (__this_00-&gt;fields)._items;
+              (__this_00-&gt;fields)._version = (__this_00-&gt;fields)._version + 1;
+              if (pRVar4 == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalOrbItem_array
+                             *)0x0) goto LAB_02b23970;
+                    /* try { // try from 02b238fc to 02c239f3 has its CatchHandler @ 02b238fc
+                       catch() { ... } // from try @ 02b238fc with catch @ 02b238fc
+                       catch() { ... } // from try @ 02b23a18 with catch @ 02b238fc
+                       catch() { ... } // from try @ 02b23a98 with catch @ 02b238fc
+                       catch() { ... } // from try @ 02b23ad8 with catch @ 02b238fc */
+              uVar1 = (__this_00-&gt;fields)._size;
+              if (uVar1 &lt; (uint)pRVar4-&gt;max_length) {
+                (__this_00-&gt;fields)._size = uVar1 + 1;
+                pRVar4-&gt;m_Items[(int)uVar1] = item;
+                switchD_0461e7ac::default();
+              }
+              else {
+                System_Collections_Generic_List&lt;object&gt;__AddWithResize
+                          ((System_Collections_Generic_List_object__o *)__this_00,
+                           (Il2CppObject *)item,
+                           *(MethodInfo_409EAD0 **)
+                            (*(long *)(*(long *)(lVar2 + 0x20) + 0xc0) + 0x70));
+              }
+            }
+          }
+          pRVar3 = (__this-&gt;fields)._GridData_k__BackingField;
+          lVar7 = lVar7 + 1;
+          if (pRVar3 == (Royal_Scenes_Home_Ui_Dialogs_MagicCarnival_Scripts_MagicCarnivalGridData_o
+                         *)0x0) goto LAB_02b23970;
+        }
+        uVar6 = uVar6 + 1;
+      } while ((long)uVar6 &lt; (long)(pRVar3-&gt;fields).height);
+    }
+    return __this_00;
+  }
+LAB_02b23970:
+                    /* WARNING: Subroutine does not return */
+  FUN_021ee1d0();
+}
+
+
+</code></pre></div>
+<footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
+</div></main>
+</div>
+<script>window.SITE_ROOT="../";</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quan sát playtest 12/11/2026 – Royal Kingdom GDD Wiki</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/img/brand.png">
+
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><img src="../assets/img/brand.png" alt=""> <span>Royal Kingdom GDD Wiki</span></a>
+  <div class="search"><input id="q" type="search" placeholder="Tìm tính năng, class, config… (/)" autocomplete="off"><div id="results" class="results" hidden></div></div>
+  <nav class="toplinks"><a href="../index.html">Trang chủ</a><a href="../categories/event.html">Sự kiện</a><a href="../analysis/index.html">Phân tích</a><a href="../appendix/events-overview.html">Phụ lục</a></nav>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="side-title">Danh mục</div>
+  <details><summary>🎯 Lõi gameplay <span class="n">17</span></summary><ul><li><a href="../features/LevelSets.html">Bộ level &amp; tải level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MatchMechanics.html">Luật match-3<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelFlow.html">Luồng level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemainingMoves.html">Lượt dư cuối level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Lives.html">Mạng (Lives)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelGoals.html">Mục tiêu level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSkins.html">Skin level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelTutorials.html">Tutorial trong level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SpecialItems.html">Vật phẩm đặc biệt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_1.html" title="Vật cản 1 (L1–500)">Vật cản 1 (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AttackLevels.html" title="Level tấn công (đánh thành)">Level tấn công (lv5)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Boosters.html" title="Booster">Booster (lv6)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Difficulty.html" title="Độ khó (Hard, Super Hard)">Độ khó (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicPot.html" title="Magic Pot (bình thuốc)">Magic Pot (lv32)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperElectroBall.html" title="Super Electro Ball">Super Electro Ball (lv101/301)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_2.html" title="Vật cản 2 (L500–1500)">Vật cản 2 (lv451)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_3.html" title="Vật cản 3 (L1500+)">Vật cản 3 (lv1501)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>💰 Kinh tế &amp; Shop <span class="n">11</span></summary><ul><li><a href="../features/Inventory.html">Coin &amp; kho đồ (Inventory)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PlayOn.html">Hết lượt - Play On<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Ads.html">Quảng cáo (Ads)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Shop.html">Shop &amp; IAP<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomePack.html" title="Welcome Pack">Welcome Pack (lv13)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PrelevelMultiplier.html" title="Nhân thưởng event theo level">Nhân thưởng event theo level (lv24)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LadderOffer.html" title="Ladder Offer">Ladder Offer (lv35)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Offers.html" title="Khung offer (Offers)">Khung offer (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MythicDeal.html" title="Mythic Deal">Mythic Deal (lv100)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CoinCraze.html" title="Coin Craze (progress offer)">Coin Craze (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperBoostOffer.html" title="Super Boost Offer">Super Boost Offer (lv111/311)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🏰 Tiến trình <span class="n">8</span></summary><ul><li><a href="../features/WorldMap.html">Bản đồ thế giới<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Cutscenes.html">Cutscene, thư viện và vignette<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TrophyRoom.html">Phòng cúp (đã gỡ)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyGift.html">Quà hằng ngày (Daily Refill)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Kingdom.html">Xây vương quốc (Kingdom)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyLogin.html">Điểm danh hằng ngày<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomeBack.html" title="Welcome Back (quà quay lại)">Welcome Back (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelMilestones.html" title="Mốc nghìn level và hết level">Mốc nghìn level và hết level (lv1000)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🎪 Sự kiện <span class="n">24</span></summary><ul><li><a href="../features/RichardsJourney.html" title="Richard&#x27;s Journey">Richard&#x27;s Journey (lv1)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamAdventure.html" title="Team Adventure">Team Adventure (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamClash.html" title="Team Clash">Team Clash (lv26)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomPass.html" title="Kingdom Pass">Kingdom Pass (lv31)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Blitz.html" title="Electro Blitz - Diamond Mine">Electro Blitz - Diamond Mine (lv36)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CardCollection.html" title="Bộ sưu tập thẻ">Bộ sưu tập thẻ (lv41)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CubeBlast.html" title="Cube Blast (mini-game)">Cube Blast (lv41/51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FlyingContest.html" title="Flying Contest">Flying Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GrandTournament.html" title="Grand Tournament">Grand Tournament (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyContest.html" title="Weekly Contest">Weekly Contest (lv46)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicCarnival.html" title="Magic Carnival (mini-game)">Magic Carnival (lv51)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DungeonEscape.html" title="Dungeon Escape">Dungeon Escape (lv56)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomDuels.html" title="Kingdom Duels">Kingdom Duels (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PowerRush.html" title="Power Rush">Power Rush (lv66)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HiddenPath.html" title="Hidden Path">Hidden Path (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PearlsOfAtlantis.html" title="Pearls of Atlantis">Pearls of Atlantis (lv76)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GemHunt.html" title="Gem Hunt">Gem Hunt (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/IslandRace.html" title="Island Race">Island Race (lv86)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CanvasQuest.html" title="Canvas Quest">Canvas Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HillQuest.html" title="Hill Quest">Hill Quest (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MissionEvents.html" title="Khung event nhiệm vụ">Khung event nhiệm vụ (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyMission.html" title="Weekly Goals (Weekly Mission)">Weekly Goals (lv101)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MedalMissions.html" title="Medal Missions">Medal Missions (lv151)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ChampionsArena.html" title="Đấu trường (Champions Arena)">Đấu trường (lv5600)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>👥 Xã hội <span class="n">6</span></summary><ul><li><a href="../features/Leaderboard.html">Bảng xếp hạng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Emotes.html">Emote<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Profile.html">Hồ sơ &amp; trang trí<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Team.html" title="Đội (Team)">Đội (lv21)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EmoteAlbum.html" title="Emote Album">Emote Album (lv22)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Friends.html" title="Bạn bè (Friends)">Bạn bè (lv44)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📡 Live-ops &amp; hạ tầng <span class="n">8</span></summary><ul><li><a href="../features/Analytics.html">Analytics<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AssetBundles.html">Bundle &amp; tải tài nguyên<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemoteConfig.html">Cấu hình từ xa &amp; AB test<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ServerCommunication.html">Giao tiếp server<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EventsFramework.html">Khung sự kiện<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SaveSync.html">Lưu &amp; đồng bộ dữ liệu<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Notifications.html">Thông báo<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FeatureDependency.html">Ưu tiên &amp; mở tính năng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>⚙️ Meta &amp; UI <span class="n">9</span></summary><ul><li><a href="../features/Settings.html">Cài đặt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Support.html">Hỗ trợ (Helpshift)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Loading.html">Loading &amp; splash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HomeUI.html">Màn hình Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Onboarding.html">Onboarding &amp; tutorial Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AppUpdate.html">Phiên bản &amp; cập nhật<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Privacy.html">Quyền riêng tư &amp; phụ huynh<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Account.html">Tài khoản &amp; đăng nhập<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RateUs.html" title="Đánh giá app">Đánh giá app (lv15)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📊 Phân tích & đánh giá <span class="n">6</span></summary><ul><li><a href="../analysis/index.html">Tất cả phân tích</a></li><li><a href="../analysis/01-sale-event-flows.html">Luồng Sale &amp; Event của Royal Kingdom — từ server tới phần thưởng</a></li><li><a href="../analysis/02-deep-dive.html">Phân tích chuyên sâu — Độ khó, bộ level, hệ số nhân, AB test và kinh tế của thất bại</a></li><li><a href="../analysis/03-iap-packages.html">Phân tích từng gói IAP — Royal Kingdom</a></li><li><a href="../analysis/04-user-segmentation.html">Phân tệp người chơi — payer, segment và AB trong Royal Kingdom</a></li><li><a href="../analysis/05-economy.html">Kinh tế Royal Kingdom — nguồn, nơi tiêu và ngân sách mỗi 1.000 level</a></li><li><a href="../analysis/06-rk-vs-royal-match.html">Royal Kingdom so với Royal Match — cùng khung, khác lõi</a></li></ul></details><details open><summary>📎 Phụ lục <span class="n">47</span></summary><ul><li><a href="../appendix/events-overview.html">Tổng quan sự kiện</a></li><li><a href="../appendix/unlock-levels.html">Level mở khoá</a></li><li><a href="../appendix/reward-codes.html">Mã phần thưởng</a></li><li><a href="../appendix/iap-products.html">Sản phẩm IAP</a></li><li><a href="../appendix/levels-summary.html">Level &amp; thống kê</a></li><li><a href="../appendix/default-configs.html">Config mặc định trong APK</a></li><li><a href="../appendix/backend-protocol.html">Giao thức backend</a></li><li><a href="../appendix/enums.html">Enum</a></li><li><a href="../appendix/static-arrays.html">Mảng tĩnh (metadata)</a></li><li><a href="../appendix/localization.html">Text UI (EN)</a></li><li><a href="../appendix/save-state.html">Trạng thái lưu (save)</a></li><li><a href="../appendix/config-default-vs-live.html">Config mặc định vs live</a></li><li><a href="../appendix/asset-configs.html">Asset/config local — phạm vi và bằng chứng</a></li><li><a href="../appendix/blitz-collect-calls.html">Blitz — các nơi gọi thu tia sét</a></li><li><a href="../appendix/bundle-config-catalog.html">Config giải từ asset bundle</a></li><li><a href="../appendix/bundle-localization.html">Localization từ bundle CDN Royal Kingdom</a></li><li><a href="../appendix/capture-plan.html">Ảnh cần chụp — kế hoạch đang thực hiện</a></li><li><a href="../appendix/card-collection-extended-native.html">Card Collection — điều kiện wildcard, hoàn tất và giao dịch</a></li><li><a href="../appendix/card-collection-extended-playtest.html">Card Collection — wildcard, hoàn tất bộ, Diamond và Ultimate</a></li><li><a href="../appendix/card-collection-playtest.html">Card Collection — kiểm thử rương và thẻ trùng 12/11/2026</a></li><li><a href="../appendix/card-collection-season10.html">Card Collection — toàn bộ season10 từ config client</a></li><li><a href="../appendix/cdn-quality-coverage.html">Độ phủ bundle: CDN, APK và config runtime</a></li><li><a href="../appendix/client-config-samples-after_ab56_57.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-after_dependency_mc.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples-forced151.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/client-config-samples.html">Mẫu config và segment client nhận — 12/11/2026</a></li><li><a href="../appendix/config-leaf-diff.html">So sánh từng trường config — kết quả tái sinh</a></li><li><a href="../appendix/config-playtest-diff.html">Config trước/sau playtest và override</a></li><li><a href="../appendix/cube-blast-outcomes.html">Cube Blast — kết quả kiểm chứng cập nhật</a></li><li><a href="../appendix/design-uncertainty-scan.html">Rà soát thiếu design và cấu hình server</a></li><li><a href="../appendix/difficulty-vignette-assets.html">Loading vignette — giá trị asset đã giải</a></li><li><a href="../appendix/event-outcome-playtest.html">Event outcomes — 12/11/2026</a></li><li><a href="../appendix/followup-outcomes.html">Follow-up Dungeon, trao đổi thẻ và chuyển mùa — 12/11/2026</a></li><li><a href="../appendix/gaps.html">Khoảng trống và giới hạn bằng chứng — 12/11/2026</a></li><li><a href="../appendix/kingdom-tasks.html">Kingdom — asset, task và localization</a></li><li><a href="../appendix/magic-carnival-config-selection.html">Magic Carnival — lựa chọn primary/secondary</a></li><li><a href="../appendix/magic-carnival-expiry-theme-native.html">Magic Carnival — hết giờ và fallback theme</a></li><li><a href="../appendix/magic-carnival-initial-orbs.html">MagicCarnival —2orbkhởiđầu</a></li><li><a href="../appendix/magic-carnival-manipulation.html">Magic Carnival — thuật toán thay nội dung orb</a></li><li><a href="../appendix/magic-carnival-mission-findings.html">Magic Carnival: tiến độ Mission khi ghép đúng</a></li><li><a href="../appendix/magic-carnival-runtime-cases.html">Magic Carnival — playtest theo trạng thái,12/11/2026</a></li><li class=cur><a href="../appendix/playtest-20261112.html">Quan sát playtest 12/11/2026</a></li><li><a href="../appendix/playtest-case-matrix.html">Ma trận use case cần kiểm chứng</a></li><li><a href="../appendix/richards-journey-outcomes.html">Richard’s Journey — gameplay và thưởng</a></li><li><a href="../appendix/save-state-inventory.html">Kiểm kê SQLite tái sinh — snapshot 11/11/2026</a></li><li><a href="../appendix/verified-findings.html">Kết quả kiểm chứng local — 12/11/2026</a></li><li><a href="../appendix/about.html">Về tài liệu này</a></li></ul></details>
+</aside>
+<main class="content"><div class="inner">
+<div class="crumbs"><a href="../index.html">Trang chủ</a> › Quan sát playtest 12/11/2026</div><h1 class="title">Quan sát playtest 12/11/2026</h1><p class="tagline"> <span class="muted">· nguồn <code>appendix/playtest-20261112.md</code></span></p><div class="md"><p>Mỗi ảnh ghi nhận một trạng thái, không tự đánh dấu toàn UC pass. Mode phân biệt natural và local simulation. Nhật ký tap: screens/raw/review_20261112/actions.jsonl.</p>
+<h2 id="richardsjourney_02_start">RichardsJourney_02_start</h2>
+<p>Mode: <code>natural-level1</code>. Chặng 2 RockFall: đồng hồ còn 00:57 sau khi vào; tài khoản level 1, chưa ép level.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RichardsJourney_02_start</figcaption></figure></div>
+<h2 id="richardsjourney_03_noinput_result">RichardsJourney_03_noinput_result</h2>
+<p>Mode: <code>natural-level1</code>. Không thao tác: đồng hồ còn 00:20, đá tiếp tục rơi.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RichardsJourney_03_noinput_result</figcaption></figure></div>
+<h2 id="richardsjourney_04_timeout">RichardsJourney_04_timeout</h2>
+<p>Mode: <code>natural-level1</code>. Hết giờ 00:00: hiện popup Thử lại.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RichardsJourney_04_timeout</figcaption></figure></div>
+<h2 id="richardsjourney_05_timeout_exit">RichardsJourney_05_timeout_exit</h2>
+<p>Mode: <code>natural-level1</code>. Đóng popup: quay về danh sách, chặng 2 vẫn có nút Chơi.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RichardsJourney_05_timeout_exit</figcaption></figure></div>
+<h2 id="richardsjourney_06_home_after_fail">RichardsJourney_06_home_after_fail</h2>
+<p>Mode: <code>natural-level1</code>. Trở về Home: UI hiện <img class="rwi" src="../assets/img/rw/life.png" alt="">5 mạng, <img class="rwi" src="../assets/img/rw/coin.png" alt="">2050 coin và 0 potion; chưa suy ra thời điểm trừ/hoàn mạng từ riêng ảnh này.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RichardsJourney_06_home_after_fail</figcaption></figure></div>
+<h2 id="forcedlevel151_01_start">ForcedLevel151_01_start</h2>
+<p>Mode: <code>local-level151-override</code>. Sau override local Level=151 và restart: popup mở Tranh Huy Chương.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>ForcedLevel151_01_start</figcaption></figure></div>
+<h2 id="medalmissions_02_tasks">MedalMissions_02_tasks</h2>
+<p>Mode: <code>local-level151-override</code>. Tutorial dẫn tới nút info; tổng tiến độ 0/13.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MedalMissions_02_tasks</figcaption></figure></div>
+<h2 id="medalmissions_03_info">MedalMissions_03_info</h2>
+<p>Mode: <code>local-level151-override</code>. Info mô tả hoàn thành nhiệm vụ → huy chương → phần thưởng và avatar.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MedalMissions_03_info</figcaption></figure></div>
+<h2 id="medalmissions_04_overview">MedalMissions_04_overview</h2>
+<p>Mode: <code>local-level151-override</code>. Tutorial yêu cầu chọn nhiệm vụ Kingdom Pass.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MedalMissions_04_overview</figcaption></figure></div>
+<h2 id="medalmissions_05_pass_task">MedalMissions_05_pass_task</h2>
+<p>Mode: <code>local-level151-override</code>. Nhiệm vụ Kingdom Pass 0/30, nút Đi; tổng 0/13; nhánh thử ở level local151.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MedalMissions_05_pass_task</figcaption></figure></div>
+<h2 id="kingdompass_01_entry">KingdomPass_01_entry</h2>
+<p>Mode: <code>local-level151-override</code>. Hai track miễn phí/trả phí; mốc khởi đầu có nút Nhận miễn phí, track trả phí khóa.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>KingdomPass_01_entry</figcaption></figure></div>
+<h2 id="kingdompass_02_info">KingdomPass_02_info</h2>
+<p>Mode: <code>local-level151-override</code>. Info: vượt level → thu key → mở thưởng; pass trả phí có phần thưởng riêng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>KingdomPass_02_info</figcaption></figure></div>
+<h2 id="kingdompass_04_activate_dialog">KingdomPass_04_activate_dialog</h2>
+<p>Mode: <code>local-level151-override</code>. Dialog gói hiển thị 299,000.00 VND; <img class="rwi" src="../assets/img/rw/life.png" alt="">8 mạng, tên/khung vàng, quà đồng đội. Chưa mua.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>KingdomPass_04_activate_dialog</figcaption></figure></div>
+<h2 id="kingdompass_06_free_claim">KingdomPass_06_free_claim</h2>
+<p>Mode: <code>local-level151-override</code>. Bấm Nhận miễn phí ở mốc khởi đầu: nút chuyển thành dấu tick.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>KingdomPass_06_free_claim</figcaption></figure></div>
+<h2 id="homeui_151_after_pass">HomeUI_151_after_pass</h2>
+<p>Mode: <code>local-level151-override</code>. Auto start dialog sau đóng pass: 0/1 helmet, thưởng hiển thị <img class="rwi" src="../assets/img/rw/unlimited_lives.png" alt="">30 phút mạng vô hạn, còn 1 ngày 4 giờ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>HomeUI_151_after_pass</figcaption></figure></div>
+<h2 id="grandtournament_02_continue">GrandTournament_02_continue</h2>
+<p>Mode: <code>local-level151-override</code>. Auto dialog yêu cầu gia nhập đội để tham gia; chưa có đội trong case này.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>GrandTournament_02_continue</figcaption></figure></div>
+<h2 id="teamadventure_02_close">TeamAdventure_02_close</h2>
+<p>Mode: <code>local-level151-override</code>. Home sau local Level151: nhiều icon event; đây không phải trạng thái mở tự nhiên ở level1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TeamAdventure_02_close</figcaption></figure></div>
+<h2 id="dungeonescape_01_start_dialog">DungeonEscape_01_start_dialog</h2>
+<p>Mode: <code>local-level151-override</code>. Start dialog yêu cầu vượt 7 level không thua.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>DungeonEscape_01_start_dialog</figcaption></figure></div>
+<h2 id="dungeonescape_02_enter">DungeonEscape_02_enter</h2>
+<p>Mode: <code>local-level151-override</code>. Sau Bắt đầu: màn ghép người 100/100; phần thưởng đỉnh cấp hiển thị <img class="rwi" src="../assets/img/rw/coin.png" alt="">10.000 coin.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>DungeonEscape_02_enter</figcaption></figure></div>
+<h2 id="dungeonescape_03_board">DungeonEscape_03_board</h2>
+<p>Mode: <code>local-level151-override</code>. Sảnh 0/7, 100 người; đồng hồ 23:59:42 sau vào.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>DungeonEscape_03_board</figcaption></figure></div>
+<h2 id="dungeonescape_04_info">DungeonEscape_04_info</h2>
+<p>Mode: <code>local-level151-override</code>. Tutorial: vượt cấp trong lần chơi đầu tiên để lên bước tiếp theo.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>DungeonEscape_04_info</figcaption></figure></div>
+<h2 id="dungeonescape_05_tutorial_next">DungeonEscape_05_tutorial_next</h2>
+<p>Mode: <code>local-level151-override</code>. Tutorial: chia đều phần thưởng đỉnh cấp cho những người thắng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>DungeonEscape_05_tutorial_next</figcaption></figure></div>
+<h2 id="dungeonescape_06_tutorial_end">DungeonEscape_06_tutorial_end</h2>
+<p>Mode: <code>local-level151-override</code>. Sảnh sau tutorial, chưa thắng hoặc thua level trong event.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>DungeonEscape_06_tutorial_end</figcaption></figure></div>
+<h2 id="powerrush_01_start">PowerRush_01_start</h2>
+<p>Mode: <code>local-level151-override</code>. Dialog bắt đầu: phiên 30 phút; hai tab thường/siêu; chưa vào phiên.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PowerRush_01_start</figcaption></figure></div>
+<h2 id="powerrush_02_super_variant">PowerRush_02_super_variant</h2>
+<p>Mode: <code>local-level151-override</code>. Tooltip thưởng hiển thị Hammer/Ram/Drill/Hat; ảnh không chứng minh đã chuyển sang phiên siêu.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PowerRush_02_super_variant</figcaption></figure></div>
+<h2 id="powerrush_03_enter">PowerRush_03_enter</h2>
+<p>Mode: <code>local-level151-override</code>. Vào sảnh 5 người, điểm đều 0, thời gian 29:44; hướng dẫn nút thông tin.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PowerRush_03_enter</figcaption></figure></div>
+<h2 id="powerrush_04_info">PowerRush_04_info</h2>
+<p>Mode: <code>local-level151-override</code>. Hướng dẫn thu thập lửa bằng power-up, phiên 30 phút và mạng vô hạn; thắng để tiến tới chế độ siêu.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PowerRush_04_info</figcaption></figure></div>
+<h2 id="powerrush_05_score_rules">PowerRush_05_score_rules</h2>
+<p>Mode: <code>local-level151-override</code>. Bảng UI: Spinner/Rocket 5, Dynamite 10; combo Spinner+Spinner/Rocket+Rocket/Spinner+Rocket 15; Dynamite+Spinner/Rocket 30; Dynamite+Dynamite 100. Electro Ball tính theo tác động.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PowerRush_05_score_rules</figcaption></figure></div>
+<h2 id="powerrush_07_board">PowerRush_07_board</h2>
+<p>Mode: <code>local-level151-override</code>. Sảnh 5 người, điểm đều 0, còn 27:35. Chưa kiểm chứng win/rank/claim.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PowerRush_07_board</figcaption></figure></div>
+<h2 id="cardcollection_01_season_intro">CardCollection_01_season_intro</h2>
+<p>Mode: <code>local-level151-override</code>. Mùa Bộ Sưu Tập Ma Quái: popup mở mùa. AB56/57 đã trở lại nhóm3 sau restart theo snapshot; không coi popup này là Magic Carnival.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_01_season_intro</figcaption></figure></div>
+<h2 id="cardcollection_02_continue">CardCollection_02_continue</h2>
+<p>Mode: <code>local-level151-override</code>. Gói khởi đầu màu xanh; màn hướng dẫn bấm để mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_02_continue</figcaption></figure></div>
+<h2 id="cardcollection_03_open_pack">CardCollection_03_open_pack</h2>
+<p>Mode: <code>local-level151-override</code>. Gói khởi đầu hiển thị 4 thẻ mới một sao: Tấm Che Mắt, Chiếc Ô, Hoa Giấy, Con Rối.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_03_open_pack</figcaption></figure></div>
+<h2 id="cardcollection_04_claim_starter">CardCollection_04_claim_starter</h2>
+<p>Mode: <code>local-level151-override</code>. Nhận gói khởi đầu; tutorial hướng đến nút Bộ Sưu Tập ở Home.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_04_claim_starter</figcaption></figure></div>
+<h2 id="cardcollection_05_album">CardCollection_05_album</h2>
+<p>Mode: <code>local-level151-override</code>. Album có 4/135 thẻ, 0 sao trùng, 19 ngày4 giờ; grand prize hiện10000coin, kỷ niệm chương và boosterx10.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_05_album</figcaption></figure></div>
+<h2 id="cardcollection_06_info">CardCollection_06_info</h2>
+<p>Mode: <code>local-level151-override</code>. Hướng dẫn lấy gói từ event/rương, nhận thẻ từ bạn bè, hoàn thành bộ và mùa để lấy thưởng/kỷ niệm chương.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_06_info</figcaption></figure></div>
+<h2 id="cardcollection_07_overview">CardCollection_07_overview</h2>
+<p>Mode: <code>local-level151-override</code>. Tutorial chọn bộ Ảo Thuật, bộ đang1/9.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_07_overview</figcaption></figure></div>
+<h2 id="cardcollection_08_set">CardCollection_08_set</h2>
+<p>Mode: <code>local-level151-override</code>. Bộ Ảo Thuật1/9, thưởng200coin, trang1/15. Chín vị trí thẻ; Piñata2sao, tám thẻ còn lại1sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_08_set</figcaption></figure></div>
+<h2 id="cardcollection_09_missing_card">CardCollection_09_missing_card</h2>
+<p>Mode: <code>local-level151-override</code>. Chi tiết Hộp Cười chưa sở hữu: nút Yêu cầu; không gửi yêu cầu tới người khác.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_09_missing_card</figcaption></figure></div>
+<h2 id="cardcollection_11_owned_card">CardCollection_11_owned_card</h2>
+<p>Mode: <code>local-level151-override</code>. Chi tiết Con Rối đã sở hữu1bản: nút Gửi hiển thị màu xám; chưa kiểm chứng điều kiện đủ bản trùng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_11_owned_card</figcaption></figure></div>
+<h2 id="cardcollection_14_star_chests">CardCollection_14_star_chests</h2>
+<p>Mode: <code>local-level151-override</code>. Rương Sao: balance0; ba mức100/250/500 đều nút xám. UI giải thích dùng sao dư từ thẻ trùng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CardCollection_14_star_chests</figcaption></figure></div>
+<h2 id="magiccarnival_dependency_01_restart">MagicCarnival_Dependency_01_restart</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Sau bỏ CubeBlast type10 khỏi primary.left nhóm type15: icon quả cầu thay iconCubeBlast ở Home. Level151, không coi là phân nhóm AB server.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_Dependency_01_restart</figcaption></figure></div>
+<h2 id="magiccarnival_dependency_03_loaded">MagicCarnival_Dependency_03_loaded</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Tutorial MagicCarnival bắt đầu ở màn1/15, lưới3×2,6orb, còn1ngày4giờ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_Dependency_03_loaded</figcaption></figure></div>
+<h2 id="magiccarnival_04_reveal_first">MagicCarnival_04_reveal_first</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Lật ô trái trên: hình mây, orb6→5; tutorial chỉ ô phải trên để ghép.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_04_reveal_first</figcaption></figure></div>
+<h2 id="magiccarnival_05_match_pair">MagicCarnival_05_match_pair</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Ghép cặp mây trái/phải trên: cả hai ô biến mất, orb5→4; hướng dẫn vượt level để lấyorb.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_05_match_pair</figcaption></figure></div>
+<h2 id="magiccarnival_06_tutorial_continue">MagicCarnival_06_tutorial_continue</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Sau tắt tutorial: tooltip gói2thẻ trên rewardtrack. Không phải kết quả thắng màn.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_06_tutorial_continue</figcaption></figure></div>
+<h2 id="magiccarnival_07_reveal_second_type">MagicCarnival_07_reveal_second_type</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Lật ô giữa trên: hìnhhoa, orb4→3.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_07_reveal_second_type</figcaption></figure></div>
+<h2 id="magiccarnival_08_second_choice">MagicCarnival_08_second_choice</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Chọn trái dưới sau hìnhhoa: cặp không khớp, cả hai úp lại; orb3→2.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_08_second_choice</figcaption></figure></div>
+<h2 id="magiccarnival_09_last_pair_first">MagicCarnival_09_last_pair_first</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Lật giữa dưới: hìnhhoa, orb2→1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_09_last_pair_first</figcaption></figure></div>
+<h2 id="magiccarnival_10_zero_collectable">MagicCarnival_10_zero_collectable</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Ghép giữa dưới với giữa trên: cặp biến mất, orb1→0, còn hai ô dưới trái/phải.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_10_zero_collectable</figcaption></figure></div>
+<h2 id="magiccarnival_11_empty_tap">MagicCarnival_11_empty_tap</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Chạm ô khiorb0: popup Không Còn Quả Cầu Nào Nữa, yêu cầu vượt level để thu thập; không tự reset màn.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_11_empty_tap</figcaption></figure></div>
+<h2 id="magiccarnival_12_empty_continue">MagicCarnival_12_empty_continue</h2>
+<p>Mode: <code>local-level151-and-dependency-override</code>. Bấm Tiếp tục ở popup thiếuorb mở prelevel151. Chưa bấm Chơi; không có kết quả thắng/claim.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MagicCarnival_12_empty_continue</figcaption></figure></div>
+<h2 id="mc_offline_09_stage2_pair1">MC_offline_09_stage2_pair1</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng2: ghép đúng cặp,198→196 orb; hai ô bị loại khỏi lưới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_09_stage2_pair1</figcaption></figure></div>
+<h2 id="mc_offline_11_stage3">MC_offline_11_stage3</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đã hoàn tất chặng2; chuyển chặng3/15, còn190 orb.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_11_stage3</figcaption></figure></div>
+<h2 id="mc_offline_14_stage3_wrong3_hint">MC_offline_14_stage3_wrong3_hint</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng3: ghép sai cùng hai ô ba lần,190→184 orb; wrong=3,hints=1; hai ô đúng phát sáng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_14_stage3_wrong3_hint</figcaption></figure></div>
+<h2 id="mc_offline_17_firework_match">MC_offline_17_firework_match</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tutorial pháo hoa yêu cầu bấm ô top x1. Client đã chuyển lá pháo hoa thứ hai từ top x3 sang top x1 khi tutorial bắt đầu; tap top x3 không tiêu orb.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_17_firework_match</figcaption></figure></div>
+<h2 id="mc_offline_19_firework_result">MC_offline_19_firework_result</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ghép pháo hoa chặng4:2orb, hai lá pháo hoa và thêm4lá (2cặp) được đánh dấu matched.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_19_firework_result</figcaption></figure></div>
+<h2 id="mc_offline_24_bonus_pouch_match">MC_offline_24_bonus_pouch_match</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng10 bonus: ghép túi tiền hiển thị +<img class="rwi" src="../assets/img/rw/coin.png" alt="">50coin;108orb. Đây là thưởng client trong phiên offline.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_24_bonus_pouch_match</figcaption></figure></div>
+<h2 id="mc_offline_26_reentry_home">MC_offline_26_reentry_home</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng mini-game giữa một cặp đang mở: trở lại HomeLevel151,coin2300 trong phiên mô phỏng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_26_reentry_home</figcaption></figure></div>
+<h2 id="mc_offline_27_reentry_preserved">MC_offline_27_reentry_preserved</h2>
+<p>Mode: <code>offline-local-simulation</code>. Mở lại MagicCarnival: chặng12,83orb; lá mây bottom-left vẫn lật. Đóng/mở dialog không tiêu thêmorb.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_27_reentry_preserved</figcaption></figure></div>
+<h2 id="mc_offline_stage03_after">MC_offline_stage03_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng3; màn hình chặng4/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage03_after</figcaption></figure></div>
+<h2 id="mc_offline_stage04_after">MC_offline_stage04_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng4; màn hình chặng5/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage04_after</figcaption></figure></div>
+<h2 id="mc_offline_stage05_after">MC_offline_stage05_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng5; màn hình chặng6/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage05_after</figcaption></figure></div>
+<h2 id="mc_offline_stage06_after">MC_offline_stage06_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng6; màn hình chặng7/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage06_after</figcaption></figure></div>
+<h2 id="mc_offline_stage07_after">MC_offline_stage07_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng7; màn hình chặng8/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage07_after</figcaption></figure></div>
+<h2 id="mc_offline_stage08_after">MC_offline_stage08_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng8; màn hình chặng9/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage08_after</figcaption></figure></div>
+<h2 id="mc_offline_stage09_after">MC_offline_stage09_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng9; màn hình chặng10/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage09_after</figcaption></figure></div>
+<h2 id="mc_offline_stage10_after">MC_offline_stage10_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng10; màn hình chặng11/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage10_after</figcaption></figure></div>
+<h2 id="mc_offline_stage11_after">MC_offline_stage11_after</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất chặng11; màn hình chặng12/15. Hình lưu sau animation chuyển chặng; đối chiếu byte progress trong mc_trial_states.jsonl.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_stage11_after</figcaption></figure></div>
+<h2 id="mc_offline_29_all15_complete">MC_offline_29_all15_complete</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất 15/15 chặng; màn hình chúc mừng và rương cuối. Progress level16, validfalse, còn40orb.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_29_all15_complete</figcaption></figure></div>
+<h2 id="mc_offline_30_grand_prize_open">MC_offline_30_grand_prize_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Mở rương cuối: <img class="rwi" src="../assets/img/rw/coin.png" alt="">500coin và1BomberPlane; nút bấm để nhận.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_30_grand_prize_open</figcaption></figure></div>
+<h2 id="mc_offline_31_grand_prize_claim">MC_offline_31_grand_prize_claim</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận thưởng cuối; icon MagicCarnival biến mất khỏi Home, các icon khác xếp lại. Coin đang chạy animation, không dùng số giữa animation làm balance cuối.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_offline_31_grand_prize_claim</figcaption></figure></div>
+<h2 id="mc_primary10_board">MC_primary10_board</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ép progress bit504=false, level10,50orb: UI hiển thị thưởng200coin. Grid có2cặppháohoa, khôngcoin/pouch. AB56/57 không đổi.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_primary10_board</figcaption></figure></div>
+<h2 id="mc_expired_orbs_loaded">MC_expired_orbs_loaded</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ép endDate quá hạn, còn3orb nhưng HasCollectedAnyCollectable=false: khi mở game, event invalidated và icon biến mất. Chỉ thêm orb vào tiến độ không tương đương đã thu orb từ thắng level.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_expired_orbs_loaded</figcaption></figure></div>
+<h2 id="mc_expired_collected_loaded">MC_expired_collected_loaded</h2>
+<p>Mode: <code>offline-local-simulation</code>. Quá hạn,3orb, ép HasCollectedAnyCollectable=true: icon vẫn có với nhãn Hoàn thành; validtrue,last_chance=true.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_expired_collected_loaded</figcaption></figure></div>
+<h2 id="mc_lastchance_enter">MC_lastchance_enter</h2>
+<p>Mode: <code>offline-local-simulation</code>. Vào sự kiện hết giờ: tooltip Đây là cơ hội cuối để dùng các quả cầu; vẫn chơi được chặng12 với3orb.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_lastchance_enter</figcaption></figure></div>
+<h2 id="mc_lastchance_zero_tap">MC_lastchance_zero_tap</h2>
+<p>Mode: <code>offline-local-simulation</code>. Dùng hết3orb: validfalse,last_chancefalse. Chạm thêm hiển thị Không còn quả cầu nào nữa, không chuyển sang mainlevel.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_lastchance_zero_tap</figcaption></figure></div>
+<h2 id="mc_lastchance_exit">MC_lastchance_exit</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng lần chơi cuối: icon MagicCarnival biến mất khỏi Home.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_lastchance_exit</figcaption></figure></div>
+<h2 id="mc_halloween_info">MC_halloween_info</h2>
+<p>Mode: <code>offline-local-simulation</code>. Theme Halloween hiển thị Lễ Hội Ma Quái, rương bí ngô và hướng dẫn ghép pháo hoa hé lộ hai cặp.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_halloween_info</figcaption></figure></div>
+<h2 id="mc_halloween_relaunch_card">MC_halloween_relaunch_card</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau force-stop rồi mở lại game, chặng 4 giữ lá mũ tím đang lật, 11 quả cầu và theme Halloween; bitfield moves=1, theme=1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_halloween_relaunch_card</figcaption></figure></div>
+<h2 id="mc_lastchance_leave_board">MC_lastchance_leave_board</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hết giờ, hasCollected=true và còn 3 quả cầu: vào chặng 12, hiển thị hướng dẫn cơ hội cuối.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_lastchance_leave_board</figcaption></figure></div>
+<h2 id="mc_lastchance_leave_dialog">MC_lastchance_leave_dialog</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng cơ hội cuối khi còn 3 quả cầu trở về Home; icon vẫn tồn tại, không có hộp xác nhận thoát trong ca này.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_lastchance_leave_dialog</figcaption></figure></div>
+<h2 id="mc_lastchance_leave_reenter">MC_lastchance_leave_reenter</h2>
+<p>Mode: <code>offline-local-simulation</code>. Mở lại sau khi đóng: vẫn chặng 12 và 3 quả cầu. Snapshot xác nhận valid=1, lastChance=1; không tiêu quả cầu khi đóng/mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_lastchance_leave_reenter</figcaption></figure></div>
+<h2 id="mc_theme_handler_board">MC_theme_handler_board</h2>
+<p>Mode: <code>offline-local-helper-invocation</code>. Sau gọi trực tiếp TryRevertThemeToDefault trên ManualUpdate trong phiên offline: theme=0, UI mặc định, giữ chặng 4, 11 quả cầu và lá đã lật. Đây là thử nghiệm helper client, không phải response server.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>MC_theme_handler_board</figcaption></figure></div>
+<h2 id="cards_event14_collection">Cards_event14_collection</h2>
+<p>Mode: <code>offline-local-simulation</code>. Event ID 14, bộ sưu tập Ma Quái: 0/135, 100 sao; thưởng lớn <img class="rwi" src="../assets/img/rw/coin.png" alt="">10.000 coin, huy hiệu xác ướp và booster x10. Season bundle 10 không phải event ID.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_event14_collection</figcaption></figure></div>
+<h2 id="cards_star_chests_100">Cards_star_chests_100</h2>
+<p>Mode: <code>offline-local-simulation</code>. Có 100 sao: nút rương 100 khả dụng, 250/500 chưa đủ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_star_chests_100</figcaption></figure></div>
+<h2 id="cards_chest250_insufficient">Cards_chest250_insufficient</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chạm rương 250 khi có 100 sao: hiện Chưa đủ sao, không chi tiêu.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest250_insufficient</figcaption></figure></div>
+<h2 id="cards_chest100_open">Cards_chest100_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Rương 100 đã trừ số dư về 0, chờ Bấm để mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest100_open</figcaption></figure></div>
+<h2 id="cards_chest100_rewards">Cards_chest100_rewards</h2>
+<p>Mode: <code>offline-local-simulation</code>. Rương 100 hiển thị Rocket, Dynamite và gói 2 thẻ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest100_rewards</figcaption></figure></div>
+<h2 id="cards_chest100_claim">Cards_chest100_claim</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận thưởng chuyển sang gói 2 thẻ, chờ mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest100_claim</figcaption></figure></div>
+<h2 id="cards_pack2_reveal">Cards_pack2_reveal</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gói 2 cho Cào (2 sao) và Bánh Gừng (1 sao), đều Mới. Snapshot xác nhận hai bản thẻ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_pack2_reveal</figcaption></figure></div>
+<h2 id="cards_750_collection">Cards_750_collection</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture mới có 750 sao, bộ sưu tập rỗng 0/135.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_750_collection</figcaption></figure></div>
+<h2 id="cards_chests750">Cards_chests750</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đủ 750 sao: cả ba nút rương 100/250/500 đều khả dụng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chests750</figcaption></figure></div>
+<h2 id="cards_chest250_open">Cards_chest250_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Mua rương 250: số dư 750 xuống 500 trước khi mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest250_open</figcaption></figure></div>
+<h2 id="cards_chest250_rewards">Cards_chest250_rewards</h2>
+<p>Mode: <code>offline-local-simulation</code>. Rương 250 hiển thị Rocket, ElectroBall, Dynamite, Hammer và hai gói xanh lá/xanh dương.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest250_rewards</figcaption></figure></div>
+<h2 id="cards_chest250_packfirst">Cards_chest250_packfirst</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gói thứ nhất của rương 250 là gói xanh lá (CP3).</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest250_packfirst</figcaption></figure></div>
+<h2 id="cards_pack3_reveal">Cards_pack3_reveal</h2>
+<p>Mode: <code>offline-local-simulation</code>. CP3: Bão, Bánh Mỳ, Vũng Nước; cả ba thẻ mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_pack3_reveal</figcaption></figure></div>
+<h2 id="cards_chest250_packsecond">Cards_chest250_packsecond</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau nhận CP3, mở tiếp gói xanh dương (CP4).</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest250_packsecond</figcaption></figure></div>
+<h2 id="cards_pack4_reveal">Cards_pack4_reveal</h2>
+<p>Mode: <code>offline-local-simulation</code>. CP4: Lọ Ma, Bia Mộ, Gà Tây Nướng, Sôcôla; cả bốn thẻ mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_pack4_reveal</figcaption></figure></div>
+<h2 id="cards_chest250_done">Cards_chest250_done</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau rương 250: số dư 500 sao, 7/135 thẻ; các bộ có badge thẻ mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest250_done</figcaption></figure></div>
+<h2 id="cards_chests500">Cards_chests500</h2>
+<p>Mode: <code>offline-local-simulation</code>. Có đúng 500 sao: rương 500 vẫn khả dụng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chests500</figcaption></figure></div>
+<h2 id="cards_chest500_open">Cards_chest500_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Mua rương 500: số dư 500 xuống 0 trước khi mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest500_open</figcaption></figure></div>
+<h2 id="cards_chest500_rewards">Cards_chest500_rewards</h2>
+<p>Mode: <code>offline-local-simulation</code>. Rương 500 hiển thị Hammer, Drill, Battering Ram, Bomber Plane, CP6 và CPG.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest500_rewards</figcaption></figure></div>
+<h2 id="cards_chest500_packfirst">Cards_chest500_packfirst</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gói đầu rương 500 có màu hồng (CP6).</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest500_packfirst</figcaption></figure></div>
+<h2 id="cards_pack6_reveal">Cards_pack6_reveal</h2>
+<p>Mode: <code>offline-local-simulation</code>. CP6 cho 6 thẻ mới: Dơi, Trăng Mọc, Trang Trại, Bánh Ngọt, Mưa, Bánh Donut.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_pack6_reveal</figcaption></figure></div>
+<h2 id="cards_chest500_packgold">Cards_chest500_packgold</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gói thứ hai rương 500 là gói vàng (CPG).</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest500_packgold</figcaption></figure></div>
+<h2 id="cards_packgold_reveal">Cards_packgold_reveal</h2>
+<p>Mode: <code>offline-local-simulation</code>. CPG cho 6 thẻ: Chính Xác (viền vàng), Cây Trồng, Cây Leo, Cây Chổi, Cây là mới; Sôcôla đã có nên không mang badge Mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_packgold_reveal</figcaption></figure></div>
+<h2 id="cards_chest500_done">Cards_chest500_done</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau nhận CPG: UI 18/135 và 1 sao. Snapshot: 18 thẻ khác nhau, 19 bản; set2/card6 có 2 bản. Không suy diễn xác suất rơi từ một mẫu.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cards_chest500_done</figcaption></figure></div>
+<h2 id="wc_retry_ready">WC_retry_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Wildcard Silver 1 sao: chỉ thẻ bạc 1 sao còn thiếu; nút Dùng tắt khi chưa chọn.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_retry_ready</figcaption></figure></div>
+<h2 id="wc_silver1_selected">WC_silver1_selected</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chọn Ma: tick xanh, Dùng bật.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_silver1_selected</figcaption></figure></div>
+<h2 id="wc_silver1_transform">WC_silver1_transform</h2>
+<p>Mode: <code>offline-local-simulation</code>. Dùng Silver 1 sao nhận Ma mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_silver1_transform</figcaption></figure></div>
+<h2 id="wc_gold_choices">WC_gold_choices</h2>
+<p>Mode: <code>offline-local-simulation</code>. Wildcard Gold: danh sách thẻ vàng thiếu, bộ Ma Ám đang 1/9.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_gold_choices</figcaption></figure></div>
+<h2 id="wc_gold_selected">WC_gold_selected</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chọn Đi Lạc, Dùng bật.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_gold_selected</figcaption></figure></div>
+<h2 id="wc_gold_transform">WC_gold_transform</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận Đi Lạc mới từ wildcard Gold.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_gold_transform</figcaption></figure></div>
+<h2 id="wc_anysilver_choices">WC_anysilver_choices</h2>
+<p>Mode: <code>offline-local-simulation</code>. Wildcard Silver bất kỳ: có nhiều mức sao; Ma và Đi Lạc đã nhận không xuất hiện.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_anysilver_choices</figcaption></figure></div>
+<h2 id="wc_anysilver_selected">WC_anysilver_selected</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chọn Đồng Hồ trong nhóm Silver bất kỳ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_anysilver_selected</figcaption></figure></div>
+<h2 id="wc_anysilver_transform">WC_anysilver_transform</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận Đồng Hồ mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_anysilver_transform</figcaption></figure></div>
+<h2 id="wc_three_done">WC_three_done</h2>
+<p>Mode: <code>offline-local-simulation</code>. Home 3/135; snapshot 3 bản thẻ set7 và kho wildcard rỗng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_three_done</figcaption></figure></div>
+<h2 id="set1_wild_ready">Set1_wild_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture bộ1 8/9: wildcard2 cho chọn Pinata còn thiếu, thưởng bộ200coin.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Set1_wild_ready</figcaption></figure></div>
+<h2 id="set1_pinata_received">Set1_pinata_received</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận Pinata mới từ wildcard2.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Set1_pinata_received</figcaption></figure></div>
+<h2 id="set1_complete_dialog">Set1_complete_dialog</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn Tất Bộ Ảo Thuật, thưởng200coin.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Set1_complete_dialog</figcaption></figure></div>
+<h2 id="set1_reward_claimed">Set1_reward_claimed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Coin2300 lên2500; Home9/135; snapshot claimed_sets=[1],wildcards=[] .</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Set1_reward_claimed</figcaption></figure></div>
+<h2 id="wc_convert1_offer">WC_convert1_offer</h2>
+<p>Mode: <code>offline-local-simulation</code>. Không thiếu Silver 1 sao: hiện đổi wildcard thành 5 sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_convert1_offer</figcaption></figure></div>
+<h2 id="wc_convert2_offer">WC_convert2_offer</h2>
+<p>Mode: <code>offline-local-simulation</code>. Không thiếu Silver 2 sao: hiện đổi wildcard thành 10 sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_convert2_offer</figcaption></figure></div>
+<h2 id="wc_convert3_offer">WC_convert3_offer</h2>
+<p>Mode: <code>offline-local-simulation</code>. Không thiếu Silver 3 sao: hiện đổi wildcard thành 15 sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_convert3_offer</figcaption></figure></div>
+<h2 id="wc_convert4_offer">WC_convert4_offer</h2>
+<p>Mode: <code>offline-local-simulation</code>. Không thiếu Silver 4 sao: hiện đổi wildcard thành 20 sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_convert4_offer</figcaption></figure></div>
+<h2 id="wc_convert5_offer">WC_convert5_offer</h2>
+<p>Mode: <code>offline-local-simulation</code>. Không thiếu Silver 5 sao: hiện đổi wildcard thành 25 sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_convert5_offer</figcaption></figure></div>
+<h2 id="wc_convert_any_offer">WC_convert_any_offer</h2>
+<p>Mode: <code>offline-local-simulation</code>. Không thiếu Silver: wildcard bất kỳ đổi25sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>WC_convert_any_offer</figcaption></figure></div>
+<h2 id="season_final_gold_choice">Season_final_gold_choice</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture134/135, chỉ thiếu Món Quà; Gold wildcard chỉ có lựa chọn này. Snapshot sau6quy đổi:100sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_final_gold_choice</figcaption></figure></div>
+<h2 id="season_gold_transform">Season_gold_transform</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận Món Quà mới, thẻ135.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_gold_transform</figcaption></figure></div>
+<h2 id="season_set15_complete">Season_set15_complete</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bộ15 Âm Mưu hoàn tất, thưởng1500coin.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_set15_complete</figcaption></figure></div>
+<h2 id="season_collection_complete">Season_collection_complete</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hiện Hoàn thành bộ sưu tập Ma Quái và rương chờ mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_collection_complete</figcaption></figure></div>
+<h2 id="season_grand_rewards">Season_grand_rewards</h2>
+<p>Mode: <code>offline-local-simulation</code>. Thưởng10000coin, huy hiệu xác ướp vàng, Rocket/ElectroBall/Dynamite mỗi loại10.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_grand_rewards</figcaption></figure></div>
+<h2 id="season_diamond_transition">Season_diamond_transition</h2>
+<p>Mode: <code>offline-local-simulation</code>. Màn trang bị huy hiệu sau nhận thưởng lớn.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_diamond_transition</figcaption></figure></div>
+<h2 id="season_badge_equipped">Season_badge_equipped</h2>
+<p>Mode: <code>offline-local-simulation</code>. Trang bị huy hiệu rồi hiện bắt đầu vòng Kim Cương.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_badge_equipped</figcaption></figure></div>
+<h2 id="diamond_intro_continue">Diamond_intro_continue</h2>
+<p>Mode: <code>offline-local-simulation</code>. Vòng Diamond có gói khởi đầu CP4; nền hiển thị100sao giữ lại và grandprize15000coin+booster15.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_intro_continue</figcaption></figure></div>
+<h2 id="diamond_startpack_reveal">Diamond_startpack_reveal</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gói đầu vòng Diamond cho4thẻ mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_startpack_reveal</figcaption></figure></div>
+<h2 id="diamond_tutorial">Diamond_tutorial</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tutorial chỉ bộ16 Lễ Hội; tổng4/144,100sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_tutorial</figcaption></figure></div>
+<h2 id="diamond_set16_tutorial">Diamond_set16_tutorial</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bộ16 có9thẻ Diamond,0/9, nguồn từ event/phần thưởng. Snapshot stage1,4thẻ,100sao,claimed_sets rỗng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_set16_tutorial</figcaption></figure></div>
+<h2 id="diamond_near_book">Diamond_near_book</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture Diamond 143/144, 100 sao; phần thưởng lớn <img class="rwi" src="../assets/img/rw/coin.png" alt="">15000 coin và booster x15.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_near_book</figcaption></figure></div>
+<h2 id="diamond_near_close">Diamond_near_close</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tutorial bộ Lễ Hội 8/9: thẻ Diamond lấy từ sự kiện và thưởng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_near_close</figcaption></figure></div>
+<h2 id="diamond_after_tutorial">Diamond_after_tutorial</h2>
+<p>Mode: <code>offline-local-simulation</code>. Không còn Gold thiếu: wildcard Gold đổi thành 50 sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_after_tutorial</figcaption></figure></div>
+<h2 id="diamond_wild_choice">Diamond_wild_choice</h2>
+<p>Mode: <code>offline-local-simulation</code>. Wildcard Diamond chỉ liệt kê Tháo Mặt Nạ!, bộ Lễ Hội 8/9; nút Dùng khóa trước lựa chọn.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_wild_choice</figcaption></figure></div>
+<h2 id="diamond_wild_received">Diamond_wild_received</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chọn và dùng wildcard Diamond: Tháo Mặt Nạ! mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_wild_received</figcaption></figure></div>
+<h2 id="diamond_set_complete">Diamond_set_complete</h2>
+<p>Mode: <code>offline-local-simulation</code>. Lễ Hội hoàn tất, 144/144; thưởng BomberPlane.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_set_complete</figcaption></figure></div>
+<h2 id="diamond_collection_complete">Diamond_collection_complete</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn tất bộ sưu tập Diamond: rương lớn chưa mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_collection_complete</figcaption></figure></div>
+<h2 id="diamond_grand_rewards">Diamond_grand_rewards</h2>
+<p>Mode: <code>offline-local-simulation</code>. Rương Diamond: <img class="rwi" src="../assets/img/rw/coin.png" alt="">15000 coin, huy hiệu xác ướp Diamond, Rocket/ElectroBall/Dynamite mỗi loại 15.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_grand_rewards</figcaption></figure></div>
+<h2 id="diamond_badge">Diamond_badge</h2>
+<p>Mode: <code>offline-local-simulation</code>. Trang bị huy hiệu Diamond sau nhận thưởng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_badge</figcaption></figure></div>
+<h2 id="ultimate_intro">Ultimate_intro</h2>
+<p>Mode: <code>offline-local-simulation</code>. Animation cộng <img class="rwi" src="../assets/img/rw/coin.png" alt="">15000 coin và huy hiệu Diamond xuất hiện trên profile. Đây chưa phải intro Ultimate.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Ultimate_intro</figcaption></figure></div>
+<h2 id="ultimate_ready">Ultimate_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Intro bộ sưu tập Đỉnh Cấp (Ultimate) sau Diamond.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Ultimate_ready</figcaption></figure></div>
+<h2 id="ultimate_startpack">Ultimate_startpack</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ultimate bắt đầu với gói CP4, số thẻ UI reset 0/144.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Ultimate_startpack</figcaption></figure></div>
+<h2 id="ultimate_pack_reveal">Ultimate_pack_reveal</h2>
+<p>Mode: <code>offline-local-simulation</code>. CP4 đầu Ultimate: Kẹo Mềm, Mưa, Sàn Nhảy, Bình Cổ Nhỏ đều mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Ultimate_pack_reveal</figcaption></figure></div>
+<h2 id="ultimate_collection">Ultimate_collection</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ultimate 4/144, 150 sao giữ lại; thưởng lớn <img class="rwi" src="../assets/img/rw/coin.png" alt="">15000 coin và booster x15, không còn huy hiệu trong preview.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Ultimate_collection</figcaption></figure></div>
+<h2 id="exchange_set">Exchange_set</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bộ Quà Thưởng1/9: Sôcôla có +1 bản trùng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Exchange_set</figcaption></figure></div>
+<h2 id="exchange_duplicate">Exchange_duplicate</h2>
+<p>Mode: <code>offline-local-simulation</code>. Thẻ Silver trùng có nút Gửi màu xám.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Exchange_duplicate</figcaption></figure></div>
+<h2 id="exchange_send_disabled">Exchange_send_disabled</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bấm Gửi: chưa có người bạn hoặc thành viên đội nào đủ điều kiện. Không gửi thành công.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Exchange_send_disabled</figcaption></figure></div>
+<h2 id="exchange_missing_silver">Exchange_missing_silver</h2>
+<p>Mode: <code>offline-local-simulation</code>. Silver thiếu Bánh Donut có nút Yêu cầu và nguồn sự kiện/thưởng/bạn/đồng đội.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Exchange_missing_silver</figcaption></figure></div>
+<h2 id="exchange_request_no_team">Exchange_request_no_team</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bấm Yêu cầu trong phiên offline: vui lòng kiểm tra kết nối internet. Không chứng minh gate no-team dù tên file như vậy.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Exchange_request_no_team</figcaption></figure></div>
+<h2 id="exchange_gold_missing">Exchange_gold_missing</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gold thiếu Đi Lạc chỉ có mô tả nguồn sự kiện và thưởng; không có nút Yêu cầu.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Exchange_gold_missing</figcaption></figure></div>
+<h2 id="diamond_convert_wait">Diamond_convert_wait</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture chỉ có9Diamond chưa claim: client vẫn tự phát reward bộ Lễ Hội lúc khởi động.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_convert_wait</figcaption></figure></div>
+<h2 id="diamond_convert_offer">Diamond_convert_offer</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đã đủ9Diamond: wildcard Diamond đổi100sao.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_convert_offer</figcaption></figure></div>
+<h2 id="diamond_convert_claimed">Diamond_convert_claimed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau nhận100sao vềHome9/144; snapshot diamond_conversion_done xác nhận100sao, wildcard hết, claimed_sets=[16].</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Diamond_convert_claimed</figcaption></figure></div>
+<h2 id="finalround_tutorial">Finalround_tutorial</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture stage29 (vòng30),143/144,123sao; Ultimate vẫn có tutorial bộ16 do fixture flag.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_tutorial</figcaption></figure></div>
+<h2 id="finalround_wildcard">Finalround_wildcard</h2>
+<p>Mode: <code>offline-local-simulation</code>. Vòng30 selector Diamond thiếu Tháo Mặt Nạ!.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_wildcard</figcaption></figure></div>
+<h2 id="finalround_card">Finalround_card</h2>
+<p>Mode: <code>offline-local-simulation</code>. Vòng30 nhận thẻ Diamond cuối có New.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_card</figcaption></figure></div>
+<h2 id="finalround_set">Finalround_set</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bộ16 vòng30 hoàn tất, thưởng BomberPlane.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_set</figcaption></figure></div>
+<h2 id="finalround_complete">Finalround_complete</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ultimate vòng30 hoàn tất, chờ mở rương.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_complete</figcaption></figure></div>
+<h2 id="finalround_rewards">Finalround_rewards</h2>
+<p>Mode: <code>offline-local-simulation</code>. Vòng30 thưởng15000coin và3booster mỗi loại15, không có huy hiệu.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_rewards</figcaption></figure></div>
+<h2 id="finalround_claimed">Finalround_claimed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận thưởng vềHome, coin2300→17300, vẫn144/144.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_claimed</figcaption></figure></div>
+<h2 id="finalround_collection">Finalround_collection</h2>
+<p>Mode: <code>offline-local-simulation</code>. Collection hiển thị Hoàn thành và các bộ tick xanh,123sao,19ngày còn lại. Không vòng31.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Finalround_collection</figcaption></figure></div>
+<h2 id="season_expired_ready">Season_expired_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ép Server/UserEndDate quá hạn: dialog mùa đã hoàn thiện, bộ sưu tập mới sớm ra mắt. Fixture chỉ1/135, nên câu UI không có nghĩa người chơi hoàn tất thẻ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_expired_ready</figcaption></figure></div>
+<h2 id="season_expired_home">Season_expired_home</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng dialog hết mùa: icon đổi từ số thẻ sang Bộ Sưu Tập, coin2300 không đổi.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_expired_home</figcaption></figure></div>
+<h2 id="season_expired_entry">Season_expired_entry</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bấm icon sau expiry: tooltip Bộ Sưu Tập Mới sắp bắt đầu rồi; không vào kho thẻ cũ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_expired_entry</figcaption></figure></div>
+<h2 id="dungeon_win_board">Dungeon_win_board</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture win step8: màn đích rương10000coin hiện, chưa thấy nút nhận thưởng; không chứng minh đã claim.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_win_board</figcaption></figure></div>
+<h2 id="dungeon_retry_animation">Dungeon_retry_animation</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture win step8 với animation từ7: nhân vật ởbậc6, chưa đi hết animation sau thời gian chờ; không kết luận reward thành công.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_retry_animation</figcaption></figure></div>
+<h2 id="dungeon_lose_result">Dungeon_lose_result</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture step9: màn thất bại Bạn không vượt được thử thách, chúc may mắn lần sau.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_lose_result</figcaption></figure></div>
+<h2 id="dungeon_lose_closed">Dungeon_lose_closed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng màn thất bại vềHome, iconDungeon biến mất, icon sự kiện khác thay vị trí; coin2300 không đổi.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_lose_closed</figcaption></figure></div>
+<h2 id="dungeon_timeout_ready">Dungeon_timeout_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau fixture endDate quá hạn, Home không còn iconDungeon. Snapshot dungeon_timeout_done để phân biệt cleanup lúc startup; chưa chụp được dialog hết giờ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_timeout_ready</figcaption></figure></div>
+<h2 id="dungeon_timeout_result">Dungeon_timeout_result</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tên file Dungeon_timeout_result nhưng ảnh thực là PowerRush: phiên Hoàn thành, cache5người, mình rank5/0điểm. Không phải ảnh timeoutDungeon.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_timeout_result</figcaption></figure></div>
+<h2 id="power_rank1_ready">Power_rank1_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture rank1,finalList=true,session đã hết: icon Mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_rank1_ready</figcaption></figure></div>
+<h2 id="power_rank1_board">Power_rank1_board</h2>
+<p>Mode: <code>offline-local-simulation</code>. Header#1 và nút Nhận theo scalar rank ép. Bảng đối thủ vẫn cache cũ (Mimzy19570 ởđầu); không phải leaderboard nhất quán/serverwin.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_rank1_board</figcaption></figure></div>
+<h2 id="power_rank1_reward">Power_rank1_reward</h2>
+<p>Mode: <code>offline-local-simulation</code>. Nhận rank1 thường: rương chúc mừng và Rocket/ElectroBall/Dynamite, không nhãn số lượng trên ảnh.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_rank1_reward</figcaption></figure></div>
+<h2 id="power_elite_entry">Power_elite_entry</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau claim thường: tab thường tick xanh, chọn Vượt Trội/Elite, phiên30phút và mạng vô hạn.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_elite_entry</figcaption></figure></div>
+<h2 id="power_elite_start_offline">Power_elite_start_offline</h2>
+<p>Mode: <code>offline-local-simulation</code>. Bấm bắt đầu Elite offline hiện spinner; chưa tạo nhóm Elite thành công.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_elite_start_offline</figcaption></figure></div>
+<h2 id="power_rank1_claimed">Power_rank1_claimed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau claimPowerRush xuất hiện Xin Đánh Giá; chưa chọn sao hoặc gửi đánh giá, đã đóngX.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_rank1_claimed</figcaption></figure></div>
+<h2 id="power_elite_reward">Power_elite_reward</h2>
+<p>Mode: <code>offline-local-simulation</code>. Elite forced rank 1: reward chest displays four in-level tools; no quantities shown. Offline scalar fixture; cached opponents remain inconsistent.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_elite_reward</figcaption></figure></div>
+<h2 id="power_rank5_board">Power_rank5_board</h2>
+<p>Mode: <code>offline-local-simulation</code>. Offline rank 5: finished leaderboard shows no reward and Continue button; cached player rank agrees with scalar rank in this fixture.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_rank5_board</figcaption></figure></div>
+<h2 id="power_no_final">Power_no_final</h2>
+<p>Mode: <code>offline-local-simulation</code>. Expired session with HasFinalList=False: completed cached leaderboard appears without claim reward footer. Forced scalar Rank=1 differs from cached list; no server finalization observed.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_no_final</figcaption></figure></div>
+<h2 id="power_elite_claimed">Power_elite_claimed</h2>
+<p>Mode: <code>offline-local-simulation</code>. After offline Elite reward claim, Rate Us prompt appears. No rating or external review submitted.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Power_elite_claimed</figcaption></figure></div>
+<h2 id="dungeon_followup_scene">Dungeon_followup_scene</h2>
+<p>Mode: <code>offline-local-simulation</code>. Offline step8,winnerCount raw2: scene stalls at platform6. Snapshot dungeon_followup_stuck proves claimed1 and Coins5640 from2300; presentation incomplete despite reward commit.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_followup_scene</figcaption></figure></div>
+<h2 id="dungeon_followup_home">Dungeon_followup_home</h2>
+<p>Mode: <code>offline-local-simulation</code>. After force-stop/relaunch, Home shows5640coins and Dungeon icon removed. Reward persisted; no second grant observed.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_followup_home</figcaption></figure></div>
+<h2 id="dungeon_solo_scene">Dungeon_solo_scene</h2>
+<p>Mode: <code>offline-local-simulation</code>. Offline winnerCount raw0: presentation still stalls; snapshot dungeon_solo_afteropen shows Coins12300 from2300, matching sole winner10000. Not a complete reward UI flow.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_solo_scene</figcaption></figure></div>
+<h2 id="trade_followup_duplicate">Trade_followup_duplicate</h2>
+<p>Mode: <code>offline-local-simulation</code>. Offline fictional friends at levels40/41: duplicate Silver Send enabled, remaining daily quota3/3. Native filter excludes below unlock41; no real friend relation created.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Trade_followup_duplicate</figcaption></figure></div>
+<h2 id="trade_followup_recipients">Trade_followup_recipients</h2>
+<p>Mode: <code>offline-local-simulation</code>. Send with eligible local friend is stopped by Internet check before recipient dialog. Screenshot shows connection warning; no delivery.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Trade_followup_recipients</figcaption></figure></div>
+<h2 id="dungeon_reward_stable">Dungeon_reward_stable</h2>
+<p>Mode: <code>offline-local-simulation</code>. Offline rawWinnerCount1; after explicit LoadMainReward and StartTransition helper retry, celebration shows sharing with1other winner and tap to receive. Visual reward pile obscures part of title; not natural full-flow validation.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_reward_stable</figcaption></figure></div>
+<h2 id="dungeon_reward_received">Dungeon_reward_received</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tapping Dungeon reward closes to Home/RateUs; coin7300 visible behind prompt. No external rating submitted.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_reward_received</figcaption></figure></div>
+<h2 id="dungeon_reward_home">Dungeon_reward_home</h2>
+<p>Mode: <code>offline-local-simulation</code>. After helper-assisted reward scene tap, Home coin7300 from2300; icon says completed. Shared reward rawWinnerCount1 totals2players,<img class="rwi" src="../assets/img/rw/coin.png" alt="">5000coins.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_reward_home</figcaption></figure></div>
+<h2 id="dungeon_reward_reentry">Dungeon_reward_reentry</h2>
+<p>Mode: <code>offline-local-simulation</code>. Reopen after claim: congratulations completed, no claim button. Stale animation header6/7 and5players differs from forced winner scalar; do not treat fixture as consistent natural run.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Dungeon_reward_reentry</figcaption></figure></div>
+<h2 id="season_version667_loaded">Season_version667_loaded</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau configversion667/helper/relaunch: popup Bộ Sưu Tập Ma Quái bắt đầu. Asset season10 tái sử dụng, không phải server season11.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_version667_loaded</figcaption></figure></div>
+<h2 id="season_version667_continue">Season_version667_continue</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tiếp tục intro mùa mới mở gói đầu tiên; nền album0/135.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_version667_continue</figcaption></figure></div>
+<h2 id="season_version667_pack">Season_version667_pack</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gói khởi đầu hiện4thẻ mới: Nhạc Cụ, Bánh Ngọt, Giỏ Kẹo, Thảm Cửa; chưa tap nhận.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_version667_pack</figcaption></figure></div>
+<h2 id="season_version667_received">Season_version667_received</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau tap nhận: album4/135,0sao,29ngày23giờ; thưởng mùa10000coin +10booster. Snapshot xác nhận4thẻ đơn,stage0,start_seen1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Season_version667_received</figcaption></figure></div>
+<h2 id="rj_claim1_ready">RJ_claim1_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture pendingclaim chặng1: sau launch Home2350coin, tăng50từ2300. Không phải trận thắng tự nhiên.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_claim1_ready</figcaption></figure></div>
+<h2 id="rj_claim1_dialog">RJ_claim1_dialog</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau claim chặng1, dialog chuyển Màn chơi2 có nút Chơi và thưởng100coin; chặng3 vẫn cần hoàn thành chặngtrước.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_claim1_dialog</figcaption></figure></div>
+<h2 id="rj_claim10_ready">RJ_claim10_ready</h2>
+<p>Mode: <code>offline-local-simulation</code>. Pending-claim chặng10: Home2800coin (+500), iconRichard đã biến mất; snapshotvalid0/claim0/index10. Không phải chơi10chặng tự nhiên.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_claim10_ready</figcaption></figure></div>
+<h2 id="trade_quota_exhausted">Trade_quota_exhausted</h2>
+<p>Mode: <code>offline-local-simulation</code>. Silver dư, sent_today3: nútGửi xám,0/3,23h05p. Offline không reset dù LastCardSendDay127.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Trade_quota_exhausted</figcaption></figure></div>
+<h2 id="trade_quota_tap">Trade_quota_tap</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tap nútGửi xám hiện Bạn đã gửi3thẻ hôm nay; vẫn0/3,không mở recipientlist.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Trade_quota_tap</figcaption></figure></div>
+<h2 id="cube_tutorial_open">Cube_tutorial_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tutorial bắt đầu: hướng dẫn đặt khối để xóa hàngngang,6cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_tutorial_open</figcaption></figure></div>
+<h2 id="cube_tutorial_horizontal">Cube_tutorial_horizontal</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đặt domino ngang hợp lệ: chuyển sang hướng dẫn hàngdọc,5cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_tutorial_horizontal</figcaption></figure></div>
+<h2 id="cube_tutorial_vertical_done">Cube_tutorial_vertical_done</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đặt domino dọc hợp lệ: chuyển hướng dẫn nổ nhiều dòng,4cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_tutorial_vertical_done</figcaption></figure></div>
+<h2 id="cube_tutorial_multiline">Cube_tutorial_multiline</h2>
+<p>Mode: <code>offline-local-simulation</code>. Khối2×2 lấp giao2hàng+2cột: tổngđiểm108/200,còn3cube; hint thắnglevelchính để lấycube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_tutorial_multiline</figcaption></figure></div>
+<h2 id="cube_tutorial_completed">Cube_tutorial_completed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng hint mởbảngphầnthưởng; snapshotlevel2001,score108,moves3. Chưa hoàn tất toànbộtutorial.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_tutorial_completed</figcaption></figure></div>
+<h2 id="cube_stage1_open">Cube_stage1_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture94/100,chặng1/10,10cube,bảng6×6,presetconfig91.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_stage1_open</figcaption></figure></div>
+<h2 id="cube_stage1_placea">Cube_stage1_placeA</h2>
+<p>Mode: <code>offline-local-simulation</code>. ĐặtA hợp lệ tiêu1cube nhưng chưa nổhàng: điểm94,còn9cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_stage1_placeA</figcaption></figure></div>
+<h2 id="cube_stage1_win">Cube_stage1_win</h2>
+<p>Mode: <code>offline-local-simulation</code>. ĐặtB nổ2hàng, điểmchặn100/100,8cube,animationđóngbảng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_stage1_win</figcaption></figure></div>
+<h2 id="cube_stage1_reward">Cube_stage1_reward</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau thưởngtựđộng chuyểnchặng2/10,0/200,8cube. Inventorytăng1Rocket; ảnhkhôngghi riêngframeRocketbay.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_stage1_reward</figcaption></figure></div>
+<h2 id="cube_stage10_open">Cube_stage10_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixturechặng10/10,892/900,10cube,bảng8×8,configlevel100.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_stage10_open</figcaption></figure></div>
+<h2 id="cube_stage10_placea">Cube_stage10_placeA</h2>
+<p>Mode: <code>offline-local-simulation</code>. ĐặtA hợp lệ chưađủhàng;892điểm,9cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_stage10_placeA</figcaption></figure></div>
+<h2 id="cube_stage10_win">Cube_stage10_win</h2>
+<p>Mode: <code>offline-local-simulation</code>. ĐặtC hoàn tất3hàng,trần900/900,Hoànthành,8cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_stage10_win</figcaption></figure></div>
+<h2 id="cube_final_chest">Cube_final_chest</h2>
+<p>Mode: <code>offline-local-simulation</code>. Popupchúc mừng hoànthành tấtcảmànchơi vàrươngcuối Bấmđểmở; fixtuređãnhảyđếnchặng10.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_final_chest</figcaption></figure></div>
+<h2 id="cube_final_rewards">Cube_final_rewards</h2>
+<p>Mode: <code>offline-local-simulation</code>. Mởrươngcuối:<img class="rwi" src="../assets/img/rw/coin.png" alt="">500coin,<img class="rwi" src="../assets/img/rw/wizard_hat.png" alt="">1WizardHat,<img class="rwi" src="../assets/img/rw/bomber_plane.png" alt="">1BomberPlane;Bấmđểnhận.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_final_rewards</figcaption></figure></div>
+<h2 id="cube_final_received">Cube_final_received</h2>
+<p>Mode: <code>offline-local-simulation</code>. SauclaimhiệnRateUs;coinHome2800;đóngbằngX,khônggửiđánhgiá.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_final_received</figcaption></figure></div>
+<h2 id="cube_final_home">Cube_final_home</h2>
+<p>Mode: <code>offline-local-simulation</code>. Home2800coin;iconCubeBlastbiếnmất sauclaimcuối. Snapshotvalid0,step11sentinel,cubes8.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_final_home</figcaption></figure></div>
+<h2 id="cube_expired_lastchance">Cube_expired_lastchance</h2>
+<p>Mode: <code>offline-local-simulation</code>. Event hết giờ, còn 1 cube: hiện hướng dẫn Cơ hội cuối để dùng những khối vuông.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_lastchance</figcaption></figure></div>
+<h2 id="cube_expired_spent">Cube_expired_spent</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đặt preset hợp lệ tiêu cube cuối: 0 cube, 0/100 điểm; bảng vẫn hiển thị.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_spent</figcaption></figure></div>
+<h2 id="cube_expired_no_cubes">Cube_expired_no_cubes</h2>
+<p>Mode: <code>offline-local-simulation</code>. Kéo thêm khi 0 cube hiện Không còn lượt đi nào nữa!; không đặt thêm khối.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_no_cubes</figcaption></figure></div>
+<h2 id="cube_expired_closed">Cube_expired_closed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng màn hình hết giờ và 0 cube: về Home, icon Cube Blast biến mất.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_closed</figcaption></figure></div>
+<h2 id="cube_step2_open">Cube_step2_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng 2 bắt đầu từ 0/200, 20 cube cấp bằng fixture offline.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_step2_open</figcaption></figure></div>
+<h2 id="cube_step2_move1">Cube_step2_move1</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đặt khối vuông vào giữa, nổ hai hàng: 24/200, 19 cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_step2_move1</figcaption></figure></div>
+<h2 id="cube_resume_reopened">Cube_resume_reopened</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau force-stop/relaunch giữ 24 điểm, 19 cube, bảng và ba preset. Snapshot progress bằng nhau.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_resume_reopened</figcaption></figure></div>
+<h2 id="cube_step2_move22">Cube_step2_move22</h2>
+<p>Mode: <code>offline-local-simulation</code>. Thắng chặng 2: từ 0 tới 200 bằng 20 lần đặt hợp lệ; hết cube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_step2_move22</figcaption></figure></div>
+<h2 id="cube_step2_chest">Cube_step2_chest</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau thưởng tự động đã sang chặng 3/10, 0/300. Ảnh không phải frame rương đang mở.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_step2_chest</figcaption></figure></div>
+<h2 id="cube_active_zero">Cube_active_zero</h2>
+<p>Mode: <code>offline-local-simulation</code>. Event còn thời gian nhưng hết cube: kéo khối báo Không còn lượt đi nào nữa, bảng không đổi.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_active_zero</figcaption></figure></div>
+<h2 id="cube_step3_open">Cube_step3_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng 3 mở lại sau khi cấp thêm 200 cube local; giữ điểm 0 và bảng config 93.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_step3_open</figcaption></figure></div>
+<h2 id="cube_s3_cont_021">Cube_s3_cont_021</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn thành chặng 3: 300/300 sau 34 lượt đặt, còn 166 cube từ đợt cấp 200. Inventory cộng ElectroBall.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s3_cont_021</figcaption></figure></div>
+<h2 id="cube_s4_end">Cube_s4_end</h2>
+<p>Mode: <code>offline-local-simulation</code>. Thưởng chặng 4 hiển thị <img class="rwi" src="../assets/img/rw/coin.png" alt="">100 coin + <img class="rwi" src="../assets/img/rw/dynamite.png" alt="">1 Dynamite; hoàn thành từ 0 sau 32 lượt, còn 134 cube. Toast root che phần đáy, không che reward.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s4_end</figcaption></figure></div>
+<h2 id="cube_s5_048_reward3">Cube_s5_048_reward3</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng 5: Hammer +1; chơi từ 0, 49 lần đặt, cube134→85.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s5_048_reward3</figcaption></figure></div>
+<h2 id="cube_s6_067_reward4">Cube_s6_067_reward4</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng 6: <img class="rwi" src="../assets/img/rw/coin.png" alt="">200 coin + ElectroBall; chơi từ 0 đến700 sau68 lần đặt, cube85→17.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s6_067_reward4</figcaption></figure></div>
+<h2 id="cube_s7_boundary_002_reward2">Cube_s7_boundary_002_reward2</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng7 hoàn thành500; ép492 rồi3lần đặt, thưởngDrill+1 xác minh inventory.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s7_boundary_002_reward2</figcaption></figure></div>
+<h2 id="cube_s8_boundary_001_reward2">Cube_s8_boundary_001_reward2</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng8 hoàn thành600; ép592 rồi2lần đặt, thưởngBattleRam+Drill xác minh inventory.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s8_boundary_001_reward2</figcaption></figure></div>
+<h2 id="cube_s9_boundary_004_reward2">Cube_s9_boundary_004_reward2</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chặng9 hoàn thành800; ép792 rồi5lần đặt, thưởngBattleRam+1 xác minh inventory.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s9_boundary_004_reward2</figcaption></figure></div>
+<h2 id="cube_s10_boundary_end">Cube_s10_boundary_end</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hoàn thành event, rương còn chờ mở; inventory đã cộng500coin+WizardHat+BomberPlane. Có toast root phía dưới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_s10_boundary_end</figcaption></figure></div>
+<h2 id="cube_final10_reward">Cube_final10_reward</h2>
+<p>Mode: <code>offline-local-simulation</code>. Rương cuối hiển thị500coin, WizardHat và BomberPlane trước tap nhận.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_final10_reward</figcaption></figure></div>
+<h2 id="cube_final10_claim">Cube_final10_claim</h2>
+<p>Mode: <code>offline-local-simulation</code>. Sau nhận rương hiện RateUs; inventory không cộng lần hai. Chỉ đóng X, không gửi đánh giá.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_final10_claim</figcaption></figure></div>
+<h2 id="cube_tutorial_finish_012_reward2">Cube_tutorial_finish_012_reward2</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tutorial đạt200 điểm sau13lần đặt bổ sung từ108; đang hiện hoàn thành.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_tutorial_finish_012_reward2</figcaption></figure></div>
+<h2 id="cube_tutorial_finish_end">Cube_tutorial_finish_end</h2>
+<p>Mode: <code>offline-local-simulation</code>. Tutorial chuyển step2/level92; cube27. Toast root phía dưới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_tutorial_finish_end</figcaption></figure></div>
+<h2 id="cube_invalid_overlap">Cube_invalid_overlap</h2>
+<p>Mode: <code>offline-local-simulation</code>. Thả preset ra ngoài bảng hoặc chồng ô đã chiếm không tiêu cube: toàn bộ ByteArrayKeyName2 bằng nhau với trước thao tác (step2, score0, cubes27, moves0). Lưới checkerboard cưỡng bức với preset lớn 10/11/12 không có chỗ đặt cũng giữ nguyên progress sau kéo; không hiện màn game-over trong cửa sổ quan sát.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_invalid_overlap</figcaption></figure></div>
+<h2 id="cube_expired_never_collected">Cube_expired_never_collected</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hết giờ chưa từng nhậncube: Home không còn icon, valid0; toast root phía dưới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_never_collected</figcaption></figure></div>
+<h2 id="cube_expired_five_open">Cube_expired_five_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Hết giờ còn5cube: tooltip cơ hội cuối, vẫn được chơi.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_five_open</figcaption></figure></div>
+<h2 id="cube_expired_five_close">Cube_expired_five_close</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đóng X khi hết giờ còn5cube: icon vẫn tồn tại ở Home; không mấtcube.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_five_close</figcaption></figure></div>
+<h2 id="cube_expired_five_reopen">Cube_expired_five_reopen</h2>
+<p>Mode: <code>offline-local-simulation</code>. Mở lại sau đóng X: cube5, score0, valid1, LastChance1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_expired_five_reopen</figcaption></figure></div>
+<h2 id="cube_checker_open">Cube_checker_open</h2>
+<p>Mode: <code>offline-local-simulation</code>. Fixture checkerboard với ba preset lớn không có vị trí hợp lệ; không phải bảng hình thành tự nhiên.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_checker_open</figcaption></figure></div>
+<h2 id="cube_checker_invalid">Cube_checker_invalid</h2>
+<p>Mode: <code>offline-local-simulation</code>. Kéo khối lớn vào checkerboard thất bại; snapshot progress giữ nguyên, cube10.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_checker_invalid</figcaption></figure></div>
+<h2 id="cube_checker_regenerated">Cube_checker_regenerated</h2>
+<p>Mode: <code>offline-local-simulation</code>. Ép cả ba preset0: UI khởi tạo dở, chỉ một1×1; các nhãn75/250,Stages2/5,cube100 là prefab chưa cập nhật, không phải configsegment.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_checker_regenerated</figcaption></figure></div>
+<h2 id="cube_checker_single_generated">Cube_checker_single_generated</h2>
+<p>Mode: <code>offline-local-simulation</code>. Chỉ ép một slot0, giữ hai presetlớn: sinh1×1, UI chính xác24/200,cube10.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_checker_single_generated</figcaption></figure></div>
+<h2 id="cube_checker_single_placed">Cube_checker_single_placed</h2>
+<p>Mode: <code>offline-local-simulation</code>. Đặt1×1 vào checkerboard thành công, cube10→9, score24, xuất hiện1×1mới.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_checker_single_placed</figcaption></figure></div>
+<h2 id="cube_disabled_home">Cube_disabled_home</h2>
+<p>Mode: <code>offline-local-simulation</code>. Gọi handlerdisable local: iconCube biến mất, IsDisabled0→1; không phải serverresponse.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>Cube_disabled_home</figcaption></figure></div>
+<h2 id="rj_stage3_result">RJ_stage3_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng3 thắng; thưởng Dynamite+1 được đối chiếu snapshot.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage3_result</figcaption></figure></div>
+<h2 id="rj_stage4_current">RJ_stage4_current</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng4 thắng; thưởng ElectroBall+1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage4_current</figcaption></figure></div>
+<h2 id="rj_stage5_attempt1_result">RJ_stage5_attempt1_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng5 hết giờ, dialog thử lại.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage5_attempt1_result</figcaption></figure></div>
+<h2 id="rj_stage5_retry2_009">RJ_stage5_retry2_009</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Cuối bảng1 chặng5, timer51 giây.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage5_retry2_009</figcaption></figure></div>
+<h2 id="rj_stage5_retry2_010">RJ_stage5_retry2_010</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Bảng2 chặng5 bắt đầu, timer đặt lại70 giây.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage5_retry2_010</figcaption></figure></div>
+<h2 id="rj_stage5_result">RJ_stage5_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng5 thắng sau hai bảng; Rocket+1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage5_result</figcaption></figure></div>
+<h2 id="rj_stage6_result">RJ_stage6_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng6 thắng; UnlimitedLives30 phút.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage6_result</figcaption></figure></div>
+<h2 id="rj_stage7_result">RJ_stage7_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng7 thắng; UnlimitedRocket15 phút.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage7_result</figcaption></figure></div>
+<h2 id="rj_stage8_result">RJ_stage8_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng8 thắng; UnlimitedDynamite15 phút.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage8_result</figcaption></figure></div>
+<h2 id="rj_stage9_result">RJ_stage9_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng9 thắng; UnlimitedElectroBall15 phút.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage9_result</figcaption></figure></div>
+<h2 id="rj_stage10_result">RJ_stage10_result</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Bảng thứ hai chặng10 đang chơi, timer43; tên file không có nghĩa đã thắng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage10_result</figcaption></figure></div>
+<h2 id="rj_stage10_win">RJ_stage10_win</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Chặng10 thắng, cả ba cờ cuối được đánh dấu hoàn thành.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage10_win</figcaption></figure></div>
+<h2 id="rj_stage10_claim">RJ_stage10_claim</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Animation claim500coin chặng10.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage10_claim</figcaption></figure></div>
+<h2 id="rj_stage10_completed">RJ_stage10_completed</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Dialog chặng10 hoàn thành và thưởng đã nhận.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_stage10_completed</figcaption></figure></div>
+<h2 id="rj_gameplay_complete_home">RJ_gameplay_complete_home</h2>
+<p>Mode: <code>offline-gameplay-with-fixture-eligibility</code>. Home2900coin, iconJourney đã biến mất sau nhận thưởng cuối.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>RJ_gameplay_complete_home</figcaption></figure></div></div>
+<footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
+</div></main>
+</div>
+<script>window.SITE_ROOT="../";</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
