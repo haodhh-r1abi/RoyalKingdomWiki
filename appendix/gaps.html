@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khoảng trống và giới hạn bằng chứng — 12/11/2026 – Royal Kingdom GDD Wiki</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/img/brand.png">
+
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><img src="../assets/img/brand.png" alt=""> <span>Royal Kingdom GDD Wiki</span></a>
+  <div class="search"><input id="q" type="search" placeholder="Tìm tính năng, class, config… (/)" autocomplete="off"><div id="results" class="results" hidden></div></div>
+  <nav class="toplinks"><a href="../index.html">Trang chủ</a><a href="../categories/event.html">Sự kiện</a><a href="../analysis/index.html">Phân tích</a><a href="../appendix/events-overview.html">Phụ lục</a></nav>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="side-title">Danh mục</div>
+  <details><summary>🎯 Lõi gameplay <span class="n">17</span></summary><ul><li><a href="../features/Boosters.html">Booster<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSets.html">Bộ level &amp; tải level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AttackLevels.html">Level tấn công (đánh thành)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MatchMechanics.html">Luật match-3<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelFlow.html">Luồng level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemainingMoves.html">Lượt dư cuối level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicPot.html">Magic Pot (bình thuốc)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Lives.html">Mạng (Lives)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelGoals.html">Mục tiêu level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSkins.html">Skin level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperElectroBall.html">Super Electro Ball<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelTutorials.html">Tutorial trong level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_1.html">Vật cản 1 (L1–500)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_2.html">Vật cản 2 (L500–1500)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_3.html">Vật cản 3 (L1500+)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SpecialItems.html">Vật phẩm đặc biệt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Difficulty.html">Độ khó (Hard, Super Hard)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>💰 Kinh tế &amp; Shop <span class="n">11</span></summary><ul><li><a href="../features/Inventory.html">Coin &amp; kho đồ (Inventory)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CoinCraze.html">Coin Craze (progress offer)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PlayOn.html">Hết lượt - Play On<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Offers.html">Khung offer (Offers)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LadderOffer.html">Ladder Offer<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MythicDeal.html">Mythic Deal<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PrelevelMultiplier.html">Nhân thưởng event theo level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Ads.html">Quảng cáo (Ads)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Shop.html">Shop &amp; IAP<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperBoostOffer.html">Super Boost Offer<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomePack.html">Welcome Pack<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🏰 Tiến trình <span class="n">8</span></summary><ul><li><a href="../features/WorldMap.html">Bản đồ thế giới<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Cutscenes.html">Cutscene, thư viện và vignette<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelMilestones.html">Mốc nghìn level và hết level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TrophyRoom.html">Phòng cúp (đã gỡ)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyGift.html">Quà hằng ngày (Daily Refill)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomeBack.html">Welcome Back (quà quay lại)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Kingdom.html">Xây vương quốc (Kingdom)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyLogin.html">Điểm danh hằng ngày<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🎪 Sự kiện <span class="n">24</span></summary><ul><li><a href="../features/CardCollection.html">Bộ sưu tập thẻ<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CanvasQuest.html">Canvas Quest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CubeBlast.html">Cube Blast (mini-game)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DungeonEscape.html">Dungeon Escape<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Blitz.html">Electro Blitz - Diamond Mine<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FlyingContest.html">Flying Contest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GemHunt.html">Gem Hunt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GrandTournament.html">Grand Tournament<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HiddenPath.html">Hidden Path<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HillQuest.html">Hill Quest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/IslandRace.html">Island Race<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MissionEvents.html">Khung event nhiệm vụ<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomDuels.html">Kingdom Duels<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomPass.html">Kingdom Pass<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicCarnival.html">Magic Carnival (mini-game)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MedalMissions.html">Medal Missions<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PearlsOfAtlantis.html">Pearls of Atlantis<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PowerRush.html">Power Rush<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RichardsJourney.html">Richard&#x27;s Journey<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamAdventure.html">Team Adventure<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamClash.html">Team Clash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyContest.html">Weekly Contest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyMission.html">Weekly Goals (Weekly Mission)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ChampionsArena.html">Đấu trường (Champions Arena)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>👥 Xã hội <span class="n">6</span></summary><ul><li><a href="../features/Friends.html">Bạn bè (Friends)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Leaderboard.html">Bảng xếp hạng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Emotes.html">Emote<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EmoteAlbum.html">Emote Album<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Profile.html">Hồ sơ &amp; trang trí<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Team.html">Đội (Team)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📡 Live-ops &amp; hạ tầng <span class="n">8</span></summary><ul><li><a href="../features/Analytics.html">Analytics<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AssetBundles.html">Bundle &amp; tải tài nguyên<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemoteConfig.html">Cấu hình từ xa &amp; AB test<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ServerCommunication.html">Giao tiếp server<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EventsFramework.html">Khung sự kiện<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SaveSync.html">Lưu &amp; đồng bộ dữ liệu<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Notifications.html">Thông báo<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FeatureDependency.html">Ưu tiên &amp; mở tính năng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>⚙️ Meta &amp; UI <span class="n">9</span></summary><ul><li><a href="../features/Settings.html">Cài đặt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Support.html">Hỗ trợ (Helpshift)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Loading.html">Loading &amp; splash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HomeUI.html">Màn hình Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Onboarding.html">Onboarding &amp; tutorial Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AppUpdate.html">Phiên bản &amp; cập nhật<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Privacy.html">Quyền riêng tư &amp; phụ huynh<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Account.html">Tài khoản &amp; đăng nhập<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RateUs.html">Đánh giá app<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📊 Phân tích & đánh giá <span class="n">6</span></summary><ul><li><a href="../analysis/index.html">Tất cả phân tích</a></li><li><a href="../analysis/01-sale-event-flows.html">Luồng Sale &amp; Event của Royal Kingdom — từ server tới phần thưởng</a></li><li><a href="../analysis/02-deep-dive.html">Phân tích chuyên sâu — Độ khó, bộ level, hệ số nhân, AB test và kinh tế của thất bại</a></li><li><a href="../analysis/03-iap-packages.html">Phân tích từng gói IAP — Royal Kingdom</a></li><li><a href="../analysis/04-user-segmentation.html">Phân tệp người chơi — payer, segment và AB trong Royal Kingdom</a></li><li><a href="../analysis/05-economy.html">Kinh tế Royal Kingdom — nguồn, nơi tiêu và ngân sách mỗi 1.000 level</a></li><li><a href="../analysis/06-rk-vs-royal-match.html">Royal Kingdom so với Royal Match — cùng khung, khác lõi</a></li></ul></details><details open><summary>📎 Phụ lục <span class="n">20</span></summary><ul><li><a href="../appendix/events-overview.html">Tổng quan sự kiện</a></li><li><a href="../appendix/unlock-levels.html">Level mở khoá</a></li><li><a href="../appendix/reward-codes.html">Mã phần thưởng</a></li><li><a href="../appendix/iap-products.html">Sản phẩm IAP</a></li><li><a href="../appendix/levels-summary.html">Level &amp; thống kê</a></li><li><a href="../appendix/default-configs.html">Config mặc định trong APK</a></li><li><a href="../appendix/backend-protocol.html">Giao thức backend</a></li><li><a href="../appendix/enums.html">Enum</a></li><li><a href="../appendix/static-arrays.html">Mảng tĩnh (metadata)</a></li><li><a href="../appendix/localization.html">Text UI (EN)</a></li><li><a href="../appendix/save-state.html">Trạng thái lưu (save)</a></li><li><a href="../appendix/config-default-vs-live.html">Config mặc định vs live</a></li><li><a href="../appendix/asset-configs.html">Asset/config local — phạm vi và bằng chứng</a></li><li><a href="../appendix/capture-plan.html">Ảnh cần chụp — hoãn playtest</a></li><li><a href="../appendix/config-leaf-diff.html">So sánh từng trường config — kết quả tái sinh</a></li><li class=cur><a href="../appendix/gaps.html">Khoảng trống và giới hạn bằng chứng — 12/11/2026</a></li><li><a href="../appendix/kingdom-tasks.html">Kingdom — asset, task và localization</a></li><li><a href="../appendix/save-state-inventory.html">Kiểm kê SQLite tái sinh — snapshot 11/11/2026</a></li><li><a href="../appendix/verified-findings.html">Kết quả kiểm chứng local — 12/11/2026</a></li><li><a href="../appendix/about.html">Về tài liệu này</a></li></ul></details>
+</aside>
+<main class="content"><div class="inner">
+<div class="crumbs"><a href="../index.html">Trang chủ</a> › Khoảng trống và giới hạn bằng chứng — 12/11/2026</div><h1 class="title">Khoảng trống và giới hạn bằng chứng — 12/11/2026</h1><p class="tagline"> <span class="muted">· nguồn <code>appendix/gaps.md</code></span></p><div class="md"><p>Build 34771; snapshot 11/11. Giữ nguyên 278 mục gốc để truy vết. Phân loại tự động chỉ để định tuyến; chỉ mục có kết luận và bằng chứng mới được đóng.</p>
+<p>Trạng thái: deferred: <strong>79</strong>, open: <strong>164</strong>, partial: <strong>9</strong>, resolved-asset: <strong>3</strong>, resolved-code: <strong>20</strong>, resolved-scope: <strong>3</strong>.</p>
+<p>Playtest, dữ liệu server chưa có và publish được hoãn. Không coi thiếu dữ liệu là bằng chứng tính năng không tồn tại.</p>
+<h2 id="account-g01--open--code--p2">Account-G01 — open / code / P2</h2>
+<p>Nội dung đầy đủ của RegisterRequest (có mang id/token từ cloud backup không) chưa đọc từ builder FlatBuffers — UC-02 là suy luận.</p>
+<p>Nguồn: <code>gdd/Account.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="account-g02--deferred--missing-data--p2">Account-G02 — deferred / missing-data / P2</h2>
+<p>Nút &#x27;Delete Account&#x27; chỉ mở mục Helpshift; client không gửi lệnh xoá riêng — việc xoá đi qua ticket hỗ trợ rồi server bật cờ (UserDetachHelper).</p>
+<p>Nguồn: <code>gdd/Account.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="account-g03--resolved-asset--asset--p2">Account-G03 — resolved-asset / asset / P2</h2>
+<p>Độ dài tối đa tên (m_CharacterLimit) nằm trong prefab, không có trong code.</p>
+<p>Nguồn: <code>gdd/Account.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc prefab local.</p>
+<p>Kết quả: EnterNameDialog.prefab:3758 có m_CharacterLimit:12. Chỉ khẳng định giới hạn input UI, không khẳng định giới hạn backend.</p>
+<p>Bằng chứng: appendix/asset-configs.md</p>
+<h2 id="account-g04--open--review--p2">Account-G04 — open / review / P2</h2>
+<p>Kết nối Apple trên Android: có AppleConnect nhưng chưa kiểm tra nút có hiện trên Android không.</p>
+<p>Nguồn: <code>gdd/Account.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="ads-g01--resolved-code--code--p1">Ads-G01 — resolved-code / code / P1</h2>
+<p>Level tối thiểu của từng ad unit (AdUnit.IsAdTypeEnabledInConfig / giá trị trả về trong IsLevelSatisfied) chưa đọc.</p>
+<p>Nguồn: <code>gdd/Ads.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: AdManager.IsLevelSatisfied yêu cầu có ad unit và active config; thiếu thì requiredLevel=int.MaxValue. Rewarded: Life/ExtraMoves yêu cầu level 1, Coin yêu cầu 11 khi RussianStoreFlowCheck bật, ngược lại 1. Interstitial chỉ origin 1–3, requiredLevel=InterstitialRules.startLevel. Cờ enabled và giới hạn khác vẫn áp dụng; level đủ không đồng nghĩa quảng cáo sẽ hiện.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f07 — AdManager.IsLevelSatisfied; RewardedAdUnit.GetRequiredLevel; InterstitialAdUnit.GetRequiredLevel; AdUnit.IsAdTypeEnabledInConfig</p>
+<h2 id="ads-g02--resolved-code--code--p1">Ads-G02 — resolved-code / code / P1</h2>
+<p>Điều kiện chọn nhánh primary/secondary (<code>shouldUsePrimary</code>) suy luận từ IsRewardedAdsV2GroupEnabled.</p>
+<p>Nguồn: <code>gdd/Ads.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: SetActiveConfigRules truyền IsRewardedAdsV2GroupEnabled vào shouldUsePrimary của InGameAdsConfigWrapper.GetConfig, cùng AdsAbTestGroup và IsRewardedAdAbTestEnabled. Nhánh primary/secondary vì thế có bằng chứng nơi gọi, không chỉ suy từ tên.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f08 — AdManager.SetActiveConfigRules; InGameAdsConfigWrapper.GetConfig</p>
+<h2 id="ads-g03--resolved-code--code--p1">Ads-G03 — resolved-code / code / P1</h2>
+<p>Ý nghĩa limit = 0 (không giới hạn) là suy luận.</p>
+<p>Nguồn: <code>gdd/Ads.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: Với daily limit Life/ExtraMoves, limit &lt;1 đi nhánh log DailyLimitIncrement Skipped:Unlimited; limit=0 không giới hạn bộ đếm ngày này. Không mở rộng kết luận sang mọi field limit trong game hoặc bỏ các gate enabled/cooldown.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f09 — RewardedAdDailyLimitController.IncrementDailyAdCount</p>
+<h2 id="ads-g04--deferred--missing-data--p1">Ads-G04 — deferred / missing-data / P1</h2>
+<p>Nhóm user ở Nga thực tế dùng ads_russian (không AB) — server có thể ghi đè (IsRussiaStoreCheckFlowDisabledByBackend).</p>
+<p>Nguồn: <code>gdd/Ads.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="analytics-g01--resolved-code--code--p2">Analytics-G01 — resolved-code / code / P2</h2>
+<p>Kích thước file / ngưỡng gửi lô (EventWriter.MaxFileSize) là static, giá trị gán trong .cctor chưa đọc.</p>
+<p>Nguồn: <code>gdd/Analytics.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: EventWriter..cctor gán MaxFileSize=0x1400 (5120). Đây là giá trị ngưỡng được gán; không nhầm với số event trong một lô.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f12 — EventWriter..cctor</p>
+<h2 id="analytics-g02--open--review--p2">Analytics-G02 — open / review / P2</h2>
+<p>Danh sách tham số của vài sự kiện bị cắt ở công cụ chuỗi (chỉ lấy literal trong method, không lấy từ struct *AnalyticsData).</p>
+<p>Nguồn: <code>gdd/Analytics.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="analytics-g03--open--review--p2">Analytics-G03 — open / review / P2</h2>
+<p>Vai trò Cloud Function sparkle_state là suy luận.</p>
+<p>Nguồn: <code>gdd/Analytics.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="appupdate-g01--open--code--p2">AppUpdate-G01 — open / code / P2</h2>
+<p>Nút Update mở store bằng URL nào (NativeService) chưa đọc.</p>
+<p>Nguồn: <code>gdd/AppUpdate.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="appupdate-g02--open--review--p2">AppUpdate-G02 — open / review / P2</h2>
+<p>Không thấy cập nhật &#x27;mềm&#x27; (gợi ý cập nhật không bắt buộc) trong client; push loại &#x27;update&#x27; có thể là kênh đó (suy luận).</p>
+<p>Nguồn: <code>gdd/AppUpdate.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="appupdate-g03--resolved-code--code--p2">AppUpdate-G03 — resolved-code / code / P2</h2>
+<p>Số FPS mục tiêu nằm trong FpsManager, chưa đọc.</p>
+<p>Nguồn: <code>gdd/AppUpdate.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: FpsManager khởi tạo TargetFrameRate=60; GetTargetFps trả 60 cho AB 0/default, 80 cho AB 2, 120 cho AB 3. SetTargetFrameRate áp giá trị vào Unity; dynamic FPS chỉ bật trên iOS khi target=80. Đây là mục tiêu code, không phải FPS đo trên thiết bị.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f13 — FpsManager..cctor; FpsManager.GetTargetFps; FpsManager.SetTargetFrameRate</p>
+<h2 id="appupdate-g04--open--review--p2">AppUpdate-G04 — open / review / P2</h2>
+<p>Inventory gán AppConfig cho AppUpdate nhưng AppConfig chỉ là cấu hình FPS/đa chạm.</p>
+<p>Nguồn: <code>gdd/AppUpdate.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="assetbundles-g01--open--code--p2">AssetBundles-G01 — open / code / P2</h2>
+<p>Cơ chế chọn biến thể SD/HD (s, sd, PreferSd) theo thiết bị chưa đọc.</p>
+<p>Nguồn: <code>gdd/AssetBundles.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="assetbundles-g02--open--review--p2">AssetBundles-G02 — open / review / P2</h2>
+<p>Điều kiện bật downloader thứ hai (QueueCountThreshold = 20) là suy luận từ tên.</p>
+<p>Nguồn: <code>gdd/AssetBundles.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="assetbundles-g03--open--review--p2">AssetBundles-G03 — open / review / P2</h2>
+<p>minLevel trong bundle config là mức bắt đầu tải, không chắc trùng level mở khoá thật (xem FeatureDependencyConfig).</p>
+<p>Nguồn: <code>gdd/AssetBundles.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="attacklevels-g01--open--review--p2">AttackLevels-G01 — open / review / P2</h2>
+<p>Có cộng thêm lượt khi sang wave mới không — chưa thấy trong StartWaveChange.</p>
+<p>Nguồn: <code>gdd/AttackLevels.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="attacklevels-g02--open--code--p2">AttackLevels-G02 — open / code / P2</h2>
+<p>Luật chi tiết của từng kẻ địch (≈56 AttackItemType) mới tóm tắt từ tên hàm/tutorial; chưa đọc từng TryExplode.</p>
+<p>Nguồn: <code>gdd/AttackLevels.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="blitz-g01--open--review--p1">Blitz-G01 — open / review / P1</h2>
+<p>Số tia sét mỗi lần kích hoạt Electro Ball trong level (TryCollectLightningBolts gọi qua virtual/interface) chưa truy được nơi gọi.</p>
+<p>Nguồn: <code>gdd/Blitz.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="blitz-g02--partial--review--p1">Blitz-G02 — partial / review / P1</h2>
+<p>Điều kiện chính xác chọn bộ SEB trong get_CurrentConfig (pseudo-C đọc lệch offset) — chỉ biết có hai bộ.</p>
+<p>Nguồn: <code>gdd/Blitz.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<p>Kết quả: Đọc ARM64 RVA 0x254733c và dump.cs: offset 0xA0 là superElectroBallManager; cờ 0x88=isSuperElectroBallConfigCreated; true+predicate chọn 0x80 (SEB), còn lại 0x78 (default). Pseudo-C gán sai tên field ở đây. Predicate virtual chưa map chắc; giữ partial thay vì suy từ timeHelper. Excerpt: analysis_research/native_evidence/Blitz_CurrentConfig_arm64.txt.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="blitz-g03--open--review--p1">Blitz-G03 — open / review / P1</h2>
+<p>Độ dài một đợt Blitz: client chỉ có endDate; đợt live 279 kết thúc 13/11/2026 08:00 UTC, ngày bắt đầu không có.</p>
+<p>Nguồn: <code>gdd/Blitz.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="blitz-g04--deferred--missing-data--p1">Blitz-G04 — deferred / missing-data / P1</h2>
+<p>Ý nghĩa segment (&#x27;or&#x27;) của Weekly Mission override do server chọn.</p>
+<p>Nguồn: <code>gdd/Blitz.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="blitz-g05--deferred--missing-data--p1">Blitz-G05 — deferred / missing-data / P1</h2>
+<p>Electro Blitz có thể không còn chạy live (snapshot là Diamond).</p>
+<p>Nguồn: <code>gdd/Blitz.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="blitz-g06--resolved-code--code--p1">Blitz-G06 — resolved-code / code / P1</h2>
+<p>Deep page ghi kim cương từ match đỏ tính bằng MultiplierWithoutMagicPot (không Magic Pot); pseudo-C DiamondRushLevelData.TryCollectMatchItem lại cộng dữ liệu bằng Multiplier (có Magic Pot) và chỉ dùng MultiplierWithoutMagicPot cho số hiển thị — cần kiểm tra trên máy với Magic Pot đầy.</p>
+<p>Nguồn: <code>gdd/Blitz.json#/gaps/5</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: DiamondRushLevelData.TryCollectMatchItem cộng tiến độ bằng count × Multiplier; số trên hiệu ứng bay dùng count × MultiplierWithoutMagicPot. Không được dùng số hiệu ứng để kết luận Magic Pot không nhân tiến độ. Bảng deep cũ ghi không Magic Pot cho tiến độ đã sửa.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f04 — DiamondRushLevelData.TryCollectMatchItem; BlitzLevelData.get_MultiplierWithoutMagicPot</p>
+<h2 id="boosters-g01--open--code--p2">Boosters-G01 — open / code / P2</h2>
+<p>Điều kiện chọn biến thể xáo bàn (JesterHat/ShuffleWizardHat) thay cho đổi màu chưa xác định.</p>
+<p>Nguồn: <code>gdd/Boosters.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="boosters-g02--deferred--missing-data--p2">Boosters-G02 — deferred / missing-data / P2</h2>
+<p>Giá booster có bị server ghi đè (AB/offer) không — client chỉ thấy bảng cứng trong BoosterPackage.</p>
+<p>Nguồn: <code>gdd/Boosters.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="boosters-g03--open--code--p2">Boosters-G03 — open / code / P2</h2>
+<p>Thuật toán chọn hàng của BattleRam (rowScoreCache) và điểm thả của BomberPlane chưa đọc chi tiết.</p>
+<p>Nguồn: <code>gdd/Boosters.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="boosters-g04--open--review--p2">Boosters-G04 — open / review / P2</h2>
+<p>Tên key lưu chính xác của InGameInventory (chuỗi DB) suy từ tên trường SetInGameInventory.</p>
+<p>Nguồn: <code>gdd/Boosters.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="canvasquest-g01--deferred--missing-data--p2">CanvasQuest-G01 — deferred / missing-data / P2</h2>
+<p>Không có config thật (c_in_s, c_m, steps, primaryTasks) trong client hay snapshot.</p>
+<p>Nguồn: <code>gdd/CanvasQuest.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="canvasquest-g02--deferred--missing-data--p2">CanvasQuest-G02 — deferred / missing-data / P2</h2>
+<p>Số rương cố định 3 theo bit progress; nếu server gửi nhiều mốc hơn chưa rõ xử lý.</p>
+<p>Nguồn: <code>gdd/CanvasQuest.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="cardcollection-g01--open--asset--p2">CardCollection-G01 — open / asset / P2</h2>
+<p>Nội dung 16 bộ (tên bộ, thẻ nào bao nhiêu sao, Gold / Diamond) nằm trong bundle mùa (set1–set16) — chưa trích xuất; snapshot 11/11 tài khoản &lt; level 41 nên chưa vào mùa.</p>
+<p>Nguồn: <code>gdd/CardCollection.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="cardcollection-g02--open--review--p2">CardCollection-G02 — open / review / P2</h2>
+<p>Thuật toán chọn thẻ chi tiết (GiveDefaultPackReward, GiveMissingGoldFavoredDeckReward, ý nghĩa chính xác gw / dw) chỉ đọc lướt.</p>
+<p>Nguồn: <code>gdd/CardCollection.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="cardcollection-g03--open--code--p2">CardCollection-G03 — open / code / P2</h2>
+<p>Gói khởi đầu mùa là loại nào (tham số GiveStartPackReward) và phần thưởng nhóm AB &#x27;CardPackInKingdomPassFree&#x27; chưa xác định.</p>
+<p>Nguồn: <code>gdd/CardCollection.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="championsarena-g01--deferred--missing-data--p2">ChampionsArena-G01 — deferred / missing-data / P2</h2>
+<p>Danh sách level arena, số nước đi, requiredLevel, lastEnterDuration và bộ thưởng thật do server gửi — snapshot 11/11 không có (tài khoản level thấp).</p>
+<p>Nguồn: <code>gdd/ChampionsArena.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="championsarena-g02--deferred--missing-data--p2">ChampionsArena-G02 — deferred / missing-data / P2</h2>
+<p>Số người mỗi nhóm và cách server chia cluster/rewardId chưa thấy trong client.</p>
+<p>Nguồn: <code>gdd/ChampionsArena.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="championsarena-g03--open--code--p2">ChampionsArena-G03 — open / code / P2</h2>
+<p>Điều kiện &#x27;complete all districts&#x27; chỉ thấy qua text QualifiedPopupText2 / GoToTasksDialog, chưa đọc code kiểm tra district.</p>
+<p>Nguồn: <code>gdd/ChampionsArena.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="championsarena-g04--open--code--p2">ChampionsArena-G04 — open / code / P2</h2>
+<p>Ý nghĩa chính xác các giá trị autoDialogState (ngoài 3 = hiện popup claim) chưa xác định.</p>
+<p>Nguồn: <code>gdd/ChampionsArena.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="championsarena-g05--open--review--p2">ChampionsArena-G05 — open / review / P2</h2>
+<p>Quy tắc trong GetEventRewardOverrideDecision (khi nào trả immediateResult) đọc chưa chắc do pseudo-C rối.</p>
+<p>Nguồn: <code>gdd/ChampionsArena.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="coincraze-g01--deferred--missing-data--p2">CoinCraze-G01 — deferred / missing-data / P2</h2>
+<p>Không có config CoinCraze trong client/snapshot: số mốc, target, coin, gói giá theo segment chưa biết.</p>
+<p>Nguồn: <code>gdd/CoinCraze.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="coincraze-g02--open--review--p2">CoinCraze-G02 — open / review / P2</h2>
+<p>Logic khung AOfferEventManager (chọn gói theo p, segment, theme) chỉ đọc qua tên; cần đọc riêng ở feature Offers.</p>
+<p>Nguồn: <code>gdd/CoinCraze.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="coincraze-g03--open--review--p2">CoinCraze-G03 — open / review / P2</h2>
+<p>Nội dung gói khi mua (có &#x27;Free life refill&#x27;?) chỉ suy từ localization.</p>
+<p>Nguồn: <code>gdd/CoinCraze.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="cubeblast-g01--open--review--p2">CubeBlast-G01 — open / review / P2</h2>
+<p>Trường <code>g</code> của CubeBlastLevelConfig không thấy được đọc trong các hàm đã xem (mục tiêu điểm lấy từ steps[].t); vai trò thật chưa rõ.</p>
+<p>Nguồn: <code>gdd/CubeBlast.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="cubeblast-g02--open--review--p2">CubeBlast-G02 — open / review / P2</h2>
+<p>Thuật toán trọng số preset (GetWeightForPreset, scaleRectangularPercentage, nhân 10 khi gần lấp hàng) chỉ đọc lướt; chưa có bảng trọng số đầy đủ.</p>
+<p>Nguồn: <code>gdd/CubeBlast.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="cubeblast-g03--open--code--p2">CubeBlast-G03 — open / code / P2</h2>
+<p>Chưa xác định có &#x27;game over&#x27; khi lưới kín: chỉ thấy fallback preset 1×1 khi không chọn được preset (&#x27;Can&#x27;t find a preset to suggest&#x27;).</p>
+<p>Nguồn: <code>gdd/CubeBlast.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="cubeblast-g04--deferred--missing-data--p2">CubeBlast-G04 — deferred / missing-data / P2</h2>
+<p>Thời lượng event (EndDate) do server gửi; snapshot chỉ có mốc kết thúc 1794556800000.</p>
+<p>Nguồn: <code>gdd/CubeBlast.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="cutscenes-g01--open--review--p2">Cutscenes-G01 — open / review / P2</h2>
+<p>URL CDN của cutscene chính không thấy dạng chuỗi trong CutsceneVideoPlayer (có thể lấy từ bundle / remote config).</p>
+<p>Nguồn: <code>gdd/Cutscenes.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="cutscenes-g02--open--code--p2">Cutscenes-G02 — open / code / P2</h2>
+<p>Bảng tĩnh vignette cho level 52–63, 78–83, 86–91, 94–99 chưa giải (mảng static trong GetLoadingVignetteForLevel).</p>
+<p>Nguồn: <code>gdd/Cutscenes.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="cutscenes-g03--open--code--p2">Cutscenes-G03 — open / code / P2</h2>
+<p>Ý nghĩa giá trị AnimType (0/1/2) chưa đối chiếu với animation cụ thể.</p>
+<p>Nguồn: <code>gdd/Cutscenes.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="dailygift-g01--deferred--missing-data--p2">DailyGift-G01 — deferred / missing-data / P2</h2>
+<p>Ý nghĩa thiết kế của test 108 (user cũ) và các nhóm E+ không thấy trong client; giá trị nhóm thật của người chơi do server phân.</p>
+<p>Nguồn: <code>gdd/DailyGift.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="dailygift-g02--open--review--p2">DailyGift-G02 — open / review / P2</h2>
+<p>Không có localization nào tên DailyGift; tên hiển thị lấy từ khoá DailyRefill*.</p>
+<p>Nguồn: <code>gdd/DailyGift.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="dailygift-g03--deferred--missing-data--p2">DailyGift-G03 — deferred / missing-data / P2</h2>
+<p>Không thấy giới hạn level riêng cho tính năng; nếu server tắt tính năng bằng cờ khác thì không tìm thấy trong DailyGiftManager.</p>
+<p>Nguồn: <code>gdd/DailyGift.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="dailylogin-g01--open--review--p2">DailyLogin-G01 — open / review / P2</h2>
+<p>Không tìm thấy nơi gọi TryFixTimeManipulatedProgress trong pseudo-C (có thể gọi qua interface sau RefreshProgress) — luồng sửa chỉ suy ra từ thân hàm.</p>
+<p>Nguồn: <code>gdd/DailyLogin.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="dailylogin-g02--deferred--missing-data--p2">DailyLogin-G02 — deferred / missing-data / P2</h2>
+<p>Phần thưởng của nhiệm vụ đăng nhập do config mission event (server) quyết định, không có trong client.</p>
+<p>Nguồn: <code>gdd/DailyLogin.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="difficulty-g01--open--review--p1">Difficulty-G01 — open / review / P1</h2>
+<p>Giá trị flagType trong 3 ScriptableObject LoadingVignetteAssets (normal/hard/superHard) nằm trong bundle, chưa xác nhận đúng là 21/22.</p>
+<p>Nguồn: <code>gdd/Difficulty.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="difficulty-g02--open--review--p1">Difficulty-G02 — open / review / P1</h2>
+<p>Khác biệt nội dung prefab Prelevel/LevelFail giữa Normal và Hard nằm trong bundle UI, không đọc được từ code.</p>
+<p>Nguồn: <code>gdd/Difficulty.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="difficulty-g03--resolved-code--code--p1">Difficulty-G03 — resolved-code / code / P1</h2>
+<p>Hệ số event Blitz theo độ khó (BlitzLevelData.get_MultiplierWithoutMagicPot) mới thấy dùng IsHardLevel, chưa trích đủ bảng.</p>
+<p>Nguồn: <code>gdd/Difficulty.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: MultiplierWithoutMagicPot dùng cùng nhánh loại level: Normal=1, Hard=2, SuperHard=5, Kingdom=3, Dark=10, RJ=2; Kingdom/Dark/RJ chỉ đổi hệ số khi LevelNo&gt;=25 hoặc Arena. Không nhân Magic Pot. Đây là hệ số chung của hàm, không có nghĩa mọi nhánh thưởng đều gọi hàm đó (đặc biệt potion RJ).</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f21 — BlitzLevelData.get_MultiplierWithoutMagicPot</p>
+<h2 id="difficulty-g04--open--review--p1">Difficulty-G04 — open / review / P1</h2>
+<p>Không có thưởng/cảnh báo riêng khác ngoài hệ số; không thấy cơ chế &#x27;mạng thêm&#x27; cho level khó trong code.</p>
+<p>Nguồn: <code>gdd/Difficulty.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="dungeonescape-g01--deferred--missing-data--p2">DungeonEscape-G01 — deferred / missing-data / P2</h2>
+<p>Kịch bản rơi người mỗi bậc (qualifiedStepPlayers) và WinnerCount do server sinh — không có thuật toán trong client; snapshot 11/11 không có dữ liệu (bảng DungeonEscapeTableItem trống).</p>
+<p>Nguồn: <code>gdd/DungeonEscape.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="dungeonescape-g02--open--code--p2">DungeonEscape-G02 — open / code / P2</h2>
+<p>Video cutscene nào phát ở tutorial icon chưa xác định.</p>
+<p>Nguồn: <code>gdd/DungeonEscape.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="dungeonescape-g03--deferred--missing-data--p2">DungeonEscape-G03 — deferred / missing-data / P2</h2>
+<p>Thời lượng server event (ServerEventEndDate) và tần suất event không có trong client.</p>
+<p>Nguồn: <code>gdd/DungeonEscape.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="emotealbum-g01--open--asset--p2">EmoteAlbum-G01 — open / asset / P2</h2>
+<p>Nội dung/hình ảnh 8 emote 1001–1008 nằm trong bundle remote, chưa giải.</p>
+<p>Nguồn: <code>gdd/EmoteAlbum.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="emotealbum-g02--deferred--missing-data--p2">EmoteAlbum-G02 — deferred / missing-data / P2</h2>
+<p>Album có reset theo mùa hay không: không thấy luồng server; giả định một lần duy nhất (suy luận).</p>
+<p>Nguồn: <code>gdd/EmoteAlbum.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="emotes-g01--open--review--p2">Emotes-G01 — open / review / P2</h2>
+<p>Không thấy emote trên màn hồ sơ — client chỉ dùng emote trong chat đội và Emote Album.</p>
+<p>Nguồn: <code>gdd/Emotes.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="emotes-g02--deferred--missing-data--p2">Emotes-G02 — deferred / missing-data / P2</h2>
+<p>Ngoài Emote Album chưa thấy nguồn EM khác trong JSON mặc định (có thể server gửi trong phần thưởng sự kiện).</p>
+<p>Nguồn: <code>gdd/Emotes.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="emotes-g03--open--review--p2">Emotes-G03 — open / review / P2</h2>
+<p>Đơn vị mốc (target) của Emote Album thuộc phân tích EmoteAlbum.</p>
+<p>Nguồn: <code>gdd/Emotes.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="eventsframework-g01--open--review--p2">EventsFramework-G01 — open / review / P2</h2>
+<p>Champions Arena, Emote Album, Super Electro Ball không override get_DisabledBit (0xFF); Emote Album đọc riêng cờ EmoteDisabled (bit 42).</p>
+<p>Nguồn: <code>gdd/EventsFramework.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="eventsframework-g02--deferred--missing-data--p2">EventsFramework-G02 — deferred / missing-data / P2</h2>
+<p>Định dạng chính xác của BlitzServerEvent (type§id§endDate) suy từ giá trị snapshot.</p>
+<p>Nguồn: <code>gdd/EventsFramework.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="eventsframework-g03--open--code--p2">EventsFramework-G03 — open / code / P2</h2>
+<p>Thứ tự ưu tiên giữa các dialog tự động của nhiều sự kiện nằm trong flow manager Home, chưa đọc.</p>
+<p>Nguồn: <code>gdd/EventsFramework.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="eventsframework-g04--open--review--p2">EventsFramework-G04 — open / review / P2</h2>
+<p>Nhóm &#x27;or&#x27; theo segment trong bảng chèn (Weekly Mission, Medal Missions) cần đọc GetOverrideSegment của từng sự kiện.</p>
+<p>Nguồn: <code>gdd/EventsFramework.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="featuredependency-g01--deferred--missing-data--p2">FeatureDependency-G01 — deferred / missing-data / P2</h2>
+<p>FeatureDependencyConfig KHÔNG chứa level mở khóa; level nằm trong get_UnlockLevel từng manager (bảng trong configs). Server có thể không gửi event info cho người chưa đủ level — không kiểm chứng được offline.</p>
+<p>Nguồn: <code>gdd/FeatureDependency.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="featuredependency-g02--open--review--p2">FeatureDependency-G02 — open / review / P2</h2>
+<p>type 27 trong config live (right[6], p58) không có trong enum FeatureWithIconType của build 34771 — không rõ là tính năng nào.</p>
+<p>Nguồn: <code>gdd/FeatureDependency.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="featuredependency-g03--open--code--p2">FeatureDependency-G03 — open / code / P2</h2>
+<p>Điều kiện chính xác của nhánh ForceClaimFeature trong ProcessIcon chưa đọc trọn (biểu thức bị decompiler làm phẳng).</p>
+<p>Nguồn: <code>gdd/FeatureDependency.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="featuredependency-g04--deferred--missing-data--p2">FeatureDependency-G04 — deferred / missing-data / P2</h2>
+<p>Khác biệt config giữa các nhóm AB event_icons (96/97) do server quyết định, client không có.</p>
+<p>Nguồn: <code>gdd/FeatureDependency.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="featuredependency-g05--deferred--missing-data--p2">FeatureDependency-G05 — deferred / missing-data / P2</h2>
+<p>Config eventTab chưa từng xuất hiện trong snapshot nên chưa biết priority Events tab thực tế.</p>
+<p>Nguồn: <code>gdd/FeatureDependency.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="flyingcontest-g01--deferred--missing-data--p2">FlyingContest-G01 — deferred / missing-data / P2</h2>
+<p>Số người/nhóm, bot và cách ghép do server.</p>
+<p>Nguồn: <code>gdd/FlyingContest.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="flyingcontest-g02--open--review--p2">FlyingContest-G02 — open / review / P2</h2>
+<p>Config live chưa có (tài khoản level thấp).</p>
+<p>Nguồn: <code>gdd/FlyingContest.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="flyingcontest-g03--open--review--p2">FlyingContest-G03 — open / review / P2</h2>
+<p>Ý nghĩa đầy đủ của FakeCountToSendForNewEvent (điểm gửi khi vào event mới) chỉ suy từ tên.</p>
+<p>Nguồn: <code>gdd/FlyingContest.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="friends-g01--deferred--missing-data--p2">Friends-G01 — deferred / missing-data / P2</h2>
+<p>Giới hạn số lời mời đang chờ (FriendOrRequestLimitExceeded) do server đặt, client không có số.</p>
+<p>Nguồn: <code>gdd/Friends.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="friends-g02--deferred--missing-data--p2">Friends-G02 — deferred / missing-data / P2</h2>
+<p>Cách server tính SuggestionScore không có trong client.</p>
+<p>Nguồn: <code>gdd/Friends.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="friends-g03--deferred--missing-data--p2">Friends-G03 — deferred / missing-data / P2</h2>
+<p>Snapshot là tài khoản mới, chưa có bạn/gợi ý nên không có dữ liệu mẫu.</p>
+<p>Nguồn: <code>gdd/Friends.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="gemhunt-g01--deferred--missing-data--p2">GemHunt-G01 — deferred / missing-data / P2</h2>
+<p>Luật qua vòng (ai bị loại) do server quyết định qua final list; client chỉ coi &#x27;đã nhặt ≥ 1 lần ngọc + có final list&#x27; là thắng vòng.</p>
+<p>Nguồn: <code>gdd/GemHunt.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="gemhunt-g02--deferred--missing-data--p2">GemHunt-G02 — deferred / missing-data / P2</h2>
+<p>Điều kiện IsInReducedPool (ReducedPoolBoundaryLevel = 1000) và userOfferSegment do server gán; live 11/11 không có dữ liệu Gem Hunt (level thấp).</p>
+<p>Nguồn: <code>gdd/GemHunt.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="gemhunt-g03--open--code--p2">GemHunt-G03 — open / code / P2</h2>
+<p>Cách ánh xạ ô Store bị ghi đè sang giá trong overriderInventory (theo pid) chưa đọc chi tiết.</p>
+<p>Nguồn: <code>gdd/GemHunt.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="grandtournament-g01--deferred--missing-data--p2">GrandTournament-G01 — deferred / missing-data / P2</h2>
+<p>Số người mỗi nhóm, cách ghép nhóm và bot (nếu có) do server quyết định, không thấy trong client.</p>
+<p>Nguồn: <code>gdd/GrandTournament.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="grandtournament-g02--deferred--missing-data--p2">GrandTournament-G02 — deferred / missing-data / P2</h2>
+<p>Độ dài giải: client chỉ có endDate; snapshot 11/11 chưa vào giải.</p>
+<p>Nguồn: <code>gdd/GrandTournament.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="grandtournament-g03--open--review--p2">GrandTournament-G03 — open / review / P2</h2>
+<p>Thứ tự &#x27;Level &gt; UnlockLevel&#x27; trong get_HasEnoughLevelToProgress dựa trên slot vtable đặt tên sai — cần xác nhận là 46 hay 47.</p>
+<p>Nguồn: <code>gdd/GrandTournament.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="grandtournament-g04--deferred--missing-data--p2">GrandTournament-G04 — deferred / missing-data / P2</h2>
+<p>Config live của giải (helmet targets, rương) chưa có trong snapshot.</p>
+<p>Nguồn: <code>gdd/GrandTournament.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="hiddenpath-g01--deferred--playtest--p2">HiddenPath-G01 — deferred / playtest / P2</h2>
+<p>Code chỉ cộng đũa = hệ số level mỗi lần thắng trong khi mỗi lần đào tốn 3 đũa; có thể còn nguồn nhân khác (PrelevelMultiplier / Magic Pot) — cần xác nhận bằng chơi thử.</p>
+<p>Nguồn: <code>gdd/HiddenPath.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Ghi nhận trên bản build tương ứng; playtest để sau.</p>
+<h2 id="hiddenpath-g02--deferred--missing-data--p2">HiddenPath-G02 — deferred / missing-data / P2</h2>
+<p>Bốn môi trường (forest / sand / ice / stone, field_type) gán cho bạn nào do server; live 11/11 không có dữ liệu (bảng HiddenPathTableItem trống).</p>
+<p>Nguồn: <code>gdd/HiddenPath.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="hillquest-g01--deferred--missing-data--p2">HillQuest-G01 — deferred / missing-data / P2</h2>
+<p>Không có config server/default trong client: target task, primaryTasks và bảng thưởng 5 rương chưa biết.</p>
+<p>Nguồn: <code>gdd/HillQuest.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="hillquest-g02--open--review--p2">HillQuest-G02 — open / review / P2</h2>
+<p>Màu pickaxe ↔ chặng (xanh dương/xanh lá/đỏ/vàng) suy ra từ tooltip, chưa thấy bảng ánh xạ trong code.</p>
+<p>Nguồn: <code>gdd/HillQuest.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="hillquest-g03--deferred--missing-data--p2">HillQuest-G03 — deferred / missing-data / P2</h2>
+<p>Thời lượng event do server.</p>
+<p>Nguồn: <code>gdd/HillQuest.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="homeui-g01--resolved-code--code--p1">HomeUI-G01 — resolved-code / code / P1</h2>
+<p>Đơn vị MaxLoadTime (300) và MaxLoadTimeForEntireSession (2000) chưa rõ (frame hay ms).</p>
+<p>Nguồn: <code>gdd/HomeUI.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: UnitySceneLoaded dùng Stopwatch.ElapsedMilliseconds: &gt;300 ms hoặc thiết bị low-end bật loading lần sau; riêng chuyển scene 0→2 tắt cờ. SceneContextsLoaded dùng &gt;2000 ms (PreviousScene khác 0) để bật loading cả phiên. Cả hai ngưỡng đều là milliseconds, không phải frame.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f17 — SceneController.UnitySceneLoaded; SceneController.SceneContextsLoaded</p>
+<h2 id="homeui-g02--resolved-code--code--p1">HomeUI-G02 — resolved-code / code / P1</h2>
+<p>Nội dung TryAddReminderDialogs và TryAddOtherLevelEndDialogs chưa liệt kê.</p>
+<p>Nguồn: <code>gdd/HomeUI.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: TryAddReminderDialogs thử IslandRace → GemHunt → DungeonEscape → PowerRush → KingdomDuels, return ngay khi thêm được. TryAddOtherLevelEndDialogs thử HillQuest → CanvasQuest → WeeklyMission; Weekly cần ready, không bị FeatureDependency chặn, chưa thấy scene mới và có task claim được. Đây là thứ tự trong hai nhóm, không phải thứ tự toàn bộ popup Home.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f05 — HomeSceneFlow.TryAddReminderDialogs; HomeSceneFlow.TryAddOtherLevelEndDialogs</p>
+<h2 id="homeui-g03--resolved-scope--scope--p1">HomeUI-G03 — resolved-scope / scope / P1</h2>
+<p>Vị trí icon trái/phải theo FeatureDependencyConfig thuộc feature FeatureDependency.</p>
+<p>Nguồn: <code>gdd/HomeUI.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Giữ liên kết đến phần sở hữu; không nhân đôi toàn bộ nội dung.</p>
+<p>Kết quả: Đây là phân chia phạm vi, không phải thiếu tính năng. Đối chiếu phần sở hữu: FeatureDependency</p>
+<p>Bằng chứng: gdd/FeatureDependency.json</p>
+<h2 id="inventory-g01--open--code--p2">Inventory-G01 — open / code / P2</h2>
+<p>RewardType EventMultiplier (<code>2xE</code>, 18), GiftBox (29) không có nhánh trong AddInventoryPackage — nơi tiêu thụ chưa xác định.</p>
+<p>Nguồn: <code>gdd/Inventory.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="inventory-g02--open--code--p2">Inventory-G02 — open / code / P2</h2>
+<p>Id nhiệm vụ 25 (MissionTaskManager) và 18 (MedalMissions) trong UpdateCoins chưa map sang tên task.</p>
+<p>Nguồn: <code>gdd/Inventory.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="inventory-g03--open--review--p2">Inventory-G03 — open / review / P2</h2>
+<p>Không có giới hạn trần coin trong client (không thấy const), chỉ kẹp ≥ 0.</p>
+<p>Nguồn: <code>gdd/Inventory.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="inventory-g04--open--review--p2">Inventory-G04 — open / review / P2</h2>
+<p>UserManager cũng thuộc Account (đăng ký, đổi user, refresh) — phần đó không mô tả ở đây.</p>
+<p>Nguồn: <code>gdd/Inventory.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="islandrace-g01--deferred--missing-data--p2">IslandRace-G01 — deferred / missing-data / P2</h2>
+<p>Biến thể Weekday (RewardOverrideEventType.IslandRaceWeekday = 25) chỉ có trong enum; client không tham chiếu — có thể là cấu hình server riêng cho ngày thường.</p>
+<p>Nguồn: <code>gdd/IslandRace.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="islandrace-g02--deferred--missing-data--p2">IslandRace-G02 — deferred / missing-data / P2</h2>
+<p>Độ dài event và lịch mở do server; snapshot không có.</p>
+<p>Nguồn: <code>gdd/IslandRace.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="islandrace-g03--deferred--missing-data--p2">IslandRace-G03 — deferred / missing-data / P2</h2>
+<p>Đối thủ là người thật hay bot, tốc độ của họ: server.</p>
+<p>Nguồn: <code>gdd/IslandRace.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="islandrace-g04--open--code--p2">IslandRace-G04 — open / code / P2</h2>
+<p>Cơ chế chính xác chuyển chặng (Enter lại hay server tự cấp nhóm mới) chưa đọc hết.</p>
+<p>Nguồn: <code>gdd/IslandRace.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="kingdom-g01--resolved-code--code--p1">Kingdom-G01 — resolved-code / code / P1</h2>
+<p>Phân bố thật Difficulty (Hard/SuperHard/Kingdom/Dark) của 5600 file level chưa trích (levels.tsv không có cột này); nhịp &#x27;theo chữ số cuối&#x27; chỉ chắc chắn cho công thức migration.</p>
+<p>Nguồn: <code>gdd/Kingdom.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: Độ khó được tính trong LevelParser.PrepareDifficulty, không chỉ trong migration: isAttack → đuôi 0 là Dark (4), còn lại Kingdom (3); không attack và level &lt;24 ngoài Arena → Normal; sau đó đuôi 4 Hard (1), đuôi 9 SuperHard (2), còn lại Normal. Không suy luận difficulty từ file name khi thiếu cờ isAttack.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f01 — LevelParser.PrepareDifficulty</p>
+<h2 id="kingdom-g02--partial--asset--p1">Kingdom-G02 — partial / asset / P1</h2>
+<p>Ý nghĩa transitionTaskId / lastTaskId trong KingdomTransitionConfig chưa đối chiếu với task trong district cuối (K7 có oldKingdomId = 5, có thể là lỗi copy asset).</p>
+<p>Nguồn: <code>gdd/Kingdom.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<p>Kết quả: Đã đối chiếu ID task của transition với district tham chiếu trong kingdom-tasks.md. K7 thực sự ghi oldKingdomId=5; chưa xác minh asset này có được dùng runtime hay là dữ liệu cũ.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="kingdom-g03--partial--code--p1">Kingdom-G03 — partial / code / P1</h2>
+<p>Điều kiện chính xác kích hoạt bypass user (TryStartBypassUserRoutine / StartBypassUserCounter) và tự hoàn thành vương quốc chưa đọc hết.</p>
+<p>Nguồn: <code>gdd/Kingdom.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<p>Kết quả: Đã giải điều kiện vào bypass và coroutine 10 giây (F14); đường tự hoàn thành task còn cần truy riêng.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="kingdom-g04--open--review--p1">Kingdom-G04 — open / review / P1</h2>
+<p>Nguồn potion ngoài level (Kingdom Pass, Arena…) không kiểm trong tính năng này.</p>
+<p>Nguồn: <code>gdd/Kingdom.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="kingdom-g05--resolved-asset--asset--p1">Kingdom-G05 — resolved-asset / asset / P1</h2>
+<p>Tên 65 task từng district có trong localization (Kingdom{k}District{d}Task{n}) nhưng chưa đưa vào bảng.</p>
+<p>Nguồn: <code>gdd/Kingdom.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Bảng tên, chi phí và nguồn có thể tái sinh.</p>
+<p>Kết quả: Xuất 516 khóa đúng mẫu KingdomNDistrictNTaskN, 75 district và 561 task asset. Giữ khóa tên riêng, chưa tự gán offset taskId.</p>
+<p>Bằng chứng: appendix/kingdom-tasks.md</p>
+<h2 id="kingdom-g06--partial--playtest--p1">Kingdom-G06 — partial / playtest / P1</h2>
+<p>Deep page ghi level Richard&#x27;s Journey cho ×2 potion từ level 25; pseudo-C cho thấy WinLevel không gọi AddRewardDatas (nơi cộng potion) với level RJ — cần xác nhận trên máy xem màn thắng RJ có potion không.</p>
+<p>Nguồn: <code>gdd/Kingdom.json#/gaps/5</code>.</p>
+<p>Tiêu chí đóng: Ghi nhận trên bản build tương ứng; playtest để sau.</p>
+<p>Kết quả: Đã sửa khẳng định RJ ×2 potion: đường WinLevel bỏ qua AddRewardDatas (F03). Quan sát UI/đường thưởng khác vẫn hoãn.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="kingdomduels-g01--open--review--p2">KingdomDuels-G01 — open / review / P2</h2>
+<p>Không có text localization trong appendix (dùng bundled language source riêng: TryGetBundledLanguageSourceLoadInfo) nên tên nút/luật hiển thị chưa xác minh.</p>
+<p>Nguồn: <code>gdd/KingdomDuels.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="kingdomduels-g02--deferred--missing-data--p2">KingdomDuels-G02 — deferred / missing-data / P2</h2>
+<p>Ý nghĩa chính xác của trạng thái &#x27;locked&#x27; khi thua level và cách server ghép 8 người (bot hay người thật theo nhóm Preset/Dynamic) chưa rõ.</p>
+<p>Nguồn: <code>gdd/KingdomDuels.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="kingdomduels-g03--open--review--p2">KingdomDuels-G03 — open / review / P2</h2>
+<p>Live 11/11 không có dữ liệu Kingdom Duels (tài khoản level thấp).</p>
+<p>Nguồn: <code>gdd/KingdomDuels.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="kingdompass-g01--deferred--missing-data--p2">KingdomPass-G01 — deferred / missing-data / P2</h2>
+<p>Không thấy giá trị live của KingdomPassInfo (đợt, endDate, config) — tài khoản snapshot dưới level 31.</p>
+<p>Nguồn: <code>gdd/KingdomPass.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="kingdompass-g02--open--code--p2">KingdomPass-G02 — open / code / P2</h2>
+<p>Gói giá nào (pass.10/15/20) được dùng cho người chơi nào do ShopConfig/server quyết định, chưa xác định.</p>
+<p>Nguồn: <code>gdd/KingdomPass.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="kingdompass-g03--deferred--missing-data--p2">KingdomPass-G03 — deferred / missing-data / P2</h2>
+<p>Độ dài một đợt pass không có trong client (endDate do server).</p>
+<p>Nguồn: <code>gdd/KingdomPass.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="kingdompass-g04--open--review--p2">KingdomPass-G04 — open / review / P2</h2>
+<p>Điều kiện chính xác của CanBuyKingdomPassForFree (dữ liệu migration attack cũ) chỉ đọc được bề mặt.</p>
+<p>Nguồn: <code>gdd/KingdomPass.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="kingdompass-g05--open--review--p2">KingdomPass-G05 — open / review / P2</h2>
+<p>Không đọc chi tiết GetEventRewardOverrideDecision (pseudo-C chỉ thấy khởi tạo struct).</p>
+<p>Nguồn: <code>gdd/KingdomPass.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="ladderoffer-g01--deferred--missing-data--p2">LadderOffer-G01 — deferred / missing-data / P2</h2>
+<p>Chưa thấy cooldown/lặp lại giữa các event Ladder liên tiếp trong client — do server lên lịch.</p>
+<p>Nguồn: <code>gdd/LadderOffer.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="ladderoffer-g02--deferred--missing-data--p2">LadderOffer-G02 — deferred / missing-data / P2</h2>
+<p>Cách gán revenue segment (1–3) nằm ở server.</p>
+<p>Nguồn: <code>gdd/LadderOffer.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="leaderboard-g01--deferred--missing-data--p2">Leaderboard-G01 — deferred / missing-data / P2</h2>
+<p>Số dòng tối đa mỗi bảng World/Local và tiêu chí xếp hạng do server quyết định.</p>
+<p>Nguồn: <code>gdd/Leaderboard.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="leaderboard-g02--deferred--missing-data--p2">Leaderboard-G02 — deferred / missing-data / P2</h2>
+<p>Ý nghĩa chính xác của UserPlayerLeaderboardId vs ServerPlayerLeaderboardId (bảng cá nhân hóa vs chung) chưa rõ.</p>
+<p>Nguồn: <code>gdd/Leaderboard.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="leaderboard-g03--open--code--p2">Leaderboard-G03 — open / code / P2</h2>
+<p>Điều kiện chính xác shouldFetchFromBackend × FetchReason chưa đọc trọn.</p>
+<p>Nguồn: <code>gdd/Leaderboard.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="leaderboard-g04--deferred--missing-data--p2">Leaderboard-G04 — deferred / missing-data / P2</h2>
+<p>Snapshot chưa mở section nên bảng rỗng.</p>
+<p>Nguồn: <code>gdd/Leaderboard.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="levelflow-g01--deferred--playtest--p1">LevelFlow-G01 — deferred / playtest / P1</h2>
+<p>Thứ tự chính xác các điều kiện trong ValidateLoadFile (biến nào là khoảng pause→quit) đọc từ pseudo-C bị gộp; cần xác nhận trên thiết bị.</p>
+<p>Nguồn: <code>gdd/LevelFlow.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Ghi nhận trên bản build tương ứng; playtest để sau.</p>
+<h2 id="levelflow-g02--resolved-scope--scope--p1">LevelFlow-G02 — resolved-scope / scope / P1</h2>
+<p>Giá/số lượt của đề nghị Ego (Out of Moves) thuộc EgoManager — feature PlayOn, không mô tả ở đây.</p>
+<p>Nguồn: <code>gdd/LevelFlow.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Giữ liên kết đến phần sở hữu; không nhân đôi toàn bộ nội dung.</p>
+<p>Kết quả: Đây là phân chia phạm vi, không phải thiếu tính năng. Đối chiếu phần sở hữu: PlayOn</p>
+<p>Bằng chứng: gdd/PlayOn.json</p>
+<h2 id="levelflow-g03--resolved-code--code--p1">LevelFlow-G03 — resolved-code / code / P1</h2>
+<p>Điều kiện chọn biến thể LevelWinDialogKing / Wizard / Simple chưa đọc.</p>
+<p>Nguồn: <code>gdd/LevelFlow.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: GameUi.GetLevelWinDialog chọn Simple khi IsSimpleLevelWinDialogFlowEnabled và không phải RJ; ngoài ra dùng dialog thường. LoadLevelWinDialog nạp King cho attack hoặc RJ, Wizard cho phần còn lại. Đã phân biệt lựa chọn prefab thường với nhánh Simple ưu tiên.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f18 — GameUi.GetLevelWinDialog; GameUi.LoadLevelWinDialog</p>
+<h2 id="levelflow-g04--resolved-scope--scope--p1">LevelFlow-G04 — resolved-scope / scope / P1</h2>
+<p>Thưởng điểm từng event khi thắng (AddRewardDatas) chỉ liệt kê tên; số cụ thể thuộc từng feature event.</p>
+<p>Nguồn: <code>gdd/LevelFlow.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Giữ liên kết đến phần sở hữu; không nhân đôi toàn bộ nội dung.</p>
+<p>Kết quả: Đây là phân chia phạm vi, không phải thiếu tính năng. Đối chiếu phần sở hữu: LastPlayedLevelData.AddRewardDatas và GDD từng event</p>
+<p>Bằng chứng: gdd/LevelFlow.json</p>
+<h2 id="levelgoals-g01--open--code--p2">LevelGoals-G01 — open / code / P2</h2>
+<p>Ý nghĩa cờ FGoalData.IsFromSettings và mục tiêu Count = 0 (ví dụ &#x27;Ice:0&#x27; ở level 2404) chưa xác định — có thể là mục tiêu sinh động trong level.</p>
+<p>Nguồn: <code>gdd/LevelGoals.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="levelgoals-g02--resolved-code--code--p2">LevelGoals-G02 — resolved-code / code / P2</h2>
+<p>Danh sách GoalType thuộc &#x27;bottom collect&#x27; (ItemExtensions.IsBottomCollectGoal) chưa trích.</p>
+<p>Nguồn: <code>gdd/LevelGoals.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: IsBottomCollectGoal kiểm goalType-18 &lt;47 rồi tra mask 0x408000000001: chỉ các ID 18,57,64 trả true. Đối chiếu enum GoalType trong dump.cs: Turtle, Penguin, Parrot. Không gán bottom collect cho các goal khác chỉ dựa hình ảnh.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f25 — ItemExtensions.IsBottomCollectGoal</p>
+<h2 id="levelmilestones-g01--deferred--playtest--p2">LevelMilestones-G01 — deferred / playtest / P2</h2>
+<p>FailOrQuitLevel cũng có nhánh ghi IsNThousandLevelCompleted (có thể do gộp mã giống nhau); TryAddClaim kiểm tra lại (Level − 1) % 1000 nên thua không nhận quà — chưa kiểm chứng trên máy.</p>
+<p>Nguồn: <code>gdd/LevelMilestones.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Ghi nhận trên bản build tương ứng; playtest để sau.</p>
+<h2 id="levelmilestones-g02--deferred--missing-data--p2">LevelMilestones-G02 — deferred / missing-data / P2</h2>
+<p>Khoảng level 5601–6000 của kingdom 7 không có file level trong client: chỉ có khi server phát hành level mới (remote levels).</p>
+<p>Nguồn: <code>gdd/LevelMilestones.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="levelsets-g01--deferred--missing-data--p2">LevelSets-G01 — deferred / missing-data / P2</h2>
+<p>Nội dung file versions/&lt;version&gt;.json (định dạng danh sách) không có trong snapshot — chỉ thấy kết quả đã tải.</p>
+<p>Nguồn: <code>gdd/LevelSets.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="levelsets-g02--open--code--p2">LevelSets-G02 — open / code / P2</h2>
+<p>Nơi gọi RemoteLevels.RemoveAll và điều kiện xoá level remote cũ chưa xác định.</p>
+<p>Nguồn: <code>gdd/LevelSets.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="levelsets-g03--open--code--p2">LevelSets-G03 — open / code / P2</h2>
+<p>Tier của AreReactivationLevelsEnabled và cách WelcomeBackProgress.RemainingReactivationLevel được đặt thuộc WelcomeBack — chưa đọc.</p>
+<p>Nguồn: <code>gdd/LevelSets.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="levelsets-g04--open--review--p2">LevelSets-G04 — open / review / P2</h2>
+<p>Cách chọn level cho Arena (ArenaManager.GetArenaLevel) thuộc ChampionsArena.</p>
+<p>Nguồn: <code>gdd/LevelSets.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="levelskins-g01--open--review--p2">LevelSkins-G01 — open / review / P2</h2>
+<p>Không có cửa hàng/chọn skin cho người chơi — &#x27;Skin dialogs&#x27; trong inventory thực chất là DialogSkinAssets + ArenaDialogSkinModifier (theme dialog Arena).</p>
+<p>Nguồn: <code>gdd/LevelSkins.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="levelskins-g02--open--review--p2">LevelSkins-G02 — open / review / P2</h2>
+<p>Cách KingdomSkin chọn nền cho từng DifficultySkinType (GetBackground) và nội dung prefab trong bundle không đọc được từ code.</p>
+<p>Nguồn: <code>gdd/LevelSkins.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="levelskins-g03--open--code--p2">LevelSkins-G03 — open / code / P2</h2>
+<p>Bảng nhạc đầy đủ cho từng case của GetGameplayMusicByLevelSkin chưa trích (chỉ thấy 5 tên).</p>
+<p>Nguồn: <code>gdd/LevelSkins.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="levelskins-g04--open--review--p2">LevelSkins-G04 — open / review / P2</h2>
+<p>Phạm vi level của từng vương quốc (GetKingdomIdOfUserLevel) thuộc feature Kingdom.</p>
+<p>Nguồn: <code>gdd/LevelSkins.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="leveltutorials-g01--open--review--p2">LevelTutorials-G01 — open / review / P2</h2>
+<p>Nội dung từng ItemIntroductionConfig (tranh, chữ) nằm trong asset bundle.</p>
+<p>Nguồn: <code>gdd/LevelTutorials.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="leveltutorials-g02--open--review--p2">LevelTutorials-G02 — open / review / P2</h2>
+<p>Chưa xác minh booster dùng trong tutorial có thực sự miễn phí (chỉ thấy CreateFreeTextForBooster).</p>
+<p>Nguồn: <code>gdd/LevelTutorials.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="leveltutorials-g03--open--code--p2">LevelTutorials-G03 — open / code / P2</h2>
+<p>Điều kiện SkipStep2 của InGameBoosterTutorial và hành vi LevelTutorial5 khi LevelTryCount &gt; 1 chưa đọc chi tiết.</p>
+<p>Nguồn: <code>gdd/LevelTutorials.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="leveltutorials-g04--open--code--p2">LevelTutorials-G04 — open / code / P2</h2>
+<p>Vị trí bit của từng tutorial động trong UserTutorialManager.Tutorials chưa trích.</p>
+<p>Nguồn: <code>gdd/LevelTutorials.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="lives-g01--open--code--p2">Lives-G01 — open / code / P2</h2>
+<p>Trạng thái nào kích hoạt tạm dừng đồng hồ vô hạn chưa xác định (cần đọc nơi gọi UpdatePausedUnlimitedLivesTime).</p>
+<p>Nguồn: <code>gdd/Lives.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="lives-g02--open--review--p2">Lives-G02 — open / review / P2</h2>
+<p>Đồ thị lời gọi có tên hàm bị gộp (identical code folding) — các quan hệ gọi trong file này đã kiểm tra trực tiếp trong pseudo-C.</p>
+<p>Nguồn: <code>gdd/Lives.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="loading-g01--open--review--p2">Loading-G01 — open / review / P2</h2>
+<p>Danh sách mẹo (GameTip) nằm trong prefab/asset LoadingTip, không có key localization rõ ràng.</p>
+<p>Nguồn: <code>gdd/Loading.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="loading-g02--open--code--p2">Loading-G02 — open / code / P2</h2>
+<p>Tỉ lệ random giữa Character và GameTip (iVar4 = 0xc) chưa giải hết.</p>
+<p>Nguồn: <code>gdd/Loading.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="loading-g03--open--code--p2">Loading-G03 — open / code / P2</h2>
+<p>Công thức ConvertToThemeId từ ServerSplashThemeType chưa đọc.</p>
+<p>Nguồn: <code>gdd/Loading.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="magiccarnival-g01--open--code--p2">MagicCarnival-G01 — open / code / P2</h2>
+<p>Cách chọn nhóm AB 56/57 và nghĩa thật của DisabledGroup/EnabledGroup/SwitchGroup chưa đọc (AClientAbTestManager).</p>
+<p>Nguồn: <code>gdd/MagicCarnival.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="magiccarnival-g02--open--review--p2">MagicCarnival-G02 — open / review / P2</h2>
+<p>InitialCollectableCount = 2 không thấy nơi dùng trong các hàm đã đọc.</p>
+<p>Nguồn: <code>gdd/MagicCarnival.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="magiccarnival-g03--open--review--p2">MagicCarnival-G03 — open / review / P2</h2>
+<p>Task Mission MagicCarnivalFindPair (33) được tạo nhưng chưa tìm thấy nơi báo tiến độ trực tiếp.</p>
+<p>Nguồn: <code>gdd/MagicCarnival.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="magiccarnival-g04--open--review--p2">MagicCarnival-G04 — open / review / P2</h2>
+<p>Thuật toán TryManipulateGrid chỉ suy luận (đổi chỗ nội dung orb để tạo cặp).</p>
+<p>Nguồn: <code>gdd/MagicCarnival.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="magiccarnival-g05--deferred--missing-data--p2">MagicCarnival-G05 — deferred / missing-data / P2</h2>
+<p>Thời lượng event do server gửi (EndDate).</p>
+<p>Nguồn: <code>gdd/MagicCarnival.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="magicpot-g01--open--asset--p1">MagicPot-G01 — open / asset / P1</h2>
+<p>Nội dung MagicPotInfoDialog (ảnh/text) nằm trong prefab, chưa trích.</p>
+<p>Nguồn: <code>gdd/MagicPot.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="magicpot-g02--open--review--p1">MagicPot-G02 — open / review / P1</h2>
+<p>PotionInfo thuộc Kingdom (tiền Potion) — nên chuyển sang GDD Kingdom.</p>
+<p>Nguồn: <code>gdd/MagicPot.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="matchmechanics-g01--open--review--p2">MatchMechanics-G01 — open / review / P2</h2>
+<p>Logic CreateMatchesFromThrees rất dài (511 dòng pseudo-C); ánh xạ hình dạng → PatternType được đọc từ các nhánh First/Middle/Last, chưa thử từng ca biên (ví dụ 6 viên thẳng hàng, chữ thập).</p>
+<p>Nguồn: <code>gdd/MatchMechanics.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="matchmechanics-g02--open--code--p2">MatchMechanics-G02 — open / code / P2</h2>
+<p>Ý nghĩa chính xác 3 phần tử [50, 25, 25] của LowMatch chưa đọc hết LowMatchContainer.GetTunedItem.</p>
+<p>Nguồn: <code>gdd/MatchMechanics.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="matchmechanics-g03--resolved-code--code--p2">MatchMechanics-G03 — resolved-code / code / P2</h2>
+<p>Giá trị FpsManager.TargetFrameRate thực tế (60/30) quyết định thời gian gợi ý — chưa xác định.</p>
+<p>Nguồn: <code>gdd/MatchMechanics.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: FpsManager khởi tạo TargetFrameRate=60; GetTargetFps trả 60 cho AB 0/default, 80 cho AB 2, 120 cho AB 3. SetTargetFrameRate áp giá trị vào Unity; dynamic FPS chỉ bật trên iOS khi target=80. Đây là mục tiêu code, không phải FPS đo trên thiết bị.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f13 — FpsManager..cctor; FpsManager.GetTargetFps; FpsManager.SetTargetFrameRate</p>
+<h2 id="matchmechanics-g04--open--code--p2">MatchMechanics-G04 — open / code / P2</h2>
+<p>PossibleMatchFinder.CheckBoard giá trị 1 (xáo kiểu ElectroBall) chưa đọc chi tiết.</p>
+<p>Nguồn: <code>gdd/MatchMechanics.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="medalmissions-g01--open--review--p2">MedalMissions-G01 — open / review / P2</h2>
+<p>Ý nghĩa trường &#x27;n&#x27; (c1/c2/c3) trên một số task chưa rõ (có thể là tên huy chương/rương).</p>
+<p>Nguồn: <code>gdd/MedalMissions.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="medalmissions-g02--open--review--p2">MedalMissions-G02 — open / review / P2</h2>
+<p>Thuật toán MedalMissionsTaskSelector (thứ tự primary/fallback, điều kiện SourceNotPlayable) chỉ đọc qua tên lý do.</p>
+<p>Nguồn: <code>gdd/MedalMissions.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="medalmissions-g03--open--code--p2">MedalMissions-G03 — open / code / P2</h2>
+<p>Cách overrider (ServerOverriderIndex) và SelectedConfigId đổi config theo segment chưa đọc.</p>
+<p>Nguồn: <code>gdd/MedalMissions.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="missionevents-g01--deferred--missing-data--p2">MissionEvents-G01 — deferred / missing-data / P2</h2>
+<p>Chưa có config server cho HillQuest/CanvasQuest trong snapshot (chỉ có BundleDownloadData); target/thưởng thật không có trong client.</p>
+<p>Nguồn: <code>gdd/MissionEvents.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="missionevents-g02--open--code--p2">MissionEvents-G02 — open / code / P2</h2>
+<p>Vị trí bit chính xác của vùng task data từng event (TaskDataStartIndex) chưa liệt kê.</p>
+<p>Nguồn: <code>gdd/MissionEvents.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="missionevents-g03--open--review--p2">MissionEvents-G03 — open / review / P2</h2>
+<p>Chưa xác minh nơi báo tiến độ của MagicCarnivalFindPair (33) và các task event khác ngoài những chỗ đã thấy TryGetTask.</p>
+<p>Nguồn: <code>gdd/MissionEvents.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="missionevents-g04--open--review--p2">MissionEvents-G04 — open / review / P2</h2>
+<p>Đồ thị lời gọi: nhiều hàm TryGetTask bị gộp tên giữa MissionTaskManager và MedalMissionsTaskRegistry; đã đọc trực tiếp CubeBlastLevelManager/MagicCarnivalLevelManager.</p>
+<p>Nguồn: <code>gdd/MissionEvents.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="missionevents-g05--open--review--p2">MissionEvents-G05 — open / review / P2</h2>
+<p>CoinCraze là offer (AOfferEventManager), không phải mission event — đã chuyển sang nhóm Economy</p>
+<p>Nguồn: <code>gdd/MissionEvents.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="mythicdeal-g01--deferred--missing-data--p2">MythicDeal-G01 — deferred / missing-data / P2</h2>
+<p>Không có config Mythic Deal mẫu trong client hoặc snapshot (tài khoản level thấp) → giá/nội dung theo segment chưa biết.</p>
+<p>Nguồn: <code>gdd/MythicDeal.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="mythicdeal-g02--open--review--p2">MythicDeal-G02 — open / review / P2</h2>
+<p>Logic chung của lớp generic (TryEnterEvent, IsEventEligible gốc) không có trong PseudoC.</p>
+<p>Nguồn: <code>gdd/MythicDeal.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="mythicdeal-g03--deferred--missing-data--p2">MythicDeal-G03 — deferred / missing-data / P2</h2>
+<p>Theme đang dùng ngoài Builder/Duke/Halloween do server quyết.</p>
+<p>Nguồn: <code>gdd/MythicDeal.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="notifications-g01--open--code--p2">Notifications-G01 — open / code / P2</h2>
+<p>Thời điểm chính xác của nhắc Richards Journey (iVar2 − iVar3) và điều kiện &#x27;OneLifeNotification&#x27; chưa giải hết.</p>
+<p>Nguồn: <code>gdd/Notifications.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="notifications-g02--open--code--p2">Notifications-G02 — open / code / P2</h2>
+<p>Danh sách tag đầy đủ gửi cho server và endpoint NotificationTagSender chưa đọc.</p>
+<p>Nguồn: <code>gdd/Notifications.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="notifications-g03--open--code--p2">Notifications-G03 — open / code / P2</h2>
+<p>Nguồn cụ thể của TaskNotificationPresenter (ITaskNotificationSource nào đăng ký) chưa liệt kê.</p>
+<p>Nguồn: <code>gdd/Notifications.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="notifications-g04--open--review--p2">Notifications-G04 — open / review / P2</h2>
+<p>Khung giờ yên tĩnh dùng giờ máy, không có giới hạn tối muộn trong code.</p>
+<p>Nguồn: <code>gdd/Notifications.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="obstacles_1-g01--open--review--p2">Obstacles_1-G01 — open / review / P2</h2>
+<p>Luật chi tiết của Spinner/propeller nhắm vật cản (GetExplodeScore, TryRedirectForPropeller) mới đọc ở mức tên hàm.</p>
+<p>Nguồn: <code>gdd/Obstacles_1.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="obstacles_1-g02--open--review--p2">Obstacles_1-G02 — open / review / P2</h2>
+<p>Số chính xác item rồng/goal Dragon khi phá DragonBox (2 hộp nhỏ × 2) suy từ GetGoalContribution (suy luận).</p>
+<p>Nguồn: <code>gdd/Obstacles_1.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="obstacles_1-g03--open--code--p2">Obstacles_1-G03 — open / code / P2</h2>
+<p>Cách tính layer ban đầu của Column (theo chiều dài cột) suy luận từ targetLength, chưa đọc nơi gán layer (OnItemModelsCreated).</p>
+<p>Nguồn: <code>gdd/Obstacles_1.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="obstacles_2-g01--open--code--p2">Obstacles_2-G01 — open / code / P2</h2>
+<p>Thứ tự đổi màu của Lightbulb khi có <code>LightbulbColorOrder</code> và quy tắc chọn màu của Clock chỉ đọc ở mức hàm (chưa giải hết GetNewSelectedColors).</p>
+<p>Nguồn: <code>gdd/Obstacles_2.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="obstacles_2-g02--open--review--p2">Obstacles_2-G02 — open / review / P2</h2>
+<p>Ánh xạ biến thể MagicCardsBLS/BLD/BLR/BLE → loại power-up là suy luận theo chữ cái.</p>
+<p>Nguồn: <code>gdd/Obstacles_2.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="obstacles_2-g03--open--review--p2">Obstacles_2-G03 — open / review / P2</h2>
+<p>Layer ban đầu của MetalColumn (theo chiều dài cột) suy luận như Column.</p>
+<p>Nguồn: <code>gdd/Obstacles_2.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="obstacles_3-g01--open--review--p2">Obstacles_3-G01 — open / review / P2</h2>
+<p>Blinds/Parchment thực ra là lớp phủ của level tấn công (do AttackBossGuard / AttackMummy tạo).</p>
+<p>Nguồn: <code>gdd/Obstacles_3.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="obstacles_3-g02--open--code--p2">Obstacles_3-G02 — open / code / P2</h2>
+<p>Cách phá Parchment (băng vải) chưa đọc hết TryExplode — ghi suy luận.</p>
+<p>Nguồn: <code>gdd/Obstacles_3.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="obstacles_3-g03--open--review--p2">Obstacles_3-G03 — open / review / P2</h2>
+<p>Hướng lan của dây hoa (Flowers) và luật chọn mục tiêu SpaceshipItemTargetFinder chỉ đọc ở mức tên hàm.</p>
+<p>Nguồn: <code>gdd/Obstacles_3.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="obstacles_3-g04--open--code--p2">Obstacles_3-G04 — open / code / P2</h2>
+<p>Thứ tự cập nhật goal Log trong TimberItemModel.Throw (khi ném hay khi khúc gỗ tới ô) chưa đọc hết; layer Timber theo chiều dài là suy luận.</p>
+<p>Nguồn: <code>gdd/Obstacles_3.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="offers-g01--open--review--p1">Offers-G01 — open / review / P1</h2>
+<p>Thân các hàm chung của lớp generic <code>AOfferEventManager&lt;…&gt;</code> (TryEnterEvent, get_CanEnterEvent, get_IsEventEligible, UpdateProgress gốc, TryAddStartDialog) không có trong PseudoC (generic shared code chưa decompile) — luồng vào offer suy ra từ tên hàm và các override.</p>
+<p>Nguồn: <code>gdd/Offers.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="offers-g02--resolved-code--code--p1">Offers-G02 — resolved-code / code / P1</h2>
+<p>Thứ tự chính xác giữa AddEventOffers và AddKingsFavorOffers trong GetAvailableEndGameOffers (khi có cả hai) đọc từ pseudo-C rút gọn — cần xác nhận.</p>
+<p>Nguồn: <code>gdd/Offers.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: GetAvailableEndGameOffers: thử Ads; AddEventOffers(false); chỉ khi lần này false mới thử KingsFavor; AddEventOffers(true) khi lần đầu true HOẶC KingsFavor false; cuối cùng thử KingdomPass. Không phải mọi event offer và KingsFavor luôn cùng được thêm. Thứ tự này là client build 34771, chưa xác minh UI khi nhiều offer cùng đủ điều kiện.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f10 — OfferManager.GetAvailableEndGameOffers</p>
+<h2 id="offers-g03--open--review--p1">Offers-G03 — open / review / P1</h2>
+<p>Không thấy cooldown chung giữa các offer ngoài Mythic Deal ↔ Welcome Pack (1 ngày).</p>
+<p>Nguồn: <code>gdd/Offers.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="onboarding-g01--open--review--p2">Onboarding-G01 — open / review / P2</h2>
+<p>Booster cụ thể mở ở từng mốc 8/12/17/21/23 chưa ánh xạ (nằm trong BoosterUnlockDialog / config booster).</p>
+<p>Nguồn: <code>gdd/Onboarding.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="onboarding-g02--open--code--p2">Onboarding-G02 — open / code / P2</h2>
+<p>Nhánh FirstDistrictUnlock / TaskBuildTutorial (điều kiện level &lt; 12) chưa đọc chi tiết.</p>
+<p>Nguồn: <code>gdd/Onboarding.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="onboarding-g03--open--review--p2">Onboarding-G03 — open / review / P2</h2>
+<p>Tutorial trong level (LevelTutorialManager, DynamicLevelTutorialManager) thuộc feature LevelTutorials, không mô tả ở đây.</p>
+<p>Nguồn: <code>gdd/Onboarding.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="onboarding-g04--open--code--p2">Onboarding-G04 — open / code / P2</h2>
+<p>HomeMagicPotTutorial không có chuỗi; điều kiện kích hoạt chưa đọc.</p>
+<p>Nguồn: <code>gdd/Onboarding.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="pearlsofatlantis-g01--open--review--p2">PearlsOfAtlantis-G01 — open / review / P2</h2>
+<p>Live 11/11 không có dữ liệu PoA (tài khoản level thấp; bảng PearlsOfAtlantisTableItem trống) — nhóm AB thực tế và thời lượng thật không biết.</p>
+<p>Nguồn: <code>gdd/PearlsOfAtlantis.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="pearlsofatlantis-g02--open--review--p2">PearlsOfAtlantis-G02 — open / review / P2</h2>
+<p>Điểm Pass: client cộng điểm quay vào Pass (AddContribution) nhưng GetEventCurrency đọc bit 15–29 của progress; cần xác nhận Pass đếm điểm hay vỏ sò (text &#x27;Score {0} Points&#x27; cho thấy là điểm).</p>
+<p>Nguồn: <code>gdd/PearlsOfAtlantis.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="pearlsofatlantis-g03--deferred--missing-data--p2">PearlsOfAtlantis-G03 — deferred / missing-data / P2</h2>
+<p>Danh sách AnimalType gán cho cặp do server chọn; quy tắc chi tiết của GetAvailableRewardIndexes (491 dòng) chỉ tóm tắt các nhánh bảo hiểm.</p>
+<p>Nguồn: <code>gdd/PearlsOfAtlantis.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="playon-g01--resolved-code--code--p1">PlayOn-G01 — resolved-code / code / P1</h2>
+<p>Ý nghĩa nhóm AB ego (103/104) ngoài nhóm 2–3 (ngưỡng tăng 1) và nhóm 3 (combo) chưa map tên test.</p>
+<p>Nguồn: <code>gdd/PlayOn.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: Tên test 103/104 là incremental_ego_new_user/old_user (F23). GetExtraMoves dùng ngưỡng fail=1 cho AbGroup 2/3, =4 cho nhóm khác; dưới ngưỡng trả FirstMoveCount, từ ngưỡng trả min(35,FirstMoveCount+(fail-threshold)*5). Đây là hành vi nhánh code, không suy ra tên marketing hoặc mục tiêu thử nghiệm của nhóm.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f26 — EgoManager.GetExtraMoves; AbTestData..cctor</p>
+<h2 id="playon-g02--deferred--playtest--p1">PlayOn-G02 — deferred / playtest / P1</h2>
+<p>Số lượt khi xem quảng cáo ở bước sau bước 0 (ses) và cách bước giá thay đổi khi Play On bằng quảng cáo đọc từ MoveToNextEgoStep, cần xác nhận trên máy.</p>
+<p>Nguồn: <code>gdd/PlayOn.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Ghi nhận trên bản build tương ứng; playtest để sau.</p>
+<h2 id="playon-g03--resolved-code--code--p1">PlayOn-G03 — resolved-code / code / P1</h2>
+<p>Lý do <code>SetLeftMoves</code> (4 khi mua / 2 khi không mua) chưa rõ ý nghĩa.</p>
+<p>Nguồn: <code>gdd/PlayOn.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: Tham số 4/2 của MoveManager.SetLeftMoves là MoveChangeType, không phải số lượt: didPurchase=true dùng PurchaseExtraMoves=4, false dùng FillExtraMoves=2. Số lượt là ExtraMoveCountForLevel ở tham số trước. Đối chiếu enum MoveChangeType trong dump.cs.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f22 — EgoManager.PlayOn; MoveManager.SetLeftMoves</p>
+<h2 id="powerrush-g01--deferred--missing-data--p2">PowerRush-G01 — deferred / missing-data / P2</h2>
+<p>Số người mỗi nhóm/bot do server.</p>
+<p>Nguồn: <code>gdd/PowerRush.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="powerrush-g02--open--review--p2">PowerRush-G02 — open / review / P2</h2>
+<p>Flames của level thua có bị huỷ hẳn không (chỉ thấy LevelEndWinState = false) — cần đọc ProcessLevelData.</p>
+<p>Nguồn: <code>gdd/PowerRush.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="powerrush-g03--open--review--p2">PowerRush-G03 — open / review / P2</h2>
+<p>Config live chưa có (tài khoản level &lt; 66).</p>
+<p>Nguồn: <code>gdd/PowerRush.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="prelevelmultiplier-g01--open--code--p2">PrelevelMultiplier-G01 — open / code / P2</h2>
+<p>RewardType EventMultiplier (<code>2xE</code>) không có nhánh cấp phát (UserManager.AddInventoryPackage) và không xuất hiện trong config mặc định / snapshot — có thể là tính năng cũ hoặc do server bật; cách bán/nhận chưa xác định.</p>
+<p>Nguồn: <code>gdd/PrelevelMultiplier.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="prelevelmultiplier-g02--open--review--p2">PrelevelMultiplier-G02 — open / review / P2</h2>
+<p>Feature này không có IContextUnit riêng (feature_inventory units = []) — logic nằm trong LevelResolver/LastPlayedLevelData.</p>
+<p>Nguồn: <code>gdd/PrelevelMultiplier.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="privacy-g01--open--code--p2">Privacy-G01 — open / code / P2</h2>
+<p>Bảng ánh xạ dịch vụ 5–12 → nhóm (DAT_00e05fa0) chưa giải mã, nên không biết dịch vụ nào thuộc Performance / Marketing / PersonalizedAds.</p>
+<p>Nguồn: <code>gdd/Privacy.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="privacy-g02--open--review--p2">Privacy-G02 — open / review / P2</h2>
+<p>Enum TermsState (giá trị 0 = ?) không tìm thấy trong dump.</p>
+<p>Nguồn: <code>gdd/Privacy.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="privacy-g03--open--code--p2">Privacy-G03 — open / code / P2</h2>
+<p>Nhóm AB tuổi thật của tài khoản live chưa đọc (AbTestTableItem).</p>
+<p>Nguồn: <code>gdd/Privacy.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="profile-g01--open--review--p2">Profile-G01 — open / review / P2</h2>
+<p>Danh sách id cosmetic theo từng nguồn (sự kiện nào thưởng frame nào) nằm trong config reward của từng sự kiện, không ở đây.</p>
+<p>Nguồn: <code>gdd/Profile.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="profile-g02--open--code--p2">Profile-G02 — open / code / P2</h2>
+<p>Ý nghĩa AtlantisPassId / HiddenPathPassId trong ProfileSetting (hiện pass trên hồ sơ?) chưa đọc.</p>
+<p>Nguồn: <code>gdd/Profile.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="profile-g03--resolved-asset--asset--p2">Profile-G03 — resolved-asset / asset / P2</h2>
+<p>Giới hạn độ dài tên tối đa nằm trong m_CharacterLimit của prefab, chưa đọc asset.</p>
+<p>Nguồn: <code>gdd/Profile.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc prefab local.</p>
+<p>Kết quả: EnterNameDialog.prefab:3758 có m_CharacterLimit:12. Chỉ khẳng định giới hạn input UI, không khẳng định giới hạn backend.</p>
+<p>Bằng chứng: appendix/asset-configs.md</p>
+<h2 id="profile-g04--deferred--missing-data--p2">Profile-G04 — deferred / missing-data / P2</h2>
+<p>Cách server tính thứ hạng World/Local không có trong client.</p>
+<p>Nguồn: <code>gdd/Profile.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="rateus-g01--deferred--playtest--p2">RateUs-G01 — deferred / playtest / P2</h2>
+<p>Kết hợp BlockedUntilLevel = level + 50 (UpdateProgress) với điều kiện level ≥ BlockedUntilLevel + 50 (TryPushRateUsPopup) cho khoảng cách ~100 level — cần kiểm lại trên thiết bị.</p>
+<p>Nguồn: <code>gdd/RateUs.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Ghi nhận trên bản build tương ứng; playtest để sau.</p>
+<h2 id="rateus-g02--open--code--p2">RateUs-G02 — open / code / P2</h2>
+<p>Danh sách nơi gọi MarkPendingRateUs với từng origin chưa liệt kê.</p>
+<p>Nguồn: <code>gdd/RateUs.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="remainingmoves-g01--open--code--p2">RemainingMoves-G01 — open / code / P2</h2>
+<p>CalculateExtraRewardAmountOnBoard cộng một trường byte của từng vật phẩm đặc biệt còn trên bàn (pRVar5[1].klass + 1) — chưa xác định tên trường (có thể là số coin của vật phẩm).</p>
+<p>Nguồn: <code>gdd/RemainingMoves.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="remainingmoves-g02--deferred--missing-data--p2">RemainingMoves-G02 — deferred / missing-data / P2</h2>
+<p>Giá trị live của cấu hình quảng cáo <code>c</code> (div/mult) do server gửi chưa có.</p>
+<p>Nguồn: <code>gdd/RemainingMoves.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="remainingmoves-g03--open--review--p2">RemainingMoves-G03 — open / review / P2</h2>
+<p>Điều kiện chọn RemainingMovesManagerCoin so với lớp con khác (nếu có) — dump chỉ thấy RemainingMovesManagerCoin.</p>
+<p>Nguồn: <code>gdd/RemainingMoves.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="remoteconfig-g01--deferred--missing-data--p1">RemoteConfig-G01 — deferred / missing-data / P1</h2>
+<p>Ý nghĩa nhóm A/B/C… của từng AB chỉ biết khi client có nhánh code (ví dụ SEB 28: B → 101); phần lớn AB chỉ đổi config server gửi.</p>
+<p>Nguồn: <code>gdd/RemoteConfig.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="remoteconfig-g02--deferred--missing-data--p1">RemoteConfig-G02 — deferred / missing-data / P1</h2>
+<p>Các id AB trong snapshot không có tên (ví dụ 69) là AB chỉ dùng ở server.</p>
+<p>Nguồn: <code>gdd/RemoteConfig.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="remoteconfig-g03--open--review--p1">RemoteConfig-G03 — open / review / P1</h2>
+<p>Không thấy lớp con AClientAbTestManager nào trong build 34771 → AB phía client hiện không dùng.</p>
+<p>Nguồn: <code>gdd/RemoteConfig.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="remoteconfig-g04--resolved-code--code--p1">RemoteConfig-G04 — resolved-code / code / P1</h2>
+<p>Luồng gửi SetKeyValueRequest chưa đọc chi tiết (suy luận từ tên).</p>
+<p>Nguồn: <code>gdd/RemoteConfig.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: SetKeyValueHttpCommand.Build dựng vector KeyValue và ByteArrayKeyValue, gọi Set*CanSynced cho cặp đang gửi. Finish parse StatusCode; chỉ success mới gọi OnSetKeyValueResponseReceived, nơi SetSynced từng key. PackageFail không đổi trạng thái trong thân hàm này. Không suy ra thứ tự với UpdateUserProgress hoặc cơ chế retry toàn hệ thống từ đây.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f15 — SetKeyValueHttpCommand.Build; SetKeyValueHttpCommand.Finish; SetKeyValueHttpCommand.PackageFail; UserRemoteKeyValueData.OnSetKeyValueResponseReceived</p>
+<h2 id="remoteconfig-g05--open--review--p1">RemoteConfig-G05 — open / review / P1</h2>
+<p>Các bit 2, 3, 23, 35 không có hằng số tên trong PingHttpCommand.</p>
+<p>Nguồn: <code>gdd/RemoteConfig.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="richardsjourney-g01--open--code--p2">RichardsJourney-G01 — open / code / P2</h2>
+<p>Bảng ánh xạ RichardsJourneyType → tên file level (ToLevelName dùng bảng con trỏ tại 0x4ab0410, cần relocation) chưa giải; chỉ biết type ≥ 23 → richards_journey_road.</p>
+<p>Nguồn: <code>gdd/RichardsJourney.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="richardsjourney-g02--open--code--p2">RichardsJourney-G02 — open / code / P2</h2>
+<p>Luật thắng/thua chi tiết của RockFall (thời lượng gốc, điều kiện vua sống) và từng cơ chế Road chưa đọc sâu.</p>
+<p>Nguồn: <code>gdd/RichardsJourney.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="richardsjourney-g03--open--review--p2">RichardsJourney-G03 — open / review / P2</h2>
+<p>Level hành trình có trừ mạng khi bắt đầu không: chỉ thấy Win gọi IncrementLives(1) (suy luận là có trừ).</p>
+<p>Nguồn: <code>gdd/RichardsJourney.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="richardsjourney-g04--open--review--p2">RichardsJourney-G04 — open / review / P2</h2>
+<p>AB làm đổi potion Kingdom (UpdatePotionOnRichardsJourneyAbChange) và văn bản &#x27;can now be played through tasks&#x27; cho người chơi cũ chưa rõ cơ chế.</p>
+<p>Nguồn: <code>gdd/RichardsJourney.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="richardsjourney-g05--deferred--missing-data--p2">RichardsJourney-G05 — deferred / missing-data / P2</h2>
+<p>Thời lượng event do server (EndDate live 1796112000000).</p>
+<p>Nguồn: <code>gdd/RichardsJourney.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="savesync-g01--partial--review--p1">SaveSync-G01 — partial / review / P1</h2>
+<p>Cách ghép giá trị bigint của IntRemoteKeyValue (ví dụ BlitzProgress = 2251874707177473 là bitfield) cần đọc từng manager event.</p>
+<p>Nguồn: <code>gdd/SaveSync.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<p>Kết quả: Đã giải layout Blitz và giá trị mẫu (F19); chưa giải toàn bộ layout riêng của từng manager event.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="savesync-g02--partial--code--p1">SaveSync-G02 — partial / code / P1</h2>
+<p>Hàm nào đặt lại Synced = 0 cho khóa nhóm đồng bộ khi giá trị đổi (UpdateValueWhereKey hay SetSynced) chưa lần theo hết — cột 0/0 = chờ gửi là suy luận từ Query và UpdateAllSynced.</p>
+<p>Nguồn: <code>gdd/SaveSync.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<p>Kết quả: Đã xác minh SetSynced(false) ghi Synced=0, phân biệt với SetString(false) (F20). Chưa truy đủ mọi caller thay đổi dữ liệu.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="savesync-g03--resolved-code--code--p1">SaveSync-G03 — resolved-code / code / P1</h2>
+<p>Thứ tự ưu tiên giữa UpdateUserProgress và SetKeyValue trong một lô chưa xác định.</p>
+<p>Nguồn: <code>gdd/SaveSync.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: HttpCommands.TryAppendCommandsToUpdateProgress giữ các command gốc, thêm danh sách prepend vào đầu và danh sách append vào cuối. UserManager.GetCommandsToAppendUpdateProgress gọi UserRemoteKeyValueData.AppendSyncRequiredKeyValues trước, tạo SetKeyValueHttpCommand. Vì vậy trong đường append này SetKeyValue nằm sau UpdateUserProgress vốn có trong lô; không suy ra thứ tự xử lý/transaction phía server hoặc mọi đường gửi riêng.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f24 — HttpCommands.TryAppendCommandsToUpdateProgress; UserManager.GetCommandsToAppendUpdateProgress; UserRemoteKeyValueData.AppendSyncRequiredKeyValues</p>
+<h2 id="servercommunication-g01--open--review--p2">ServerCommunication-G01 — open / review / P2</h2>
+<p>Ý nghĩa literal &#x27;37k&#x27; trong RequestHeaderHelper.AddCommonHeaders (có thể là giá trị header phiên bản API) chưa rõ.</p>
+<p>Nguồn: <code>gdd/ServerCommunication.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="servercommunication-g02--open--review--p2">ServerCommunication-G02 — open / review / P2</h2>
+<p>Bảng field chi tiết của UpdateUserProgressRequest / RefreshResponse không liệt kê ở đây (xem tools/rk_fbschema.py, facts/flatlevel-schema.json).</p>
+<p>Nguồn: <code>gdd/ServerCommunication.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="servercommunication-g03--open--code--p2">ServerCommunication-G03 — open / code / P2</h2>
+<p>Điều kiện chính xác chọn NoConnectionDialog so với NoConnectionForContentDialog chưa đọc hết.</p>
+<p>Nguồn: <code>gdd/ServerCommunication.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="servercommunication-g04--deferred--missing-data--p2">ServerCommunication-G04 — deferred / missing-data / P2</h2>
+<p>Không thử kết nối server (đúng quy tắc) nên không kiểm chứng được host dự phòng còn hoạt động.</p>
+<p>Nguồn: <code>gdd/ServerCommunication.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="settings-g01--open--review--p2">Settings-G01 — open / review / P2</h2>
+<p>Ý nghĩa chính xác của toggle Hint (gợi ý nước đi) là suy luận từ tên.</p>
+<p>Nguồn: <code>gdd/Settings.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="settings-g02--open--code--p2">Settings-G02 — open / code / P2</h2>
+<p>Ngôn ngữ mặc định lần đầu (theo máy) và việc có tải lại scene khi đổi ngôn ngữ chưa đọc.</p>
+<p>Nguồn: <code>gdd/Settings.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="settings-g03--open--code--p2">Settings-G03 — open / code / P2</h2>
+<p>Số trận thắng cần để popup Facebook tự hiện (neededWonLevelsToShowFacebook) là static, giá trị chưa đọc.</p>
+<p>Nguồn: <code>gdd/Settings.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="shop-g01--open--code--p1">Shop-G01 — open / code / P1</h2>
+<p>Nội dung single.1 ($0.99) không có trong gói mặc định — nơi dùng chưa xác định.</p>
+<p>Nguồn: <code>gdd/Shop.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="shop-g02--resolved-code--code--p1">Shop-G02 — resolved-code / code / P1</h2>
+<p>Họ eventgemoffer / eventshellpass / eventwandpass: nội dung đến từ config event, chưa map chắc manager (GemHunt? PearlsOfAtlantis pass? HiddenPath pass?).</p>
+<p>Nguồn: <code>gdd/Shop.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: Map họ sản phẩm đã xác minh bằng IsEventPassPrefix: eventgemoffer → GemHunt; eventshellpass → PearlsOfAtlantis; eventwandpass → HiddenPath. Nội dung và giá theo segment vẫn cần config event, không suy ra từ prefix.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f11 — GemHuntManager.IsEventPassPrefix; PearlsOfAtlantisManager.IsEventPassPrefix; HiddenPathManager.IsEventPassPrefix</p>
+<h2 id="shop-g03--partial--review--p1">Shop-G03 — partial / review / P1</h2>
+<p>Đơn vị của TotalPurchaseAmount (HighPayerPurchaseLimit 1000) chưa rõ (USD hay cent).</p>
+<p>Nguồn: <code>gdd/Shop.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<p>Kết quả: IncreaseTotalPurchase cộng trường purchaseProduct.numberId theo pseudo-C, kẹp 65000; cần kiểm offset struct bằng native trước khi gọi đơn vị USD/cent. Không đổi đơn vị trong bài phân tệp.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="shop-g04--resolved-code--code--p1">Shop-G04 — resolved-code / code / P1</h2>
+<p>Id AB test điều khiển single.3/single.4 (dùng cặp id 105/106 và 94/95 trong IsDefaultPackageVisible / GetShortList) chưa map sang tên test.</p>
+<p>Nguồn: <code>gdd/Shop.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đã đọc nguồn và cập nhật tài liệu; kiểm chứng playtest tách riêng.</p>
+<p>Kết quả: AbTestData..cctor map 94/95=superboost_offer_new_user/old_user; 103/104=incremental_ego_new_user/old_user; 105/106=increasing_ego_price_new_user/old_user. Tên test không chứng minh ý đồ của từng nhóm; vẫn giữ gap về hành vi nhóm chưa truy.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md#f23 — AbTestData..cctor</p>
+<h2 id="shop-g05--partial--review--p1">Shop-G05 — partial / review / P1</h2>
+<p>StoreType = 1 bỏ qua RetryPurchases — loại store nào chưa rõ.</p>
+<p>Nguồn: <code>gdd/Shop.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<p>Kết quả: StoreType trả 1 trong binary Android (F16); tên loại store trong hệ thống đa nền tảng chưa xác minh.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p>
+<h2 id="specialitems-g01--open--code--p2">SpecialItems-G01 — open / code / P2</h2>
+<p>Hình dạng chính xác của Dynamite+Rocket (số hàng/cột) và Spinner+Spinner (số Spinner) chưa đọc hết DynamiteRocketCombo.Explode / SpinnerSpinnerCombo.Explode — đang ghi suy luận.</p>
+<p>Nguồn: <code>gdd/SpecialItems.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="specialitems-g02--open--code--p2">SpecialItems-G02 — open / code / P2</h2>
+<p>Bảng điểm ExplodeTargetFinder (GetSingleScore/GetAreaScore...) theo từng loại vật cản chưa trích; chỉ biết có extra score cho vật thu ở đáy và Fire Gate.</p>
+<p>Nguồn: <code>gdd/SpecialItems.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="specialitems-g03--open--code--p2">SpecialItems-G03 — open / code / P2</h2>
+<p>Quy tắc chọn ô đặt vật phẩm đặc biệt (ô swap hay ô giao) trong CreateSpecialItemData chưa đọc chi tiết.</p>
+<p>Nguồn: <code>gdd/SpecialItems.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="specialitems-g04--open--review--p2">SpecialItems-G04 — open / review / P2</h2>
+<p>Super Electro Ball (biến thể isSuper) thuộc feature SuperElectroBall, chưa mô tả ở đây.</p>
+<p>Nguồn: <code>gdd/SpecialItems.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="superboostoffer-g01--open--review--p2">SuperBoostOffer-G01 — open / review / P2</h2>
+<p>Ý nghĩa nhóm 1 (control?) — không có giá, offer không hoạt động.</p>
+<p>Nguồn: <code>gdd/SuperBoostOffer.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="superboostoffer-g02--open--review--p2">SuperBoostOffer-G02 — open / review / P2</h2>
+<p>Text loc: <code>SuperboostOfferExplanationText</code> = <code>Refill Super Electro Ball and Magic Pots!</code>, <code>…Alt2</code> = <code>Refill Super Electro Ball and get free booster!</code> — chưa kiểm tra dialog chọn text nào theo nhóm.</p>
+<p>Nguồn: <code>gdd/SuperBoostOffer.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="superelectroball-g01--open--code--p2">SuperElectroBall-G01 — open / code / P2</h2>
+<p>Cách tính <code>after</code> trong SuperElectroBallLevelData (+1, kẹp 10) suy từ mẫu BeforeAfterData, chưa đọc hàm khởi tạo.</p>
+<p>Nguồn: <code>gdd/SuperElectroBall.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="support-g01--open--review--p2">Support-G01 — open / review / P2</h2>
+<p>Nội dung FAQ nằm trên Helpshift, không có trong client.</p>
+<p>Nguồn: <code>gdd/Support.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="support-g02--open--review--p2">Support-G02 — open / review / P2</h2>
+<p>Ý nghĩa tag &#x27;hc&#x27; chưa rõ.</p>
+<p>Nguồn: <code>gdd/Support.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="team-g01--deferred--missing-data--p2">Team-G01 — deferred / missing-data / P2</h2>
+<p>Không thấy client tự trừ <img class="rwi" src="../assets/img/rw/coin.png" alt="">100 coin khi lập đội (TeamCreated không gọi UpdateCoins) — có thể server trừ và đồng bộ lại.</p>
+<p>Nguồn: <code>gdd/Team.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="team-g02--deferred--missing-data--p2">Team-G02 — deferred / missing-data / P2</h2>
+<p>Mục tiêu (Goal) và Reward của từng dòng Team Star do server đặt; snapshot là tài khoản chưa có đội nên không có giá trị thật.</p>
+<p>Nguồn: <code>gdd/Team.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="team-g03--deferred--missing-data--p2">Team-G03 — deferred / missing-data / P2</h2>
+<p>Thời điểm reset tuần Team Star chỉ biết qua RemainingTime từ server.</p>
+<p>Nguồn: <code>gdd/Team.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="team-g04--open--review--p2">Team-G04 — open / review / P2</h2>
+<p>Điều kiện IsBig của yêu cầu xin mạng (5 → 8 lượt) suy ra từ ArrangeKingdomPassItems, chưa xác nhận nguồn cờ.</p>
+<p>Nguồn: <code>gdd/Team.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="team-g05--deferred--missing-data--p2">Team-G05 — deferred / missing-data / P2</h2>
+<p>Bộ lọc ngôn từ (ProfanityWarn/Ban) chạy ở server.</p>
+<p>Nguồn: <code>gdd/Team.json#/gaps/4</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="team-g06--open--review--p2">Team-G06 — open / review / P2</h2>
+<p>GiftMessage là system message (SystemMessageManager), không thuộc đội — đề nghị chuyển sang Notifications.</p>
+<p>Nguồn: <code>gdd/Team.json#/gaps/5</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="teamadventure-g01--deferred--missing-data--p2">TeamAdventure-G01 — deferred / missing-data / P2</h2>
+<p>Thời lượng event và cách server chia segment / nhóm đội không có trong client (live 11/11 tài khoản mới chưa có đội nên bảng TeamAdventureTableItem trống).</p>
+<p>Nguồn: <code>gdd/TeamAdventure.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="teamadventure-g02--open--review--p2">TeamAdventure-G02 — open / review / P2</h2>
+<p>Hướng đúng của nhánh trong GetEventRewardOverrideDecision (khi nào dùng immediateResult) chưa xác minh kỹ.</p>
+<p>Nguồn: <code>gdd/TeamAdventure.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="teamadventure-g03--open--review--p2">TeamAdventure-G03 — open / review / P2</h2>
+<p>Text &#x27;My Missions / Bonus Mission / Collect {0} Compass Stars&#x27; có trong localization nhưng không thấy code nhiệm vụ trong TeamAdventureManager — có thể là bản cũ.</p>
+<p>Nguồn: <code>gdd/TeamAdventure.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="teamclash-g01--deferred--missing-data--p2">TeamClash-G01 — deferred / missing-data / P2</h2>
+<p>Số đội mỗi nhóm, cách tính groupSegment / teamSegment và thời lượng event do server quyết định — không có trong client; live 11/11 không có dữ liệu Team Clash (tài khoản chưa có đội).</p>
+<p>Nguồn: <code>gdd/TeamClash.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="teamclash-g02--deferred--missing-data--p2">TeamClash-G02 — deferred / missing-data / P2</h2>
+<p>Khi nào server để bit CanUsePrimaryConfig = false (dùng config secondary) chưa rõ.</p>
+<p>Nguồn: <code>gdd/TeamClash.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="trophyroom-g01--deferred--missing-data--p2">TrophyRoom-G01 — deferred / missing-data / P2</h2>
+<p>Không còn logic client: luật số lần cần cho từng bậc, danh sách event có cúp, phần thưởng (nếu có) đều nằm trong Config chuỗi của server cũ.</p>
+<p>Nguồn: <code>gdd/TrophyRoom.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="trophyroom-g02--deferred--missing-data--p2">TrophyRoom-G02 — deferred / missing-data / P2</h2>
+<p>Cần bản client cũ hơn nếu muốn GDD đầy đủ cho phòng cúp.</p>
+<p>Nguồn: <code>gdd/TrophyRoom.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="weeklycontest-g01--deferred--missing-data--p2">WeeklyContest-G01 — deferred / missing-data / P2</h2>
+<p>Thành phần nhóm (chỉ bạn bè Facebook hay ghép thêm người lạ) và kích thước nhóm do server.</p>
+<p>Nguồn: <code>gdd/WeeklyContest.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="weeklycontest-g02--deferred--missing-data--p2">WeeklyContest-G02 — deferred / missing-data / P2</h2>
+<p>Ý nghĩa userSegment/serverSegment (phân nhóm thưởng?) chưa thấy được dùng trong config mặc định.</p>
+<p>Nguồn: <code>gdd/WeeklyContest.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="weeklycontest-g03--deferred--missing-data--p2">WeeklyContest-G03 — deferred / missing-data / P2</h2>
+<p>Mốc bắt đầu/kết thúc tuần (múi giờ) do server.</p>
+<p>Nguồn: <code>gdd/WeeklyContest.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="weeklycontest-g04--open--code--p2">WeeklyContest-G04 — open / code / P2</h2>
+<p>Thưởng hạng trao trong WeeklyContestDataHelper.Claim chưa đọc chi tiết (giả định r[s = rank]).</p>
+<p>Nguồn: <code>gdd/WeeklyContest.json#/gaps/3</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="weeklymission-g01--open--code--p2">WeeklyMission-G01 — open / code / P2</h2>
+<p>Điều kiện cấp Bonus Crown (BonusStreakClaimed) và ProgressProtection chưa đọc chi tiết.</p>
+<p>Nguồn: <code>gdd/WeeklyMission.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="weeklymission-g02--deferred--missing-data--p2">WeeklyMission-G02 — deferred / missing-data / P2</h2>
+<p>Cách tính UserStreakSegment khi StreakCount = 0 (lấy từ server segment) chỉ đọc lướt.</p>
+<p>Nguồn: <code>gdd/WeeklyMission.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="weeklymission-g03--open--review--p2">WeeklyMission-G03 — open / review / P2</h2>
+<p>Có cho tích tiến độ task của ngày chưa mở hay không chưa xác nhận (suy luận là có).</p>
+<p>Nguồn: <code>gdd/WeeklyMission.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="welcomeback-g01--open--code--p2">WelcomeBack-G01 — open / code / P2</h2>
+<p>Lịch đẩy thông báo 15/30/90 ngày nằm ở tính năng Notifications, chưa đối chiếu.</p>
+<p>Nguồn: <code>gdd/WelcomeBack.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="welcomeback-g02--deferred--missing-data--p2">WelcomeBack-G02 — deferred / missing-data / P2</h2>
+<p>Các nhóm A/B có trong code nhưng ShowWelcomeBackGift truyền cứng nhóm C; không rõ server có đường khác để chọn nhóm.</p>
+<p>Nguồn: <code>gdd/WelcomeBack.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="welcomepack-g01--deferred--missing-data--p2">WelcomePack-G01 — deferred / missing-data / P2</h2>
+<p>Nhóm Control (1) và NonParticipant (6) không vào được Welcome Pack — tỉ lệ chia nhóm do server.</p>
+<p>Nguồn: <code>gdd/WelcomePack.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Chỉ đóng khi có dữ liệu phù hợp; không suy ra giá trị từ tên hoặc tài khoản khác.</p>
+<h2 id="welcomepack-g02--open--review--p2">WelcomePack-G02 — open / review / P2</h2>
+<p>Nhánh nhóm 3 (LowPrice) dùng primary giống nhóm 5 ngoài Mỹ; khác biệt giữa 3 và 5 chỉ ở nhãn giảm giá (suy luận).</p>
+<p>Nguồn: <code>gdd/WelcomePack.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="welcomepack-g03--open--review--p2">WelcomePack-G03 — open / review / P2</h2>
+<p>Thân hàm generic TryEnterEvent không có trong PseudoC.</p>
+<p>Nguồn: <code>gdd/WelcomePack.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="worldmap-g01--open--asset--p2">WorldMap-G01 — open / asset / P2</h2>
+<p>WorldMapKingdomConfig nằm trong bundle world_map, không có trong Resources: tên ô 8/9 (Sky Kingdom / Dark Kingdom) và cờ isComingSoon chưa đọc được.</p>
+<p>Nguồn: <code>gdd/WorldMap.json#/gaps/0</code>.</p>
+<p>Tiêu chí đóng: Đọc nguồn local, ghi method/RVA hoặc asset/field; sửa mọi tài liệu liên quan.</p>
+<h2 id="worldmap-g02--open--review--p2">WorldMap-G02 — open / review / P2</h2>
+<p>Bảng ánh xạ FlagType → event được lấy từ code; asset cờ từng event nằm ở bundle remote.</p>
+<p>Nguồn: <code>gdd/WorldMap.json#/gaps/1</code>.</p>
+<p>Tiêu chí đóng: Đối chiếu GDD sở hữu và nguồn trước khi đóng; có thể là ghi chú phạm vi, không phải thiếu dữ liệu.</p>
+<h2 id="worldmap-g03--partial--playtest--p2">WorldMap-G03 — partial / playtest / P2</h2>
+<p>Deep page ghi K7 dừng ở 42/70 = 60% (client chỉ có 6 district); Resources có đủ 10 district K7 với unlockLevel 5000–5900 — mức trần thật (60% hay 70%) cần kiểm tra trên máy ở level 5601.</p>
+<p>Nguồn: <code>gdd/WorldMap.json#/gaps/2</code>.</p>
+<p>Tiêu chí đóng: Ghi nhận trên bản build tương ứng; playtest để sau.</p>
+<p>Kết quả: Đã sửa khẳng định client chỉ có 6 district: asset K7 có đủ D1–D10. Trần tiến độ tại level 5601 không kết luận offline.</p>
+<p>Bằng chứng: analysis_research/verified-findings.md; appendix/kingdom-tasks.md</p></div>
+<footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
+</div></main>
+</div>
+<script>window.SITE_ROOT="../";</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

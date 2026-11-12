@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mảng tĩnh (metadata) – Royal Kingdom GDD Wiki</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/img/brand.png">
+
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><img src="../assets/img/brand.png" alt=""> <span>Royal Kingdom GDD Wiki</span></a>
+  <div class="search"><input id="q" type="search" placeholder="Tìm tính năng, class, config… (/)" autocomplete="off"><div id="results" class="results" hidden></div></div>
+  <nav class="toplinks"><a href="../index.html">Trang chủ</a><a href="../categories/event.html">Sự kiện</a><a href="../analysis/index.html">Phân tích</a><a href="../appendix/events-overview.html">Phụ lục</a></nav>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="side-title">Danh mục</div>
+  <details><summary>🎯 Lõi gameplay <span class="n">17</span></summary><ul><li><a href="../features/Boosters.html">Booster<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSets.html">Bộ level &amp; tải level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AttackLevels.html">Level tấn công (đánh thành)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MatchMechanics.html">Luật match-3<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelFlow.html">Luồng level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemainingMoves.html">Lượt dư cuối level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicPot.html">Magic Pot (bình thuốc)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Lives.html">Mạng (Lives)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelGoals.html">Mục tiêu level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelSkins.html">Skin level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperElectroBall.html">Super Electro Ball<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelTutorials.html">Tutorial trong level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_1.html">Vật cản 1 (L1–500)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_2.html">Vật cản 2 (L500–1500)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Obstacles_3.html">Vật cản 3 (L1500+)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SpecialItems.html">Vật phẩm đặc biệt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Difficulty.html">Độ khó (Hard, Super Hard)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>💰 Kinh tế &amp; Shop <span class="n">11</span></summary><ul><li><a href="../features/Inventory.html">Coin &amp; kho đồ (Inventory)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CoinCraze.html">Coin Craze (progress offer)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PlayOn.html">Hết lượt - Play On<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Offers.html">Khung offer (Offers)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LadderOffer.html">Ladder Offer<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MythicDeal.html">Mythic Deal<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PrelevelMultiplier.html">Nhân thưởng event theo level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Ads.html">Quảng cáo (Ads)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Shop.html">Shop &amp; IAP<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SuperBoostOffer.html">Super Boost Offer<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomePack.html">Welcome Pack<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🏰 Tiến trình <span class="n">8</span></summary><ul><li><a href="../features/WorldMap.html">Bản đồ thế giới<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Cutscenes.html">Cutscene, thư viện và vignette<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/LevelMilestones.html">Mốc nghìn level và hết level<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TrophyRoom.html">Phòng cúp (đã gỡ)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyGift.html">Quà hằng ngày (Daily Refill)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WelcomeBack.html">Welcome Back (quà quay lại)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Kingdom.html">Xây vương quốc (Kingdom)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DailyLogin.html">Điểm danh hằng ngày<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>🎪 Sự kiện <span class="n">24</span></summary><ul><li><a href="../features/CardCollection.html">Bộ sưu tập thẻ<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CanvasQuest.html">Canvas Quest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/CubeBlast.html">Cube Blast (mini-game)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/DungeonEscape.html">Dungeon Escape<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Blitz.html">Electro Blitz - Diamond Mine<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FlyingContest.html">Flying Contest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GemHunt.html">Gem Hunt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/GrandTournament.html">Grand Tournament<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HiddenPath.html">Hidden Path<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HillQuest.html">Hill Quest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/IslandRace.html">Island Race<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MissionEvents.html">Khung event nhiệm vụ<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomDuels.html">Kingdom Duels<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/KingdomPass.html">Kingdom Pass<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MagicCarnival.html">Magic Carnival (mini-game)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/MedalMissions.html">Medal Missions<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PearlsOfAtlantis.html">Pearls of Atlantis<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/PowerRush.html">Power Rush<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RichardsJourney.html">Richard&#x27;s Journey<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamAdventure.html">Team Adventure<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/TeamClash.html">Team Clash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyContest.html">Weekly Contest<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/WeeklyMission.html">Weekly Goals (Weekly Mission)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ChampionsArena.html">Đấu trường (Champions Arena)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>👥 Xã hội <span class="n">6</span></summary><ul><li><a href="../features/Friends.html">Bạn bè (Friends)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Leaderboard.html">Bảng xếp hạng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Emotes.html">Emote<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EmoteAlbum.html">Emote Album<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Profile.html">Hồ sơ &amp; trang trí<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Team.html">Đội (Team)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📡 Live-ops &amp; hạ tầng <span class="n">8</span></summary><ul><li><a href="../features/Analytics.html">Analytics<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AssetBundles.html">Bundle &amp; tải tài nguyên<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RemoteConfig.html">Cấu hình từ xa &amp; AB test<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/ServerCommunication.html">Giao tiếp server<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/EventsFramework.html">Khung sự kiện<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/SaveSync.html">Lưu &amp; đồng bộ dữ liệu<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Notifications.html">Thông báo<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/FeatureDependency.html">Ưu tiên &amp; mở tính năng<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>⚙️ Meta &amp; UI <span class="n">9</span></summary><ul><li><a href="../features/Settings.html">Cài đặt<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Support.html">Hỗ trợ (Helpshift)<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Loading.html">Loading &amp; splash<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/HomeUI.html">Màn hình Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Onboarding.html">Onboarding &amp; tutorial Home<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/AppUpdate.html">Phiên bản &amp; cập nhật<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Privacy.html">Quyền riêng tư &amp; phụ huynh<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/Account.html">Tài khoản &amp; đăng nhập<span class="dd" title="Có thiết kế chi tiết">●</span></a></li><li><a href="../features/RateUs.html">Đánh giá app<span class="dd" title="Có thiết kế chi tiết">●</span></a></li></ul></details><details><summary>📊 Phân tích & đánh giá <span class="n">6</span></summary><ul><li><a href="../analysis/index.html">Tất cả phân tích</a></li><li><a href="../analysis/01-sale-event-flows.html">Luồng Sale &amp; Event của Royal Kingdom — từ server tới phần thưởng</a></li><li><a href="../analysis/02-deep-dive.html">Phân tích chuyên sâu — Độ khó, bộ level, hệ số nhân, AB test và kinh tế của thất bại</a></li><li><a href="../analysis/03-iap-packages.html">Phân tích từng gói IAP — Royal Kingdom</a></li><li><a href="../analysis/04-user-segmentation.html">Phân tệp người chơi — payer, segment và AB trong Royal Kingdom</a></li><li><a href="../analysis/05-economy.html">Kinh tế Royal Kingdom — nguồn, nơi tiêu và ngân sách mỗi 1.000 level</a></li><li><a href="../analysis/06-rk-vs-royal-match.html">Royal Kingdom so với Royal Match — cùng khung, khác lõi</a></li></ul></details><details open><summary>📎 Phụ lục <span class="n">20</span></summary><ul><li><a href="../appendix/events-overview.html">Tổng quan sự kiện</a></li><li><a href="../appendix/unlock-levels.html">Level mở khoá</a></li><li><a href="../appendix/reward-codes.html">Mã phần thưởng</a></li><li><a href="../appendix/iap-products.html">Sản phẩm IAP</a></li><li><a href="../appendix/levels-summary.html">Level &amp; thống kê</a></li><li><a href="../appendix/default-configs.html">Config mặc định trong APK</a></li><li><a href="../appendix/backend-protocol.html">Giao thức backend</a></li><li><a href="../appendix/enums.html">Enum</a></li><li class=cur><a href="../appendix/static-arrays.html">Mảng tĩnh (metadata)</a></li><li><a href="../appendix/localization.html">Text UI (EN)</a></li><li><a href="../appendix/save-state.html">Trạng thái lưu (save)</a></li><li><a href="../appendix/config-default-vs-live.html">Config mặc định vs live</a></li><li><a href="../appendix/asset-configs.html">Asset/config local — phạm vi và bằng chứng</a></li><li><a href="../appendix/capture-plan.html">Ảnh cần chụp — hoãn playtest</a></li><li><a href="../appendix/config-leaf-diff.html">So sánh từng trường config — kết quả tái sinh</a></li><li><a href="../appendix/gaps.html">Khoảng trống và giới hạn bằng chứng — 12/11/2026</a></li><li><a href="../appendix/kingdom-tasks.html">Kingdom — asset, task và localization</a></li><li><a href="../appendix/save-state-inventory.html">Kiểm kê SQLite tái sinh — snapshot 11/11/2026</a></li><li><a href="../appendix/verified-findings.html">Kết quả kiểm chứng local — 12/11/2026</a></li><li><a href="../appendix/about.html">Về tài liệu này</a></li></ul></details>
+</aside>
+<main class="content"><div class="inner">
+<div class="crumbs"><a href="../index.html">Trang chủ</a> › Mảng tĩnh (metadata)</div><h1 class="title">Mảng tĩnh (metadata)</h1><p class="tagline">Static array initializers recovered from global-metadata.dat <span class="muted">· nguồn <code>appendix/static-arrays.md</code></span></p><div class="md"><p>497 blobs (257 referenced from Assembly-CSharp methods). Values shown as int32 (and float when plausible); pick the interpretation matching the array type in the method.</p>
+<h3 id="accordionitemarmview--public-float-animatearmdamage">AccordionItemArmView :: public float AnimateArmDamage()</h3>
+<ul><li>blob <code>4FC7D8BF0BD2…</code> (12 bytes)</li><li>int32: <code>[1670, 1671, 1672]</code></li></ul>
+<h3 id="accordionitemassets--public-void-ctor">AccordionItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>B8C93D59B555…</code> (60 bytes)</li><li>int32: <code>[1662, 1663, 1664, 1665, 1666, 1667, 1668, 1669, 1670, 1671, 1672, 1673, 1674, 1675, 1676]</code></li></ul>
+<h3 id="accordionitemhelper--public-void-tryexplodeaccordioncenterint-centerid">AccordionItemHelper :: public void TryExplodeAccordionCenter(int centerId)</h3>
+<ul><li>also used by <code>AccordionItemModel :: public void TryExplodeFromHelper()</code></li><li>also used by <code>AccordionItemCenterView :: public void FinalExplodeAnimation(Action onComplete)</code></li><li>blob <code>05297B0436D7…</code> (12 bytes)</li><li>int32: <code>[1662, 1663, 1664]</code></li></ul>
+<h3 id="accordionitemmanager--public-bool-trydamageaccordionarmexplodedata-data-int-armindex">AccordionItemManager :: public bool TryDamageAccordionArm(ExplodeData data, int armIndex)</h3>
+<ul><li>blob <code>2F2188664214…</code> (20 bytes)</li><li>int32: <code>[1665, 1666, 1667, 1668, 1669]</code></li></ul>
+<h3 id="armoryitemview--private-void-playhitsfx">ArmoryItemView :: private void PlayHitSfx()</h3>
+<ul><li>blob <code>C94E9E28692A…</code> (12 bytes)</li><li>int32: <code>[1093, 1094, 1095]</code></li></ul>
+<h3 id="armoryitemview--private-void-playhitsfx-1">ArmoryItemView :: private void PlayHitSfx()</h3>
+<ul><li>blob <code>DCDA4886835F…</code> (12 bytes)</li><li>int32: <code>[1100, 1101, 1102]</code></li></ul>
+<h3 id="attackarmadilloitemassets--public-void-ctor">AttackArmadilloItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>D336FC2E90FF…</code> (52 bytes)</li><li>int32: <code>[1783, 1784, 1785, 1786, 1787, 1788, 1789, 1790, 1791, 1792, 1793, 1794, 1795]</code></li></ul>
+<h3 id="attackarmadilloitemview--private-static-void-cctor">AttackArmadilloItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>06C4EC00683D…</code> (12 bytes)</li><li>int32: <code>[1789, 1790, 1791]</code></li></ul>
+<h3 id="attackarmadilloitemview--private-static-void-cctor-1">AttackArmadilloItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>3C911C450E1D…</code> (12 bytes)</li><li>int32: <code>[1786, 1787, 1788]</code></li></ul>
+<h3 id="attackarmadilloitemview--private-static-void-cctor-2">AttackArmadilloItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>B0AFF765107A…</code> (12 bytes)</li><li>int32: <code>[1792, 1793, 1794]</code></li></ul>
+<h3 id="attackarmadilloitemview--private-static-void-cctor-3">AttackArmadilloItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>E14E0B59D3AC…</code> (12 bytes)</li><li>int32: <code>[1783, 1784, 1785]</code></li></ul>
+<h3 id="attackblacksmithitemview--private-void-playhitanimation">AttackBlacksmithItemView :: private void PlayHitAnimation()</h3>
+<ul><li>blob <code>356E210E5ED5…</code> (12 bytes)</li><li>int32: <code>[1205, 1206, 1207]</code></li></ul>
+<h3 id="attackblacksmithitemview--public-override-void-explode">AttackBlacksmithItemView :: public override void Explode()</h3>
+<ul><li>blob <code>B9735C989C38…</code> (12 bytes)</li><li>int32: <code>[1202, 1203, 1204]</code></li></ul>
+<h3 id="attackblacksmithitemview--public-void-playnohitparticlesvector3-position-explodedata-data-attackcellmodel-cellmodel">AttackBlacksmithItemView :: public void PlayNoHitParticles(Vector3 position, ExplodeData data, AttackCellModel cellModel)</h3>
+<ul><li>blob <code>B53E80ED8BD0…</code> (12 bytes)</li><li>int32: <code>[1199, 1200, 1201]</code></li></ul>
+<h3 id="attackbomberitemview--private-void-playhitanimationattackcellmodel-damagedcell-explodedata-explodedata">AttackBomberItemView :: private void PlayHitAnimation(AttackCellModel damagedCell, ExplodeData explodeData)</h3>
+<ul><li>blob <code>7A0AB9299269…</code> (12 bytes)</li><li>int32: <code>[517, 518, 1179]</code></li></ul>
+<h3 id="attackboomerangitemassets--public-void-ctor">AttackBoomerangItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>AD0A16791E9B…</code> (60 bytes)</li><li>int32: <code>[1690, 1691, 1692, 1693, 1694, 1695, 1696, 1697, 1698, 1699, 1700, 1701, 1702, 1703, 1704]</code></li></ul>
+<h3 id="attackboomerangitembarrelview--public-override-void-directhit">AttackBoomerangItemBarrelView :: public override void DirectHit()</h3>
+<ul><li>blob <code>6FB17F8EE7D4…</code> (12 bytes)</li><li>int32: <code>[1690, 1691, 1692]</code></li></ul>
+<h3 id="attackboomerangitemheadview--private-void-playexplodeb__59_0trackentry-_">AttackBoomerangItemHeadView :: private void &lt;PlayExplode&gt;b__59_0(TrackEntry _)</h3>
+<ul><li>blob <code>D04074D8A5FF…</code> (12 bytes)</li><li>int32: <code>[1699, 1700, 1701]</code></li></ul>
+<h3 id="attackboomerangitemheadview--private-void-handleattackeventtrackentry-trackentry-event-e">AttackBoomerangItemHeadView :: private void HandleAttackEvent(TrackEntry trackEntry, Event e)</h3>
+<ul><li>blob <code>C8DA562C32BF…</code> (12 bytes)</li><li>int32: <code>[1702, 1703, 1704]</code></li></ul>
+<h3 id="attackboomerangitemheadview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackBoomerangItemHeadView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>6B78D38EE1F2…</code> (12 bytes)</li><li>int32: <code>[1696, 1697, 1698]</code></li></ul>
+<h3 id="attackboomerangitemhelperboomeranggroup--private-static-void-cctor">AttackBoomerangItemHelper.BoomerangGroup :: private static void .cctor()</h3>
+<ul><li>blob <code>2B05C5E87781…</code> (12 bytes)</li><li>int32: <code>[1693, 1694, 1695]</code></li></ul>
+<h3 id="attackboomerangmissileitemassets--public-void-ctor">AttackBoomerangMissileItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>D718D9AEF611…</code> (28 bytes)</li><li>int32: <code>[1705, 1706, 1707, 1708, 1709, 1710, 1711]</code></li></ul>
+<h3 id="attackboomerangmissileitemview--public-override-void-explodeselfbool-isspecialitemcombo--false-bool-isrocketcombo--false-vector3-targetposition">AttackBoomerangMissileItemView :: public override void ExplodeSelf(bool isSpecialItemCombo = False, bool isRocketCombo = False, Vector3 targetPosition)</h3>
+<ul><li>blob <code>875FF11C9034…</code> (12 bytes)</li><li>int32: <code>[1709, 1710, 1711]</code></li></ul>
+<h3 id="attackbossscarecrowitemmodel--private-static-void-cctor">AttackBossScarecrowItemModel :: private static void .cctor()</h3>
+<ul><li>blob <code>27D75B3375DF…</code> (504 bytes)</li><li>int32: <code>[9, 8, 7, 6, 6, 6, 7, 8, 9, 8, 7, 6, 5, 5, 5, 6, 7, 8, 7, 6, 5, 4, 4, 4, 5, 6, 7, 6, 5, 4, 3, 3, 3, 4, 5, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1, 0, 0, 0, 1, 2, 3, 3]</code></li></ul>
+<h3 id="attackbossscarecrowitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackBossScarecrowItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>8E6F718C5AB1…</code> (12 bytes)</li><li>int32: <code>[488, 489, 1177]</code></li></ul>
+<h3 id="attackcactusitemview--private-void-playhitanimation">AttackCactusItemView :: private void PlayHitAnimation()</h3>
+<ul><li>blob <code>A041151C5A72…</code> (12 bytes)</li><li>int32: <code>[1236, 1237, 1238]</code></li></ul>
+<h3 id="attackcannonballitemcollectviewcollectroutined__17--private-bool-movenext">AttackCannonBallItemCollectView.&lt;CollectRoutine&gt;d__17 :: private bool MoveNext()</h3>
+<ul><li>blob <code>1A3DA3FA2EF3…</code> (12 bytes)</li><li>int32: <code>[1187, 1188, 1189]</code></li></ul>
+<h3 id="attackcannonballitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackCannonBallItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>6CE6A0DAFD87…</code> (12 bytes)</li><li>int32: <code>[1195, 1196, 1197]</code></li></ul>
+<h3 id="attackcastleitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackCastleItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>124CA02A3EA4…</code> (12 bytes)</li><li>int32: <code>[83, 84, 85]</code></li></ul>
+<h3 id="attackcellneighbors--private-static-void-cctor">AttackCellNeighbors :: private static void .cctor()</h3>
+<ul><li>also used by <code>CellNeighbors :: private static void .cctor()</code></li><li>also used by <code>CubeBlastCellNeighbors :: private static void .cctor()</code></li><li>blob <code>FF1F6EE5D674…</code> (32 bytes)</li><li>int32: <code>[0, 1, 2, 3, 4, 5, 6, 7]</code></li></ul>
+<h3 id="attackcellneighbors--private-static-void-cctor-1">AttackCellNeighbors :: private static void .cctor()</h3>
+<ul><li>also used by <code>CellNeighbors :: private static void .cctor()</code></li><li>blob <code>49C16B6F0EF8…</code> (16 bytes)</li><li>int32: <code>[1, 3, 5, 7]</code></li></ul>
+<h3 id="attackclouditemassets--public-void-ctor">AttackCloudItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>EA13C7A33E88…</code> (20 bytes)</li><li>int32: <code>[1595, 1596, 1597, 1598, 1599]</code></li></ul>
+<h3 id="attackclouditemview--private-void-playblockparticlesattackcellpoint-point">AttackCloudItemView :: private void PlayBlockParticles(AttackCellPoint point)</h3>
+<ul><li>blob <code>1D6E70C8FC38…</code> (12 bytes)</li><li>int32: <code>[1595, 1596, 1597]</code></li></ul>
+<h3 id="attackfiregateitemassets--public-void-ctor">AttackFireGateItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>3F56ACC8054A…</code> (40 bytes)</li><li>int32: <code>[1444, 1445, 1446, 1447, 1448, 1449, 1450, 1451, 1452, 1453]</code></li></ul>
+<h3 id="attackfiregateitemprojectile--private-static-void-playhapticandsfx">AttackFireGateItemProjectile :: private static void PlayHapticAndSfx()</h3>
+<ul><li>blob <code>CDE371DD421A…</code> (12 bytes)</li><li>int32: <code>[1447, 1448, 1449]</code></li></ul>
+<h3 id="attackfiregateitemview--public-void-onhitbymatchitemvector3-position-attackcellmodel-attackcellmodel-explodedata-data">AttackFireGateItemView :: public void OnHitByMatchItem(Vector3 position, AttackCellModel attackCellModel, ExplodeData data)</h3>
+<ul><li>blob <code>56D25EC47B35…</code> (12 bytes)</li><li>int32: <code>[1444, 1445, 1446]</code></li></ul>
+<h3 id="attackfiregateitemviewmoveanimationroutined__26--private-bool-movenext">AttackFireGateItemView.&lt;MoveAnimationRoutine&gt;d__26 :: private bool MoveNext()</h3>
+<ul><li>blob <code>D5280A1AB83E…</code> (12 bytes)</li><li>int32: <code>[1450, 1451, 1452]</code></li></ul>
+<h3 id="attackgateitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackGateItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>EB5C0E4FC668…</code> (12 bytes)</li><li>int32: <code>[94, 95, 96]</code></li></ul>
+<h3 id="attackgenieitemassets--public-void-ctor">AttackGenieItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>46F3DAEB4287…</code> (32 bytes)</li><li>int32: <code>[1499, 1500, 1501, 1502, 1503, 1504, 1505, 1506]</code></li></ul>
+<h3 id="attackgenieitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackGenieItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>6C65B13787A7…</code> (12 bytes)</li><li>int32: <code>[1499, 1500, 1501]</code></li></ul>
+<h3 id="attackgenieitemview--public-override-void-explode">AttackGenieItemView :: public override void Explode()</h3>
+<ul><li>blob <code>42F8AA37A322…</code> (12 bytes)</li><li>int32: <code>[1502, 1503, 1504]</code></li></ul>
+<h3 id="attackghostitemassets--public-void-ctor">AttackGhostItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>0098A59BD2CF…</code> (40 bytes)</li><li>int32: <code>[1652, 1653, 1654, 1655, 1656, 1657, 1658, 1659, 1660, 1661]</code></li></ul>
+<h3 id="attackghostitemview--private-static-void-cctor">AttackGhostItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>89B6FF8CB4BD…</code> (12 bytes)</li><li>int32: <code>[1659, 1660, 1661]</code></li></ul>
+<h3 id="attackghostitemview--private-static-void-cctor-1">AttackGhostItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>B66D3F798110…</code> (12 bytes)</li><li>int32: <code>[1656, 1657, 1658]</code></li></ul>
+<h3 id="attackghostitemview--private-static-void-cctor-2">AttackGhostItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>EAF4F3BF0EC7…</code> (12 bytes)</li><li>int32: <code>[1653, 1654, 1655]</code></li></ul>
+<h3 id="attackgiantmoleitemview--private-void-playhitanimation">AttackGiantMoleItemView :: private void PlayHitAnimation()</h3>
+<ul><li>blob <code>93E560608B17…</code> (12 bytes)</li><li>int32: <code>[504, 505, 1180]</code></li></ul>
+<h3 id="attackgiantoctopusarmitemassets--public-void-ctor">AttackGiantOctopusArmItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>8F28BD29195C…</code> (24 bytes)</li><li>int32: <code>[1561, 1562, 1563, 1564, 1565, 1566]</code></li></ul>
+<h3 id="attackgiantoctopusarmitemview--private-static-void-cctor">AttackGiantOctopusArmItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>2368436D8129…</code> (12 bytes)</li><li>int32: <code>[1564, 1565, 1566]</code></li></ul>
+<h3 id="attackgiantoctopusarmitemview--private-static-void-cctor-1">AttackGiantOctopusArmItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>5D7E57C26849…</code> (12 bytes)</li><li>int32: <code>[1561, 1562, 1563]</code></li></ul>
+<h3 id="attackgiantoctopusitemassets--public-void-ctor">AttackGiantOctopusItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>BB97DD6EB244…</code> (20 bytes)</li><li>int32: <code>[1556, 1557, 1558, 1559, 1560]</code></li></ul>
+<h3 id="attackgiantoctopusitemview--private-static-void-cctor">AttackGiantOctopusItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>EE453B0F14A3…</code> (12 bytes)</li><li>int32: <code>[1556, 1557, 1558]</code></li></ul>
+<h3 id="attackgoldgolemitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackGoldGolemItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>also used by <code>AttackGoldGolemItemView :: private void PlayHitAnimation(AttackCellModel damagedCell, ExplodeData explodeData)</code></li><li>blob <code>38805E2BEE1B…</code> (12 bytes)</li><li>int32: <code>[431, 432, 1175]</code></li></ul>
+<h3 id="attackmaceitemmodel--protected-override-void-tryexplodeexplodedata-data-vector3-position-attackcellmodel-attackcellmodel">AttackMaceItemModel :: protected override void TryExplode(ExplodeData data, Vector3 position, AttackCellModel attackCellModel)</h3>
+<ul><li>also used by <code>AttackMaceItemView :: public void PlayNoHitParticles(Vector3 position, MatchType matchType, AttackCellModel cellModel)</code></li><li>blob <code>83B78B3589C0…</code> (12 bytes)</li><li>int32: <code>[1158, 1159, 1160]</code></li></ul>
+<h3 id="attackmaceitemview--private-void-update">AttackMaceItemView :: private void Update()</h3>
+<ul><li>also used by <code>AttackMaceItemView :: private void AnimateAndExplode()</code></li><li>blob <code>12DB040E4A87…</code> (12 bytes)</li><li>int32: <code>[1155, 1156, 1157]</code></li></ul>
+<h3 id="attackmaceitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackMaceItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>58FD9C6863FC…</code> (12 bytes)</li><li>int32: <code>[1152, 1153, 1154]</code></li></ul>
+<h3 id="attackmagicwallitemview--private-static-void-cctor">AttackMagicWallItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>C50D2C637C73…</code> (48 bytes)</li><li>int32: <code>[361, 362, 359, 360, 357, 358, 355, 356, 353, 354, 351, 352]</code></li></ul>
+<h3 id="attackmatchitemviewmoved__36--private-bool-movenext">AttackMatchItemView.&lt;Move&gt;d__36 :: private bool MoveNext()</h3>
+<ul><li>blob <code>F4ABE4656225…</code> (12 bytes)</li><li>int32: <code>[79, 80, 81]</code></li></ul>
+<h3 id="attackmoleitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackMoleItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>63C044E0631A…</code> (12 bytes)</li><li>int32: <code>[382, 383, 1178]</code></li></ul>
+<h3 id="attackmushroomitemview--private-void-playhitanimation">AttackMushroomItemView :: private void PlayHitAnimation()</h3>
+<ul><li>blob <code>D5633F01CEC8…</code> (12 bytes)</li><li>int32: <code>[1145, 1146, 1147]</code></li></ul>
+<h3 id="attackpandaitemmodel--public-void-incrementmove">AttackPandaItemModel :: public void IncrementMove()</h3>
+<ul><li>also used by <code>AttackPandaItemView :: public void ThrowItems()</code></li><li>blob <code>33067275D813…</code> (12 bytes)</li><li>int32: <code>[1343, 1344, 1345]</code></li></ul>
+<h3 id="attackpandaitemmodel--public-void-incrementmove-1">AttackPandaItemModel :: public void IncrementMove()</h3>
+<ul><li>also used by <code>AttackPandaItemView :: public void PlayPrepareAttackAnimation()</code></li><li>blob <code>510F9FF7E37C…</code> (12 bytes)</li><li>int32: <code>[1337, 1338, 1339]</code></li></ul>
+<h3 id="attackpandaitemthrowviewc__displayclass7_0--internal-void-squashstretchb__0">AttackPandaItemThrowView.&lt;&gt;c__DisplayClass7_0 :: internal void &lt;SquashStretch&gt;b__0()</h3>
+<ul><li>blob <code>A686003676DF…</code> (12 bytes)</li><li>int32: <code>[1334, 1335, 1336]</code></li></ul>
+<h3 id="attackpandaitemview--private-void-playthrowanimationb__20_0trackentry-_-event-evt">AttackPandaItemView :: private void &lt;PlayThrowAnimation&gt;b__20_0(TrackEntry _, Event evt)</h3>
+<ul><li>blob <code>C527E14A88BA…</code> (12 bytes)</li><li>int32: <code>[1340, 1341, 1342]</code></li></ul>
+<h3 id="attackpandaitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackPandaItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>8BCB1A3F804E…</code> (12 bytes)</li><li>int32: <code>[1328, 1329, 1330]</code></li></ul>
+<h3 id="attackpandaitemview--public-override-void-explode">AttackPandaItemView :: public override void Explode()</h3>
+<ul><li>blob <code>13456C838E6D…</code> (12 bytes)</li><li>int32: <code>[1331, 1332, 1333]</code></li></ul>
+<h3 id="attackpounderitemassets--public-void-ctor">AttackPounderItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>11F501EB2497…</code> (60 bytes)</li><li>int32: <code>[1848, 1849, 1850, 1851, 1852, 1853, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 1862]</code></li></ul>
+<h3 id="attackpounderitemview--private-static-void-cctor">AttackPounderItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>6508F47225BC…</code> (12 bytes)</li><li>int32: <code>[1857, 1858, 1859]</code></li></ul>
+<h3 id="attackpounderitemview--private-static-void-cctor-1">AttackPounderItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>6F7ED109C1A0…</code> (12 bytes)</li><li>int32: <code>[1854, 1855, 1856]</code></li></ul>
+<h3 id="attackpounderitemview--private-static-void-cctor-2">AttackPounderItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>76AF978F0F82…</code> (12 bytes)</li><li>int32: <code>[1848, 1849, 1850]</code></li></ul>
+<h3 id="attackpounderitemview--private-static-void-cctor-3">AttackPounderItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>EF6D1A874583…</code> (12 bytes)</li><li>int32: <code>[1851, 1852, 1853]</code></li></ul>
+<h3 id="attackpounderitemview--private-static-void-cctor-4">AttackPounderItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>F12C61E4207D…</code> (12 bytes)</li><li>int32: <code>[1860, 1861, 1862]</code></li></ul>
+<h3 id="attackraccoonitemmodel--protected-override-void-tryexplodeexplodedata-data-vector3-position-attackcellmodel-attackcellmodel">AttackRaccoonItemModel :: protected override void TryExplode(ExplodeData data, Vector3 position, AttackCellModel attackCellModel)</h3>
+<ul><li>also used by <code>AttackRaccoonItemView :: public void Block()</code></li><li>blob <code>308A0C722B72…</code> (12 bytes)</li><li>int32: <code>[1366, 1367, 1368]</code></li></ul>
+<h3 id="attackraccoonitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackRaccoonItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>91ACEF381619…</code> (12 bytes)</li><li>int32: <code>[1354, 1355, 1356]</code></li></ul>
+<h3 id="attackraccoonitemview--public-void-explodehelmet">AttackRaccoonItemView :: public void ExplodeHelmet()</h3>
+<ul><li>also used by <code>AttackRaccoonItemView :: public override void Explode()</code></li><li>blob <code>A6CE4331476F…</code> (12 bytes)</li><li>int32: <code>[1357, 1358, 1359]</code></li></ul>
+<h3 id="attackraccoonitemviewmoveanimationd__42--private-bool-movenext">AttackRaccoonItemView.&lt;MoveAnimation&gt;d__42 :: private bool MoveNext()</h3>
+<ul><li>blob <code>03F388D1AB58…</code> (12 bytes)</li><li>int32: <code>[1360, 1361, 1362]</code></li></ul>
+<h3 id="attackraccoonitemviewmoveanimationd__42--private-bool-movenext-1">AttackRaccoonItemView.&lt;MoveAnimation&gt;d__42 :: private bool MoveNext()</h3>
+<ul><li>blob <code>E3D7A3A13600…</code> (12 bytes)</li><li>int32: <code>[1363, 1364, 1365]</code></li></ul>
+<h3 id="attackseeditemview--private-void-playhitanimation">AttackSeedItemView :: private void PlayHitAnimation()</h3>
+<ul><li>blob <code>C5FA9389BEAD…</code> (12 bytes)</li><li>int32: <code>[1136, 1137, 1138]</code></li></ul>
+<h3 id="attackswitcheritemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackSwitcherItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>1F22E3C66335…</code> (12 bytes)</li><li>int32: <code>[330, 331, 1176]</code></li></ul>
+<h3 id="attacktargetdummyitemassets--public-void-ctor">AttackTargetDummyItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>539674666F8F…</code> (72 bytes)</li><li>int32: <code>[1808, 1809, 1810, 1823, 1824, 1825, 1811, 1812, 1813, 1814, 1815, 1816, 1817, 1818, 1819, 1820, 1821, 1822]</code></li></ul>
+<h3 id="attacktargetdummyitemview--private-static-void-cctor">AttackTargetDummyItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>2B5642F28630…</code> (12 bytes)</li><li>int32: <code>[1811, 1812, 1813]</code></li></ul>
+<h3 id="attacktargetdummyitemview--private-static-void-cctor-1">AttackTargetDummyItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>4DED2FAB3BF9…</code> (12 bytes)</li><li>int32: <code>[1808, 1809, 1810]</code></li></ul>
+<h3 id="attacktargetdummyitemview--private-static-void-cctor-2">AttackTargetDummyItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>8125AAA36AD6…</code> (12 bytes)</li><li>int32: <code>[1823, 1824, 1825]</code></li></ul>
+<h3 id="attacktargetdummyitemview--private-static-void-cctor-3">AttackTargetDummyItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>A5D20E49CCE7…</code> (12 bytes)</li><li>int32: <code>[1814, 1815, 1816]</code></li></ul>
+<h3 id="attacktargetdummyitemview--private-static-void-cctor-4">AttackTargetDummyItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>E4D574F06A00…</code> (12 bytes)</li><li>int32: <code>[1820, 1821, 1822]</code></li></ul>
+<h3 id="attacktargetdummyitemview--private-static-void-cctor-5">AttackTargetDummyItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>FA0D3813F6BE…</code> (12 bytes)</li><li>int32: <code>[1817, 1818, 1819]</code></li></ul>
+<h3 id="attacktoweritemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackTowerItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>B0975420978A…</code> (12 bytes)</li><li>int32: <code>[90, 91, 92]</code></li></ul>
+<h3 id="attacktrojanhorseitemmodel--protected-override-void-tryexplodeexplodedata-data-vector3-position-attackcellmodel-attackcellmodel">AttackTrojanHorseItemModel :: protected override void TryExplode(ExplodeData data, Vector3 position, AttackCellModel attackCellModel)</h3>
+<ul><li>also used by <code>AttackTrojanHorseItemView :: public void PlayBlockParticles(Vector3 position, MatchType matchType, AttackCellModel cellModel)</code></li><li>blob <code>7630C1AA4E3B…</code> (12 bytes)</li><li>int32: <code>[1425, 1426, 1427]</code></li></ul>
+<h3 id="attacktrojanhorseitemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackTrojanHorseItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>E8B82ACA404D…</code> (12 bytes)</li><li>int32: <code>[1422, 1423, 1424]</code></li></ul>
+<h3 id="attacktrojanhorseitemview--public-override-void-explode">AttackTrojanHorseItemView :: public override void Explode()</h3>
+<ul><li>blob <code>86FF40023E3F…</code> (12 bytes)</li><li>int32: <code>[1428, 1429, 1430]</code></li></ul>
+<h3 id="attacktrojanwarrioritemview--public-override-void-damageint-newhealth-vector3-position-attackcellmodel-damagedcell-explodedata-data">AttackTrojanWarriorItemView :: public override void Damage(int newHealth, Vector3 position, AttackCellModel damagedCell, ExplodeData data)</h3>
+<ul><li>blob <code>62B7173AE127…</code> (12 bytes)</li><li>int32: <code>[1431, 1432, 1433]</code></li></ul>
+<h3 id="attacktrojanwarrioritemview--public-override-void-explode">AttackTrojanWarriorItemView :: public override void Explode()</h3>
+<ul><li>blob <code>5F5A41FCDD0E…</code> (12 bytes)</li><li>int32: <code>[1434, 1435, 1436]</code></li></ul>
+<h3 id="attacktrojanwarrioritemview--public-void-playcreationanimation">AttackTrojanWarriorItemView :: public void PlayCreationAnimation()</h3>
+<ul><li>blob <code>11E1D3CA431E…</code> (12 bytes)</li><li>int32: <code>[1437, 1438, 1439]</code></li></ul>
+<h3 id="attackvampireitemassets--public-void-ctor">AttackVampireItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>4F392E108DB7…</code> (60 bytes)</li><li>int32: <code>[1712, 1713, 1714, 1715, 1716, 1717, 1718, 1719, 1720, 1721, 1722, 1723, 1724, 1725, 1726]</code></li></ul>
+<h3 id="attackvampireitemview--private-static-void-cctor">AttackVampireItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>1D8F10D633B6…</code> (12 bytes)</li><li>int32: <code>[1718, 1719, 1720]</code></li></ul>
+<h3 id="attackvampireitemview--private-static-void-cctor-1">AttackVampireItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>41AEBD50B94B…</code> (12 bytes)</li><li>int32: <code>[1721, 1722, 1723]</code></li></ul>
+<h3 id="attackvampireitemview--private-static-void-cctor-2">AttackVampireItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>4DC674853F84…</code> (12 bytes)</li><li>int32: <code>[1724, 1725, 1726]</code></li></ul>
+<h3 id="attackvampireitemview--private-static-void-cctor-3">AttackVampireItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>C31D2FB81C54…</code> (12 bytes)</li><li>int32: <code>[1712, 1713, 1714]</code></li></ul>
+<h3 id="attackvampireitemview--private-static-void-cctor-4">AttackVampireItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>F0ED66431A87…</code> (12 bytes)</li><li>int32: <code>[1715, 1716, 1717]</code></li></ul>
+<h3 id="attackvampirestatueitemassets--public-void-ctor">AttackVampireStatueItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>A1E412EFBB3E…</code> (24 bytes)</li><li>int32: <code>[1727, 1728, 1729, 1730, 1731, 1732]</code></li></ul>
+<h3 id="attackvampirestatueitemview--private-static-void-cctor">AttackVampireStatueItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>25F69B12C565…</code> (12 bytes)</li><li>int32: <code>[1730, 1731, 1732]</code></li></ul>
+<h3 id="attackvampirestatueitemview--private-static-void-cctor-1">AttackVampireStatueItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>D90F6B3EED2F…</code> (12 bytes)</li><li>int32: <code>[1727, 1728, 1729]</code></li></ul>
+<h3 id="bomberplaneboosterview--public-void-ctor">BomberPlaneBoosterView :: public void .ctor()</h3>
+<ul><li>blob <code>C896C383BAD9…</code> (12 bytes)</li><li>int32: <code>[1065353216, 1063675494, 1066192077]</code></li><li>float: <code>[1.0, 0.9, 1.1]</code></li></ul>
+<h3 id="canvasquestanimationchest--private-static-void-cctor">CanvasQuestAnimationChest :: private static void .cctor()</h3>
+<ul><li>blob <code>F501B14B2316…</code> (16 bytes)</li><li>int32: <code>[0, 1051931443, 1059145646, 1065353216]</code></li><li>float: <code>[0.0, 0.35, 0.63, 1.0]</code></li></ul>
+<h3 id="canvasquestanimationchest--private-static-void-cctor-1">CanvasQuestAnimationChest :: private static void .cctor()</h3>
+<ul><li>blob <code>F951E635D560…</code> (16 bytes)</li><li>int32: <code>[0, 1048576000, 1054951342, 1059984507]</code></li><li>float: <code>[0.0, 0.25, 0.44, 0.68]</code></li></ul>
+<h3 id="canvasquestanimationchest--private-static-void-cctor-2">CanvasQuestAnimationChest :: private static void .cctor()</h3>
+<ul><li>blob <code>0F60247DC83A…</code> (12 bytes)</li><li>int32: <code>[1076258406, 1076971438, 1076677837]</code></li><li>float: <code>[2.6, 2.77, 2.7]</code></li></ul>
+<h3 id="canvasquestanimationchest--private-static-void-cctor-3">CanvasQuestAnimationChest :: private static void .cctor()</h3>
+<ul><li>blob <code>90F2D5E8CAE4…</code> (12 bytes)</li><li>int32: <code>[1045220557, 1048576000, 1056964608]</code></li><li>float: <code>[0.2, 0.25, 0.5]</code></li></ul>
+<h3 id="canvasquestanimationchest--private-static-void-cctor-4">CanvasQuestAnimationChest :: private static void .cctor()</h3>
+<ul><li>blob <code>9391DB9C5014…</code> (12 bytes)</li><li>int32: <code>[1078607217, 1080033280, 1078774989]</code></li><li>float: <code>[3.16, 3.5, 3.2]</code></li></ul>
+<h3 id="canvasquestanimationchest--private-static-void-cctor-5">CanvasQuestAnimationChest :: private static void .cctor()</h3>
+<ul><li>blob <code>B91B7FB12651…</code> (12 bytes)</li><li>int32: <code>[1047233823, 1045220557, 1041865114]</code></li><li>float: <code>[0.23, 0.2, 0.15]</code></li></ul>
+<h3 id="cubeblastscreengridview--private-static-void-cctor">CubeBlastScreenGridView :: private static void .cctor()</h3>
+<ul><li>blob <code>C5811796C66F…</code> (12 bytes)</li><li>int32: <code>[1061204166, 1063278691, 1065353216]</code></li><li>float: <code>[0.7527, 0.8763, 1.0]</code></li></ul>
+<h3 id="cubeblastscreengridview--private-static-void-cctor-1">CubeBlastScreenGridView :: private static void .cctor()</h3>
+<ul><li>blob <code>EFD96D281A2F…</code> (12 bytes)</li><li>int32: <code>[1061201376, 1063277296, 1065353216]</code></li><li>float: <code>[0.7525, 0.8763, 1.0]</code></li></ul>
+<h3 id="districttaskui--public-void-ctor">DistrictTaskUi :: public void .ctor()</h3>
+<ul><li>blob <code>052523CF8822…</code> (20 bytes)</li><li>int32: <code>[-1121724662, -1114986932, -1148608473, -1104759541, -1106289623]</code></li><li>float: <code>[-0.04, -0.0677, -0.0042, -0.1628, -0.14]</code></li></ul>
+<h3 id="dragonboxitemview--private-static-void-cctor">DragonBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>A81E58F1DE31…</code> (32 bytes)</li><li>int32: <code>[241, 242, 239, 240, 237, 238, 235, 236]</code></li></ul>
+<h3 id="dungeonescapefindingplayersscene--public-void-ctor">DungeonEscapeFindingPlayersScene :: public void .ctor()</h3>
+<ul><li>blob <code>BC385CABA41F…</code> (48 bytes)</li><li>int32: <code>[1, 2, 3, 5, 9, 15, 25, 37, 50, 64, 82, 100]</code></li></ul>
+<h3 id="dungeonescapeuidataprovider--public-void-ctor">DungeonEscapeUiDataProvider :: public void .ctor()</h3>
+<ul><li>blob <code>43FA59F47E79…</code> (44 bytes)</li><li>int32: <code>[15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5]</code></li></ul>
+<h3 id="egomanager--private-static-int-getfirstegoprice">EgoManager :: private static int GetFirstEgoPrice()</h3>
+<ul><li>blob <code>AA31F8B29271…</code> (24 bytes)</li><li>int32: <code>[300, 600, 900, 1200, 1200, 1200]</code></li></ul>
+<h3 id="egomanager--private-static-int-getfirstegoprice-1">EgoManager :: private static int GetFirstEgoPrice()</h3>
+<ul><li>blob <code>E64674AB3FC6…</code> (24 bytes)</li><li>int32: <code>[300, 600, 900, 900, 900, 900]</code></li></ul>
+<h3 id="egomanager--private-static-int-getfirstegoprice-2">EgoManager :: private static int GetFirstEgoPrice()</h3>
+<ul><li>blob <code>E85B8B9439D8…</code> (24 bytes)</li><li>int32: <code>[300, 600, 900, 1200, 1500, 1800]</code></li></ul>
+<h3 id="egomanager--private-static-int-getfirstegoprice-3">EgoManager :: private static int GetFirstEgoPrice()</h3>
+<ul><li>blob <code>EFB8A6915183…</code> (24 bytes)</li><li>int32: <code>[900, 1200, 1500, 1800, 1800, 1800]</code></li></ul>
+<h3 id="egomanager--private-static-void-cctor">EgoManager :: private static void .cctor()</h3>
+<ul><li>blob <code>66BDEED1D2D3…</code> (40 bytes)</li><li>int32: <code>[1, 2, 3, 5, 10, 15, 20, 25, 30, 35]</code></li></ul>
+<h3 id="extramovesdialogextra--private-static-void-cctor">ExtraMovesDialogExtra :: private static void .cctor()</h3>
+<ul><li>blob <code>7C044B2A9AB0…</code> (16 bytes)</li><li>int32: <code>[1, 3, 10, 11]</code></li></ul>
+<h3 id="extramovesdialogextra--private-static-void-cctor-1">ExtraMovesDialogExtra :: private static void .cctor()</h3>
+<ul><li>blob <code>A0E53F3CB715…</code> (16 bytes)</li><li>int32: <code>[1, 3, 4, 10]</code></li></ul>
+<h3 id="fireworkrocketitemview--private-static-void-cctor">FireworkRocketItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>C4F61C617B21…</code> (12 bytes)</li><li>int32: <code>[1835, 1836, 1837]</code></li></ul>
+<h3 id="fireworksitemassets--public-void-ctor">FireworksItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>3AD5AE2AA05D…</code> (56 bytes)</li><li>int32: <code>[1826, 1827, 1828, 1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1837, 1838, 1839]</code></li></ul>
+<h3 id="fireworksitemview--private-static-void-cctor">FireworksItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>3894F1B89E22…</code> (12 bytes)</li><li>int32: <code>[1829, 1830, 1831]</code></li></ul>
+<h3 id="fireworksitemview--private-static-void-cctor-1">FireworksItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>B3794EAFEFA8…</code> (12 bytes)</li><li>int32: <code>[1826, 1827, 1828]</code></li></ul>
+<h3 id="flowersitemview--private-void-playdamagesfxint-layer">FlowersItemView :: private void PlayDamageSfx(int layer)</h3>
+<ul><li>blob <code>4D5A3ECBDF75…</code> (12 bytes)</li><li>int32: <code>[1114, 1115, 1116]</code></li></ul>
+<h3 id="flowersitemview--private-void-playdamagesfxint-layer-1">FlowersItemView :: private void PlayDamageSfx(int layer)</h3>
+<ul><li>blob <code>8835FC63FB1A…</code> (12 bytes)</li><li>int32: <code>[1117, 1118, 1119]</code></li></ul>
+<h3 id="flowersitemview--private-void-playdamagesfxint-layer-2">FlowersItemView :: private void PlayDamageSfx(int layer)</h3>
+<ul><li>blob <code>EDF97AC80D0D…</code> (12 bytes)</li><li>int32: <code>[1120, 1121, 1122]</code></li></ul>
+<h3 id="flowersitemview--private-void-playexplodesfxint-initiallayer">FlowersItemView :: private void PlayExplodeSfx(int initialLayer)</h3>
+<ul><li>blob <code>2F2844AB4165…</code> (12 bytes)</li><li>int32: <code>[1128, 1129, 1130]</code></li></ul>
+<h3 id="flowersitemview--private-void-playexplodesfxint-initiallayer-1">FlowersItemView :: private void PlayExplodeSfx(int initialLayer)</h3>
+<ul><li>blob <code>ED900443B8FF…</code> (12 bytes)</li><li>int32: <code>[1131, 1132, 1133]</code></li></ul>
+<h3 id="flowersitemview--public-override-void-updatesortingsortingdata-sortingdata">FlowersItemView :: public override void UpdateSorting(SortingData sortingData)</h3>
+<ul><li>blob <code>2546ADBF3685…</code> (16 bytes)</li><li>int32: <code>[-2, 6, 12, 11]</code></li></ul>
+<h3 id="flowersitemview--public-override-void-updatesortingsortingdata-sortingdata-1">FlowersItemView :: public override void UpdateSorting(SortingData sortingData)</h3>
+<ul><li>blob <code>3808872D82A7…</code> (16 bytes)</li><li>int32: <code>[0, 1, 10, 8]</code></li></ul>
+<h3 id="flowersitemview--public-override-void-updatesortingsortingdata-sortingdata-2">FlowersItemView :: public override void UpdateSorting(SortingData sortingData)</h3>
+<ul><li>blob <code>7A2091DB87E3…</code> (16 bytes)</li><li>int32: <code>[2, 4, 10, 8]</code></li></ul>
+<h3 id="flyingcontestmultiplierprogresswheel--private-static-void-cctor">FlyingContestMultiplierProgressWheel :: private static void .cctor()</h3>
+<ul><li>blob <code>A4C6D451615B…</code> (20 bytes)</li><li>int32: <code>[79, 40, 0, -40, -78]</code></li></ul>
+<h3 id="flyingcontestmultiplierprogresswheel--public-void-ctor">FlyingContestMultiplierProgressWheel :: public void .ctor()</h3>
+<ul><li>blob <code>D6F265C1ABF0…</code> (16 bytes)</li><li>int32: <code>[1051260355, 1054280253, 1057300152, 1058642330]</code></li><li>float: <code>[0.33, 0.42, 0.52, 0.6]</code></li></ul>
+<h3 id="gameoperationtype--private-static-void-cctor">GameOperationType :: private static void .cctor()</h3>
+<ul><li>blob <code>152B9000086F…</code> (20 bytes)</li><li>int32: <code>[18, 19, 24, 13, 23]</code></li></ul>
+<h3 id="giantgnomeitemassets--public-void-ctor">GiantGnomeItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>6677FC90326F…</code> (60 bytes)</li><li>int32: <code>[1733, 1734, 1735, 1736, 1737, 1738, 1739, 1740, 1741, 1742, 1743, 1744, 1745, 1746, 1747]</code></li></ul>
+<h3 id="giantgnomeitemview--private-static-void-cctor">GiantGnomeItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>25C3B57A578F…</code> (12 bytes)</li><li>int32: <code>[1736, 1737, 1738]</code></li></ul>
+<h3 id="giantgnomeitemview--private-static-void-cctor-1">GiantGnomeItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>6453263702D8…</code> (12 bytes)</li><li>int32: <code>[1739, 1740, 1741]</code></li></ul>
+<h3 id="giantgnomeitemview--private-static-void-cctor-2">GiantGnomeItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>E2E06FDFD0EB…</code> (12 bytes)</li><li>int32: <code>[1733, 1734, 1735]</code></li></ul>
+<h3 id="giantgnomethrowview--private-static-void-cctor">GiantGnomeThrowView :: private static void .cctor()</h3>
+<ul><li>blob <code>DA9E58CEE563…</code> (12 bytes)</li><li>int32: <code>[1742, 1743, 1744]</code></li></ul>
+<h3 id="giftboxitemview--private-static-void-cctor">GiftBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>07824A52A2A4…</code> (32 bytes)</li><li>int32: <code>[824, 825, 822, 823, 820, 821, 818, 819]</code></li></ul>
+<h3 id="gnomehelmetitemview--private-static-void-cctor">GnomeHelmetItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>B9466CCF1D32…</code> (24 bytes)</li><li>int32: <code>[663, 664, 661, 662, 659, 660]</code></li></ul>
+<h3 id="gnomehelmetitemview--private-static-void-cctor-1">GnomeHelmetItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>EB4BC592F110…</code> (12 bytes)</li><li>int32: <code>[667, 666, 665]</code></li></ul>
+<h3 id="goaltuple--private-igoalcondition-getgoalcondition">GoalTuple :: private IGoalCondition GetGoalCondition()</h3>
+<ul><li>blob <code>96A31AA05F7F…</code> (12 bytes)</li><li>int32: <code>[19, 57, 68]</code></li></ul>
+<h3 id="hiddenpathboardextensions--private-static-void-cctor">HiddenPathBoardExtensions :: private static void .cctor()</h3>
+<ul><li>blob <code>5B3F9EC06466…</code> (16 bytes)</li><li>int32: <code>[2, 3, 4, 5]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>43DD91C0AB57…</code> (16 bytes)</li><li>int32: <code>[1257, 1258, 1259, 1260]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-1">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>798EE6A5DD0E…</code> (16 bytes)</li><li>int32: <code>[1264, 1265, 1266, 1267]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-2">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>9F7CC5334F2C…</code> (16 bytes)</li><li>int32: <code>[1271, 1272, 1273, 1274]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-3">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>CC0CBAA68102…</code> (16 bytes)</li><li>int32: <code>[1278, 1279, 1280, 1281]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-4">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>027B023875F4…</code> (12 bytes)</li><li>int32: <code>[1268, 1269, 1270]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-5">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>0EDD65561525…</code> (12 bytes)</li><li>int32: <code>[1492, 1493, 1494]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-6">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>1B023BA0ECEE…</code> (12 bytes)</li><li>int32: <code>[1489, 1490, 1491]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-7">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>206736D9C91F…</code> (12 bytes)</li><li>int32: <code>[1486, 1487, 1488]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-8">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>401E33381E99…</code> (12 bytes)</li><li>int32: <code>[1495, 1496, 1497]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-9">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>A8BCB260E7E1…</code> (12 bytes)</li><li>int32: <code>[1275, 1276, 1277]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-10">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>C86583FA3466…</code> (12 bytes)</li><li>int32: <code>[1261, 1262, 1263]</code></li></ul>
+<h3 id="hiddenpathboardhelper--private-static-void-cctor-11">HiddenPathBoardHelper :: private static void .cctor()</h3>
+<ul><li>blob <code>D7FB7D9E0AE2…</code> (12 bytes)</li><li>int32: <code>[1254, 1255, 1256]</code></li></ul>
+<h3 id="hiddenpathboardsceneprogressbar--private-static-void-cctor">HiddenPathBoardSceneProgressBar :: private static void .cctor()</h3>
+<ul><li>blob <code>DD17BE1C4C27…</code> (40 bytes)</li><li>int32: <code>[1036831949, 1045220557, 1050253722, 1053609165, 1056964608, 1058642330, 1060320051, 1061997773, 1063675494, 1065353216]</code></li><li>float: <code>[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]</code></li></ul>
+<h3 id="hiddenpathdarkwitchanimator--public-void-ctor">HiddenPathDarkWitchAnimator :: public void .ctor()</h3>
+<ul><li>blob <code>AD237E0F45F3…</code> (24 bytes)</li><li>int32: <code>[1, 0, 2, 0, 1, 0]</code></li></ul>
+<h3 id="hiddenpathinfodialog--public-void-ctor">HiddenPathInfoDialog :: public void .ctor()</h3>
+<ul><li>blob <code>BF7436835B90…</code> (12 bytes)</li><li>int32: <code>[12, 14, 11]</code></li></ul>
+<h3 id="hintparticles--private-static-void-cctor">HintParticles :: private static void .cctor()</h3>
+<ul><li>blob <code>168373A1A68F…</code> (16 bytes)</li><li>int32: <code>[1, 16, 256, 4096]</code></li></ul>
+<h3 id="icefanitemassets--public-void-ctor">IceFanItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>3DB204163463…</code> (36 bytes)</li><li>int32: <code>[1681, 1682, 1683, 1684, 1685, 1686, 1687, 1688, 1689]</code></li></ul>
+<h3 id="icefanitemview--private-static-void-cctor">IceFanItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>FDA7563F5A77…</code> (12 bytes)</li><li>int32: <code>[1681, 1682, 1683]</code></li></ul>
+<h3 id="ingameboostercontroller--public-void-ctor">InGameBoosterController :: public void .ctor()</h3>
+<ul><li>blob <code>520F6A6CA9B9…</code> (12 bytes)</li><li>int32: <code>[3, 10, 15]</code></li></ul>
+<h3 id="itemmodelcreator--public-void-prepareforlevel">ItemModelCreator :: public void PrepareForLevel()</h3>
+<ul><li>also used by <code>ItemModelCreator :: private void ArrangeLowMatch()</code></li><li>blob <code>6AD5017CF910…</code> (12 bytes)</li><li>int32: <code>[50, 25, 25]</code></li></ul>
+<h3 id="itemshakeanimation--private-static-void-cctor">ItemShakeAnimation :: private static void .cctor()</h3>
+<ul><li>blob <code>006787648896…</code> (20 bytes)</li><li>int32: <code>[1065353216, 1053609165, 1065353216, 1065353216, 1065353216]</code></li><li>float: <code>[1.0, 0.4, 1.0, 1.0, 1.0]</code></li></ul>
+<h3 id="itemshakeanimation--private-static-void-cctor-1">ItemShakeAnimation :: private static void .cctor()</h3>
+<ul><li>blob <code>9FEFE4954B82…</code> (20 bytes)</li><li>int32: <code>[0, 1032358472, 1042983818, 1049135352, 1052490796]</code></li></ul>
+<h3 id="itemshakeanimation--private-static-void-cctor-2">ItemShakeAnimation :: private static void .cctor()</h3>
+<ul><li>blob <code>CEF2852119E4…</code> (20 bytes)</li><li>int32: <code>[0, 1036831949, 1042983818, 1049135352, 1052490796]</code></li><li>float: <code>[0.0, 0.1, 0.1667, 0.2667, 0.3667]</code></li></ul>
+<h3 id="ivyitemview--private-static-void-cctor">IvyItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>933E86291734…</code> (120 bytes)</li><li>int32: <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 10, 12, 13, 0, 0, 1, 7, 10, 8, 11, 15, 17, 16, 5, 4, 3, 2, 1, -1]</code></li></ul>
+<h3 id="ivyitemview--private-void-playfallunderneathanimation">IvyItemView :: private void PlayFallUnderneathAnimation()</h3>
+<ul><li>blob <code>0B99E19D1C8B…</code> (12 bytes)</li><li>int32: <code>[1248, 1249, 1250]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>4CF69020AB90…</code> (60 bytes)</li><li>int32: <code>[5, 5, 8, 8, 9, 9, 9, 7, 8, 9, 10, 7, 7, 8, 7]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-1">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>3F35E19ED35E…</code> (40 bytes)</li><li>int32: <code>[7, 7, 8, 7, 7, 7, 7, 7, 7, 7]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-2">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>575AC022494F…</code> (40 bytes)</li><li>int32: <code>[8, 7, 8, 8, 8, 8, 8, 7, 7, 9]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-3">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>B4E03D4D0ED0…</code> (40 bytes)</li><li>int32: <code>[8, 8, 8, 8, 7, 8, 8, 8, 7, 8]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-4">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>DB5D87D3DBF6…</code> (40 bytes)</li><li>int32: <code>[6, 8, 7, 7, 8, 8, 8, 8, 8, 7]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-5">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>E08F0D7945E3…</code> (40 bytes)</li><li>int32: <code>[7, 8, 7, 8, 7, 7, 7, 7, 7, 7]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-6">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>F6C125073936…</code> (40 bytes)</li><li>int32: <code>[7, 7, 7, 7, 7, 7, 7, 7, 7, 7]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-7">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>4AA5B705300C…</code> (28 bytes)</li><li>int32: <code>[0, 470, 490, 380, 430, 410, 430]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-8">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>66BB5A6AC347…</code> (28 bytes)</li><li>int32: <code>[15, 10, 10, 10, 10, 10, 10]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-9">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>A931FD17FD15…</code> (28 bytes)</li><li>int32: <code>[15, 10, 10, 10, 10, 10, 7]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-10">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>CCC7BDB4033E…</code> (28 bytes)</li><li>int32: <code>[15, 10, 10, 10, 10, 10, 6]</code></li></ul>
+<h3 id="kingdomconfig--private-static-void-cctor-11">KingdomConfig :: private static void .cctor()</h3>
+<ul><li>blob <code>6F88BBC4F98D…</code> (24 bytes)</li><li>int32: <code>[990, 910, 920, 880, 930, 970]</code></li></ul>
+<h3 id="kingdomduelsmanager--public-void-ctor">KingdomDuelsManager :: public void .ctor()</h3>
+<ul><li>blob <code>C0F9B17C3202…</code> (20 bytes)</li><li>int32: <code>[0, 600, 600, 600, 0]</code></li></ul>
+<h3 id="knightitemview--public-void-ctor">KnightItemView :: public void .ctor()</h3>
+<ul><li>blob <code>E0B9B7EE6252…</code> (20 bytes)</li><li>int32: <code>[214, 213, 212, 211, 210]</code></li></ul>
+<h3 id="labyrinthcrossbowshootroutined__17--private-bool-movenext">LabyrinthCrossbow.&lt;ShootRoutine&gt;d__17 :: private bool MoveNext()</h3>
+<ul><li>blob <code>D84B0DCFCB8B…</code> (12 bytes)</li><li>int32: <code>[1515, 1516, 1517]</code></li></ul>
+<h3 id="labyrinthtrap--private-void-closeb__24_0">LabyrinthTrap :: private void &lt;Close&gt;b__24_0()</h3>
+<ul><li>blob <code>14A8A11A3F16…</code> (12 bytes)</li><li>int32: <code>[1522, 1523, 1524]</code></li></ul>
+<h3 id="labyrinthtrap--private-void-openb__23_0">LabyrinthTrap :: private void &lt;Open&gt;b__23_0()</h3>
+<ul><li>blob <code>7A63DFDFB245…</code> (12 bytes)</li><li>int32: <code>[1519, 1520, 1521]</code></li></ul>
+<h3 id="levelresolver--private-static-void-cctor">LevelResolver :: private static void .cctor()</h3>
+<ul><li>blob <code>B540291439F6…</code> (140 bytes)</li><li>int32: <code>[201, 202, 203, 204, 205, 221, 251, 252, 254, 255, 301, 302, 303, 354, 355, 401, 402, 403, 454, 455, 501, 551, 601, 654, 655, 701, 751, 801, 854, 905, 1001, 1201, 1404, 1605, 1801]</code></li></ul>
+<h3 id="lightbulbitemview--public-void-ctor">LightbulbItemView :: public void .ctor()</h3>
+<ul><li>blob <code>18D26CFE6C51…</code> (20 bytes)</li><li>int32: <code>[1065353216, 1061158912, 1056964608, 1056964608, 1061158912]</code></li><li>float: <code>[1.0, 0.75, 0.5, 0.5, 0.75]</code></li></ul>
+<h3 id="lightbulbitemview--public-void-ctor-1">LightbulbItemView :: public void .ctor()</h3>
+<ul><li>blob <code>FFA9FFF3E9FA…</code> (12 bytes)</li><li>int32: <code>[683, 684, 685]</code></li></ul>
+<h3 id="logitemview--private-static-void-cctor">LogItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>5CFB103F7AEE…</code> (24 bytes)</li><li>int32: <code>[320, 321, 318, 319, 316, 317]</code></li></ul>
+<h3 id="lyreitemhelper--public-void-ctor">LyreItemHelper :: public void .ctor()</h3>
+<ul><li>blob <code>390A2F7B06EB…</code> (24 bytes)</li><li>int32: <code>[632, 633, 634, 635, 636, 637]</code></li></ul>
+<h3 id="maceboxitemview--private-static-void-cctor">MaceBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>5CD0B628B46F…</code> (12 bytes)</li><li>int32: <code>[1619, 1620, 1621]</code></li></ul>
+<h3 id="maceboxitemview--private-static-void-cctor-1">MaceBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>73F0359CEEBA…</code> (12 bytes)</li><li>int32: <code>[1603, 1604, 1605]</code></li></ul>
+<h3 id="maceboxitemview--private-static-void-cctor-2">MaceBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>CA4A0FCC7296…</code> (12 bytes)</li><li>int32: <code>[1625, 1626, 1627]</code></li></ul>
+<h3 id="maceboxitemview--private-static-void-cctor-3">MaceBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>DD6603C021BF…</code> (12 bytes)</li><li>int32: <code>[1628, 1629, 1630]</code></li></ul>
+<h3 id="maceboxitemview--private-static-void-cctor-4">MaceBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>E1026A787C34…</code> (12 bytes)</li><li>int32: <code>[1631, 1632, 1633]</code></li></ul>
+<h3 id="maceboxthrowview--private-static-void-cctor">MaceBoxThrowView :: private static void .cctor()</h3>
+<ul><li>blob <code>6390448E218A…</code> (12 bytes)</li><li>int32: <code>[1609, 1610, 1611]</code></li></ul>
+<h3 id="maceitemassets--public-void-ctor">MaceItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>0068C217918B…</code> (152 bytes)</li><li>int32: <code>[1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610, 1611, 1612, 1613, 1614, 1615, 1616, 1617, 1618, 1619, 1620, 1621, 1622, 1623, 1624, 1625, 1626, 1627, 1628, 1629, 1630, 1631, 1632, 1633, 1634, 1635, 1636, 1637]</code></li></ul>
+<h3 id="macelauncherview--private-static-void-cctor">MaceLauncherView :: private static void .cctor()</h3>
+<ul><li>blob <code>43DA6A41C0F4…</code> (12 bytes)</li><li>int32: <code>[1622, 1623, 1624]</code></li></ul>
+<h3 id="macelauncherview--private-static-void-cctor-1">MaceLauncherView :: private static void .cctor()</h3>
+<ul><li>blob <code>F7DB8D629700…</code> (12 bytes)</li><li>int32: <code>[1600, 1601, 1602]</code></li></ul>
+<h3 id="macesmallboxitemview--private-static-void-cctor">MaceSmallBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>0A5C363AD2C3…</code> (12 bytes)</li><li>int32: <code>[1615, 1616, 1617]</code></li></ul>
+<h3 id="macesmallboxitemview--private-static-void-cctor-1">MaceSmallBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>566B0B63F745…</code> (12 bytes)</li><li>int32: <code>[1606, 1607, 1608]</code></li></ul>
+<h3 id="macesmallboxitemview--private-static-void-cctor-2">MaceSmallBoxItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>B6D0468DD8A0…</code> (12 bytes)</li><li>int32: <code>[1612, 1613, 1614]</code></li></ul>
+<h3 id="magiccarnivallanternsimulationdata--private-static-void-cctor">MagicCarnivalLanternSimulationData :: private static void .cctor()</h3>
+<ul><li>blob <code>2E0EEF093588…</code> (4 bytes)</li><li>int32: <code>[1129139026]</code></li></ul>
+<h3 id="magicglobeitemview--public-void-playhitsfxint-layer">MagicGlobeItemView :: public void PlayHitSfx(int layer)</h3>
+<ul><li>blob <code>1392D2992483…</code> (12 bytes)</li><li>int32: <code>[1169, 1170, 1171]</code></li></ul>
+<h3 id="magicglobeitemview--public-void-playhitsfxint-layer-1">MagicGlobeItemView :: public void PlayHitSfx(int layer)</h3>
+<ul><li>blob <code>A0F0AA6228FD…</code> (12 bytes)</li><li>int32: <code>[1166, 1167, 1168]</code></li></ul>
+<h3 id="magicglobeitemview--public-void-playhitsfxint-layer-2">MagicGlobeItemView :: public void PlayHitSfx(int layer)</h3>
+<ul><li>blob <code>BF8B922A0F04…</code> (12 bytes)</li><li>int32: <code>[1163, 1164, 1165]</code></li></ul>
+<h3 id="magicorbitemmodel--public-void-ctoritemsettings-itemsettings">MagicOrbItemModel :: public void .ctor(ItemSettings itemSettings)</h3>
+<ul><li>blob <code>C6F69B8DFEC9…</code> (16 bytes)</li><li>int32: <code>[3, 2, 4, 1]</code></li></ul>
+<h3 id="magicorbitemview--public-void-ctor">MagicOrbItemView :: public void .ctor()</h3>
+<ul><li>blob <code>BAED64233981…</code> (16 bytes)</li><li>int32: <code>[0, 1, 2, 3]</code></li></ul>
+<h3 id="magicpotprelevelbottompanel--public-void-ctor">MagicPotPrelevelBottomPanel :: public void .ctor()</h3>
+<ul><li>blob <code>C1A79E5A0EF6…</code> (24 bytes)</li><li>int32: <code>[0, 1043073073, 1052468314, 1058457780, 1061964218, 1065353216]</code></li><li>float: <code>[0.0, 0.168, 0.366, 0.589, 0.798, 1.0]</code></li></ul>
+<h3 id="magicpotprelevelbottompanel--public-void-initlockedstate">MagicPotPrelevelBottomPanel :: public void InitLockedState()</h3>
+<ul><li>blob <code>AB71DBFED813…</code> (20 bytes)</li><li>int32: <code>[-1109846393, -1119040307, 0, 1025758986, 1038174126]</code></li><li>float: <code>[-0.106, -0.05, 0.0, 0.04, 0.11]</code></li></ul>
+<h3 id="magicpotprelevelpanel--public-void-ctor">MagicPotPrelevelPanel :: public void .ctor()</h3>
+<ul><li>blob <code>7639134087E9…</code> (24 bytes)</li><li>int32: <code>[0, 1058929218, 1066772459, 1071439889, 1074752010, 1077936128]</code></li><li>float: <code>[0.0, 0.6171, 1.1692, 1.7256, 2.2408, 3.0]</code></li></ul>
+<h3 id="medalmissionsheaderpanel--private-static-void-cctor">MedalMissionsHeaderPanel :: private static void .cctor()</h3>
+<ul><li>blob <code>BCBC01A50366…</code> (12 bytes)</li><li>int32: <code>[7, 8, 9]</code></li></ul>
+<h3 id="medalmissionsmanager--private-static-void-cctor">MedalMissionsManager :: private static void .cctor()</h3>
+<ul><li>blob <code>B97F208FD5F5…</code> (44 bytes)</li><li>int32: <code>[16, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28]</code></li></ul>
+<h3 id="moleitemassets--public-void-ctor">MoleItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>B45804908807…</code> (44 bytes)</li><li>int32: <code>[1796, 1797, 1798, 1799, 1800, 1801, 1802, 1803, 1804, 1805, 1806]</code></li></ul>
+<h3 id="moleitemview--private-static-void-cctor">MoleItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>2B41AB5E86B6…</code> (12 bytes)</li><li>int32: <code>[1802, 1803, 1804]</code></li></ul>
+<h3 id="moleitemview--private-static-void-cctor-1">MoleItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>C925863FB1CB…</code> (12 bytes)</li><li>int32: <code>[1799, 1800, 1801]</code></li></ul>
+<h3 id="moleitemview--private-static-void-cctor-2">MoleItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>D107AAC3700F…</code> (12 bytes)</li><li>int32: <code>[1796, 1797, 1798]</code></li></ul>
+<h3 id="mosaicitemview--private-void-spawnparticle">MosaicItemView :: private void SpawnParticle()</h3>
+<ul><li>blob <code>667D571F8A27…</code> (12 bytes)</li><li>int32: <code>[1241, 1242, 1243]</code></li></ul>
+<h3 id="mushroomsitemassets--public-void-ctor">MushroomsItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>0BCC6EF1C320…</code> (40 bytes)</li><li>int32: <code>[1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463]</code></li></ul>
+<h3 id="mushroomsitemview--private-static-void-cctor">MushroomsItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>08028897BC0B…</code> (12 bytes)</li><li>int32: <code>[1459, 1460, 1461]</code></li></ul>
+<h3 id="mushroomsitemview--private-static-void-cctor-1">MushroomsItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>E1DDF16C1B0E…</code> (12 bytes)</li><li>int32: <code>[1456, 1457, 1458]</code></li></ul>
+<h3 id="mushroomsitemview--public-void-ctor">MushroomsItemView :: public void .ctor()</h3>
+<ul><li>blob <code>867E5F52BA56…</code> (80 bytes)</li><li>int32: <code>[5, 3, 10, 8, 6, 2, 4, 7, 1, 9, 6, 10, 1, 3, 9, 5, 7, 4, 8, 2]</code></li></ul>
+<h3 id="parrotitemassets--public-void-ctor">ParrotItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>6000B78E8466…</code> (76 bytes)</li><li>int32: <code>[1567, 1568, 1569, 1570, 1571, 1572, 1573, 1574, 1575, 1576, 1577, 1578, 1579, 1580, 1581, 1582, 1583, 1584, 1585]</code></li></ul>
+<h3 id="parrotitemview--private-static-void-cctor">ParrotItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>53A10F7BFE18…</code> (12 bytes)</li><li>int32: <code>[1576, 1577, 1578]</code></li></ul>
+<h3 id="parrotitemview--private-static-void-cctor-1">ParrotItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>6F63B8AC4B51…</code> (12 bytes)</li><li>int32: <code>[1579, 1580, 1581]</code></li></ul>
+<h3 id="parrotitemview--private-static-void-cctor-2">ParrotItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>854E9E32B0DA…</code> (12 bytes)</li><li>int32: <code>[1573, 1574, 1575]</code></li></ul>
+<h3 id="parrotitemview--private-static-void-cctor-3">ParrotItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>C3C935DE531C…</code> (12 bytes)</li><li>int32: <code>[1570, 1571, 1572]</code></li></ul>
+<h3 id="parrotitemview--private-static-void-cctor-4">ParrotItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>F01DCCBC008D…</code> (12 bytes)</li><li>int32: <code>[1567, 1568, 1569]</code></li></ul>
+<h3 id="pearlsofatlantisinfodialog--public-void-ctor">PearlsOfAtlantisInfoDialog :: public void .ctor()</h3>
+<ul><li>blob <code>4CA904779876…</code> (12 bytes)</li><li>int32: <code>[14, 11, 12]</code></li></ul>
+<h3 id="pearlsofatlantisoysterrewardpanel--public-void-ctor">PearlsOfAtlantisOysterRewardPanel :: public void .ctor()</h3>
+<ul><li>blob <code>5A769AF07E24…</code> (12 bytes)</li><li>int32: <code>[186, 187, 188]</code></li></ul>
+<h3 id="penguinitemview--private-static-void-cctor">PenguinItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>1B3E0F492521…</code> (12 bytes)</li><li>int32: <code>[1214, 1215, 1216]</code></li></ul>
+<h3 id="penguinitemviewcollectanimationd__33--private-bool-movenext">PenguinItemView.&lt;CollectAnimation&gt;d__33 :: private bool MoveNext()</h3>
+<ul><li>blob <code>449472F090B4…</code> (12 bytes)</li><li>int32: <code>[1211, 1212, 1213]</code></li></ul>
+<h3 id="powercapsulesitemassets--public-void-ctor">PowerCapsulesItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>D1DA1CD652E6…</code> (28 bytes)</li><li>int32: <code>[1507, 1508, 1509, 1510, 1511, 1512, 1513]</code></li></ul>
+<h3 id="powercapsulesitemview--private-static-void-cctor">PowerCapsulesItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>6C39A86D9478…</code> (12 bytes)</li><li>int32: <code>[1509, 1510, 1511]</code></li></ul>
+<h3 id="rtlfixertool--internal-static-string-removetashkeelstring-str-out-listtashkeellocation-tashkeellocation">RTLFixerTool :: internal static string RemoveTashkeel(string str, out List&lt;TashkeelLocation&gt; tashkeelLocation)</h3>
+<ul><li>blob <code>6B37F2DC3CBC…</code> (24 bytes)</li><li>int32: <code>[105645643, 105776717, 105907791, 106038865, -60815789, -60621727]</code></li></ul>
+<h3 id="richardsjourneycannon--private-void-shootb__7_0">RichardsJourneyCannon :: private void &lt;Shoot&gt;b__7_0()</h3>
+<ul><li>blob <code>E07FC125B346…</code> (12 bytes)</li><li>int32: <code>[1538, 1539, 1540]</code></li></ul>
+<h3 id="richardsjourneykingfootstepsfxplayer--public-void-playrandomfootstepsfx">RichardsJourneyKingFootstepSfxPlayer :: public void PlayRandomFootstepSfx()</h3>
+<ul><li>blob <code>0CF4D0F847B7…</code> (12 bytes)</li><li>int32: <code>[1532, 1533, 1534]</code></li></ul>
+<h3 id="rubberduckfoamitemassets--public-void-ctor">RubberDuckFoamItemAssets :: public void .ctor()</h3>
+<ul><li>blob <code>030984E1803B…</code> (44 bytes)</li><li>int32: <code>[1863, 1864, 1865, 1866, 1867, 1868, 1869, 1870, 1871, 1872, 1873]</code></li></ul>
+<h3 id="rubberduckfoamitemview--private-static-void-cctor">RubberDuckFoamItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>6D28B9E4B45E…</code> (12 bytes)</li><li>int32: <code>[1871, 1872, 1873]</code></li></ul>
+<h3 id="rubberduckitemview--private-static-void-cctor">RubberDuckItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>37317DE53F9D…</code> (12 bytes)</li><li>int32: <code>[1868, 1869, 1870]</code></li></ul>
+<h3 id="rubberduckitemview--private-static-void-cctor-1">RubberDuckItemView :: private static void .cctor()</h3>
+<ul><li>blob <code>52740C60DF95…</code> (12 bytes)</li><li>int32: <code>[1863, 1864, 1865]</code></li></ul>
+<h3 id="scrolltubehelperc__displayclass42_0--internal-void-animatetocurrentboardb__0">ScrollTubeHelper.&lt;&gt;c__DisplayClass42_0 :: internal void &lt;AnimateToCurrentBoard&gt;b__0()</h3>
+<ul><li>also used by <code>GameStateManager :: public void OperationFinish(int animationId)</code></li><li>also used by <code>WinFailManager :: private void OnGoalUpdated(GoalType goalType, int amountLeft, GoalManager.GoalUpdateType goalUpdateType)</code></li><li>also used by <code>WinFailManager :: public void TryWinByGoal()</code></li><li>blob <code>ADCC4DFD6812…</code> (12 bytes)</li><li>int32: <code>[10, 45, 45]</code></li></ul>
+<h3 id="spaceshipitemview--private-void-playdamagesfxint-damagedlayer">SpaceshipItemView :: private void PlayDamageSfx(int damagedLayer)</h3>
+<ul><li>blob <code>8D78075D075E…</code> (12 bytes)</li><li>int32: <code>[1374, 1375, 1376]</code></li></ul>
+<h3 id="spaceshipitemview--private-void-playdamagesfxint-damagedlayer-1">SpaceshipItemView :: private void PlayDamageSfx(int damagedLayer)</h3>
+<ul><li>blob <code>C49869147C71…</code> (12 bytes)</li><li>int32: <code>[1380, 1381, 1382]</code></li></ul>
+<h3 id="spaceshipitemview--public-void-explode">SpaceshipItemView :: public void Explode()</h3>
+<ul><li>blob <code>F72CB87D4629…</code> (12 bytes)</li><li>int32: <code>[1371, 1372, 1373]</code></li></ul>
+<h3 id="spaceshiprocketviewexplodecellsd__44--private-bool-movenext">SpaceshipRocketView.&lt;ExplodeCells&gt;d__44 :: private bool MoveNext()</h3>
+<ul><li>blob <code>FCE4974EEA3D…</code> (12 bytes)</li><li>int32: <code>[1383, 1384, 1385]</code></li></ul>
+<h3 id="steambombitemmodel--public-void-ctoritemsettings-itemsettings">SteamBombItemModel :: public void .ctor(ItemSettings itemSettings)</h3>
+<ul><li>blob <code>DC47C8BD2F88…</code> (32 bytes)</li><li>int32: <code>[1, 1, 2, 2, 3, 3, 4, 4]</code></li></ul>
+<h3 id="teamadventureteamprogressbar--private-static-void-cctor">TeamAdventureTeamProgressBar :: private static void .cctor()</h3>
+<ul><li>blob <code>50AC4F9DD4A4…</code> (16 bytes)</li><li>int32: <code>[1044213924, 1052434760, 1055790203, 0]</code></li><li>float: <code>[0.185, 0.365, 0.465, 0.0]</code></li></ul>
+<h3 id="teamadventureteamprogressbar--private-static-void-cctor-1">TeamAdventureTeamProgressBar :: private static void .cctor()</h3>
+<ul><li>blob <code>9EC910E411CC…</code> (16 bytes)</li><li>int32: <code>[1032805417, 1041194025, 1040187392, 0]</code></li><li>float: <code>[0.07, 0.14, 0.125, 0.0]</code></li></ul>
+<h3 id="teamadventureteamprogressbar--public-void-ctor">TeamAdventureTeamProgressBar :: public void .ctor()</h3>
+<ul><li>blob <code>8E4C501DA928…</code> (16 bytes)</li><li>int32: <code>[1027101164, 1043878380, 1046562734, 0]</code></li><li>float: <code>[0.045, 0.18, 0.22, 0.0]</code></li></ul>
+<h3 id="timberitemthrowviewthrowd__8--private-bool-movenext">TimberItemThrowView.&lt;Throw&gt;d__8 :: private bool MoveNext()</h3>
+<ul><li>blob <code>0128A69BE53B…</code> (12 bytes)</li><li>int32: <code>[1414, 1415, 1416]</code></li></ul>
+<h3 id="unitysourcegeneratedassemblymonoscripttypes_v1--private-static-unitysourcegeneratedassemblymonoscripttypes_v1monoscriptdata-get">UnitySourceGeneratedAssemblyMonoScriptTypes_v1 :: private static UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData Get()</h3>
+<ul><li>blob <code>14DB5A7A5894…</code> (602537 bytes)</li><li>int32: <code>[0, 0, 0, 0, 8, 84, 111, 74, 124, 77, 97, 115, 107, 0, 0, 0, 0, 22, 84, 111, 74, 124, 83, 112, 114, 105, 116, 101, 82, 101, 110, 100, 101, 114, 101, 114, 77, 97, 115, 107, 0, 0, 0, 0, 19, 124, 85, 73, 77, 97, 116, 101, 114, 105, 97, 108, 77, 111, 100, 105, 102, 105, 101, 114]</code></li></ul>
+<h3 id="unitysourcegeneratedassemblymonoscripttypes_v1--private-static-unitysourcegeneratedassemblymonoscripttypes_v1monoscriptdata-get-1">UnitySourceGeneratedAssemblyMonoScriptTypes_v1 :: private static UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData Get()</h3>
+<ul><li>blob <code>EC682BAE5D19…</code> (588386 bytes)</li><li>int32: <code>[0, 0, 0, 1, 0, 0, 0, 29, 92, 65, 115, 115, 101, 116, 115, 92, 65, 108, 112, 104, 97, 32, 77, 97, 115, 107, 105, 110, 103, 92, 77, 97, 115, 107, 46, 99, 115, 0, 0, 0, 1, 0, 0, 0, 53, 92, 65, 115, 115, 101, 116, 115, 92, 65, 108, 112, 104, 97, 32, 77, 97, 115, 107, 105]</code></li></ul>
+<h3 id="wallitemassets--private-static-void-cctor">WallItemAssets :: private static void .cctor()</h3>
+<ul><li>blob <code>8E5A6C255711…</code> (16 bytes)</li><li>int32: <code>[3, 6, 12, 9]</code></li></ul>
+<p>240 blobs are used only by other assemblies or via generic sharing.</p></div>
+<footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
+</div></main>
+</div>
+<script>window.SITE_ROOT="../";</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
