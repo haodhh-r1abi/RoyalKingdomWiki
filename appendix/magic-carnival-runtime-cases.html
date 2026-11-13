@@ -39,7 +39,10 @@
 <p>Snapshot ledger: facts/runtime/review_20261112/mc_restore_ledger.json. Native get_RevealedSingleCard đọc bit74–80; không nhầm với trường66–73. Sau thử nghiệm restore mc_restore_before, App/User SQL dump khớp, gỡ hai rule mạng.</p>
 <h2 id="hết-hạn-và-không-còn-orb--1311">Hết hạn và không còn orb — 13/11</h2>
 <p>13/11 offline, stage2/orb0 và hạn cache đã qua: collected0 làm icon mất; collected1 giữ icon Hoàn thành, mở được bảng0orb. Chạm ô báo Không còn quả cầu nào nữa, không lật; đóng X về Home mất icon. Snapshot cả hai nhánh IsEventValid=0,EventId118,step2,orb0: không dùng riêng bit valid để suy ra icon đã biến mất. Fixture cờ/giờ, chưa kiểm chứng server hoặc chuyển hạn tự nhiên.</p>
-<p>Đối chứng: mc_expiry_zero_ledger.json; thay cờ collected bit84 giữa0/1, giữ stage2 và orb0. Cả hai nhánh dùng expiry fixture24giờ trước. Không khẳng định snapshot bitvalid phản ánh tức thì toàn bộ trạng thái UI trong RAM.</p></div>
+<p>Đối chứng: mc_expiry_zero_ledger.json; thay cờ collected bit84 giữa0/1, giữ stage2 và orb0. Cả hai nhánh dùng expiry fixture24giờ trước. Không khẳng định snapshot bitvalid phản ánh tức thì toàn bộ trạng thái UI trong RAM.</p>
+<h2 id="ngưỡng-notification-chặng2--1311">Ngưỡng notification chặng2 — 13/11</h2>
+<p>13/11 offline, chặng2:14orb không có badge;15orb có dấu chấm than trên icon. Mở event giữ15orb và ghi LastNotificationShownLevelForEnoughCollectable0→2. Đóng rồi restart: badge không trở lại, marker2 và15orb giữ nguyên. Không gọi helper notification. Chưa kiểm chứng các ngưỡng khác hoặc tăngorb tự nhiên sau thắng level.</p>
+<p>Bằng chứng: mc_notification_ledger.json; ảnh MCN14/15. Native HasEnoughCollectableToShowNotification dùng so sánh &gt;=; OnScreenActionExecuted gọi TryUpdateLastNotificationShownLevel. Chỉ runtime ngưỡng15; bảng10/15/15/20/20/20/30 còn dựa vào code ở các chặng khác.</p></div>
 <footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
 </div></main>
 </div>
