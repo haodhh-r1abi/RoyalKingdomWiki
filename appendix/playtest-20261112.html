@@ -4545,7 +4545,28 @@
 <div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_leave_intro_clean</figcaption></figure></div>
 <h2 id="ta3_kick_intro">TA3_kick_intro</h2>
 <p>Mode: <code>offline team/score/deadline/final-list fixture; actual enter/quit/claim UI; leave/kick callbacks explicitly invoked locally</code>. Từ cùng checkpoint, gọi OnMyUserKicked cho kết quả event/inventory giống nhánhleave, intro xuất hiện lại. Không có tài khoản thứ hai hoặc thông báo kick từ server.</p>
-<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_kick_intro</figcaption></figure></div></div>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_kick_intro</figcaption></figure></div>
+<h2 id="tc3_secondary_rank2_ready">TC3_secondary_rank2_ready</h2>
+<p>Mode: <code>offline secondary/rank/deadline/team fixtures; real claim and enter/quit UI; getter member cases explicitly synthetic</code>. Secondary bit53=0, đủ5mốc, rank2/final-list fixture: panel thưởng2000coin. BấmNhận được ledger xác nhận8684→10684,claimed1.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TC3_secondary_rank2_ready</figcaption></figure></div>
+<h2 id="tc3_secondary_rank3_ready">TC3_secondary_rank3_ready</h2>
+<p>Mode: <code>offline secondary/rank/deadline/team fixtures; real claim and enter/quit UI; getter member cases explicitly synthetic</code>. Từ cùng checkpoint secondary, rank3/final-list fixture: panel thưởng1000coin; không phải đội cạnh tranh thật.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TC3_secondary_rank3_ready</figcaption></figure></div>
+<h2 id="tc3_secondary_rank3_claim">TC3_secondary_rank3_claim</h2>
+<p>Mode: <code>offline secondary/rank/deadline/team fixtures; real claim and enter/quit UI; getter member cases explicitly synthetic</code>. Nhận secondary rank3 vềHome9684coin; ledger8684→9684,claimed1,primary0.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TC3_secondary_rank3_claim</figcaption></figure></div>
+<h2 id="tc3_above_dialog">TC3_above_dialog</h2>
+<p>Mode: <code>offline secondary/rank/deadline/team fixtures; real claim and enter/quit UI; getter member cases explicitly synthetic</code>. Deadline cache hơn3h, UI03:00:45; getter đọc10847147ms vàHasEnoughTimeToEnter=true. Đã cógroup nên ảnh leaderboard không chứng minh giao dịch join.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TC3_above_dialog</figcaption></figure></div>
+<h2 id="tc3_below_clean">TC3_below_clean</h2>
+<p>Mode: <code>offline secondary/rank/deadline/team fixtures; real claim and enter/quit UI; getter member cases explicitly synthetic</code>. Deadline cache dưới3h, UI02:58:26; getter trước ảnh10727124ms vàHasEnoughTimeToEnter=false. Đúng3h chỉ xác nhận bằng code, chưa playtest chính xác1ms.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TC3_below_clean</figcaption></figure></div>
+<h2 id="tc3_auto_popup">TC3_auto_popup</h2>
+<p>Mode: <code>offline secondary/rank/deadline/team fixtures; real claim and enter/quit UI; getter member cases explicitly synthetic</code>. Fixture secondary rank3 hết hạn/final-list, vào rồi thoát162 bằngUI: tự hiện popup thưởng1000coin khi trở vềHome, không bấmicon và không gọihelperclaimflow.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TC3_auto_popup</figcaption></figure></div>
+<h2 id="tc3_auto_claim">TC3_auto_claim</h2>
+<p>Mode: <code>offline secondary/rank/deadline/team fixtures; real claim and enter/quit UI; getter member cases explicitly synthetic</code>. Nhận trên popup tự động: Home9684coin và4mạng do đã bỏlevel. Snapshotclaim/restart xác nhận không cộng lặp.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TC3_auto_claim</figcaption></figure></div></div>
 <footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
 </div></main>
 </div>
