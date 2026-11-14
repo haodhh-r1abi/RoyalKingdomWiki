@@ -53,13 +53,13 @@
 <p>Giới hạn hiện hành:</p>
 <ul><li>Ý nghĩa transitionTaskId / lastTaskId trong KingdomTransitionConfig chưa đối chiếu với task trong district cuối (K7 có oldKingdomId = 5, có thể là lỗi copy asset).</li><li>Điều kiện chính xác kích hoạt bypass user (TryStartBypassUserRoutine / StartBypassUserCounter) và tự hoàn thành vương quốc chưa đọc hết.</li><li>Nguồn potion ngoài level (Kingdom Pass, Arena…) không kiểm trong tính năng này.</li><li>Deep page ghi level Richard&#x27;s Journey cho ×2 potion từ level 25; pseudo-C cho thấy WinLevel không gọi AddRewardDatas (nơi cộng potion) với level RJ — cần xác nhận trên máy xem màn thắng RJ có potion không.</li></ul>
 <h2 id="dailylogin--điểm-danh-hằng-ngày">DailyLogin — Điểm danh hằng ngày</h2>
-<p>Ảnh trong sổ quan sát: 0.</p>
+<p>Ảnh trong sổ quan sát: 5.</p>
 <p>Danh mục UC bên dưới chưa được đánh dấu pass toàn phần; ảnh quan sát chỉ xác nhận nhánh được mô tả trong caption.</p>
 <ul><li>UC-01 — Ghi nhận ngày đăng nhập</li><li>UC-02 — Không ghi khi giờ không tin cậy</li><li>UC-03 — Cửa sổ trượt 180 ngày</li><li>UC-04 — Nhiệm vụ đăng nhập N ngày</li><li>UC-05 — Phát hiện chỉnh giờ</li><li>UC-06 — Sửa tiến trình đã bị chỉnh giờ</li><li>UC-07 — Hiện TimeHackDialog</li><li>UC-08 — Backend tắt kiểm tra chỉnh giờ</li><li>UC-09 — Đổi tài khoản / refresh từ server</li></ul>
 <p>Giới hạn hiện hành:</p>
 <ul><li>Không tìm thấy nơi gọi TryFixTimeManipulatedProgress trong pseudo-C (có thể gọi qua interface sau RefreshProgress) — luồng sửa chỉ suy ra từ thân hàm.</li><li>Phần thưởng của nhiệm vụ đăng nhập do config mission event (server) quyết định, không có trong client.</li></ul>
 <h2 id="welcomeback--welcome-back-quà-quay-lại">WelcomeBack — Welcome Back (quà quay lại)</h2>
-<p>Ảnh trong sổ quan sát: 5.</p>
+<p>Ảnh trong sổ quan sát: 11.</p>
 <p>Danh mục UC bên dưới chưa được đánh dấu pass toàn phần; ảnh quan sát chỉ xác nhận nhánh được mô tả trong caption.</p>
 <ul><li>UC-01 — Quay lại sau ≥ 4 ngày (giờ đã xác thực)</li><li>UC-02 — Quay lại khi offline (quà chưa xác thực)</li><li>UC-03 — Đang nợ quà chưa nhận</li><li>UC-04 — Chỉ hiện ở tab Home</li><li>UC-05 — Chọn bậc quà (tier) theo ngày vắng</li><li>UC-06 — Nhận gói quà</li><li>UC-07 — Thêm nước đi giảm dần ở các level sau</li><li>UC-08 — Thắng level giảm bộ đếm</li><li>UC-09 — Chèn 3 level reactivation</li><li>UC-10 — Backend tắt tính năng</li><li>UC-11 — Migration dữ liệu cũ</li><li>UC-12 — Phạm vi áp dụng extra moves</li></ul>
 <p>Giới hạn hiện hành:</p>

@@ -2898,7 +2898,40 @@
 <div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_endlevel_prelevel</figcaption></figure></div>
 <h2 id="ps_endlevel_tasks">PS_endlevel_tasks</h2>
 <p>Mode: <code>offline-local-fixture; UI actions; CDN assets only where needed</code>. CTA chuyển tới task Xóa50 của Quốc Hội0/5. Chưa kiểm chứng entryArena khi toàn bộ kingdom hoàn tất.</p>
-<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_endlevel_tasks</figcaption></figure></div></div>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_endlevel_tasks</figcaption></figure></div>
+<h2 id="ps_boundary_before_loaded">PS_boundary_before_loaded</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Giờ app mô phỏng15/11 07:58UTC, backend cô lập: Home không có popup điểm danh. DB start20771,bitset0x1 giữ nguyên.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_before_loaded</figcaption></figure></div>
+<h2 id="ps_boundary_after_home">PS_boundary_after_home</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Cùng bitset đầu vào, giờ app08:02UTC: client tự ghi bitset0x3 (2ngày). Mốc08:00UTC =15:00 Việt Nam; chưa kiểm tra chính xác buffer100ms.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_after_home</figcaption></figure></div>
+<h2 id="ps_boundary_gap">PS_boundary_gap</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Fixture bỏ2ngày giữa hai lần đăng nhập: start20769,bitset0x1→0x9, tổng2ngày; không lấp các ngày vắng và không reset toàn bộ lịch sử.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_gap</figcaption></figure></div>
+<h2 id="ps_boundary_window">PS_boundary_window</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Fixture vượt cửa sổ180ngày: start20592→20593; bit cũ đầu cửa sổ bị bỏ, bit179 cũ dịch sang178 và ngày mới ở179, còn2ngày.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_window</figcaption></figure></div>
+<h2 id="ps_boundary_untrusted">PS_boundary_untrusted</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Fixture ST=0 với giờ sau biên: bitset vẫn0x1, không ghi ngày mới. Ảnh chỉ cho thấy Home; kết luận dựa snapshot DB.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_untrusted</figcaption></figure></div>
+<h2 id="ps_boundary_welcome3">PS_boundary_welcome3</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Fixture level162, LastActiveDate cách3ngày, không pending: vào Home không quà, churn0/deserved0; last cập nhật20772.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_welcome3</figcaption></figure></div>
+<h2 id="ps_boundary_welcome4">PS_boundary_welcome4</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Fixture level162, cách4ngày, không pending: Home chưa phát quà; client tự ghi churn4,OfflineGiftDeservedDate20772,pending0. Chưa có xác thực backend.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_welcome4</figcaption></figure></div>
+<h2 id="ps_extra_zero_board">PS_extra_zero_board</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Cùng snapshot reactivation level162, đặt RemainingExtraMoveLevel=0: màn mới12rồng/3cột có18lượt.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_extra_zero_board</figcaption></figure></div>
+<h2 id="ps_extra_ten_fresh_board">PS_extra_ten_fresh_board</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Giữ RemainingExtraMoveLevel25,type2,reactivation3: màn mới cùng mục tiêu có28lượt, xác nhận+10. Bố trí màu/booster có thể đổi; đây là fixture client.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_extra_ten_fresh_board</figcaption></figure></div>
+<h2 id="ps_extra_ten_fail_final">PS_extra_ten_fail_final</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Thoát qua xác nhận dẫn tới Không vượt được cấp và Thử lại. DB remainingExtra25/reactivation3 không giảm sau fail.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_extra_ten_fail_final</figcaption></figure></div>
+<h2 id="ps_extra_ten_back_home">PS_extra_ten_back_home</h2>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Đóng Thử lại trở về Home162; không thắng/không cộng level. Đối chiếu snapshot thắng từ phiên trước: remainingExtra25→24,reactivation3→2.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_extra_ten_back_home</figcaption></figure></div></div>
 <footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
 </div></main>
 </div>
