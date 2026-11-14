@@ -2921,7 +2921,7 @@
 <p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Fixture level162, cách4ngày, không pending: Home chưa phát quà; client tự ghi churn4,OfflineGiftDeservedDate20772,pending0. Chưa có xác thực backend.</p>
 <div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_boundary_welcome4</figcaption></figure></div>
 <h2 id="ps_extra_zero_board">PS_extra_zero_board</h2>
-<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Cùng snapshot reactivation level162, đặt RemainingExtraMoveLevel=0: màn mới12rồng/3cột có18lượt.</p>
+<p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Cùng snapshot level162; không xác nhận nguồn file reactivation, đặt RemainingExtraMoveLevel=0: màn mới12rồng/3cột có18lượt.</p>
 <div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_extra_zero_board</figcaption></figure></div>
 <h2 id="ps_extra_ten_fresh_board">PS_extra_ten_fresh_board</h2>
 <p>Mode: <code>offline-local-fixture; app STD only; UI playtest and DB comparison</code>. Giữ RemainingExtraMoveLevel25,type2,reactivation3: màn mới cùng mục tiêu có28lượt, xác nhận+10. Bố trí màu/booster có thể đổi; đây là fixture client.</p>
@@ -2943,7 +2943,76 @@
 <div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_validated_welcome_accept_panel</figcaption></figure></div>
 <h2 id="ps_validated_welcome_reject">PS_validated_welcome_reject</h2>
 <p>Mode: <code>offline synthetic validated flag; native helper on main thread; not actual backend response</code>. Mô phỏng validated, deserved ở tương lai1ngày: helper trảfalse, xóa deserved và không hiện quà. Ảnh Home kèm DB ledger; chưa kiểm chứng end-to-end backend.</p>
-<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_validated_welcome_reject</figcaption></figure></div></div>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>PS_validated_welcome_reject</figcaption></figure></div>
+<h2 id="core_201_default_ready">CORE_201_default_ready</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. AB100/101=1, reactivation=0, level201: 33 lượt, 4 màu, mục tiêu30 hoa. Booster/pot có sẵn từ fixture.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_201_default_ready</figcaption></figure></div>
+<h2 id="core_201_threecolor_ready">CORE_201_threecolor_ready</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. AB100/101=2, level201 vẫn33 lượt/4 màu/30 hoa: mẫu đối chứng giống Default; ảnh đang kết thúc animation booster đầu trận.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_201_threecolor_ready</figcaption></figure></div>
+<h2 id="core_202_default_board">CORE_202_default_board</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. AB100/101=1, level202: 28 lượt,4 màu,25 thùng+30 hoa; khớp thông số main0202v01_E trong levels.tsv.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_202_default_board</figcaption></figure></div>
+<h2 id="core_202_threecolor_board">CORE_202_threecolor_board</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. AB100/101=2, level202:20 lượt,3 màu,25 thùng+30 hoa; khớp alt0202v01_F. Không trace tên file đang load; không chứng minh remote selection.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_202_threecolor_board</figcaption></figure></div>
+<h2 id="core_match_invalid">CORE_match_invalid</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Level202 ThreeColor: swap(540,870)→(660,870) không tạo match, bàn trả về và còn20 lượt.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_invalid</figcaption></figure></div>
+<h2 id="core_match_three">CORE_match_three</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Swap(540,510)→(540,630) tạo hàng3 vàng;20→19 lượt, viên rơi/lấp lại.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_three</figcaption></figure></div>
+<h2 id="core_match_ball_result">CORE_match_ball_result</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Tap ElectroBall(660,750):19→18 lượt; ảnh bắt được tia sét tới các viên vàng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_ball_result</figcaption></figure></div>
+<h2 id="core_match_ball_settled">CORE_match_ball_settled</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Sau ElectroBall/cascade vẫn18 lượt, thùng25→24. Viền hint quanh Rocket/Spinner.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_ball_settled</figcaption></figure></div>
+<h2 id="core_match_combo_settled">CORE_match_combo_settled</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Rocket+Spinner qua swipe(780,870)→(780,990),18→17 lượt; thùng24→15 sau chuỗi nổ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_combo_settled</figcaption></figure></div>
+<h2 id="core_match_five">CORE_match_five</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Swap(660,1110)→(660,990) ghép hàng5 xanh:17→16 lượt, ElectroBall xuất hiện tại(660,1110); cascade còn sinh Spinner.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_five</figcaption></figure></div>
+<h2 id="core_match_four">CORE_match_four</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Thử swap(660,870)→(660,990):14→13 lượt nhưng ảnh KHÔNG có Rocket mới; không tính đã kiểm chứng mẫu4. Ảnh có hint hàng vàng, dùng cho UC08.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_four</figcaption></figure></div>
+<h2 id="core_match_five_repeat">CORE_match_five_repeat</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Theo hint, swap(660,990)→(660,1110):13→12 lượt. ElectroBall ở(660,1110), thêm ElectroBall tại(540,990) sau cascade; không tốn lượt thứ hai.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_match_five_repeat</figcaption></figure></div>
+<h2 id="core_202_default_pause">CORE_202_default_pause</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Bấm bánh răng trong bàn mở các nút thoát/âm thanh/nhạc/rung; chưa thoát level.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_202_default_pause</figcaption></figure></div>
+<h2 id="core_202_default_quit">CORE_202_default_quit</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Thoát mở xác nhận, biểu tượng mạng vô hạn; không suy ra mất mạng hữu hạn từ fixture này.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_202_default_quit</figcaption></figure></div>
+<h2 id="core_202_default_warning">CORE_202_default_warning</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Bấm Thoát lần đầu mở cảnh báo mất Hũ Phép và thưởngx2.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_202_default_warning</figcaption></figure></div>
+<h2 id="core_202_default_fail">CORE_202_default_fail</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Bấm Thoát tiếp: popup Cấp202 không vượt được, Hũ Phép rỗng, nút Thử lại và X về Home.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_202_default_fail</figcaption></figure></div>
+<h2 id="core_planes_b_02_before">CORE_planes_b_02_before</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Trước Plane cuối:12 lượt còn lại,2 hoa, kho Plane38. Hai mục tiêu hoàn tất sau thao tác này.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_planes_b_02_before</figcaption></figure></div>
+<h2 id="core_planes_b_02_after">CORE_planes_b_02_after</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Sau Plane cuối, chuyển từ mục tiêu sang Thưởng, lượt0 và coin30 trong pha kết thúc. Chưa quay đủ frame để đếm từng chuyển đổi lượt→special.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_planes_b_02_after</figcaption></figure></div>
+<h2 id="core_level202_win">CORE_level202_win</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Sau pha lượt dư, màn Tuyệt vời hiện100 Potion và Hũ Phép5/5 x2. Không suy giá trị coin cuối từ frame coin30 trước đó.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_level202_win</figcaption></figure></div>
+<h2 id="core_special_ball_rocket">CORE_special_ball_rocket</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Combo ElectroBall+Rocket tại cột trái:16→15 lượt, mục tiêu thùng hoàn tất, hoa30→27; ảnh sau chuỗi nổ.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_special_ball_rocket</figcaption></figure></div>
+<h2 id="core_special_rocket_tap">CORE_special_rocket_tap</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Tap Rocket(540,1470):15→14 lượt, hoa27→26; ảnh sau nổ/cascade, không dùng để khẳng định chỉ một hàng bị ảnh hưởng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_special_rocket_tap</figcaption></figure></div>
+<h2 id="core_booster_plane_dialog">CORE_booster_plane_dialog</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Máy Bay Bom: overlay giải thích dùng ba bom tấn công bàn cờ, nút Tấn công; số lượng42 trước dùng.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_booster_plane_dialog</figcaption></figure></div>
+<h2 id="core_planes_a_01_after">CORE_planes_a_01_after</h2>
+<p>Mode: <code>offline local level/AB fixture; gameplay through ADB; no backend validation</code>. Sau hai lượt kích hoạt Plane: kho42→40, lượt bàn vẫn12, hoa26→21. Đây là vật phẩm từ fixture offline, không giao dịch thật.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>CORE_planes_a_01_after</figcaption></figure></div></div>
 <footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
 </div></main>
 </div>
