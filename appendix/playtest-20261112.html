@@ -4530,7 +4530,22 @@
 <div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>EVT043_rj_supported_play</figcaption></figure></div>
 <h2 id="evt046_rj_unsupported_play">EVT046_rj_unsupported_play</h2>
 <p>Mode: <code>isolated offline App disabled-bit and event-config fixtures; actual UI launch; not server response</code>. Chỉ cóv1/ids999 (không được hỗ trợ): Play nạp RockFall dự phòng, timer03:00. Không có crash ở case này; không suy sang v2 chứaid lỗi.</p>
-<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>EVT046_rj_unsupported_play</figcaption></figure></div></div>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>EVT046_rj_unsupported_play</figcaption></figure></div>
+<h2 id="ta3_home_after_game">TA3_home_after_game</h2>
+<p>Mode: <code>offline team/score/deadline/final-list fixture; actual enter/quit/claim UI; leave/kick callbacks explicitly invoked locally</code>. Không bấm icon: sau vào rồi thoát level162, Home flow tự mở màn hết hạn với ba rương và nútNhận. Fixture segment2/tổngđội2000/cá nhân1/HasFinalList=true. Các lần gọi TryAddClaimDialog trước khi vào game scene trảfalse.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_home_after_game</figcaption></figure></div>
+<h2 id="ta3_autoclaim_rewards">TA3_autoclaim_rewards</h2>
+<p>Mode: <code>offline team/score/deadline/final-list fixture; actual enter/quit/claim UI; leave/kick callbacks explicitly invoked locally</code>. BấmNhận trên popup tự động: cả ba rương mở, mask7,coin8684→9284, UL và ba pre-timer45phút; in-game reward/Plane được đối chiếu ledger. Shell/Gem hiện thêm do event đồng thời, không gán vào reward mặc định TeamAdventure.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_autoclaim_rewards</figcaption></figure></div>
+<h2 id="ta3_autoclaim_restart_clean">TA3_autoclaim_restart_clean</h2>
+<p>Mode: <code>offline team/score/deadline/final-list fixture; actual enter/quit/claim UI; leave/kick callbacks explicitly invoked locally</code>. Restart sau claim:<img class="rwi" src="../assets/img/rw/coin.png" alt="">9284coin, icon TeamAdventure biến mất; inventory và deadline timers bằng snapshot ngay sau claim, không cộng lặp.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_autoclaim_restart_clean</figcaption></figure></div>
+<h2 id="ta3_leave_intro_clean">TA3_leave_intro_clean</h2>
+<p>Mode: <code>offline team/score/deadline/final-list fixture; actual enter/quit/claim UI; leave/kick callbacks explicitly invoked locally</code>. Gọi callback client OnTeamLeave trên fixture còn3rương chưa nhận: IsInAGroup true→false, điểmđội2000→0/cánhân1→0/LastSeen2000→0; coin/kho giữ nguyên. Mở icon quay về intro, không tự nhận rương. Không phải giao dịch rời đội với server.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_leave_intro_clean</figcaption></figure></div>
+<h2 id="ta3_kick_intro">TA3_kick_intro</h2>
+<p>Mode: <code>offline team/score/deadline/final-list fixture; actual enter/quit/claim UI; leave/kick callbacks explicitly invoked locally</code>. Từ cùng checkpoint, gọi OnMyUserKicked cho kết quả event/inventory giống nhánhleave, intro xuất hiện lại. Không có tài khoản thứ hai hoặc thông báo kick từ server.</p>
+<div class="gallery"><figure class="missing"><div class="noimg">ảnh chưa có</div><figcaption>TA3_kick_intro</figcaption></figure></div></div>
 <footer class="foot">Tài liệu thiết kế đọc ngược từ client Royal Kingdom v34771 (Android, 11/2026) · sinh tự động từ <code>GameDesign/gdd/*.json</code>, <code>deep/*.json</code>, <code>appendix/</code> bằng <code>tools/rk_build_site.py</code> · chỉ dùng nội bộ.</footer>
 </div></main>
 </div>
