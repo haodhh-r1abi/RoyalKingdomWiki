@@ -1018,7 +1018,7 @@
 <p>CoinCrazeTableItem (LastSeenScore, RevenueSegment, RevenueSegmentVersion, ServerEvent*/UserEvent* qua AOfferEventManager)</p>
 <h2 id="review-88532bf9fb58--coincraze">REVIEW-88532bf9fb58 — CoinCraze</h2>
 <p>Nguồn: <code>gdd/CoinCraze.json#/gaps/0</code>; trạng thái: needs-review.</p>
-<p>Không có config CoinCraze trong client/snapshot: số mốc, target, coin, gói giá theo segment chưa biết.</p>
+<p>Đã nhận config event46/version49 sau backend thật ngày15/11: primary6 cấu hình, có target/coin/p/d. Còn thiếu xác nhận cấu hình thực chọn trên UI, gameplay nhận mốc và mua/receipt; không còn thiếu payload mẫu.</p>
 <h2 id="review-bbf4fbf4271d--coincraze">REVIEW-bbf4fbf4271d — CoinCraze</h2>
 <p>Nguồn: <code>gdd/CoinCraze.json#/gaps/1</code>; trạng thái: server-segment-reference.</p>
 <p>Logic khung AOfferEventManager (chọn gói theo p, segment, theme) chỉ đọc qua tên; cần đọc riêng ở feature Offers.</p>
@@ -4039,7 +4039,7 @@
 <p>MythicDealTableItem (EventId, EventEndDate, EventConfig, EventConfigVersion, RevenueSegment, RevenueSegmentVersion)</p>
 <h2 id="review-c2b790aa5579--mythicdeal">REVIEW-c2b790aa5579 — MythicDeal</h2>
 <p>Nguồn: <code>gdd/MythicDeal.json#/gaps/0</code>; trạng thái: needs-review.</p>
-<p>Không có config Mythic Deal mẫu trong client hoặc snapshot (tài khoản level thấp) → giá/nội dung theo segment chưa biết.</p>
+<p>Đã nhận config event74/version76 sau backend thật ngày15/11: primary7 và improvedPrice8 cấu hình. Còn thiếu xác nhận mapping segment/theme/giá được chọn trong UI và mua/receipt; không còn thiếu payload mẫu.</p>
 <h2 id="review-72fc5297200f--mythicdeal">REVIEW-72fc5297200f — MythicDeal</h2>
 <p>Nguồn: <code>gdd/MythicDeal.json#/gaps/2</code>; trạng thái: server-segment-reference.</p>
 <p>Theme đang dùng ngoài Builder/Duke/Halloween do server quyết.</p>
